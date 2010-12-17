@@ -93,6 +93,13 @@ class ItemRelationsPlugin
             return;
         }
         // save/delete the item relations
+        foreach ($post['item_relations_relation_id'] as $key => $relationId) {
+            $itemRelation = new ItemRelationsItemRelation;
+            $itemRelation->subject_item_id = $record->id;
+            $itemRelation->object_item_id = $post['item_relations_item_relation_object_item_id'][$key];
+            $itemRelation->relation_id = $relationId;
+            $itemRelation->save();
+        }
     }
     
     public static function adminAppendToItemsShowSecondary($item)
