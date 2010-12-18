@@ -227,9 +227,9 @@ Item ID <input type="text" name="item_relations_item_relation_object_item_id[]" 
     <?php endforeach; ?>
     <?php foreach ($objects as $object): ?>
     <?php
-    $title = item('Dublin Core', 'Title', array(), get_item_by_id($subject->subject_item_id));
+    $title = item('Dublin Core', 'Title', array(), get_item_by_id($object->subject_item_id));
     if (!$title) {
-        $title = $subject->subject_item_id;
+        $title = $object->subject_item_id;
     }
     ?>
     <tr>
