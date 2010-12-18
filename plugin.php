@@ -19,7 +19,7 @@ add_filter('admin_items_form_tabs', 'ItemRelationsPlugin::adminItemsFormTabs');
 class ItemRelationsPlugin
 {
     // refinements of Dublin Core:relation and all their refinements
-    // Add FOAF, SIOC, SKOS, etc?
+    // Add SIOC, SKOS, etc?
     public static $relations = array(
         // Dublin Core: http://dublincore.org/documents/dcmi-terms/
         'dcterms:relation' => 'A related resource.', 
@@ -48,6 +48,21 @@ class ItemRelationsPlugin
         'bibo:subsequentLegalDecision' => 'A legal decision on appeal that takes action on a case (affirming it, reversing it, etc.).', 
         'bibo:transcriptOf' => 'Relates a document to some transcribed original.', 
         'bibo:translationOf' => 'Relates a translated document to the original document.', 
+        // FOAF: http://xmlns.com/foaf/spec/
+        'based_near' => 'A location that something is based near, for some broadly human notion of near.', 
+        'depiction' => 'A depiction of some thing.', 
+        'depicts' => 'A thing depicted in this representation. ', 
+        'fundedBy' => 'An organization funding a project or person.', 
+        'img' => 'An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one\'s photo on a homepage).', 
+        'isPrimaryTopicOf' => 'A document that this thing is the primary topic of.', 
+        'knows' => 'A person known by this person (indicating some level of reciprocated interaction between the parties).', 
+        'logo' => 'A logo representing some thing.', 
+        'made' => 'Something that was made by this agent.', 
+        'maker' => 'An agent that made this thing.', 
+        'member' => 'Indicates a member of a Group.', 
+        'page' => 'A page or document about this thing.', 
+        'primaryTopic' => 'The primary topic of some page or document.', 
+        'thumbnail' => 'A derived thumbnail image.', 
     );
     
     public static function install()
