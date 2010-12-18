@@ -115,9 +115,16 @@ class ItemRelationsPlugin
             if (!is_numeric($relationId)) {
                 continue;
             }
+            
+            $objectItem = $db->getTable('Item')->find($post['item_relations_item_relation_object_item_id'][$key]);
+            // Don't save the relation if the object item doesn't exist.
+            if (!$objectItem) {
+                continue;
+            }
+            
             $itemRelation = new ItemRelationsItemRelation;
             $itemRelation->subject_item_id = $record->id;
-            $itemRelation->object_item_id = $post['item_relations_item_relation_object_item_id'][$key];
+            $itemRelation->object_item_id = $objectItem->id;
             $itemRelation->relation_id = $relationId;
             $itemRelation->save();
         }
