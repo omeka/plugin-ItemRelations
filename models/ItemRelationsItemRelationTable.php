@@ -9,7 +9,7 @@ class ItemRelationsItemRelationTable extends Omeka_Db_Table
         $select = $this->getSelect()
                        ->join(array('irr' => $db->ItemRelationsRelation), 
                               'irir.relation_id = irr.id', 
-                              array('name', 'description'))
+                              array('name', 'definition'))
                        ->where('irir.subject_item_id = ?', (int) $subjectItemId);
         return $this->fetchObjects($select);
     }
@@ -20,7 +20,7 @@ class ItemRelationsItemRelationTable extends Omeka_Db_Table
         $select = $this->getSelect()
                        ->join(array('irr' => $db->ItemRelationsRelation), 
                               'irir.relation_id = irr.id', 
-                              array('name', 'description'))
+                              array('name', 'definition'))
                        ->where('irir.object_item_id = ?', (int) $objectItemId);
         return $this->fetchObjects($select);
     }

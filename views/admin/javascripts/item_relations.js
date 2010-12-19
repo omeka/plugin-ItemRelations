@@ -1,0 +1,1 @@
+// Emulate application/views/scripts/javascripts/search.js

@@ -5,6 +5,8 @@ Wish List:
   * custom relations
   * break out vocabularies from relations (item_relations_vocabularies table containing Dublin Core, BIBO, etc.)
   * elegant selector for object items (instead of item ID; maybe use exhibit plugin?)
+  * add multiple relations on item form
+  * advanced search for subject/object relations
 */
 
 // Plugin hooks.
@@ -15,6 +17,7 @@ add_plugin_hook('admin_append_to_items_show_secondary', 'ItemRelationsPlugin::ad
 
 // Plugin filters.
 add_filter('admin_items_form_tabs', 'ItemRelationsPlugin::adminItemsFormTabs');
+add_filter('admin_navigation_main', 'ItemRelationsPlugin::adminNavigationMain');
 
 class ItemRelationsPlugin
 {
@@ -72,14 +75,14 @@ class ItemRelationsPlugin
         CREATE TABLE `{$db->prefix}item_relations_relations` (
             `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
             `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-            `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+            `definition` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
             PRIMARY KEY (`id`)
         ) ENGINE=MyISAM DEFAULT CHARSET=utf8;";
         $db->query($sql);
         
-        foreach (self::$relations as $name => $description) {
-            $sql = "INSERT INTO `{$db->prefix}item_relations_relations` (`name`, `description`) VALUES (?, ?);";
-            $db->query($sql, array($name, $description));
+        foreach (self::$relations as $name => $definition) {
+            $sql = "INSERT INTO `{$db->prefix}item_relations_relations` (`name`, `definition`) VALUES (?, ?);";
+            $db->query($sql, array($name, $definition));
         }
         
         $sql = "
@@ -202,14 +205,16 @@ class ItemRelationsPlugin
         
         ob_start();
 ?>
-<p>This Item 
+<div class="item-relations-entry">This Item 
 <select name="item_relations_relation_id[]">
     <option value="">Select below...</option>
     <?php foreach ($relations as $relation): ?>
     <option value="<?php echo $relation->id; ?>"><?php echo $relation->name; ?></option>
     <?php endforeach; ?>
 </select> 
-Item ID <input type="text" name="item_relations_item_relation_object_item_id[]" size="8" /></p>
+Item ID <input type="text" name="item_relations_item_relation_object_item_id[]" size="8" />
+</div>
+<!--<button type="button" class="item-relations-add-relation">Add Relation</button>-->
 <?php if ($subjects || $objects): ?>
 <table>
     <tr>
@@ -254,5 +259,11 @@ Item ID <input type="text" name="item_relations_item_relation_object_item_id[]" 
         $content = ob_get_contents();
         ob_end_clean();
         return $content;
+    }
+    
+    public static function adminNavigationMain($nav)
+    {
+        $nav['Item Relations'] = uri('item-relations');
+        return $nav;
     }
 }
