@@ -5,7 +5,6 @@ Wish List:
   * custom relations
   * break out vocabularies from relations (item_relations_vocabularies table containing Dublin Core, BIBO, etc.)
   * elegant selector for object items (instead of item ID; maybe use exhibit plugin?)
-  * add multiple relations on item form
   * advanced search for subject/object relations
 */
 
@@ -205,16 +204,18 @@ class ItemRelationsPlugin
         
         ob_start();
 ?>
-<div class="item-relations-entry">This Item 
-<select name="item_relations_relation_id[]">
-    <option value="">Select below...</option>
-    <?php foreach ($relations as $relation): ?>
-    <option value="<?php echo $relation->id; ?>"><?php echo $relation->name; ?></option>
-    <?php endforeach; ?>
-</select> 
-Item ID <input type="text" name="item_relations_item_relation_object_item_id[]" size="8" />
+<div>
+    <div class="item-relations-entry">This Item 
+    <select name="item_relations_relation_id[]">
+        <option value="">Select below...</option>
+        <?php foreach ($relations as $relation): ?>
+        <option value="<?php echo $relation->id; ?>"><?php echo $relation->name; ?></option>
+        <?php endforeach; ?>
+    </select> 
+    Item ID <input type="text" name="item_relations_item_relation_object_item_id[]" size="8" />
+    </div>
 </div>
-<!--<button type="button" class="item-relations-add-relation">Add Relation</button>-->
+<button type="button" class="item-relations-add-relation">Add Relation</button>
 <?php if ($subjects || $objects): ?>
 <table>
     <tr>
@@ -255,6 +256,12 @@ Item ID <input type="text" name="item_relations_item_relation_object_item_id[]" 
 <?php else: ?>
 <p>This item has no relations.</p>
 <?php endif; ?>
+<?php echo js('item_relations'); ?>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        Omeka.ItemRelations.activateItemRelationButtons();
+    });
+</script>
 <?php
         $content = ob_get_contents();
         ob_end_clean();
