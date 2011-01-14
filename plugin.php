@@ -6,6 +6,8 @@ Wish List:
   * break out vocabularies from relations (item_relations_vocabularies table containing Dublin Core, BIBO, etc.)
   * elegant selector for object items (instead of item ID; maybe use exhibit plugin?)
   * advanced search for subject/object relations
+  * automate inverse property relations (e.g. replaces/isReplacedBy, part/part of)
+  * assign RDF URIs to relation properties
 */
 
 // Plugin hooks.
@@ -65,6 +67,54 @@ class ItemRelationsPlugin
         'foaf:page' => 'A page or document about this thing.', 
         'foaf:primaryTopic' => 'The primary topic of some page or document.', 
         'foaf:thumbnail' => 'A derived thumbnail image.', 
+        // FRBR: http://vocab.org/frbr/core.html
+        'frbr:abridgement' => 'A property representing an abridgment of an expression.', 
+        'frbr:abridgementOf' => 'A property representing an expression that is abridged.', 
+        'frbr:adaption' => 'A property representing an adaption of a work or expression.', 
+        'frbr:adaptionOf' => 'A property representing a work or expression that is adapted.', 
+        'frbr:alternate' => 'A property representing an alternative to a manifestation.', 
+        'frbr:alternateOf' => 'A property representing a manifestation that is alternated.', 
+        'frbr:arrangement' => 'A property representing an arrangement of an expression.', 
+        'frbr:arrangementOf' => 'A property representing an expression that is arranged.', 
+        'frbr:complement' => 'A property representing a complement to a work or expression.', 
+        'frbr:complementOf' => 'A property representing a work or expression that is complemented.', 
+        'frbr:creator' => 'A property representing an entity in some way responsible for the creation of a work.', 
+        'frbr:creatorOf' => 'A property representing a work that was in some way created by of an entity.', 
+        'frbr:embodiment' => 'A property representing a manifestation that embodies an expression.', 
+        'frbr:embodimentOf' => 'A property representing an expression that is embodied by a manifestation.', 
+        'frbr:exemplar' => 'A property representing an item that is an exemplar of a manifestation.', 
+        'frbr:exemplarOf' => 'A property representing the manifestation that is exemplified by a item.', 
+        'frbr:imitation' => 'A property representing an imitation of a work or expression.', 
+        'frbr:imitationOf' => 'A property representing a work or expression that is imitated.', 
+        'frbr:owner' => 'A property representing an entity that owns an item.', 
+        'frbr:ownerOf' => 'A property representing an item that is in some way owned an entity.', 
+        'frbr:part' => 'A property representing a part of an endeavour.', 
+        'frbr:partOf' => 'A property representing an endeavour incorporating an endeavour.', 
+        'frbr:producer' => 'A property representing an entity in some way responsible for producing a manifestation.', 
+        'frbr:producerOf' => 'A property representing a manifestation that was in some way produced an entity.', 
+        'frbr:realization' => 'A property representing an expression that is an intellectual or artistic realization of a work.', 
+        'frbr:realizationOf' => 'A property representing the work that has been realized by an expression.', 
+        'frbr:realizer' => 'A property representing an entity in some way responsible for realizing an expression.', 
+        'frbr:realizerOf' => 'A property representing an expression that was in some way realized by an entity.', 
+        'frbr:reconfiguration' => 'A property representing a recongifuration of an item.', 
+        'frbr:reconfigurationOf' => 'A property representing an item that is reconfigured.', 
+        'frbr:relatedEndeavour' => 'A property representing another endeavour that is related in some way to an endeavour.', 
+        'frbr:reproduction' => 'A property representing a reproduction of a manifestation or item.', 
+        'frbr:reproductionOf' => 'A property representing a manifestation or item that is reproduced.', 
+        'frbr:responsibleEntity' => 'A property representing an entity in some way responsible for an endeavour.', 
+        'frbr:responsibleEntityOf' => 'A property representing an endeavour that is the responsibility of an entity.', 
+        'frbr:revision' => 'A property representing a revision of an expression.', 
+        'frbr:revisionOf' => 'A property representing an expression that is revised.', 
+        'frbr:successor' => 'A property representing a successor to a work or expression.', 
+        'frbr:successorOf' => 'A property representing a work or expression that is succeeded.', 
+        'frbr:summarization' => 'A property representing a summarization of a work or expression.', 
+        'frbr:summarizationOf' => 'A property representing a work or expression that is summarized.', 
+        'frbr:supplement' => 'A property representing a supplement to a work or expression.', 
+        'frbr:supplementOf' => 'A property representing a work or expression that is supplemented.', 
+        'frbr:transformation' => 'A property representing a transformation of a work or expression.', 
+        'frbr:transformationOf' => 'A property representing a work or expression that is transformed.', 
+        'frbr:translation' => 'A property representing a translation of an expression.', 
+        'frbr:translationOf' => 'A property representing an expression that is translated.', 
     );
     
     public static function install()
