@@ -1,13 +1,10 @@
 <?php
 /*
 Wish List:
-  * more vocabularies
   * custom relations
-  * break out vocabularies from relations (item_relations_vocabularies table containing Dublin Core, BIBO, etc.)
   * elegant selector for object items (instead of item ID; maybe use exhibit plugin?)
   * advanced search for subject/object relations
   * automate inverse property relations (e.g. replaces/isReplacedBy, part/part of)
-  * assign RDF URIs to relation properties
 */
 
 // Plugin hooks.
@@ -109,12 +106,13 @@ class ItemRelationsPlugin
         }
         
         // Save item relations.
-        foreach ($post['item_relations_relation_id'] as $key => $relationId) {
-            if (!is_numeric($relationId)) {
+        foreach ($post['item_relations_property_id'] as $key => $propertyId) {
+            if (!is_numeric($propertyId)) {
                 continue;
             }
             
             $objectItem = $db->getTable('Item')->find($post['item_relations_item_relation_object_item_id'][$key]);
+            
             // Don't save the relation if the object item doesn't exist.
             if (!$objectItem) {
                 continue;
@@ -122,8 +120,8 @@ class ItemRelationsPlugin
             
             $itemRelation = new ItemRelationsItemRelation;
             $itemRelation->subject_item_id = $record->id;
+            $itemRelation->property_id = $propertyId;
             $itemRelation->object_item_id = $objectItem->id;
-            $itemRelation->relation_id = $relationId;
             $itemRelation->save();
         }
         
@@ -155,7 +153,12 @@ class ItemRelationsPlugin
     {
         $db = get_db();
         
-        $relations = $db->getTable('ItemRelationsRelation')->findAll();
+        $properties = $db->getTable('ItemRelationsProperty')->findAllWithVocabularyData();
+        $formSelectProperties = array('' => 'Select below...');
+        foreach ($properties as $property) {
+            $formSelectProperties[$property->name][$property->id] = $property->local_part;
+        }
+        
         $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
         $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
         

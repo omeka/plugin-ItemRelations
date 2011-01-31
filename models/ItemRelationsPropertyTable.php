@@ -9,4 +9,15 @@ class ItemRelationsPropertyTable extends Omeka_Db_Table
         $select->where('vocabulary_id = ?', (int) $id);
         return $this->fetchObjects($select);
     }
+    
+    public function findAllWithVocabularyData()
+    {
+        $db = $this->getDb();
+        $select = $this->getSelect()
+                       ->join(array('irv' => $db->ItemRelationsVocabulary), 
+                              'irp.vocabulary_id = irv.id', 
+                              array('name', 'description', 
+                                    'namespace_prefix', 'namespace_uri'));
+        return $this->fetchObjects($select);
+    }
 }

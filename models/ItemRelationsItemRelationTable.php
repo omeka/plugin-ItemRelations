@@ -7,9 +7,15 @@ class ItemRelationsItemRelationTable extends Omeka_Db_Table
     {
         $db = $this->getDb();
         $select = $this->getSelect()
-                       ->join(array('irr' => $db->ItemRelationsRelation), 
-                              'irir.relation_id = irr.id', 
-                              array('name', 'definition'))
+                       ->join(array('irp' => $db->ItemRelationsProperty), 
+                              'irir.property_id = irp.id', 
+                              array('property_vocabulary_id' => 'vocabulary_id', 
+                                    'property_local_part' => 'local_part', 
+                                    'property_label' => 'label', 
+                                    'property_description' => 'description'))
+                       ->join(array('irv' => $db->ItemRelationsVocabulary), 
+                              'irp.vocabulary_id = irv.id', 
+                              array('vocabulary_namespace_prefix' => 'namespace_prefix'))
                        ->where('irir.subject_item_id = ?', (int) $subjectItemId);
         return $this->fetchObjects($select);
     }
@@ -18,9 +24,15 @@ class ItemRelationsItemRelationTable extends Omeka_Db_Table
     {
         $db = $this->getDb();
         $select = $this->getSelect()
-                       ->join(array('irr' => $db->ItemRelationsRelation), 
-                              'irir.relation_id = irr.id', 
-                              array('name', 'definition'))
+                       ->join(array('irp' => $db->ItemRelationsProperty), 
+                              'irir.property_id = irp.id', 
+                              array('property_vocabulary_id' => 'vocabulary_id', 
+                                    'property_local_part' => 'local_part', 
+                                    'property_label' => 'label', 
+                                    'property_description' => 'description'))
+                       ->join(array('irv' => $db->ItemRelationsVocabulary), 
+                              'irp.vocabulary_id = irv.id', 
+                              array('vocabulary_namespace_prefix' => 'namespace_prefix'))
                        ->where('irir.object_item_id = ?', (int) $objectItemId);
         return $this->fetchObjects($select);
     }

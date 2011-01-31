@@ -10,7 +10,7 @@
                 $title = $subject->object_item_id;
             }
             ?>
-            <li>This Item <strong><?php echo $subject->name; ?></strong> <a href="<?php echo uri('items/show/' . $subject->object_item_id); ?>" target="_blank"><?php echo $title; ?></a></li>
+            <li>This Item <strong><?php echo "{$subject->vocabulary_namespace_prefix}:{$subject->property_local_part}"; ?></strong> <a href="<?php echo uri('items/show/' . $subject->object_item_id); ?>" target="_blank"><?php echo $title; ?></a></li>
             <?php endforeach; ?>
             <?php foreach ($objects as $object): ?>
             <?php
@@ -19,7 +19,7 @@
                 $title = $object->subject_item_id;
             }
             ?>
-            <li><a href="<?php echo uri('items/show/' . $object->subject_item_id); ?>" target="_blank"><?php echo $title; ?></a> <strong><?php echo $object->name; ?></strong> This Item</li>
+            <li><a href="<?php echo uri('items/show/' . $object->subject_item_id); ?>" target="_blank"><?php echo $title; ?></a> <strong><?php echo "{$object->vocabulary_namespace_prefix}:{$object->property_local_part}"; ?></strong> This Item</li>
             <?php endforeach; ?>
         </ul>
         <?php else: ?>
