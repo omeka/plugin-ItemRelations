@@ -12,6 +12,8 @@ add_plugin_hook('install', 'ItemRelationsPlugin::install');
 add_plugin_hook('uninstall', 'ItemRelationsPlugin::uninstall');
 add_plugin_hook('after_save_form_record', 'ItemRelationsPlugin::afterSaveFormRecord');
 add_plugin_hook('admin_append_to_items_show_secondary', 'ItemRelationsPlugin::adminAppendToItemsShowSecondary');
+add_plugin_hook('admin_append_to_advanced_search', 'ItemRelationsPlugin::adminAppendToAdvancedSearch');
+add_plugin_hook('item_browse_sql', 'ItemRelationsPlugin::itemBrowseSql');
 
 // Plugin filters.
 add_filter('admin_items_form_tabs', 'ItemRelationsPlugin::adminItemsFormTabs');
@@ -153,17 +155,12 @@ class ItemRelationsPlugin
     {
         $db = get_db();
         
-        $properties = $db->getTable('ItemRelationsProperty')->findAllWithVocabularyData();
-        $formSelectProperties = array('' => 'Select below...');
-        foreach ($properties as $property) {
-            $formSelectProperties[$property->name][$property->id] = $property->local_part;
-        }
+        $formSelectProperties = self::getFormSelectProperties();
         
         $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
         $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
         
         ob_start();
-        // use optgroup
         include 'item_relations_form.php';
         $content = ob_get_contents();
         ob_end_clean();
@@ -174,5 +171,44 @@ class ItemRelationsPlugin
     {
         $nav['Item Relations'] = uri('item-relations');
         return $nav;
+    }
+    
+    public static function adminAppendToAdvancedSearch()
+    {
+        $formSelectProperties = self::getFormSelectProperties();
+        include 'item_relations_advanced_search_form.php';
+    }
+    
+    /**
+     * Instead of one "Has Relation" form element, using two---"Is Subject Of" 
+     * and "Is Object Of"---form elements would be more useful. Unfortunately, 
+     * this is tricky because 1) Zend doesn't allow duplicate correlation names 
+     * (table aliases), which complicates select object building; and 2) joining 
+     * twice on the same table using different ON clauses does not replicate an
+     * AND conditional (e.g. it will not select an item that is both a subject 
+     * of AND an object of "isPartOf"). Will have to fine another way to perform 
+     * this search operation.
+     */
+    public static function itemBrowseSql($select, $params)
+    {
+        $db = get_db();
+        if (is_numeric($_GET['item_relations_property_id'])) {
+            $select->join(array('irir' => $db->ItemRelationsItemRelation), 
+                          'irir.subject_item_id = i.id', 
+                          array())
+                   ->where('irir.property_id = ?', $_GET['item_relations_property_id']);
+        }
+        return $select;
+    }
+    
+    public static function getFormSelectProperties()
+    {
+        $db = get_db();
+        $properties = $db->getTable('ItemRelationsProperty')->findAllWithVocabularyData();
+        $formSelectProperties = array('' => 'Select below...');
+        foreach ($properties as $property) {
+            $formSelectProperties[$property->name][$property->id] = $property->local_part;
+        }
+        return $formSelectProperties;
     }
 }
