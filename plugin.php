@@ -1,10 +1,9 @@
 <?php
 /*
 Wish List:
-  * custom relations
-  * elegant selector for object items (instead of item ID; maybe use exhibit plugin?)
-  * advanced search for subject/object relations
-  * automate inverse property relations (e.g. replaces/isReplacedBy, part/part of)
+  * custom relations, see https://addons.omeka.org/trac/ticket/143
+  * elegant selector for object items, instead of item ID; maybe use exhibit plugin?
+  * automate inverse property relations, e.g. replaces/isReplacedBy, part/part of
 */
 
 // Plugin hooks.
@@ -179,22 +178,18 @@ class ItemRelationsPlugin
         include 'item_relations_advanced_search_form.php';
     }
     
-    /**
-     * Instead of one "Has Relation" form element, using two---"Is Subject Of" 
-     * and "Is Object Of"---form elements would be more useful. Unfortunately, 
-     * this is tricky because 1) Zend doesn't allow duplicate correlation names 
-     * (table aliases), which complicates select object building; and 2) joining 
-     * twice on the same table using different ON clauses does not replicate an
-     * AND conditional (e.g. it will not select an item that is both a subject 
-     * of AND an object of "isPartOf"). Will have to fine another way to perform 
-     * this search operation.
-     */
     public static function itemBrowseSql($select, $params)
     {
-        $db = get_db();
         if (is_numeric($_GET['item_relations_property_id'])) {
+            $db = get_db();
+            // Set the field on which to join.
+            if ($_GET['item_relations_clause_part'] == 'subject') {
+                $onField = 'subject_item_id';
+            } else {
+                $onField = 'object_item_id';
+            }
             $select->join(array('irir' => $db->ItemRelationsItemRelation), 
-                          'irir.subject_item_id = i.id', 
+                          "irir.$onField = i.id", 
                           array())
                    ->where('irir.property_id = ?', $_GET['item_relations_property_id']);
         }
