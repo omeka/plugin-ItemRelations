@@ -9,14 +9,25 @@ Wish List:
 // Plugin hooks.
 add_plugin_hook('install', 'ItemRelationsPlugin::install');
 add_plugin_hook('uninstall', 'ItemRelationsPlugin::uninstall');
+add_plugin_hook('config_form', 'ItemRelationsPlugin::configForm');
+add_plugin_hook('config', 'ItemRelationsPlugin::config');
 add_plugin_hook('after_save_form_record', 'ItemRelationsPlugin::afterSaveFormRecord');
 add_plugin_hook('admin_append_to_items_show_secondary', 'ItemRelationsPlugin::adminAppendToItemsShowSecondary');
+add_plugin_hook('public_append_to_items_show', 'ItemRelationsPlugin::publicAppendToItemsShow');
 add_plugin_hook('admin_append_to_advanced_search', 'ItemRelationsPlugin::adminAppendToAdvancedSearch');
 add_plugin_hook('item_browse_sql', 'ItemRelationsPlugin::itemBrowseSql');
 
 // Plugin filters.
 add_filter('admin_items_form_tabs', 'ItemRelationsPlugin::adminItemsFormTabs');
 add_filter('admin_navigation_main', 'ItemRelationsPlugin::adminNavigationMain');
+
+function item_relations_display_item_relations(Item $item)
+{
+    $db = get_db();
+    $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
+    $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
+    include 'public_items_show.php';
+}
 
 class ItemRelationsPlugin
 {
@@ -96,6 +107,19 @@ class ItemRelationsPlugin
         $db->query($sql);
         $sql = "DROP TABLE IF EXISTS `{$db->prefix}item_relations_item_relations`";
         $db->query($sql);
+        
+        delete_option('item_relations_public_append_to_items_show');
+    }
+    
+    public static function configForm()
+    {
+        include 'config_form.php';
+    }
+    
+    public static function config($params)
+    {
+        set_option('item_relations_public_append_to_items_show', 
+                   $params['item_relations_public_append_to_items_show']);
     }
     
     public static function afterSaveFormRecord($record, $post)
@@ -144,6 +168,14 @@ class ItemRelationsPlugin
         include 'item_relations_secondary.php';
     }
     
+    public static function publicAppendToItemsShow()
+    {
+        if ('1' == get_option('item_relations_public_append_to_items_show')) {
+            $item = get_current_item();
+            item_relations_display_item_relations($item);
+        }
+    }
+    
     public static function adminItemsFormTabs($tabs, $item)
     {
         $tabs['Item Relations'] = self::itemRelationsFormContent($item);
@@ -175,7 +207,7 @@ class ItemRelationsPlugin
     public static function adminAppendToAdvancedSearch()
     {
         $formSelectProperties = self::getFormSelectProperties();
-        include 'item_relations_advanced_search_form.php';
+        include 'advanced_search_form.php';
     }
     
     public static function itemBrowseSql($select, $params)
