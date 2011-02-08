@@ -20,4 +20,15 @@ class ItemRelationsPropertyTable extends Omeka_Db_Table
                                     'namespace_prefix', 'namespace_uri'));
         return $this->fetchObjects($select);
     }
+    
+    public function findByCustom()
+    {
+        $db = $this->getDb();
+        $select = $this->getSelect()
+                       ->join(array('irv' => $db->ItemRelationsVocabulary), 
+                              'irp.vocabulary_id = irv.id', 
+                              array())
+                       ->where('irv.name = ?', ItemRelationsVocabularyTable::CUSTOM_VOCABULARY_NAME);
+        return $this->fetchObjects($select);
+    }
 }

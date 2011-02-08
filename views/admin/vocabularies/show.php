@@ -1,8 +1,9 @@
 <?php
-$head = array('title' => html_escape('Item Relations | Vocabularies | Show'));
+$head = array('title' => html_escape('Show Relations'));
 head($head);
 ?>
 <h1><?php echo $head['title']; ?></h1>
+<p class="edit-button"><a href="<?php echo html_escape($this->url('item-relations/vocabularies/edit-custom')); ?>" class="edit">Edit Custom Vocabulary</a></p>
 <div id="primary">
 <h2><?php echo $this->vocabulary->name; ?></h2>
 <table>

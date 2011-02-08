@@ -1,10 +1,17 @@
 <?php
 return $vocabularies = array(
     array(
+        'name' => ItemRelationsVocabularyTable::CUSTOM_VOCABULARY_NAME, 
+        'description' => 'Custom relations defined by this Omeka instance.', 
+        'namespace_prefix' => '', 
+        'namespace_uri' => '', 
+        'properties' => array()
+    ), 
+    array(
         'name' => 'Dublin Core', 
         'description' => 'Relations defined by DCMI Metadata Terms: http://dublincore.org/documents/dcmi-terms/', 
         'namespace_prefix' => 'dcterms', 
-        'namespace_uri' => ' http://purl.org/dc/terms/', 
+        'namespace_uri' => 'http://purl.org/dc/terms/', 
         'properties' => array(
             array(
                 'local_part' => 'relation', 

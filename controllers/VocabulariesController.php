@@ -23,4 +23,10 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_Action
         $this->view->vocabulary = $vocabulary;
         $this->view->properties = $properties;
     }
+    
+    public function editCustomAction()
+    {
+        $properties = $this->getTable('ItemRelationsProperty')->findByCustom();
+        $this->view->properties = $properties;
+    }
 }
