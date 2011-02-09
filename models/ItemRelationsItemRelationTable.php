@@ -3,6 +3,11 @@ class ItemRelationsItemRelationTable extends Omeka_Db_Table
 {
     protected $_alias = 'irir';
     
+    /**
+     * Finds all item relations by subject item ID.
+     * 
+     * @return array
+     */
     public function findBySubjectItemId($subjectItemId)
     {
         $db = $this->getDb();
@@ -20,6 +25,11 @@ class ItemRelationsItemRelationTable extends Omeka_Db_Table
         return $this->fetchObjects($select);
     }
     
+    /**
+     * Finds all item relations by object item ID.
+     * 
+     * @return array
+     */
     public function findByObjectItemId($objectItemId)
     {
         $db = $this->getDb();

@@ -1,11 +1,13 @@
 <?php
-$head = array('title' => html_escape('Show Relations'));
+$head = array('title' => html_escape('Show Vocabulary Properties'));
 head($head);
 ?>
 <h1><?php echo $head['title']; ?></h1>
-<p class="edit-button"><a href="<?php echo html_escape($this->url('item-relations/vocabularies/edit-custom')); ?>" class="edit">Edit Custom Vocabulary</a></p>
 <div id="primary">
 <h2><?php echo $this->vocabulary->name; ?></h2>
+<?php if (!$this->properties): ?>
+<p>This vocabulary has no properties.<?php if ($this->vocabulary->custom): ?> <a href="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>">Edit this vocabulary.</a><?php endif; ?></p>
+<?php else: ?>
 <table>
     <tr>
         <th>Local Part</th>
@@ -20,5 +22,6 @@ head($head);
     </tr>
 <?php endforeach; ?>
 </table>
+<?php endif; ?>
 </div>
 <?php foot(); ?>

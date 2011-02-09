@@ -7,4 +7,5 @@ class ItemRelationsVocabulary extends Omeka_Record
     public $description;
     public $namespace_prefix;
     public $namespace_uri;
+    public $custom;
 }

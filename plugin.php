@@ -1,7 +1,6 @@
 <?php
 /*
 Wish List:
-  * custom relations, see https://addons.omeka.org/trac/ticket/143
   * elegant selector for object items, instead of item ID; maybe use exhibit plugin?
   * automate inverse property relations, e.g. replaces/isReplacedBy, part/part of
 */
@@ -31,6 +30,9 @@ function item_relations_display_item_relations(Item $item)
 
 class ItemRelationsPlugin
 {
+    /**
+     * Install the plugin.
+     */
     public static function install()
     {
         $db = get_db();
@@ -41,6 +43,7 @@ class ItemRelationsPlugin
             `description` text,
             `namespace_prefix` varchar(100) NOT NULL,
             `namespace_uri` varchar(200) DEFAULT NULL,
+            `custom` BOOLEAN NOT NULL,
             PRIMARY KEY (`id`)
         ) ENGINE=MyISAM DEFAULT CHARSET=utf8;";
         $db->query($sql);
@@ -66,38 +69,42 @@ class ItemRelationsPlugin
         ) ENGINE=MyISAM DEFAULT CHARSET=utf8;";
         $db->query($sql);
         
-        // Install the vocabularies and their properties.
-        $vocabularies = include 'vocabularies.php';
-        foreach ($vocabularies as $vocabulary) {
-            $sql = "
-            INSERT INTO `{$db->prefix}item_relations_vocabularies` (
-                `name`, 
-                `description`, 
-                `namespace_prefix`, 
-                `namespace_uri`
-            ) VALUES (?, ?, ?, ?)";
-            $db->query($sql, array($vocabulary['name'], 
-                                   $vocabulary['description'], 
-                                   $vocabulary['namespace_prefix'], 
-                                   $vocabulary['namespace_uri']));
+        // Install the formal vocabularies and their properties.
+        $formalVocabularies = include 'formal_vocabularies.php';
+        foreach ($formalVocabularies as $formalVocabulary) {
+            $vocabulary = new ItemRelationsVocabulary;
+            $vocabulary->name = $formalVocabulary['name'];
+            $vocabulary->description = $formalVocabulary['description'];
+            $vocabulary->namespace_prefix = $formalVocabulary['namespace_prefix'];
+            $vocabulary->namespace_uri = $formalVocabulary['namespace_uri'];
+            $vocabulary->custom = 0;
+            $vocabulary->save();
+            
             $vocabularyId = $db->lastInsertId();
             
-            foreach ($vocabulary['properties'] as $property) {
-                $sql = "
-                INSERT INTO `{$db->prefix}item_relations_properties` (
-                    `vocabulary_id`, 
-                    `local_part`, 
-                    `label`, 
-                    `description`
-                ) VALUES (?, ?, ?, ?)";
-                $db->query($sql, array($vocabularyId, 
-                                       $property['local_part'], 
-                                       $property['label'], 
-                                       $property['description']));
+            foreach ($formalVocabulary['properties'] as $formalProperty) {
+                $property = new ItemRelationsProperty;
+                $property->vocabulary_id = $vocabularyId;
+                $property->local_part = $formalProperty['local_part'];
+                $property->label = $formalProperty['label'];
+                $property->description = $formalProperty['description'];
+                $property->save();
             }
         }
+        
+        // Install a custom vocabulary.
+        $customVocabulary = new ItemRelationsVocabulary;
+        $customVocabulary->name = 'Custom';
+        $customVocabulary->description = 'Custom relations defined for this Omeka instance.';
+        $customVocabulary->namespace_prefix = 'custom';
+        $customVocabulary->namespace_uri = null;
+        $customVocabulary->custom = 1;
+        $customVocabulary->save();
     }
     
+    /**
+     * Uninstall the plugin.
+     */
     public static function uninstall()
     {
         $db = get_db();
@@ -111,17 +118,31 @@ class ItemRelationsPlugin
         delete_option('item_relations_public_append_to_items_show');
     }
     
+    /**
+     * Display the plugin configuration form.
+     */
     public static function configForm()
     {
         include 'config_form.php';
     }
     
+    /**
+     * Handle the plugin configuration form.
+     * 
+     * @param array $params
+     */
     public static function config($params)
     {
         set_option('item_relations_public_append_to_items_show', 
                    $params['item_relations_public_append_to_items_show']);
     }
     
+    /**
+     * Save the item relations after saving an item add/edit form.
+     * 
+     * @param Omeka_Record $record
+     * @param array $post
+     */
     public static function afterSaveFormRecord($record, $post)
     {
         $db = get_db();
@@ -159,6 +180,9 @@ class ItemRelationsPlugin
         }
     }
     
+    /**
+     * Display item relations on the admin items show page.
+     */
     public static function adminAppendToItemsShowSecondary($item)
     {
         $db = get_db();
@@ -168,6 +192,9 @@ class ItemRelationsPlugin
         include 'item_relations_secondary.php';
     }
     
+    /**
+     * Display item relations on the public items show page.
+     */
     public static function publicAppendToItemsShow()
     {
         if ('1' == get_option('item_relations_public_append_to_items_show')) {
@@ -176,12 +203,23 @@ class ItemRelationsPlugin
         }
     }
     
+    /**
+     * Add the "Item Relations" tab to the admin items add/edit page.
+     * 
+     * @return array
+     */
     public static function adminItemsFormTabs($tabs, $item)
     {
         $tabs['Item Relations'] = self::itemRelationsFormContent($item);
         return $tabs;
     }
     
+    /**
+     * Return the content of the "Item Relations" form.
+     * 
+     * @param Item $item
+     * @return string
+     */
     public static function itemRelationsFormContent($item)
     {
         $db = get_db();
@@ -198,18 +236,34 @@ class ItemRelationsPlugin
         return $content;
     }
     
+    /**
+     * Add the "Item Relations" tab to the admin navigation.
+     * 
+     * @param array $nav
+     * @return array
+     */
     public static function adminNavigationMain($nav)
     {
         $nav['Item Relations'] = uri('item-relations');
         return $nav;
     }
     
+    /**
+     * Display the item relations form on the admin advanced search page.
+     */
     public static function adminAppendToAdvancedSearch()
     {
         $formSelectProperties = self::getFormSelectProperties();
         include 'advanced_search_form.php';
     }
     
+    /**
+     * Filter for an item relation after search page submission.
+     * 
+     * @param Omeka_Db_Select $select
+     * @param array $params
+     * @return Omeka_Db_Select
+     */
     public static function itemBrowseSql($select, $params)
     {
         if (is_numeric($_GET['item_relations_property_id'])) {
@@ -228,6 +282,11 @@ class ItemRelationsPlugin
         return $select;
     }
     
+    /**
+     * Prepare an array for formSelect().
+     * 
+     * @return array
+     */
     public static function getFormSelectProperties()
     {
         $db = get_db();

@@ -1,7 +1,19 @@
 <?php
 class ItemRelationsVocabularyTable extends Omeka_Db_Table
 {
-    const CUSTOM_VOCABULARY_NAME = 'Custom Omeka';
-    
     protected $_alias = 'irv';
+    
+    /**
+     * Finds all vocabularies beginning with custom ones.
+     * 
+     * @return array
+     */
+    public function findAllCustomFirst()
+    {
+        $select = $this->getSelect();
+        
+        $select->order('custom DESC');
+        
+        return $this->fetchObjects($select);
+    }
 }

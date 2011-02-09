@@ -9,7 +9,7 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_Action
     
     public function browseAction()
     {
-        $vocabularies = $this->getTable('ItemRelationsVocabulary')->findAll();
+        $vocabularies = $this->getTable('ItemRelationsVocabulary')->findAllCustomFirst();
         $this->view->vocabularies = $vocabularies;
     }
     
@@ -18,15 +18,23 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_Action
         $vocabularyId = $this->_getParam('id');
         
         $vocabulary = $this->getTable('ItemRelationsVocabulary')->find($vocabularyId);
-        $properties = $this->getTable('ItemRelationsProperty')->findByVocabularyId($vocabulary->id);
+        $properties = $this->getTable('ItemRelationsProperty')->findByVocabularyId($vocabularyId);
         
         $this->view->vocabulary = $vocabulary;
         $this->view->properties = $properties;
     }
     
-    public function editCustomAction()
+    public function editAction()
     {
-        $properties = $this->getTable('ItemRelationsProperty')->findByCustom();
+        $vocabularyId = $this->_getParam('id');
+        
+        // Only custom vocabularies can be edited.
+        $vocabulary = $this->getTable('ItemRelationsVocabulary')->find($vocabularyId);
+        if (!$vocabulary->custom) {
+            $this->redirect->gotoSimple('browse');
+        }
+        
+        $properties = $this->getTable('ItemRelationsProperty')->findByVocabularyId($vocabularyId);
         $this->view->properties = $properties;
     }
 }
