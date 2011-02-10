@@ -1,3 +1,16 @@
+<script type="text/javascript">
+jQuery(document).ready(function () {
+    jQuery('.item-relations-add-relation').click(function () {
+        var oldDiv = jQuery('.item-relations-entry').last();
+        var div = oldDiv.clone();
+        oldDiv.parent().append(div);
+        var inputs = div.find('input');
+        var selects = div.find('select');
+        inputs.val('');
+        selects.val('');
+    });
+});
+</script>
 <div>
     <div class="item-relations-entry">This Item 
     <?php echo __v()->formSelect('item_relations_property_id[]', null, array('multiple' => false), $formSelectProperties); ?>
@@ -45,16 +58,3 @@
 <?php else: ?>
 <p>This item has no relations.</p>
 <?php endif; ?>
-<script type="text/javascript">
-jQuery(document).ready(function () {
-    jQuery('.item-relations-add-relation').click(function () {
-        var oldDiv = jQuery('.item-relations-entry').last();
-        var div = oldDiv.clone();
-        oldDiv.parent().append(div);
-        var inputs = div.find('input');
-        var selects = div.find('select');
-        inputs.val('');
-        selects.val('');
-    });
-});
-</script>

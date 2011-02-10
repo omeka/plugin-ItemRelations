@@ -13,7 +13,8 @@ class ItemRelationsPropertyTable extends Omeka_Db_Table
     {
         $select = $this->getSelect();
         
-        $select->where('vocabulary_id = ?', (int) $id);
+        $select->where('vocabulary_id = ?', (int) $id)
+               ->order('id');
         
         return $this->fetchObjects($select);
     }
@@ -32,6 +33,15 @@ class ItemRelationsPropertyTable extends Omeka_Db_Table
                       'irp.vocabulary_id = irv.id', 
                       array('name', 'description', 
                             'namespace_prefix', 'namespace_uri'));
+        
+        return $this->fetchObjects($select);
+    }
+    
+    public function findByLabel($label)
+    {
+        $select = $this->getSelect();
+        
+        $select->where('label = ?', $label);
         
         return $this->fetchObjects($select);
     }

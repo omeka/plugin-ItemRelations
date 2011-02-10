@@ -4,6 +4,7 @@ head($head);
 ?>
 <h1><?php echo $head['title']; ?></h1>
 <div id="primary">
+<?php echo flash(); ?>
 <table>
     <tr>
         <th>Name</th>
@@ -19,7 +20,7 @@ head($head);
         <td><?php echo $vocabulary->namespace_prefix; ?></td>
         <td><?php echo $vocabulary->namespace_uri; ?></td>
         <td><?php if ($vocabulary->custom): ?>
-            <form method="get" action="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>">
+            <form method="post" action="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>">
                 <?php echo __v()->formSubmit('item_relations_edit_vocabulary_submit', 'Edit') ?>
             </form>
         <?php endif; ?></td>

@@ -96,7 +96,7 @@ class ItemRelationsPlugin
         $customVocabulary = new ItemRelationsVocabulary;
         $customVocabulary->name = 'Custom';
         $customVocabulary->description = 'Custom relations defined for this Omeka instance.';
-        $customVocabulary->namespace_prefix = 'custom';
+        $customVocabulary->namespace_prefix = ''; // cannot be NULL
         $customVocabulary->namespace_uri = null;
         $customVocabulary->custom = 1;
         $customVocabulary->save();
