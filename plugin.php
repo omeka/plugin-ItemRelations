@@ -293,7 +293,12 @@ class ItemRelationsPlugin
         $properties = $db->getTable('ItemRelationsProperty')->findAllWithVocabularyData();
         $formSelectProperties = array('' => 'Select below...');
         foreach ($properties as $property) {
-            $formSelectProperties[$property->name][$property->id] = $property->local_part;
+            if ($property->local_part) {
+                $optionValue = $property->local_part;
+            } else {
+                $optionValue = $property->label;
+            }
+            $formSelectProperties[$property->vocabulary_name][$property->id] = $optionValue;
         }
         return $formSelectProperties;
     }

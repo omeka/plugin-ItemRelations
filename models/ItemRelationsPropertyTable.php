@@ -31,8 +31,11 @@ class ItemRelationsPropertyTable extends Omeka_Db_Table
         
         $select->join(array('irv' => $db->ItemRelationsVocabulary), 
                       'irp.vocabulary_id = irv.id', 
-                      array('name', 'description', 
-                            'namespace_prefix', 'namespace_uri'));
+                      array('vocabulary_name' => 'name', 
+                            'vocabulary_description' => 'description', 
+                            'vocabulary_namespace_prefix' => 'namespace_prefix', 
+                            'vocabulary_namespace_uri' => 'namespace_uri'))
+               ->order('custom DESC');
         
         return $this->fetchObjects($select);
     }
