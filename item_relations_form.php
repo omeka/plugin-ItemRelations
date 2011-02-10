@@ -18,7 +18,7 @@ jQuery(document).ready(function () {
     </div>
 </div>
 <button type="button" class="item-relations-add-relation">Add Relation</button>
-<?php if ($subjects || $objects): ?>
+<?php if ($subjectRelations || $objectRelations): ?>
 <table>
     <tr>
         <th>Subject</th>
@@ -26,32 +26,20 @@ jQuery(document).ready(function () {
         <th>Object</th>
         <th>Delete?</th>
     </tr>
-    <?php foreach ($subjects as $subject): ?>
-    <?php
-    $title = item('Dublin Core', 'Title', array(), get_item_by_id($subject->object_item_id));
-    if (!$title) {
-        $title = $subject->object_item_id;
-    }
-    ?>
+    <?php foreach ($subjectRelations as $subjectRelation): ?>
     <tr>
         <td>This Item</td>
-        <td><?php echo "{$subject->vocabulary_namespace_prefix}:{$subject->property_local_part}"; ?></td>
-        <td><a href="<?php echo uri('items/show/' . $subject->object_item_id); ?>" target="_blank"><?php echo $title; ?></a></td>
-        <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $subject->id ?>" /></td>
+        <td><?php echo $subjectRelation['relation_text']; ?></td>
+        <td><a href="<?php echo uri('items/show/' . $subjectRelation['object_item_id']); ?>" target="_blank"><?php echo $subjectRelation['object_item_title']; ?></a></td>
+        <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $subjectRelation['item_relation_id']; ?>" /></td>
     </tr>
     <?php endforeach; ?>
-    <?php foreach ($objects as $object): ?>
-    <?php
-    $title = item('Dublin Core', 'Title', array(), get_item_by_id($object->subject_item_id));
-    if (!$title) {
-        $title = $object->subject_item_id;
-    }
-    ?>
+    <?php foreach ($objectRelations as $objectRelation): ?>
     <tr>
-        <td><a href="<?php echo uri('items/show/' . $object->subject_item_id); ?>" target="_blank"><?php echo $title; ?></a></td>
-        <td><?php echo "{$object->vocabulary_namespace_prefix}:{$object->property_local_part}"; ?></td>
+        <td><a href="<?php echo uri('items/show/' . $objectRelation['subject_item_id']); ?>" target="_blank"><?php echo $objectRelation['subject_item_title']; ?></a></td>
+        <td><?php echo $objectRelation['relation_text']; ?></td>
         <td>This Item</td>
-        <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $object->id ?>" /></td>
+        <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $objectRelation['item_relation_id']; ?>" /></td>
     </tr>
     <?php endforeach; ?>
 </table>

@@ -187,8 +187,24 @@ class ItemRelationsPlugin
     {
         $db = get_db();
         
+        // Prepare the subject relations.
         $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
+        $subjectRelations = array();
+        foreach ($subjects as $subject) {
+            $subjectRelations[] = array('object_item_id' => $subject->object_item_id, 
+                                        'object_item_title' => self::getItemTitle($subject->object_item_id), 
+                                        'relation_text' => self::getRelationText($subject));
+        }
+        
+        // Prepare the object relations.
         $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
+        $objectRelations = array();
+        foreach ($objects as $object) {
+            $objectRelations[] = array('subject_item_id' => $object->subject_item_id, 
+                                       'subject_item_title' => self::getItemTitle($object->subject_item_id), 
+                                       'relation_text' => self::getRelationText($object));
+        }
+        
         include 'item_relations_secondary.php';
     }
     
@@ -226,8 +242,25 @@ class ItemRelationsPlugin
         
         $formSelectProperties = self::getFormSelectProperties();
         
+        // Prepare the subject relations.
         $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
+        $subjectRelations = array();
+        foreach ($subjects as $subject) {
+            $subjectRelations[] = array('item_relation_id' => $subject->id, 
+                                        'object_item_id' => $subject->object_item_id, 
+                                        'object_item_title' => self::getItemTitle($subject->object_item_id), 
+                                        'relation_text' => self::getRelationText($subject));
+        }
+        
+        // Prepare the object relations.
         $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
+        $objectRelations = array();
+        foreach ($objects as $object) {
+            $objectRelations[] = array('item_relation_id' => $object->id, 
+                                       'subject_item_id' => $object->subject_item_id, 
+                                       'subject_item_title' => self::getItemTitle($object->subject_item_id), 
+                                       'relation_text' => self::getRelationText($object));
+        }
         
         ob_start();
         include 'item_relations_form.php';
@@ -301,5 +334,38 @@ class ItemRelationsPlugin
             $formSelectProperties[$property->vocabulary_name][$property->id] = $optionValue;
         }
         return $formSelectProperties;
+    }
+    
+    /**
+     * Return a item's title.
+     * 
+     * @param int $itemId The item ID.
+     * @return string
+     */
+    public static function getItemTitle($itemId)
+    {
+        $title = item('Dublin Core', 'Title', array(), get_item_by_id($itemId));
+        if (!trim($title)) {
+            $title = $itemId;
+        }
+        return $title;
+    }
+    
+    /**
+     * Return an item relation's relation/predicate text.
+     * 
+     * @param ItemRelationsItemRelation $itemRelation An object found via 
+     * ItemRelationsItemRelation::findBySubjectItemId() or 
+     * ItemRelationsItemRelation::findByObjectItemId.
+     * @return string
+     */
+    public static function getRelationText(ItemRelationsItemRelation $itemRelation)
+    {
+        if ($itemRelation->property_local_part) {
+            $relationText = $itemRelation->vocabulary_namespace_prefix . ':' . $itemRelation->property_local_part;
+        } else {
+            $relationText = $itemRelation->property_label;
+        }
+        return $relationText;
     }
 }
