@@ -75,14 +75,12 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_Action
                 continue;
             }
             
-            if ($newPropertyLabel) {
-                $newProperty = new ItemRelationsProperty;
-                $newProperty->vocabulary_id = $vocabularyId;
-                $newProperty->local_part = '';
-                $newProperty->label = $newPropertyLabel;
-                $newProperty->description = $newPropertyDescription;
-                $newProperty->save();
-            }
+            $newProperty = new ItemRelationsProperty;
+            $newProperty->vocabulary_id = $vocabularyId;
+            $newProperty->local_part = ''; // cannot be NULL
+            $newProperty->label = $newPropertyLabel;
+            $newProperty->description = $newPropertyDescription;
+            $newProperty->save();
         }
         
         // Delete existing properties.
