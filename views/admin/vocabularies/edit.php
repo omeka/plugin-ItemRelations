@@ -15,10 +15,11 @@ jQuery(document).ready(function () {
 </script>
 <h1><?php echo $head['title']; ?></h1>
 <div id="primary">
+<p>Here you can add, edit, and delete properties in your custom vocabulary. 
+Property labels must be unique. You cannot edit property lables once they've 
+been created, so make sure they're spelled correctly and convey the exact 
+relation you want them to convey.</p>
 <form method="post">
-<?php if (!$this->properties): ?>
-<p>This vocabulary has no properties.</p>
-<?php else: ?>
 <table>
     <thead>
         <tr>
@@ -36,13 +37,12 @@ jQuery(document).ready(function () {
         </tr>
 <?php endforeach; ?>
         <tr class="new-property">
-            <td><?php echo __v()->formText("new_property_label[]", null, null); ?></td>
+            <td><?php echo __v()->formText("new_property_label[]", null, array('size' => 30)); ?></td>
             <td><?php echo __v()->formTextarea("new_property_description[]", null, array('cols' => 50, 'rows' => 2)); ?></td>
             <td></td>
         </tr>
     </tbody>
 </table>
-<?php endif; ?>
 <?php echo __v()->formButton('add_property', 'Add a Property', array('id' => 'add-property')); ?>
 <?php echo __v()->formSubmit('submit_edit_vocabulary', 'Save Custom Vocabulary'); ?>
 </form>
