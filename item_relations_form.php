@@ -11,21 +11,16 @@ jQuery(document).ready(function () {
     });
 });
 </script>
-<div>
-    <div class="item-relations-entry">This Item 
-    <?php echo __v()->formSelect('item_relations_property_id[]', null, array('multiple' => false), $formSelectProperties); ?>
-    Item ID <?php echo __v()->formText('item_relations_item_relation_object_item_id[]', null, array('size' => 8)); ?>
-    </div>
-</div>
-<button type="button" class="item-relations-add-relation">Add Relation</button>
-<?php if ($subjectRelations || $objectRelations): ?>
 <table>
+    <thead>
     <tr>
         <th>Subject</th>
         <th>Relation</th>
         <th>Object</th>
         <th>Delete?</th>
     </tr>
+    </thead>
+    <tbody>
     <?php foreach ($subjectRelations as $subjectRelation): ?>
     <tr>
         <td>This Item</td>
@@ -42,7 +37,12 @@ jQuery(document).ready(function () {
         <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $objectRelation['item_relation_id']; ?>" /></td>
     </tr>
     <?php endforeach; ?>
+    <tr class="item-relations-entry">
+        <td>This Item</td>
+        <td><?php echo __v()->formSelect('item_relations_property_id[]', null, array('multiple' => false), $formSelectProperties); ?></td>
+        <td>Item ID <?php echo __v()->formText('item_relations_item_relation_object_item_id[]', null, array('size' => 8)); ?></td>
+        <td></td>
+    </tr>
+    </tbody>
 </table>
-<?php else: ?>
-<p>This item has no relations.</p>
-<?php endif; ?>
+<button type="button" class="item-relations-add-relation">Add Relation</button>

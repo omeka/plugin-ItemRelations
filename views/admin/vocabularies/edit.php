@@ -16,20 +16,35 @@ jQuery(document).ready(function () {
 <h1><?php echo $head['title']; ?></h1>
 <div id="primary">
 <form method="post">
-<h2>Edit Existing Properties</h2>
 <?php if (!$this->properties): ?>
 <p>This vocabulary has no properties.</p>
 <?php else: ?>
+<table>
+    <thead>
+        <tr>
+            <th>Label</th>
+            <th>Description</th>
+            <th>Delete?</th>
+        </tr>
+    </thead>
+    <tbody>
 <?php foreach ($this->properties as $property): ?>
-<div><?php echo $property->label; ?> <?php echo __v()->formText("property_description[{$property->id}]", $property->description, null); ?><?php echo __v()->formCheckbox("property_delete[{$property->id}]") ?>Delete</div>
+        <tr>
+            <td><?php echo $property->label; ?></td>
+            <td><?php echo __v()->formTextarea("property_description[{$property->id}]", $property->description, array('cols' => 50, 'rows' => 2)); ?></td>
+            <td><?php echo __v()->formCheckbox("property_delete[{$property->id}]") ?></td>
+        </tr>
 <?php endforeach; ?>
+        <tr class="new-property">
+            <td><?php echo __v()->formText("new_property_label[]", null, null); ?></td>
+            <td><?php echo __v()->formTextarea("new_property_description[]", null, array('cols' => 50, 'rows' => 2)); ?></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 <?php endif; ?>
-<h2>Add New Properties</h2>
-<div>
-    <div class="new-property">Label: <?php echo __v()->formText("new_property_label[]", null, null); ?> Description: <?php echo __v()->formText("new_property_description[]", null, null); ?></div>
-</div>
-<?php echo __v()->formButton('add_property', 'Add Property', array('id' => 'add-property')); ?>
-<?php echo __v()->formSubmit('submit_edit_vocabulary', 'Edit Custom Vocabulary'); ?>
+<?php echo __v()->formButton('add_property', 'Add a Property', array('id' => 'add-property')); ?>
+<?php echo __v()->formSubmit('submit_edit_vocabulary', 'Save Custom Vocabulary'); ?>
 </form>
 </div>
 <?php foot(); ?>
