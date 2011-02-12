@@ -27,8 +27,8 @@ add_filter('admin_navigation_main', 'ItemRelationsPlugin::adminNavigationMain');
  */
 function item_relations_display_item_relations(Item $item)
 {
-    $subjectRelations = self::prepareSubjectRelations($item);
-    $objectRelations = self::prepareObjectRelations($item);
+    $subjectRelations = ItemRelationsPlugin::prepareSubjectRelations($item);
+    $objectRelations = ItemRelationsPlugin::prepareObjectRelations($item);
     include 'public_items_show.php';
 }
 

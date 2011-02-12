@@ -45,4 +45,4 @@ jQuery(document).ready(function () {
     </tr>
     </tbody>
 </table>
-<button type="button" class="item-relations-add-relation">Add Relation</button>
+<button type="button" class="item-relations-add-relation">Add a Relation</button>
