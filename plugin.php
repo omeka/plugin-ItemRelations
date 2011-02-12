@@ -20,11 +20,15 @@ add_plugin_hook('item_browse_sql', 'ItemRelationsPlugin::itemBrowseSql');
 add_filter('admin_items_form_tabs', 'ItemRelationsPlugin::adminItemsFormTabs');
 add_filter('admin_navigation_main', 'ItemRelationsPlugin::adminNavigationMain');
 
+/**
+ * Display item relations.
+ * 
+ * @param Item $item
+ */
 function item_relations_display_item_relations(Item $item)
 {
-    $db = get_db();
-    $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
-    $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
+    $subjectRelations = self::prepareSubjectRelations($item);
+    $objectRelations = self::prepareObjectRelations($item);
     include 'public_items_show.php';
 }
 
@@ -182,29 +186,13 @@ class ItemRelationsPlugin
     
     /**
      * Display item relations on the admin items show page.
+     * 
+     * @param Item $item
      */
     public static function adminAppendToItemsShowSecondary($item)
     {
-        $db = get_db();
-        
-        // Prepare the subject relations.
-        $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
-        $subjectRelations = array();
-        foreach ($subjects as $subject) {
-            $subjectRelations[] = array('object_item_id' => $subject->object_item_id, 
-                                        'object_item_title' => self::getItemTitle($subject->object_item_id), 
-                                        'relation_text' => self::getRelationText($subject));
-        }
-        
-        // Prepare the object relations.
-        $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
-        $objectRelations = array();
-        foreach ($objects as $object) {
-            $objectRelations[] = array('subject_item_id' => $object->subject_item_id, 
-                                       'subject_item_title' => self::getItemTitle($object->subject_item_id), 
-                                       'relation_text' => self::getRelationText($object));
-        }
-        
+        $subjectRelations = self::prepareSubjectRelations($item);
+        $objectRelations = self::prepareObjectRelations($item);
         include 'item_relations_secondary.php';
     }
     
@@ -238,29 +226,9 @@ class ItemRelationsPlugin
      */
     public static function itemRelationsFormContent($item)
     {
-        $db = get_db();
-        
         $formSelectProperties = self::getFormSelectProperties();
-        
-        // Prepare the subject relations.
-        $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
-        $subjectRelations = array();
-        foreach ($subjects as $subject) {
-            $subjectRelations[] = array('item_relation_id' => $subject->id, 
-                                        'object_item_id' => $subject->object_item_id, 
-                                        'object_item_title' => self::getItemTitle($subject->object_item_id), 
-                                        'relation_text' => self::getRelationText($subject));
-        }
-        
-        // Prepare the object relations.
-        $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
-        $objectRelations = array();
-        foreach ($objects as $object) {
-            $objectRelations[] = array('item_relation_id' => $object->id, 
-                                       'subject_item_id' => $object->subject_item_id, 
-                                       'subject_item_title' => self::getItemTitle($object->subject_item_id), 
-                                       'relation_text' => self::getRelationText($object));
-        }
+        $subjectRelations = self::prepareSubjectRelations($item);
+        $objectRelations = self::prepareObjectRelations($item);
         
         ob_start();
         include 'item_relations_form.php';
@@ -334,6 +302,46 @@ class ItemRelationsPlugin
             $formSelectProperties[$property->vocabulary_name][$property->id] = $optionValue;
         }
         return $formSelectProperties;
+    }
+    
+    /**
+     * Prepare subject item relations for display.
+     * 
+     * @param Item $item
+     * @return array
+     */
+    public static function prepareSubjectRelations(Item $item)
+    {
+        $db = get_db();
+        $subjects = $db->getTable('ItemRelationsItemRelation')->findBySubjectItemId($item->id);
+        $subjectRelations = array();
+        foreach ($subjects as $subject) {
+            $subjectRelations[] = array('item_relation_id' => $subject->id, 
+                                        'object_item_id' => $subject->object_item_id, 
+                                        'object_item_title' => self::getItemTitle($subject->object_item_id), 
+                                        'relation_text' => self::getRelationText($subject));
+        }
+        return $subjectRelations;
+    }
+    
+    /**
+     * Prepare object item relations for display.
+     * 
+     * @param Item $item
+     * @return array
+     */
+    public static function prepareObjectRelations(Item $item)
+    {
+        $db = get_db();
+        $objects = $db->getTable('ItemRelationsItemRelation')->findByObjectItemId($item->id);
+        $objectRelations = array();
+        foreach ($objects as $object) {
+            $objectRelations[] = array('item_relation_id' => $object->id, 
+                                       'subject_item_id' => $object->subject_item_id, 
+                                       'subject_item_title' => self::getItemTitle($object->subject_item_id), 
+                                       'relation_text' => self::getRelationText($object));
+        }
+        return $objectRelations;
     }
     
     /**
