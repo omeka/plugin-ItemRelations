@@ -39,12 +39,12 @@ relation you want them to convey.</p>
         <tr class="new-property">
             <td><?php echo __v()->formText("new_property_label[]", null, array('size' => 30)); ?></td>
             <td><?php echo __v()->formTextarea("new_property_description[]", null, array('cols' => 50, 'rows' => 2)); ?></td>
-            <td></td>
+            <td><span style="color:#ccc;">n/a</span></td>
         </tr>
     </tbody>
 </table>
 <?php echo __v()->formButton('add_property', 'Add a Property', array('id' => 'add-property')); ?>
-<?php echo __v()->formSubmit('submit_edit_vocabulary', 'Save Custom Vocabulary'); ?>
+<?php echo __v()->formSubmit('submit_edit_vocabulary', 'Submit', array('class' => 'submit submit-medium')); ?>
 </form>
 </div>
 <?php foot(); ?>
