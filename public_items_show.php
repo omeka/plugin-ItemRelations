@@ -1,6 +1,6 @@
 <div id="item-relations-display-item-relations">
     <h2>Item Relations</h2>
-    <?php if (!$subjectRelations && !$subjectRelation): ?>
+    <?php if (!$subjectRelations && !$objectRelations): ?>
     <p>This item has no relations.</p>
     <?php else: ?>
     <table>
