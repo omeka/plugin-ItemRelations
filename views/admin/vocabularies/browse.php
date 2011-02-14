@@ -12,21 +12,17 @@ head($head);
         <th>Description</th>
         <th>Namespace Prefix</th>
         <th>Namespace URI</th>
-        <th></th>
+        <th>Edit</th>
     </tr>
     </thead>
     <tbody>
 <?php foreach ($this->vocabularies as $vocabulary): ?>
     <tr>
-        <td><a href="show/id/<?php echo $vocabulary->id; ?>"><?php echo $vocabulary->name; ?></a></td>
-        <td><?php echo $vocabulary->description; ?></td>
+        <td><a href="<?php echo html_escape($this->url("item-relations/vocabularies/show/id/{$vocabulary->id}")); ?>"><?php echo $vocabulary->name; ?></a></td>
+        <td><?php echo preg_replace('#(https?://\S+)#', '<a href="$1">$1</a>', $vocabulary->description); ?></td>
         <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $vocabulary->namespace_prefix; ?></td>
         <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $vocabulary->namespace_uri; ?></td>
-        <td><?php if ($vocabulary->custom): ?>
-            <form method="post" action="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>">
-                <?php echo __v()->formSubmit('item_relations_edit_vocabulary_submit', 'Edit') ?>
-            </form>
-        <?php endif; ?></td>
+        <td><?php if ($vocabulary->custom): ?><a href="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>">Edit</a><?php else: ?><span style="color:#ccc;">n/a</span><?php endif; ?></td>
     </tr>
 <?php endforeach; ?>
     </tbody>

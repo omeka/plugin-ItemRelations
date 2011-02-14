@@ -5,7 +5,7 @@ head($head);
 <h1><?php echo $head['title']; ?></h1>
 <div id="primary">
 <h2><?php echo $this->vocabulary->name; ?></h2>
-<p><?php echo $this->vocabulary->description; ?></p>
+<p><?php echo preg_replace('#(https?://\S+)#', '<a href="$1">$1</a>', $vocabulary->description); ?></p>
 <?php if (!$this->properties): ?>
 <p>This vocabulary has no properties.<?php if ($this->vocabulary->custom): ?> <a href="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>">Edit this vocabulary.</a><?php endif; ?></p>
 <?php else: ?>
