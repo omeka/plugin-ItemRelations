@@ -3,6 +3,7 @@ $head = array('title' => html_escape('Show Vocabulary Properties'));
 head($head);
 ?>
 <h1><?php echo $head['title']; ?></h1>
+<?php if ($vocabulary->custom): ?><p class="edit-button"><a href="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>" class="edit">Edit Custom Vocabulary</a></p><?php endif; ?>
 <div id="primary">
 <h2><?php echo $this->vocabulary->name; ?></h2>
 <p><?php echo preg_replace('#(https?://\S+)#', '<a href="$1">$1</a>', $vocabulary->description); ?></p>

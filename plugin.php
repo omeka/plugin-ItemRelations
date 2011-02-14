@@ -1,9 +1,4 @@
 <?php
-/*
-Wish List:
-  * elegant selector for object items, instead of item ID; maybe use exhibit plugin?
-  * automate inverse property relations, e.g. replaces/isReplacedBy, part/part of
-*/
 
 // Plugin hooks.
 add_plugin_hook('install', 'ItemRelationsPlugin::install');
@@ -32,8 +27,14 @@ function item_relations_display_item_relations(Item $item)
     include 'public_items_show.php';
 }
 
+/**
+ * Class containing plugin hook callback and helper methods.
+ */
 class ItemRelationsPlugin
 {
+    const DEFAULT_PUBLIC_APPEND_TO_ITEMS_SHOW = 1;
+    const DEFAULT_RELATION_FORMAT = 'local_part';
+    
     /**
      * Install the plugin.
      */
@@ -127,6 +128,15 @@ class ItemRelationsPlugin
      */
     public static function configForm()
     {
+        $publicAppendToItemsShow = get_option('item_relations_public_append_to_items_show');
+        if (null == $publicAppendToItemsShow) {
+            $publicAppendToItemsShow = self::DEFAULT_PUBLIC_APPEND_TO_ITEMS_SHOW;
+        }
+        
+        $relationFormat = get_option('item_relations_relation_format');
+        if (null == $relationFormat) {
+            $relationFormat = self::DEFAULT_RELATION_FORMAT;
+        }
         include 'config_form.php';
     }
     
@@ -139,6 +149,8 @@ class ItemRelationsPlugin
     {
         set_option('item_relations_public_append_to_items_show', 
                    $params['item_relations_public_append_to_items_show']);
+        set_option('item_relations_relation_format', 
+                   $params['item_relations_relation_format']);
     }
     
     /**
@@ -369,11 +381,18 @@ class ItemRelationsPlugin
      */
     public static function getRelationText(ItemRelationsItemRelation $itemRelation)
     {
-        if ($itemRelation->property_local_part) {
+        $relationFormat = get_option('item_relations_relation_format');
+        $hasPrefixLocalPart = (bool) $itemRelation->property_local_part;
+        $hasLabel = (bool) $itemRelation->property_label;
+        
+        if ('label' == $relationFormat && $hasLabel) {
+            $relationText = $itemRelation->property_label;
+        } else if ('prefix_local_part' == $relationFormat && $hasPrefixLocalPart) {
             $relationText = $itemRelation->vocabulary_namespace_prefix . ':' . $itemRelation->property_local_part;
         } else {
             $relationText = $itemRelation->property_label;
         }
+        
         return $relationText;
     }
 }
