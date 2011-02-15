@@ -1,5 +1,5 @@
 <?php
-$head = array('title' => html_escape('Browse Vocabularies'));
+$head = array('title' => 'Browse Vocabularies');
 head($head);
 ?>
 <h1><?php echo $head['title']; ?></h1>

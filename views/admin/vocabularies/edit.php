@@ -1,5 +1,5 @@
 <?php
-$head = array('title' => html_escape('Edit Custom Vocabulary'));
+$head = array('title' => 'Edit Custom Vocabulary');
 head($head);
 ?>
 <script type="text/javascript">

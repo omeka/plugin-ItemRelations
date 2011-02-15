@@ -1,5 +1,5 @@
 <?php
-$head = array('title' => html_escape('Show Vocabulary Properties'));
+$head = array('title' => 'Show Vocabulary Properties');
 head($head);
 ?>
 <h1><?php echo $head['title']; ?></h1>
