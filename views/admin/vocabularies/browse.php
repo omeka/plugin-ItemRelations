@@ -9,6 +9,7 @@ head($head);
     <thead>
     <tr>
         <th>Name</th>
+        <th></th>
         <th>Description</th>
         <th>Namespace Prefix</th>
         <th>Namespace URI</th>
@@ -17,8 +18,9 @@ head($head);
     <tbody>
 <?php foreach ($this->vocabularies as $vocabulary): ?>
     <tr>
-        <td><a href="<?php echo html_escape($this->url("item-relations/vocabularies/show/id/{$vocabulary->id}")); ?>"><?php echo $vocabulary->name; ?></a></td>
-        <td><?php echo preg_replace('#(https?://\S+)#', '<a href="$1">$1</a>', $vocabulary->description); ?></td>
+        <td><?php echo $vocabulary->name; ?></td>
+        <td><a href="<?php echo html_escape($this->url("item-relations/vocabularies/show/id/{$vocabulary->id}")); ?>">Show</a></td>
+        <td><?php echo $vocabulary->description; ?></td>
         <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $vocabulary->namespace_prefix; ?></td>
         <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $vocabulary->namespace_uri; ?></td>
     </tr>

@@ -331,7 +331,8 @@ class ItemRelationsPlugin
             $subjectRelations[] = array('item_relation_id' => $subject->id, 
                                         'object_item_id' => $subject->object_item_id, 
                                         'object_item_title' => self::getItemTitle($subject->object_item_id), 
-                                        'relation_text' => self::getRelationText($subject));
+                                        'relation_text' => self::getRelationText($subject), 
+                                        'relation_description' => $subject->property_description);
         }
         return $subjectRelations;
     }
@@ -351,7 +352,8 @@ class ItemRelationsPlugin
             $objectRelations[] = array('item_relation_id' => $object->id, 
                                        'subject_item_id' => $object->subject_item_id, 
                                        'subject_item_title' => self::getItemTitle($object->subject_item_id), 
-                                       'relation_text' => self::getRelationText($object));
+                                       'relation_text' => self::getRelationText($object), 
+                                       'relation_description' => $object->property_description);
         }
         return $objectRelations;
     }

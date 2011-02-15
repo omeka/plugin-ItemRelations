@@ -4,29 +4,20 @@
     <p>This item has no relations.</p>
     <?php else: ?>
     <table>
-        <thead>
-        <tr>
-            <th>Subject</th>
-            <th>Relation</th>
-            <th>Object</th>
-        </tr>
-        </thead>
-        <tbody>
         <?php foreach ($subjectRelations as $subjectRelation): ?>
         <tr>
             <td>This Item</td>
-            <td><?php echo $subjectRelation['relation_text']; ?></td>
-            <td><a href="<?php echo uri('items/show/' . $subjectRelation['object_item_id']); ?>"><?php echo $subjectRelation['object_item_title']; ?></a></td>
+            <td><span title="<?php echo $subjectRelation['relation_description']; ?>"><?php echo $subjectRelation['relation_text']; ?></span></td>
+            <td>Item: <a href="<?php echo uri('items/show/' . $subjectRelation['object_item_id']); ?>"><?php echo $subjectRelation['object_item_title']; ?></a></td>
         </tr>
         <?php endforeach; ?>
         <?php foreach ($objectRelations as $objectRelation): ?>
         <tr>
-            <td><a href="<?php echo uri('items/show/' . $objectRelation['subject_item_id']); ?>"><?php echo $objectRelation['subject_item_title']; ?></a></td>
-            <td><?php echo $objectRelation['relation_text']; ?></td>
+            <td>Item: <a href="<?php echo uri('items/show/' . $objectRelation['subject_item_id']); ?>"><?php echo $objectRelation['subject_item_title']; ?></a></td>
+            <td><span title="<?php echo $objectRelation['relation_description']; ?>"><?php echo $objectRelation['relation_text']; ?></span></td>
             <td>This Item</td>
         </tr>
         <?php endforeach; ?>
-        </tbody>
     </table>
     <?php endif; ?>
 </div>
