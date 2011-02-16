@@ -110,7 +110,7 @@ return $formalVocabularies = array(
                 'description' => 'Relates a review document to a reviewed thing (resource, item, etc.).'
             ), 
             array(
-                'local_part' => 'reproducedId', 
+                'local_part' => 'reproducedIn', 
                 'label' => 'reproduced in', 
                 'description' => 'The resource in which another resource is reproduced.'
             ), 
