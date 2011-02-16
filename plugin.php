@@ -32,8 +32,9 @@ function item_relations_display_item_relations(Item $item)
  */
 class ItemRelationsPlugin
 {
+    // Configuration defaults.
     const DEFAULT_PUBLIC_APPEND_TO_ITEMS_SHOW = 1;
-    const DEFAULT_RELATION_FORMAT = 'local_part';
+    const DEFAULT_RELATION_FORMAT = 'prefix_local_part';
     
     /**
      * Install the plugin.
@@ -100,7 +101,7 @@ class ItemRelationsPlugin
         // Install a custom vocabulary.
         $customVocabulary = new ItemRelationsVocabulary;
         $customVocabulary->name = 'Custom';
-        $customVocabulary->description = 'Custom relations defined for this Omeka instance.';
+        $customVocabulary->description = 'Custom vocabulary containing relations defined for this Omeka instance.';
         $customVocabulary->namespace_prefix = ''; // cannot be NULL
         $customVocabulary->namespace_uri = null;
         $customVocabulary->custom = 1;
@@ -121,6 +122,7 @@ class ItemRelationsPlugin
         $db->query($sql);
         
         delete_option('item_relations_public_append_to_items_show');
+        delete_option('item_relations_relation_format');
     }
     
     /**

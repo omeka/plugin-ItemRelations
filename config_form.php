@@ -9,6 +9,6 @@
     <?php echo __v()->formLabel('item_relations_relation_format', 'Relation Format'); ?>
     <div class="inputs">
         <?php echo __v()->formSelect('item_relations_relation_format', $relationFormat, null, array('prefix_local_part' => 'prefix:localPart', 'label' => 'label')); ?>
-        <p class="explanation">Select the format you'd prefer to display an item's relations. If one is unavailable the other will be used.</p>
+        <p class="explanation">Select the format of an item's relations that you'd prefer to show. If one is unavailable the other will be used.</p>
     </div>
 </div>
