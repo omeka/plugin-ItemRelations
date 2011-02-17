@@ -11,6 +11,7 @@ jQuery(document).ready(function () {
     });
 });
 </script>
+<p>Here you can relate this item to another item and delete existing relations. For descriptions of the relations go to the <a href="<?php echo uri('item-relations/vocabularies/'); ?>">Browse Vocabularies</a> page. Invalid item IDs will be ignored.</p>
 <table>
     <thead>
     <tr>
