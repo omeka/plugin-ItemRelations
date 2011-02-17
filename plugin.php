@@ -298,11 +298,9 @@ class ItemRelationsPlugin
         $properties = $db->getTable('ItemRelationsProperty')->findAllWithVocabularyData();
         $formSelectProperties = array('' => 'Select below...');
         foreach ($properties as $property) {
-            if ($property->local_part) {
-                $optionValue = $property->local_part;
-            } else {
-                $optionValue = $property->label;
-            }
+            $optionValue = self::getRelationText($property->vocabulary_namespace_prefix, 
+                                                 $property->local_part, 
+                                                 $property->label);
             $formSelectProperties[$property->vocabulary_name][$property->id] = $optionValue;
         }
         return $formSelectProperties;
@@ -323,7 +321,9 @@ class ItemRelationsPlugin
             $subjectRelations[] = array('item_relation_id' => $subject->id, 
                                         'object_item_id' => $subject->object_item_id, 
                                         'object_item_title' => self::getItemTitle($subject->object_item_id), 
-                                        'relation_text' => self::getRelationText($subject), 
+                                        'relation_text' => self::getRelationText($subject->vocabulary_namespace_prefix, 
+                                                                                 $subject->property_local_part, 
+                                                                                 $subject->property_label), 
                                         'relation_description' => $subject->property_description);
         }
         return $subjectRelations;
@@ -344,7 +344,9 @@ class ItemRelationsPlugin
             $objectRelations[] = array('item_relation_id' => $object->id, 
                                        'subject_item_id' => $object->subject_item_id, 
                                        'subject_item_title' => self::getItemTitle($object->subject_item_id), 
-                                       'relation_text' => self::getRelationText($object), 
+                                       'relation_text' => self::getRelationText($object->vocabulary_namespace_prefix, 
+                                                                                $object->property_local_part, 
+                                                                                $object->property_label), 
                                        'relation_description' => $object->property_description);
         }
         return $objectRelations;
@@ -366,25 +368,28 @@ class ItemRelationsPlugin
     }
     
     /**
-     * Return an item relation's relation/predicate text.
+     * Return an item relation's relation/predicate text, determined by the 
+     * relation format configuration.
      * 
-     * @param ItemRelationsItemRelation $itemRelation An object found via 
-     * ItemRelationsItemRelation::findBySubjectItemId() or 
-     * ItemRelationsItemRelation::findByObjectItemId.
+     * @param string $namespacePrefix
+     * @param string $localPart
+     * @param string $label
      * @return string
      */
-    public static function getRelationText(ItemRelationsItemRelation $itemRelation)
+    public static function getRelationText($namespacePrefix, $localPart, $label)
     {
-        $relationFormat = get_option('item_relations_relation_format');
-        $hasPrefixLocalPart = (bool) $itemRelation->property_local_part;
-        $hasLabel = (bool) $itemRelation->property_label;
+        $hasPrefixLocalPart = (bool) $namespacePrefix && (bool) $localPart;
+        $hasLabel = (bool) $label;
         
-        if ('label' == $relationFormat && $hasLabel) {
-            $relationText = $itemRelation->property_label;
-        } else if ('prefix_local_part' == $relationFormat && $hasPrefixLocalPart) {
-            $relationText = $itemRelation->vocabulary_namespace_prefix . ':' . $itemRelation->property_local_part;
-        } else {
-            $relationText = $itemRelation->property_label;
+        switch (get_option('item_relations_relation_format')) {
+            case 'prefix_local_part';
+                $relationText = $hasPrefixLocalPart ? "$namespacePrefix:$localPart" : $label;
+                break;
+            case 'label':
+                $relationText = $hasLabel ? $label: "$namespacePrefix:$localPart";
+                break;
+            default:
+                $relationText = '[unknown]';
         }
         
         return $relationText;
