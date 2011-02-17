@@ -228,18 +228,6 @@ class ItemRelationsPlugin
      */
     public static function adminItemsFormTabs($tabs, $item)
     {
-        $tabs['Item Relations'] = self::itemRelationsFormContent($item);
-        return $tabs;
-    }
-    
-    /**
-     * Return the content of the "Item Relations" form.
-     * 
-     * @param Item $item
-     * @return string
-     */
-    public static function itemRelationsFormContent($item)
-    {
         $formSelectProperties = self::getFormSelectProperties();
         $subjectRelations = self::prepareSubjectRelations($item);
         $objectRelations = self::prepareObjectRelations($item);
@@ -248,7 +236,9 @@ class ItemRelationsPlugin
         include 'item_relations_form.php';
         $content = ob_get_contents();
         ob_end_clean();
-        return $content;
+        
+        $tabs['Item Relations'] = $content;
+        return $tabs;
     }
     
     /**
