@@ -10,6 +10,8 @@ add_plugin_hook('admin_append_to_items_show_secondary', 'ItemRelationsPlugin::ad
 add_plugin_hook('public_append_to_items_show', 'ItemRelationsPlugin::publicAppendToItemsShow');
 add_plugin_hook('admin_append_to_advanced_search', 'ItemRelationsPlugin::adminAppendToAdvancedSearch');
 add_plugin_hook('item_browse_sql', 'ItemRelationsPlugin::itemBrowseSql');
+add_plugin_hook('admin_append_to_items_batch_edit_form', 'ItemRelationsPlugin::adminAppendToItemsBatchEditForm');
+add_plugin_hook('items_batch_edit_custom', 'ItemRelationsPlugin::itemsBatchEditCustom');
 
 // Plugin filters.
 add_filter('admin_items_form_tabs', 'ItemRelationsPlugin::adminItemsFormTabs');
@@ -171,29 +173,27 @@ class ItemRelationsPlugin
         
         // Save item relations.
         foreach ($post['item_relations_property_id'] as $key => $propertyId) {
-            if (!is_numeric($propertyId)) {
+            
+            $insertedItemRelation = self::insertItemRelation(
+                $record, 
+                $propertyId, 
+                $post['item_relations_item_relation_object_item_id'][$key]
+            );
+            if (!$insertedItemRelation) {
                 continue;
             }
-            
-            $objectItem = $db->getTable('Item')->find($post['item_relations_item_relation_object_item_id'][$key]);
-            
-            // Don't save the relation if the object item doesn't exist.
-            if (!$objectItem) {
-                continue;
-            }
-            
-            $itemRelation = new ItemRelationsItemRelation;
-            $itemRelation->subject_item_id = $record->id;
-            $itemRelation->property_id = $propertyId;
-            $itemRelation->object_item_id = $objectItem->id;
-            $itemRelation->save();
         }
         
         // Delete item relations.
         if (isset($post['item_relations_item_relation_delete'])) {
             foreach ($post['item_relations_item_relation_delete'] as $itemRelationId) {
                 $itemRelation = $db->getTable('ItemRelationsItemRelation')->find($itemRelationId);
-                $itemRelation->delete();
+                // When an item is related to itself, deleting both relations 
+                // simultaniously will result in an error. Prevent this by 
+                // checking if the item relation exists prior to deletion.
+                if ($itemRelation) {
+                    $itemRelation->delete();
+                }
             }
         }
     }
@@ -285,6 +285,48 @@ class ItemRelationsPlugin
                    ->where('irir.property_id = ?', $_GET['item_relations_property_id']);
         }
         return $select;
+    }
+    
+    /**
+     * Add custom fields to the item batch edit form.
+     */
+    public static function adminAppendToItemsBatchEditForm()
+    {
+        $formSelectProperties = self::getFormSelectProperties();
+?>
+<fieldset id="item-fields" style="width: 70%; margin-bottom:2em;">
+<legend>Items Relation</legend>
+<table>
+    <thead>
+    <tr>
+        <th>Subjects</th>
+        <th>Relation</th>
+        <th>Object</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>These Items</td>
+        <td><?php echo __v()->formSelect('custom[item_relations_property_id]', null, array('multiple' => false), $formSelectProperties); ?></td>
+        <td>Item ID <?php echo __v()->formText('custom[item_relations_item_relation_object_item_id]', null, array('size' => 8)); ?></td>
+    </tr>
+    </tbody>
+</table>
+</fieldset>
+<?php
+    }
+    
+    /**
+     * Process the item batch edit form.
+     * 
+     * @param Item $item
+     * @param array $custom
+     */
+    public static function itemsBatchEditCustom($item, $custom)
+    {
+        self::insertItemRelation($item, 
+                                 $custom['item_relations_property_id'], 
+                                 $custom['item_relations_item_relation_object_item_id']);
     }
     
     /**
@@ -393,5 +435,46 @@ class ItemRelationsPlugin
         }
         
         return $relationText;
+    }
+    
+    /**
+     * Insert an item relation.
+     * 
+     * @param Item|int $subjectItem
+     * @param int $propertyId
+     * @param Item|int $objectItem
+     * @return bool True: success; false: unsuccessful
+     */
+    public static function insertItemRelation($subjectItem, $propertyId, $objectItem)
+    {
+        $db = get_db();
+        
+        // Only numeric property IDs are valid.
+        if (!is_numeric($propertyId)) {
+            return false;
+        }
+        
+        // Set the subject item.
+        if (!($subjectItem instanceOf Item)) {
+            $subjectItem = $db->getTable('Item')->find($subjectItem);
+        }
+        
+        // Set the object item.
+        if (!($objectItem instanceOf Item)) {
+            $objectItem = $db->getTable('Item')->find($objectItem);
+        }
+        
+        // Don't save the relation if the subject or object items don't exist.
+        if (!$subjectItem || !$objectItem) {
+            return false;
+        }
+        
+        $itemRelation = new ItemRelationsItemRelation;
+        $itemRelation->subject_item_id = $subjectItem->id;
+        $itemRelation->property_id = $propertyId;
+        $itemRelation->object_item_id = $objectItem->id;
+        $itemRelation->save();
+        
+        return true;
     }
 }
