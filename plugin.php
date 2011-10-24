@@ -12,6 +12,7 @@ add_plugin_hook('admin_append_to_advanced_search', 'ItemRelationsPlugin::adminAp
 add_plugin_hook('item_browse_sql', 'ItemRelationsPlugin::itemBrowseSql');
 add_plugin_hook('admin_append_to_items_batch_edit_form', 'ItemRelationsPlugin::adminAppendToItemsBatchEditForm');
 add_plugin_hook('items_batch_edit_custom', 'ItemRelationsPlugin::itemsBatchEditCustom');
+add_plugin_hook('define_acl', 'ItemRelationsPlugin::defineAcl');
 
 // Plugin filters.
 add_filter('admin_items_form_tabs', 'ItemRelationsPlugin::adminItemsFormTabs');
@@ -476,5 +477,12 @@ class ItemRelationsPlugin
         $itemRelation->save();
         
         return true;
+    }
+    
+    public static function defineAcl($acl)
+    {
+        $acl->loadResourceList(array('ItemRelations_Vocabularies' => array(
+            'index', 'browse', 'show', 'edit'
+        )));
     }
 }
