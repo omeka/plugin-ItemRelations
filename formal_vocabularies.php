@@ -81,6 +81,141 @@ return $formalVocabularies = array(
                 'label' => 'Source', 
                 'description' => 'A related resource from which the described resource is derived.'
             ), 
+            array(
+                'local_part' => 'abstract', 
+                'label' => 'Abstract', 
+                'description' => 'A summary of the resource.'
+            ), 
+            array(
+                'local_part' => 'accessRights', 
+                'label' => 'Access Rights', 
+                'description' => 'Information about who can access the resource or an indication of its security status.'
+            ), 
+            array(
+                'local_part' => 'accrualMethod', 
+                'label' => 'Accrual Method', 
+                'description' => 'The method by which items are added to a collection.'
+            ), 
+            array(
+                'local_part' => 'accrualPeriodicity', 
+                'label' => 'Accrual Periodicity', 
+                'description' => 'The frequency with which items are added to a collection.'
+            ), 
+            array(
+                'local_part' => 'accrualPolicy', 
+                'label' => 'Accrual Policy', 
+                'description' => 'The policy governing the addition of items to a collection.'
+            ), 
+            array(
+                'local_part' => 'audience', 
+                'label' => 'Audience', 
+                'description' => 'A class of entity for whom the resource is intended or useful.'
+            ), 
+            array(
+                'local_part' => 'contributor', 
+                'label' => 'Contributor', 
+                'description' => 'An entity responsible for making contributions to the resource.'
+            ), 
+            array(
+                'local_part' => 'coverage', 
+                'label' => 'Coverage', 
+                'description' => 'The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.'
+            ), 
+            array(
+                'local_part' => 'creator', 
+                'label' => 'Creator', 
+                'description' => 'An entity primarily responsible for making the resource.'
+            ), 
+            array(
+                'local_part' => 'description', 
+                'label' => 'Description', 
+                'description' => 'An account of the resource.'
+            ), 
+            array(
+                'local_part' => 'educationLevel', 
+                'label' => 'Audience Education Level', 
+                'description' => 'A class of entity, defined in terms of progression through an educational or training context, for which the described resource is intended.'
+            ), 
+            array(
+                'local_part' => 'extent', 
+                'label' => 'Extent', 
+                'description' => 'The size or duration of the resource.'
+            ), 
+            array(
+                'local_part' => 'format', 
+                'label' => 'Format', 
+                'description' => 'The file format, physical medium, or dimensions of the resource.'
+            ), 
+            array(
+                'local_part' => 'instructionalMethod', 
+                'label' => 'Instructional Method', 
+                'description' => 'A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.'
+            ), 
+            array(
+                'local_part' => 'language', 
+                'label' => 'Language', 
+                'description' => 'A language of the resource.'
+            ), 
+            array(
+                'local_part' => 'license', 
+                'label' => 'License', 
+                'description' => 'A legal document giving official permission to do something with the resource.'
+            ), 
+            array(
+                'local_part' => 'mediator', 
+                'label' => 'Mediator', 
+                'description' => 'An entity that mediates access to the resource and for whom the resource is intended or useful.'
+            ), 
+            array(
+                'local_part' => 'medium', 
+                'label' => 'Medium', 
+                'description' => 'The material or physical carrier of the resource.'
+            ), 
+            array(
+                'local_part' => 'provenance', 
+                'label' => 'Provenance', 
+                'description' => 'A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.'
+            ), 
+            array(
+                'local_part' => 'publisher', 
+                'label' => 'Publisher', 
+                'description' => 'An entity responsible for making the resource available.'
+            ), 
+            array(
+                'local_part' => 'rights', 
+                'label' => 'Rights', 
+                'description' => 'Information about rights held in and over the resource.'
+            ), 
+            array(
+                'local_part' => 'rightsHolder', 
+                'label' => 'Rights Holder', 
+                'description' => 'A person or organization owning or managing rights over the resource.'
+            ), 
+            array(
+                'local_part' => 'spatial', 
+                'label' => 'Spatial Coverage', 
+                'description' => 'Spatial characteristics of the resource.'
+            ), 
+            array(
+                'local_part' => 'subject', 
+                'label' => 'Subject', 
+                'description' => 'The topic of the resource.'
+            ), 
+            array(
+                'local_part' => 'tableOfContents', 
+                'label' => 'Table Of Contents', 
+                'description' => 'A list of subunits of the resource.'
+            ), 
+            array(
+                'local_part' => 'temporal', 
+                'label' => 'Temporal Coverage', 
+                'description' => 'Temporal characteristics of the resource.'
+            ), 
+            array(
+                'local_part' => 'type', 
+                'label' => 'Type', 
+                'description' => 'The nature or genre of the resource.'
+            ), 
         )
     ), 
     array(

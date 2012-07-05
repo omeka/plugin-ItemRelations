@@ -3,6 +3,7 @@
 // Plugin hooks.
 add_plugin_hook('install', 'ItemRelationsPlugin::install');
 add_plugin_hook('uninstall', 'ItemRelationsPlugin::uninstall');
+add_plugin_hook('upgrade', 'ItemRelationsPlugin::upgrade');
 add_plugin_hook('config_form', 'ItemRelationsPlugin::configForm');
 add_plugin_hook('config', 'ItemRelationsPlugin::config');
 add_plugin_hook('after_save_form_record', 'ItemRelationsPlugin::afterSaveFormRecord');
@@ -126,6 +127,47 @@ class ItemRelationsPlugin
         
         delete_option('item_relations_public_append_to_items_show');
         delete_option('item_relations_relation_format');
+    }
+    
+    public static function upgrade($oldVersion, $newVersion)
+    {
+        $db = get_db();
+        switch ($oldVersion) {
+            case '1.0':
+            case '1.1':
+                $sql = "
+                INSERT INTO `{$db->prefix}item_relations_properties` 
+                (`vocabulary_id`, `local_part`, `label`, `description`) 
+                VALUES 
+                (1, 'abstract', 'Abstract', 'A summary of the resource.'), 
+                (1, 'accessRights', 'Access Rights', 'Information about who can access the resource or an indication of its security status.'), 
+                (1, 'accrualMethod', 'Accrual Method', 'The method by which items are added to a collection.'), 
+                (1, 'accrualPeriodicity', 'Accrual Periodicity', 'The frequency with which items are added to a collection.'), 
+                (1, 'accrualPolicy', 'Accrual Policy', 'The policy governing the addition of items to a collection.'), 
+                (1, 'audience', 'Audience', 'A class of entity for whom the resource is intended or useful.'), 
+                (1, 'contributor', 'Contributor', 'An entity responsible for making contributions to the resource.'), 
+                (1, 'coverage', 'Coverage', 'The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.'), 
+                (1, 'creator', 'Creator', 'An entity primarily responsible for making the resource.'), 
+                (1, 'description', 'Description', 'An account of the resource.'), 
+                (1, 'educationLevel', 'Audience Education Level', 'A class of entity, defined in terms of progression through an educational or training context, for which the described resource is intended.'), 
+                (1, 'extent', 'Extent', 'The size or duration of the resource.'), 
+                (1, 'format', 'Format', 'The file format, physical medium, or dimensions of the resource.'), 
+                (1, 'instructionalMethod', 'Instructional Method', 'A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.'), 
+                (1, 'language', 'Language', 'A language of the resource.'), 
+                (1, 'license', 'License', 'A legal document giving official permission to do something with the resource.'), 
+                (1, 'mediator', 'Mediator', 'An entity that mediates access to the resource and for whom the resource is intended or useful.'), 
+                (1, 'medium', 'Medium', 'The material or physical carrier of the resource.'), 
+                (1, 'provenance', 'Provenance', 'A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.'), 
+                (1, 'publisher', 'Publisher', 'An entity responsible for making the resource available.'), 
+                (1, 'rights', 'Rights', 'Information about rights held in and over the resource.'), 
+                (1, 'rightsHolder', 'Rights Holder', 'A person or organization owning or managing rights over the resource.'), 
+                (1, 'spatial', 'Spatial Coverage', 'Spatial characteristics of the resource.'), 
+                (1, 'subject', 'Subject', 'The topic of the resource.'), 
+                (1, 'tableOfContents', 'Table Of Contents', 'A list of subunits of the resource.'), 
+                (1, 'temporal', 'Temporal Coverage', 'Temporal characteristics of the resource.'), 
+                (1, 'type', 'Type', 'The nature or genre of the resource.')";
+                $db->query($sql);
+        }
     }
     
     /**
