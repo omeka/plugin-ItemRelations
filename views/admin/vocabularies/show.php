@@ -1,27 +1,34 @@
 <?php
-$head = array('title' => 'Show Vocabulary Properties');
-head($head);
+echo head(array('title' => __('Vocabulary Properties')));
+$vocabulary = $this->item_relations_vocabulary;
+$properties = $vocabulary->getProperties();
 ?>
-<h1><?php echo $head['title']; ?></h1>
-<?php if ($this->vocabulary->custom): ?><p class="edit-button"><a href="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>" class="edit">Edit Custom Vocabulary</a></p><?php endif; ?>
-<div id="primary">
-<h2><?php echo $this->vocabulary->name; ?></h2>
-<p><?php echo preg_replace('#(https?://\S+)#', '<a href="$1">$1</a>', $vocabulary->description); ?></p>
-<?php if (!$this->properties): ?>
-<p>This vocabulary has no properties.<?php if ($this->vocabulary->custom): ?> <a href="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>">Why don't you add some?</a><?php endif; ?></p>
+<?php if ($vocabulary->custom): ?>
+<a class="button" href="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>" class="edit"><?php echo __('Edit Vocabulary'); ?></a>
+<?php endif; ?>
+
+<h2><?php echo $vocabulary->name; ?></h2>
+<p><?php echo url_to_link(html_escape($vocabulary->description)); ?></p>
+<?php if (!$properties): ?>
+<p>
+    <?php echo __('This vocabulary has no properties.'); ?>
+    <?php if ($vocabulary->custom): ?>
+    <a href="<?php echo html_escape($this->url("item-relations/vocabularies/edit/id/{$vocabulary->id}")); ?>"><?php echo __("Why don't you add some?"); ?></a>
+    <?php endif; ?>
+</p>
 <?php else: ?>
 <table>
     <thead>
     <tr>
-        <th>Local Part</th>
-        <th>Label</th>
-        <th>Description</th>
+        <th><?php echo __('Local Part'); ?></th>
+        <th><?php echo __('Label'); ?></th>
+        <th><?php echo __('Description'); ?></th>
     </tr>
     </thead>
     <tbody>
-<?php foreach ($this->properties as $property): ?>
+<?php foreach ($properties as $property): ?>
     <tr>
-        <td><?php echo $this->vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $property->local_part; ?></td>
+        <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $property->local_part; ?></td>
         <td><?php echo $property->label; ?></td>
         <td><?php echo $property->description; ?></td>
     </tr>
@@ -29,5 +36,4 @@ head($head);
     </tbody>
 </table>
 <?php endif; ?>
-</div>
-<?php foot(); ?>
+<?php echo foot(); ?>

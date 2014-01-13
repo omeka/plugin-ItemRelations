@@ -1,59 +1,72 @@
 <?php
-class ItemRelations_VocabulariesController extends Omeka_Controller_Action
+/**
+ * Item Relations
+ * @copyright Copyright 2010-2014 Roy Rosenzweig Center for History and New Media
+ * @license http://www.gnu.org/licenses/gpl-3.0.txt GNU GPLv3
+ */
+
+/**
+ * Vocabularies controller.
+ */
+class ItemRelations_VocabulariesController extends Omeka_Controller_AbstractActionController
 {
-    public function indexAction()
-    {        
-        $this->redirect->gotoSimple('browse');
-        return;
-    }
-    
-    public function browseAction()
+    /**
+     * Initialize the controller before each request.
+     *
+     * Set ItemRelationsVocabulary as the model for the controller.
+     */
+    public function init()
     {
-        $vocabularies = $this->getTable('ItemRelationsVocabulary')->findAllCustomFirst();
-        $this->view->vocabularies = $vocabularies;
+        $this->_helper->db->setDefaultModelName('ItemRelationsVocabulary');
     }
-    
-    public function showAction()
+
+    /**
+     * Dummy add action.
+     *
+     * Vocabularies cannot be added through the UI.
+     */
+    public function addAction()
     {
-        $vocabularyId = $this->_getParam('id');
-        
-        $vocabulary = $this->getTable('ItemRelationsVocabulary')->find($vocabularyId);
-        $properties = $this->getTable('ItemRelationsProperty')->findByVocabularyId($vocabularyId);
-        
-        $this->view->vocabulary = $vocabulary;
-        $this->view->properties = $properties;
+        throw new Omeka_Controller_Exception_404;
     }
-    
+
+    /**
+     * Edit action.
+     */
     public function editAction()
     {
-        $vocabularyId = $this->_getParam('id');
+        $vocabulary = $this->_helper->db->findById();
         
         // Only custom vocabularies can be edited.
-        $vocabulary = $this->getTable('ItemRelationsVocabulary')->find($vocabularyId);
         if (!$vocabulary->custom) {
-            $this->redirect->gotoSimple('browse');
+            throw new Omeka_Controller_Exception_404;
         }
         
         // Handle edit vocabulary form.
-        if ($this->_getParam('submit_edit_vocabulary')) {
-            
-            $this->_handleEditVocabularyForm($vocabularyId);
+        if ($this->getRequest()->isPost()) {
+            $this->_handleEditVocabularyForm($vocabulary->id);
             
             // Redirect to browse.
-            $this->flashSuccess('The vocabulary was successfully edited.');
-            $this->redirect->gotoSimple('browse');
+            $this->_helper->flashMessenger(__('The vocabulary was successfully edited.'), 'success');
+            $this->_helper->redirector('browse');
+            return;
         }
         
-        $properties = $this->getTable('ItemRelationsProperty')->findByVocabularyId($vocabularyId);
+        $properties = $vocabulary->getProperties();
         $this->view->properties = $properties;
     }
-    
+
+    /**
+     * Actually alter and save the vocabulary with the request data.
+     * 
+     * @param int $vocabularyId
+     */
     protected function _handleEditVocabularyForm($vocabularyId)
     {
         // Edit existing properties.
         $propertyDescriptions = $this->_getParam('property_description');
         foreach ($propertyDescriptions as $propertyId => $propertyDescription) {
-            $property = $this->getTable('ItemRelationsProperty')->find($propertyId);
+            $property = $this->_helper->db->getTable('ItemRelationsProperty')->find($propertyId);
             $property->description = $propertyDescription;
             $property->save();
         }
@@ -71,7 +84,7 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_Action
             }
             
             // Labels must be unique.
-            if ($this->getTable('ItemRelationsProperty')->findByLabel($newPropertyLabel)) {
+            if ($this->_helper->db->getTable('ItemRelationsProperty')->findByLabel($newPropertyLabel)) {
                 continue;
             }
             
@@ -87,7 +100,7 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_Action
         $propertyDeletes = $this->_getParam('property_delete');
         foreach ($propertyDeletes as $propertyId => $propertyDelete) {
             if ($propertyDelete) {
-                $this->getTable('ItemRelationsProperty')->find($propertyId)->delete();
+                $this->_helper->db->getTable('ItemRelationsProperty')->find($propertyId)->delete();
             }
         }
     }
