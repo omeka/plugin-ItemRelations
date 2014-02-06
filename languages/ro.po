@@ -1,0 +1,153 @@
+# Translation for the Exhibit Builder plugin for Omeka.
+# Copyright (C) 2014 Roy Rosenzweig Center for History and New Media
+# This file is distributed under the same license as the Omeka package.
+# 
+# Translators:
+# Nicolaie Constantinescu <kosson@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Omeka\n"
+"Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
+"POT-Creation-Date: 2014-01-13 12:59-0500\n"
+"PO-Revision-Date: 2014-01-14 08:56+0000\n"
+"Last-Translator: Nicolaie Constantinescu <kosson@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/omeka/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ItemRelationsPlugin.php:357 ItemRelationsPlugin.php:407
+#: views/admin/common/item-relations-show.php:2
+#: views/public/common/item-relations-show.php:2
+#: views/shared/common/item-relations-advanced-search.php:3
+msgid "Item Relations"
+msgstr "Relaționarea resurselor"
+
+#: ItemRelationsPlugin.php:361
+msgid "Subjects"
+msgstr "Subiecte"
+
+#: ItemRelationsPlugin.php:363 item_relations_form.php:17
+#: views/shared/common/item-relations-advanced-search.php:17
+msgid "Object"
+msgstr "Obiect"
+
+#: ItemRelationsPlugin.php:368
+msgid "These Items"
+msgstr "Folosește aceste resurse"
+
+#: ItemRelationsPlugin.php:371 item_relations_form.php:41
+msgid "Item ID"
+msgstr "ID-ul resursei"
+
+#: config_form.php:3
+msgid "Append to Public Items Show"
+msgstr "Adăugă pe Panoul Resurselor Publice"
+
+#: config_form.php:8
+msgid ""
+"Check this if you want to display an item's relations on its public show "
+"page."
+msgstr "Bifează aici dacă dorești să afișezi în pagina publică relațiile acestei resurse."
+
+#: config_form.php:17
+msgid "Relation Format"
+msgstr "Formatul relațiilor"
+
+#: config_form.php:22
+msgid ""
+"Select the format of an item's relations that you would prefer to show. If "
+"one is unavailable the other will be used."
+msgstr "Selectează formatul pentru relațiile unei resurse pe care ai dori să pe afișezi. Dacă una este indisponibilă, celaltă va fi utilizată."
+
+#: controllers/VocabulariesController.php:50
+msgid "The vocabulary was successfully edited."
+msgstr "Vocabularul a fost editat fără probleme."
+
+#: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
+msgid "Browse Vocabularies"
+msgstr "Răsfoiește vocabularele"
+
+#: item_relations_form.php:6
+#, php-format
+msgid ""
+"Here you can relate this item to another item and delete existing relations."
+" For descriptions of the relations, see the %s page. Invalid item IDs will "
+"be ignored."
+msgstr "Aici poți relaționa acest obiect cu un altul și poți șterge relațiile existente. Pentru descrierea relațiilor, vezi pagina %s. ID-urile resurselor care nu sunt valide vor fi ignorate."
+
+#: item_relations_form.php:24 item_relations_form.php:34
+#: item_relations_form.php:39 views/admin/common/item-relations-show.php:10
+#: views/admin/common/item-relations-show.php:19
+#: views/public/common/item-relations-show.php:9
+#: views/public/common/item-relations-show.php:18
+msgid "This Item"
+msgstr "Această resursă"
+
+#: item_relations_form.php:46
+msgid "Add a Relation"
+msgstr "Adaugă o relație"
+
+#: models/ItemRelationsProperty.php:62
+msgid "[unknown]"
+msgstr "[necunoscută]"
+
+#: views/admin/common/item-relations-show.php:5
+#: views/public/common/item-relations-show.php:4
+msgid "This item has no relations."
+msgstr "Această resursă nu are relații."
+
+#: views/admin/vocabularies/browse.php:8
+msgid "Namespace Prefix"
+msgstr "Prefixul Namespace-ului"
+
+#: views/admin/vocabularies/browse.php:9
+msgid "Namespace URI"
+msgstr "URI-ul Namespace-ului"
+
+#: views/admin/vocabularies/edit.php:1
+msgid "Edit Custom Vocabulary"
+msgstr "Editează un vocabular particularizat"
+
+#: views/admin/vocabularies/edit.php:8
+msgid ""
+"Here you can add, edit, and delete properties in your custom vocabulary. "
+"Property labels must be unique. You cannot edit property labels once they "
+"have been created, so make sure they are spelled correctly and convey the "
+"exact relation you want them to convey."
+msgstr "Aici poți adăuga, edita și elimina proprietățile vocabularului particularizat. Etichetele proprietăților trebuie să fie unice. Nu poți edita etichetele proprietăților din moment ce au fost create așa că asigură-te că au fost scrise corect și că exprimă cât mai fidel natura relației pe care o stabilește."
+
+#: views/admin/vocabularies/edit.php:37
+msgid "Add a Property"
+msgstr "Adaugă o proprietate"
+
+#: views/admin/vocabularies/show.php:2
+msgid "Vocabulary Properties"
+msgstr "Proprietățile vocabularului"
+
+#: views/admin/vocabularies/show.php:7
+msgid "Edit Vocabulary"
+msgstr "Editează vocabularul"
+
+#: views/admin/vocabularies/show.php:14
+msgid "This vocabulary has no properties."
+msgstr "Acest vocabular nu are proprietăți."
+
+#: views/admin/vocabularies/show.php:16
+msgid "Why don't you add some?"
+msgstr "Ce-ar fi să adaugi câteva?"
+
+#: views/admin/vocabularies/show.php:23
+msgid "Local Part"
+msgstr "Partea locală"
+
+#: views/shared/common/item-relations-advanced-search.php:8
+msgid ""
+"Filter this search for items with the selected relation. For example, when "
+"selecting \"Subject\" items with the \"hasPart\" relation, the search will "
+"return all items that have parts. When selecting \"Object\" items with the "
+"same relation, the search will return all items that are parts of other "
+"items."
+msgstr "Filtrează acestă căutare după resurse care au relația menționată. De exemplu, atunci când selectezi resurse după „Subiect” și au relația „hasPart”, căutarea va returna toate resursele care au părți. Atunci când selectezi resursele „Obiect” având aceeași relație, căutarea va returna toate resursele care sunt părți ale altor resurse."

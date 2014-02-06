@@ -1,0 +1,153 @@
+# Translation for the Exhibit Builder plugin for Omeka.
+# Copyright (C) 2014 Roy Rosenzweig Center for History and New Media
+# This file is distributed under the same license as the Omeka package.
+# 
+# Translators:
+# yenny <yennylin1234@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Omeka\n"
+"Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
+"POT-Creation-Date: 2014-01-13 12:59-0500\n"
+"PO-Revision-Date: 2014-01-20 07:06+0000\n"
+"Last-Translator: yenny <yennylin1234@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/omeka/language/zh_TW/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ItemRelationsPlugin.php:357 ItemRelationsPlugin.php:407
+#: views/admin/common/item-relations-show.php:2
+#: views/public/common/item-relations-show.php:2
+#: views/shared/common/item-relations-advanced-search.php:3
+msgid "Item Relations"
+msgstr "單件關聯"
+
+#: ItemRelationsPlugin.php:361
+msgid "Subjects"
+msgstr "主題"
+
+#: ItemRelationsPlugin.php:363 item_relations_form.php:17
+#: views/shared/common/item-relations-advanced-search.php:17
+msgid "Object"
+msgstr "物件"
+
+#: ItemRelationsPlugin.php:368
+msgid "These Items"
+msgstr "這些單件"
+
+#: ItemRelationsPlugin.php:371 item_relations_form.php:41
+msgid "Item ID"
+msgstr "單件 ID"
+
+#: config_form.php:3
+msgid "Append to Public Items Show"
+msgstr "附加到單件公開介面"
+
+#: config_form.php:8
+msgid ""
+"Check this if you want to display an item's relations on its public show "
+"page."
+msgstr "如果要在單件公開頁面顯示關聯，請勾選。"
+
+#: config_form.php:17
+msgid "Relation Format"
+msgstr "關聯形式"
+
+#: config_form.php:22
+msgid ""
+"Select the format of an item's relations that you would prefer to show. If "
+"one is unavailable the other will be used."
+msgstr "選擇你要顯示的單件的關聯形式。如果沒有，將會使用其他的。"
+
+#: controllers/VocabulariesController.php:50
+msgid "The vocabulary was successfully edited."
+msgstr "詞彙已經編輯成功。"
+
+#: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
+msgid "Browse Vocabularies"
+msgstr "瀏覽詞彙"
+
+#: item_relations_form.php:6
+#, php-format
+msgid ""
+"Here you can relate this item to another item and delete existing relations."
+" For descriptions of the relations, see the %s page. Invalid item IDs will "
+"be ignored."
+msgstr "你可以在這裡建立單件之間的關聯以及刪除既存的關聯。關於關聯的描述，參見 %s 頁。無效的單件 ID將被忽略。"
+
+#: item_relations_form.php:24 item_relations_form.php:34
+#: item_relations_form.php:39 views/admin/common/item-relations-show.php:10
+#: views/admin/common/item-relations-show.php:19
+#: views/public/common/item-relations-show.php:9
+#: views/public/common/item-relations-show.php:18
+msgid "This Item"
+msgstr "這個單件"
+
+#: item_relations_form.php:46
+msgid "Add a Relation"
+msgstr "增加關聯"
+
+#: models/ItemRelationsProperty.php:62
+msgid "[unknown]"
+msgstr "[未知]"
+
+#: views/admin/common/item-relations-show.php:5
+#: views/public/common/item-relations-show.php:4
+msgid "This item has no relations."
+msgstr "這個單件沒有關聯。"
+
+#: views/admin/vocabularies/browse.php:8
+msgid "Namespace Prefix"
+msgstr "命名空間前綴詞"
+
+#: views/admin/vocabularies/browse.php:9
+msgid "Namespace URI"
+msgstr "命名空間URI"
+
+#: views/admin/vocabularies/edit.php:1
+msgid "Edit Custom Vocabulary"
+msgstr "編輯自訂詞彙表"
+
+#: views/admin/vocabularies/edit.php:8
+msgid ""
+"Here you can add, edit, and delete properties in your custom vocabulary. "
+"Property labels must be unique. You cannot edit property labels once they "
+"have been created, so make sure they are spelled correctly and convey the "
+"exact relation you want them to convey."
+msgstr "你可以增加、編輯和刪除你的自定詞彙表之屬性。屬性的標籤必需是唯一的。你無法編輯尚未創建的屬性之標籤，請確認拼寫正確並且表達了你想要的關聯。"
+
+#: views/admin/vocabularies/edit.php:37
+msgid "Add a Property"
+msgstr "增加一個屬性"
+
+#: views/admin/vocabularies/show.php:2
+msgid "Vocabulary Properties"
+msgstr "詞彙屬性"
+
+#: views/admin/vocabularies/show.php:7
+msgid "Edit Vocabulary"
+msgstr "編輯詞彙"
+
+#: views/admin/vocabularies/show.php:14
+msgid "This vocabulary has no properties."
+msgstr "這個詞彙沒有屬性。"
+
+#: views/admin/vocabularies/show.php:16
+msgid "Why don't you add some?"
+msgstr "你為什麼不增加一些？"
+
+#: views/admin/vocabularies/show.php:23
+msgid "Local Part"
+msgstr "本地部分"
+
+#: views/shared/common/item-relations-advanced-search.php:8
+msgid ""
+"Filter this search for items with the selected relation. For example, when "
+"selecting \"Subject\" items with the \"hasPart\" relation, the search will "
+"return all items that have parts. When selecting \"Object\" items with the "
+"same relation, the search will return all items that are parts of other "
+"items."
+msgstr "用選擇的關聯過濾單件的搜尋。例如，若選擇與「主題」有「hasPart」關聯的單件，搜尋將會顯示具有此部分的單件。若選擇與「物件」有相同關聯的單件，搜尋將會顯示所有為其他單件之一部分的單件。"
