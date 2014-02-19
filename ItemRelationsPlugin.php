@@ -209,6 +209,15 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             (1, 'type', 'Type', 'The nature or genre of the resource.')";
             $db->query($sql);
         }
+
+        if ($oldVersion <= '2.0') {
+            // Fix un-upgraded old table name if present.
+            $correctTableName = (bool) $db->fetchOne("SHOW TABLES LIKE '{$db->ItemRelationsRelation}'");
+            if (!$correctTableName) {
+                $sql = "RENAME TABLE `{$db->prefix}item_relations_item_relations` TO `{$db->ItemRelationsRelation}`";
+                $db->query($sql);
+            }
+        }
     }
 
    /**
