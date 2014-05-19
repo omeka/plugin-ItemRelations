@@ -455,10 +455,13 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $subjectRelations = array();
 
         foreach ($subjects as $subject) {
+            if (!($item = get_record_by_id('item', $subject->object_item_id))) {
+                continue;
+            }
             $subjectRelations[] = array(
                 'item_relation_id' => $subject->id,
                 'object_item_id' => $subject->object_item_id,
-                'object_item_title' => self::getItemTitle($subject->object_item_id),
+                'object_item_title' => self::getItemTitle($item),
                 'relation_text' => $subject->getPropertyText(),
                 'relation_description' => $subject->property_description
             );
@@ -477,10 +480,13 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $objects = get_db()->getTable('ItemRelationsRelation')->findByObjectItemId($item->id);
         $objectRelations = array();
         foreach ($objects as $object) {
+            if (!($item = get_record_by_id('item', $object->subject_item_id))) {
+                continue;
+            }
             $objectRelations[] = array(
                 'item_relation_id' => $object->id,
                 'subject_item_id' => $object->subject_item_id,
-                'subject_item_title' => self::getItemTitle($object->subject_item_id),
+                'subject_item_title' => self::getItemTitle($item),
                 'relation_text' => $object->getPropertyText(),
                 'relation_description' => $object->property_description
             );
@@ -491,14 +497,14 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     /**
      * Return a item's title.
      *
-     * @param int $itemId The item ID.
+     * @param Item $item The item.
      * @return string
      */
-    public static function getItemTitle($itemId)
+    public static function getItemTitle($item)
     {
-        $title = metadata(get_record_by_id('item', $itemId), array('Dublin Core', 'Title'), array('no_filter' => true));
+        $title = metadata($item, array('Dublin Core', 'Title'), array('no_filter' => true));
         if (!trim($title)) {
-            $title = '#' . $itemId;
+            $title = '#' . $item->id;
         }
         return $title;
     }
