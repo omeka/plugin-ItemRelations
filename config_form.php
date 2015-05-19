@@ -23,6 +23,6 @@
                 . 'prefer to show. If one is unavailable the other will be used.');
             ?>
         </p>
-        <?php echo get_view()->formSelect('item_relations_relation_format', $relationFormat, null, array('prefix_local_part' => 'prefix:localPart', 'label' => 'label')); ?>
+        <?php echo get_view()->formSelect('item_relations_relation_format', $relationFormat, null, array('prefix_local_part' => __('prefix:localPart'), 'label' => __('label'))); ?>
     </div>
 </div>

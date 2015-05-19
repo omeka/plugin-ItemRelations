@@ -88,6 +88,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $db->query($sql);
 
         // Install the formal vocabularies and their properties.
+        self::hookInitialize(); // Make sure that the i18n file is already loaded
         $formalVocabularies = include 'formal_vocabularies.php';
         foreach ($formalVocabularies as $formalVocabulary) {
             $vocabulary = new ItemRelationsVocabulary;
@@ -112,8 +113,8 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
 
         // Install a custom vocabulary.
         $customVocabulary = new ItemRelationsVocabulary;
-        $customVocabulary->name = 'Custom';
-        $customVocabulary->description = 'Custom vocabulary containing relations defined for this Omeka instance.';
+        $customVocabulary->name = __('Custom');
+        $customVocabulary->description = __('Custom vocabulary containing relations defined for this Omeka instance.');
         $customVocabulary->namespace_prefix = ''; // cannot be NULL
         $customVocabulary->namespace_uri = null;
         $customVocabulary->custom = 1;
