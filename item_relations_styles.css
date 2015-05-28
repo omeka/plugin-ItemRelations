@@ -1,0 +1,12 @@
+#selectObjectId {
+	// display:block !IMPORTANT; 
+	background:#fff;
+	padding:1.5em;
+	width:460px;
+	height:460px;
+	overflow:hidden; // scroll;
+}
+
+#allItemIds { width:28em; }
+
+.inlineselect { display: inline-block; }

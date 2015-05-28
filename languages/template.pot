@@ -101,8 +101,40 @@ msgstr ""
 msgid "This Item"
 msgstr ""
 
-#: item_relations_form.php:46
+#: item_relations_form.php:44
+msgid "Select ID"
+msgstr ""
+
+#: item_relations_form.php:48
+msgid "[n/a]"
+msgstr ""
+
+#: item_relations_form.php:52
 msgid "Add a Relation"
+msgstr ""
+
+#: item_relations_form.php:80
+msgid "All Items"
+msgstr ""
+
+#: models/ItemRelationsProperty.php:84
+msgid "Sort within item types by"
+msgstr ""
+
+#: models/ItemRelationsProperty.php:85
+msgid "Last Update (desc)"
+msgstr ""
+
+#: models/ItemRelationsProperty.php:86
+msgid "Name (asc)"
+msgstr ""
+
+#: models/ItemRelationsProperty.php:89
+msgid "Search Term"
+msgstr ""
+
+#: models/ItemRelationsProperty.php:90
+msgid "Reset"
 msgstr ""
 
 #: models/ItemRelationsProperty.php:62
