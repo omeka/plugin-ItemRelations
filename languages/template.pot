@@ -432,7 +432,7 @@ msgstr ""
 msgid "Spatial characteristics of the resource."
 msgstr ""
 
-msgid "Subject"
+msgid "Subject "
 msgstr ""
 
 msgid "The topic of the resource."

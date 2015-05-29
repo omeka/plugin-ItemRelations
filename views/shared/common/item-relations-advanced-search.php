@@ -13,7 +13,7 @@
         ?>
         </p>
         <p>
-            <input type="radio" name="item_relations_clause_part" value="subject" checked="checked" /><?php echo __('Subject'); ?>
+            <input type="radio" name="item_relations_clause_part" value="subject" checked="checked" /><?php echo __('Subject '); ?>
             <input type="radio" name="item_relations_clause_part" value="object" /><?php echo __('Object'); ?>
         </p>
         <?php echo $this->formSelect('item_relations_property_id', @$_GET['item_relations_property_id'], array(), $formSelectProperties); ?>

@@ -12,7 +12,7 @@ echo __('Here you can relate this item to another item and delete existing '
 <table>
     <thead>
     <tr>
-        <th><?php echo __('Subject'); ?></th>
+        <th><?php echo __('Subject '); ?></th>
         <th><?php echo __('Relation'); ?></th>
         <th><?php echo __('Object'); ?></th>
         <th><?php echo __('Delete'); ?></th>
