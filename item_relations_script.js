@@ -5,7 +5,6 @@ jQuery(document).ready(function () {
 
 	var my_input = null; // Reference to currently active input
 	var allItemsSortedArr = null; // Room for a pre-sorted array
-	var itemTypes = null; // Room for the pre-calculated item types
 	var filterItemTyp = null; // Room for filter by type
 	var curListOrder = null; // Room for sort order
 	var curFilter = null; // Room for filter word
@@ -65,13 +64,12 @@ jQuery(document).ready(function () {
 		$("#searchTerm").on("input",searchTermChange);
 		$("#resetBtn").click("input",resetBtnClick);
 
+		$("#itemTypeIds").empty().append(itemTypeOptions());
 		$('input:radio[name=itemsListSort]').change(function() {
 				curListOrder=this.value;
 				updateList();
 			});
 		selectObjectSortTimestamp(); // fill item selector
-		// finally fill item type selector, based on item selector pre-processing
-		$("#itemTypeIds").empty().append(itemTypeOptions());
 
 		lightbox.open("#selectObjectId"); // and off we go
 
@@ -99,7 +97,7 @@ jQuery(document).ready(function () {
 			allItemsSortedArr=allItemsArr.slice(); // correct operation to copy an array
 			allItemsSortedArr.sort(function(a,b) { // sort it via compare function
 				var catdiff=a[2]-b[2];  // different category? then sort asc for that
-				return ( catdiff==0 ? (b[4]-a[4]) : catdiff ); // otherwise sort desc for timestamp
+				return ( catdiff==0 ? (b[3]-a[3]) : catdiff ); // otherwise sort desc for timestamp
 			});
 		}
 		$("#allItemIds").empty().append(allItemsOptions(allItemsSortedArr));
@@ -113,10 +111,7 @@ jQuery(document).ready(function () {
 		var opencat=false;
 		var lastcat=-1;
 
-		var fillItemTypes=(itemTypes==null); // no itemTypes array yet?
-		if (fillItemTypes) { itemTypes=new Array(); }
-
-		var result="<option value=''>"+selectBelowTxt+"</option>";
+		var result="";
 		$.each(ItemsArr, function (itemIndex, item) { // all items
 
 			var showThisItem=true;
@@ -135,8 +130,7 @@ jQuery(document).ready(function () {
 					opencat=false;
 				}
 				if (!opencat) { // no currently open group?
-					var groupname=( item[3]!='0' ? String(item[3]) : nATxt);
-					if (fillItemTypes) { itemTypes[item[2]]=groupname; } // also store group name
+					var groupname=itemTypes[item[2]];
 					result+="<optgroup label='"+itemTypeTxt+" \""+groupname+"\"'>";
 					opencat=true;
 				}
@@ -152,11 +146,7 @@ jQuery(document).ready(function () {
 	// generate <option>...</option> tages corresponding the existing item types
 	function itemTypeOptions() {
 		var result="<option value='-1'>"+allTxt+"</option>";
-		$.each(itemTypes, function (itemIndex, item) { // all items
-			if (typeof item != 'undefined') {
-				result+="<option value='"+itemIndex+"'>"+item+"</option>";
-			}
-		});
+		$.each(itemTypes, function (itemIndex, item) { result+="<option value='"+itemIndex+"'>"+item+"</option>"; });
 		return result;
 	}
 

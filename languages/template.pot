@@ -113,27 +113,23 @@ msgstr ""
 msgid "Add a Relation"
 msgstr ""
 
-#: item_relations_form.php:80
-msgid "All Items"
-msgstr ""
-
-#: models/ItemRelationsProperty.php:84
+#: models/ItemRelationsProperty.php:96
 msgid "Sort within item types by"
 msgstr ""
 
-#: models/ItemRelationsProperty.php:85
+#: models/ItemRelationsProperty.php:97
 msgid "Last Update (desc)"
 msgstr ""
 
-#: models/ItemRelationsProperty.php:86
+#: models/ItemRelationsProperty.php:98
 msgid "Name (asc)"
 msgstr ""
 
-#: models/ItemRelationsProperty.php:89
+#: models/ItemRelationsProperty.php:99
 msgid "Search Term"
 msgstr ""
 
-#: models/ItemRelationsProperty.php:90
+#: models/ItemRelationsProperty.php:100
 msgid "Reset"
 msgstr ""
 

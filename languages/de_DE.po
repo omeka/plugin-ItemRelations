@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Item Relations\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2015-05-28 15:28+0100\n"
+"PO-Revision-Date: 2015-05-29 11:38+0100\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,27 +103,23 @@ msgstr "[n.v.]"
 msgid "Add a Relation"
 msgstr "Beziehung hinzufügen"
 
-#: item_relations_form.php:80
-msgid "All Items"
-msgstr "Alle Objekte"
-
-#: models/ItemRelationsProperty.php:84
+#: models/ItemRelationsProperty.php:96
 msgid "Sort within item types by"
 msgstr "Innerhalb Objekttyp sortieren nach"
 
-#: models/ItemRelationsProperty.php:85
+#: models/ItemRelationsProperty.php:97
 msgid "Last Update (desc)"
 msgstr "Letzte Änderung (abst.)"
 
-#: models/ItemRelationsProperty.php:86
+#: models/ItemRelationsProperty.php:98
 msgid "Name (asc)"
 msgstr "Name (aufst.)"
 
-#: models/ItemRelationsProperty.php:89
+#: models/ItemRelationsProperty.php:99
 msgid "Search Term"
 msgstr "Suchbegriff"
 
-#: models/ItemRelationsProperty.php:90
+#: models/ItemRelationsProperty.php:100
 msgid "Reset"
 msgstr "Zurücksetzen"
 

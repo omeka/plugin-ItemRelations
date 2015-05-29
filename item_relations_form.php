@@ -56,36 +56,46 @@ echo __('Here you can relate this item to another item and delete existing '
 <script type="text/javascript" src="<?php echo PUBLIC_BASE_URL; ?>/plugins/ItemRelations/item_relations_script.js"></script>
 <?php
 	$db = get_db();
-	// Fetch all items together with their IDs, titles, and item type IDs and names
-	$sql = "SELECT items.id, text, items.item_type_id, itemtypes.name, UNIX_TIMESTAMP(modified)
+	// Put all database items into JavaScript arrays, that will later be used via jQuery.
+	echo "<script type='text/javascript'>\n";
+	// --- 1. Fetch all item typs together with ther IDs and names
+	$sql = "SELECT id, name from {$db->Item_Types} ORDER BY id";
+	$itemtypes = $db->fetchAll($sql);
+	$lines=array();
+	$lines[]="0:'".__("[n/a]")."'";
+	foreach($itemtypes as $itemtyp) {
+		$lines[]=$itemtyp["id"].":'".htmlspecialchars($itemtyp["name"], ENT_QUOTES)."'";
+	}
+	// JavaScript object
+	echo "var itemTypes={\n".
+				implode(",\n",$lines)."\n".
+				"};\n";
+	// --- 2. Fetch all items together with their IDs, titles, and item type IDs and names
+	$sql = "SELECT items.id, text, item_type_id, UNIX_TIMESTAMP(modified)
 					FROM {$db->Item} items
 					LEFT JOIN {$db->Element_Texts} elementtexts on (items.id=elementtexts.id)
-					LEFT JOIN {$db->Item_Types} itemtypes on (items.item_type_id=itemtypes.id)
 					WHERE true
-					ORDER BY itemtypes.name ASC, text ASC";
-
+					ORDER BY items.item_type_id ASC, text ASC";
 	$items = $db->fetchAll($sql);
-
-	# echo "<pre>"; print_r($items); echo "</pre>\n"; # DEBUG
-	echo "<script type='text/javascript'>\n";
-	echo "var allItemsArr=[\n"; // Put all items into a JavaScript array, that will later be used via jQuery
+	// For efficiency, we use a regular JavaScript array  notation instead of JSON
+	$lines=array();
 	foreach($items as $item) {
 		foreach (array_keys($item) as $key) {
 			if (!$item[$key]) { $item[$key]=0; } # Transform all empty values to zero
 			if (intval($item[$key])!==$item[$key]) { $item[$key]="'".htmlspecialchars($item[$key], ENT_QUOTES)."'"; } # Non-ints i.e. string into apostrophes
 		}
-		echo "[[".implode("],[", $item)."]],\n"; # Item as a new array element - with its components in another array
+		$lines[]="[[".implode("],[", $item)."]]"; # Item as a new array element - with its components in another array
 	}
-	echo "];\n";
-	// echo "var allItemsTxt='".__("All Items")."';\n";
-	echo "var selectBelowTxt='".__("Select Below")."';\n";
+	echo "var allItemsArr=[\n".
+				implode(",\n",$lines)."\n".
+				"];\n";
+	// --------
+	echo "var itemTypesTxt='".__("Item Types")."';\n";
+	echo "var allTxt='".__("Alle")."';\n";
 	echo "var itemTypeTxt='".__("Item Type")."';\n";
-	echo "var nATxt='".__("[n/a]")."';\n";
 	echo "var sortWithinItemTypeByTxt='".__("Sort within item types by")."';\n";
 	echo "var updDateDescTxt='".__("Last Update (desc)")."';\n";
 	echo "var nameAscTxt='".__("Name (asc)")."';\n";
-	echo "var itemTypesTxt='".__("Item Types")."';\n";
-	echo "var allTxt='".__("Alle")."';\n";
 	echo "var searchTermTxt='".__("Search Term")."';\n";
 	echo "var resetTxt='".__("Reset")."';\n";
 	echo "</script>\n";
