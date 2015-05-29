@@ -204,7 +204,7 @@ return $formalVocabularies = array(
             ),
             array(
                 'local_part' => 'subject',
-                'label' => __('Subject '),
+                'label' => __('Subject'),
                 'description' => __('The topic of the resource.')
             ),
             array(
