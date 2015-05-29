@@ -91,7 +91,7 @@ echo __('Here you can relate this item to another item and delete existing '
 				"];\n";
 	// --------
 	echo "var itemTypesTxt='".__("Item Types")."';\n";
-	echo "var allTxt='".__("Alle")."';\n";
+	echo "var allTxt='".__("All")."';\n";
 	echo "var itemTypeTxt='".__("Item Type")."';\n";
 	echo "var sortWithinItemTypeByTxt='".__("Sort within item types by")."';\n";
 	echo "var updDateDescTxt='".__("Last Update (desc)")."';\n";

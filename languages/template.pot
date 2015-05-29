@@ -113,6 +113,10 @@ msgstr ""
 msgid "Add a Relation"
 msgstr ""
 
+#: models/ItemRelationsProperty.php:94
+msgid "All"
+msgstr ""
+
 #: models/ItemRelationsProperty.php:96
 msgid "Sort within item types by"
 msgstr ""
