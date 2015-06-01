@@ -73,8 +73,8 @@ echo __('Here you can relate this item to another item and delete existing '
 	// --- 2. Fetch all items together with their IDs, titles, and item type IDs and names
 	$sql = "SELECT items.id, text, item_type_id, UNIX_TIMESTAMP(modified)
 					FROM {$db->Item} items
-					LEFT JOIN {$db->Element_Texts} elementtexts on (items.id=elementtexts.id)
-					WHERE true
+					LEFT JOIN {$db->Element_Texts} elementtexts on (items.id=elementtexts.record_id)
+					WHERE elementtexts.element_id=50
 					ORDER BY items.item_type_id ASC, text ASC";
 	$items = $db->fetchAll($sql);
 	// For efficiency, we use a regular JavaScript array  notation instead of JSON
@@ -99,5 +99,6 @@ echo __('Here you can relate this item to another item and delete existing '
 	echo "var searchTermTxt='".__("Search Term")."';\n";
 	echo "var resetTxt='".__("Reset")."';\n";
 	echo "</script>\n";
+	# echo "$sql<br>\n";
 ?>
 <div id="lightboxJsContent" class="lity-hide"></div>
