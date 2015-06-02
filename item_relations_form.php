@@ -1,3 +1,12 @@
+<?php
+	// All code related to 'SIMULATION' and 'if (defined("SIMULATION"))'
+	// is meant only to tickle the complexity to check scalability
+	# DEFINE("SIMULATION", true); // uncomment this line to use simulation
+	DEFINE("SIM_CATEGORIES",12);
+	DEFINE("SIM_CATLEN",16);
+	DEFINE("SIM_ITEMS",5000);
+	DEFINE("SIM_ITEMLEN",48);
+?>
 <p>
 <?php
 $link = '<a href="' . url('item-relations/vocabularies/') . '">'
@@ -59,8 +68,14 @@ echo __('Here you can relate this item to another item and delete existing '
 	// Put all database items into JavaScript arrays, that will later be used via jQuery.
 	echo "<script type='text/javascript'>\n";
 	// --- 1. Fetch all item typs together with ther IDs and names
-	$sql = "SELECT id, name from {$db->Item_Types} ORDER BY id";
-	$itemtypes = $db->fetchAll($sql);
+	if (defined("SIMULATION")) {
+		$itemtypes=array();
+		for($i=1; ($i<=SIM_CATEGORIES); $i++) { $itemtypes[]=array("id" => $i, "name" => substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, SIM_CATLEN)); }
+	}
+	else {
+		$sql = "SELECT id, name from {$db->Item_Types} ORDER BY id";
+		$itemtypes = $db->fetchAll($sql);
+	}
 	$lines=array();
 	$lines[]="0:'".__("[n/a]")."'";
 	foreach($itemtypes as $itemtyp) {
@@ -71,12 +86,21 @@ echo __('Here you can relate this item to another item and delete existing '
 				implode(",\n",$lines)."\n".
 				"};\n";
 	// --- 2. Fetch all items together with their IDs, titles, and item type IDs and names
-	$sql = "SELECT items.id, text, item_type_id, UNIX_TIMESTAMP(modified)
-					FROM {$db->Item} items
-					LEFT JOIN {$db->Element_Texts} elementtexts on (items.id=elementtexts.record_id)
-					WHERE elementtexts.element_id=50
-					ORDER BY items.item_type_id ASC, text ASC";
-	$items = $db->fetchAll($sql);
+	if (defined("SIMULATION")) {
+		$items=array();
+		for($i=1; ($i<=SIM_ITEMS); $i++) {
+			$items[]=array($i, substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, SIM_ITEMLEN), rand(0,SIM_CATEGORIES), time()-rand(0,3600));
+		}
+		usort($items, function($a, $b) { return ( $a[2]!=$b[2] ? $a[2]-$b[2] : ( $a[1]!=$b[1] ? ($a[1]>$b[1] ? 1 : -1 ) : 0  ) ); } );
+	}
+	else {
+		$sql = "SELECT items.id, text, item_type_id, UNIX_TIMESTAMP(modified)
+						FROM {$db->Item} items
+						LEFT JOIN {$db->Element_Texts} elementtexts on (items.id=elementtexts.record_id)
+						WHERE elementtexts.element_id=50 and items.id<>".$item->id."
+						ORDER BY items.item_type_id ASC, text ASC";
+		$items = $db->fetchAll($sql);
+	}
 	// For efficiency, we use a regular JavaScript array  notation instead of JSON
 	$lines=array();
 	foreach($items as $item) {
