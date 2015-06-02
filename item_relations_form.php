@@ -94,10 +94,11 @@ echo __('Here you can relate this item to another item and delete existing '
 		usort($items, function($a, $b) { return ( $a[2]!=$b[2] ? $a[2]-$b[2] : ( $a[1]!=$b[1] ? ($a[1]>$b[1] ? 1 : -1 ) : 0  ) ); } );
 	}
 	else {
+		$item_id_suffix=($item->id ? "and items.id<>".$item->id : "" );
 		$sql = "SELECT items.id, text, item_type_id, UNIX_TIMESTAMP(modified)
 						FROM {$db->Item} items
 						LEFT JOIN {$db->Element_Texts} elementtexts on (items.id=elementtexts.record_id)
-						WHERE elementtexts.element_id=50 and items.id<>".$item->id."
+						WHERE elementtexts.element_id=50 $item_id_suffix
 						ORDER BY items.item_type_id ASC, text ASC";
 		$items = $db->fetchAll($sql);
 	}
