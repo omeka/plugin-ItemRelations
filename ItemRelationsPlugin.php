@@ -300,12 +300,14 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $db = $this->_db;
 
         // Save item relations.
-        foreach ($post['item_relations_property_id'] as $key => $propertyId) {
-            self::insertItemRelation(
-                $record,
-                $propertyId,
-                $post['item_relations_item_relation_object_item_id'][$key]
-            );
+        if (isset($post['item_relations_property_id'])) {
+            foreach ($post['item_relations_property_id'] as $key => $propertyId) {
+                self::insertItemRelation(
+                    $record,
+                    $propertyId,
+                    $post['item_relations_item_relation_object_item_id'][$key]
+                );
+            }
         }
 
         // Delete item relations.
