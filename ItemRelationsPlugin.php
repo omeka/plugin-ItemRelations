@@ -43,6 +43,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
      */
     protected $_options = array(
         'item_relations_public_append_to_items_show' => 1,
+        'item_relations_provide_relation_comments' => 0,
         'item_relations_relation_format' => 'prefix_local_part'
     );
 
@@ -83,6 +84,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             `subject_item_id` int(10) unsigned NOT NULL,
             `property_id` int(10) unsigned NOT NULL,
             `object_item_id` int(10) unsigned NOT NULL,
+            `relation_comment` varchar(60) NOT NULL DEFAULT '',
             PRIMARY KEY (`id`)
         ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
         $db->query($sql);
@@ -151,6 +153,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     public static function hookConfigForm()
     {
         $publicAppendToItemsShow = get_option('item_relations_public_append_to_items_show');
+        $provideRelationComments = get_option('item_relations_provide_relation_comments');
         $relationFormat = get_option('item_relations_relation_format');
 
         require dirname(__FILE__) . '/config_form.php';
@@ -163,6 +166,8 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     {
         set_option('item_relations_public_append_to_items_show',
             (int)(boolean) $_POST['item_relations_public_append_to_items_show']);
+        set_option('item_relations_provide_relation_comments',
+            (int)(boolean) $_POST['item_relations_provide_relation_comments']);
         set_option('item_relations_relation_format',
             $_POST['item_relations_relation_format']);
     }
@@ -219,6 +224,13 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                 $db->query($sql);
             }
         }
+
+        if ($oldVersion <= '2.21') {
+            // Insert relation_comment column
+            $sql = "ALTER TABLE `{$db->prefix}item_relations_relations` ADD `relation_comment` VARCHAR(60) NOT NULL DEFAULT '' AFTER `object_item_id`";
+            $db->query($sql);
+        }
+
     }
 
    /**
@@ -305,7 +317,8 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                 self::insertItemRelation(
                     $record,
                     $propertyId,
-                    $post['item_relations_item_relation_object_item_id'][$key]
+                    $post['item_relations_item_relation_object_item_id'][$key],
+                    $post['item_relations_item_relation_relation_comment'][$key]
                 );
             }
         }
@@ -403,7 +416,8 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         self::insertItemRelation(
             $item,
             $custom['item_relations_property_id'],
-            $custom['item_relations_item_relation_object_item_id']
+            $custom['item_relations_item_relation_object_item_id'],
+            $custom['item_relations_item_relation_relation_comment']
         );
     }
 
@@ -464,6 +478,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             $subjectRelations[] = array(
                 'item_relation_id' => $subject->id,
                 'object_item_id' => $subject->object_item_id,
+                'relation_comment' => $subject->relation_comment,
                 'object_item_title' => self::getItemTitle($item),
                 'relation_text' => $subject->getPropertyText(),
                 'relation_description' => $subject->property_description
@@ -489,6 +504,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             $objectRelations[] = array(
                 'item_relation_id' => $object->id,
                 'subject_item_id' => $object->subject_item_id,
+                'relation_comment' => $object->relation_comment,
                 'subject_item_title' => self::getItemTitle($item),
                 'relation_text' => $object->getPropertyText(),
                 'relation_description' => $object->property_description
@@ -520,7 +536,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
      * @param Item|int $objectItem
      * @return bool True: success; false: unsuccessful
      */
-    public static function insertItemRelation($subjectItem, $propertyId, $objectItem)
+    public static function insertItemRelation($subjectItem, $propertyId, $objectItem, $relationComment)
     {
         // Only numeric property IDs are valid.
         if (!is_numeric($propertyId)) {
@@ -546,6 +562,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $itemRelation->subject_item_id = $subjectItem->id;
         $itemRelation->property_id = $propertyId;
         $itemRelation->object_item_id = $objectItem->id;
+        $itemRelation->relation_comment = ( $relationComment ? $relationComment : "");
         $itemRelation->save();
 
         return true;

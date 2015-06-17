@@ -16,6 +16,7 @@ echo __('Here you can relate this item to another item and delete existing '
      . 'relations. For descriptions of the relations, see the %s page. Invalid '
      . 'item IDs will be ignored.', $link
 );
+$provideRelationComments = get_option('item_relations_provide_relation_comments');
 ?>
 </p>
 <table>
@@ -24,6 +25,7 @@ echo __('Here you can relate this item to another item and delete existing '
         <th><?php echo __('Subject '); ?></th>
         <th><?php echo __('Relation'); ?></th>
         <th><?php echo __('Object'); ?></th>
+        <?php if ($provideRelationComments): ?><th><?php echo __('Comment'); ?></th><?php endif; ?>
         <th><?php echo __('Delete'); ?></th>
     </tr>
     </thead>
@@ -33,6 +35,7 @@ echo __('Here you can relate this item to another item and delete existing '
         <td><?php echo __('This Item'); ?></td>
         <td><?php echo $subjectRelation['relation_text']; ?></td>
         <td><a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>" target="_blank"><?php echo $subjectRelation['object_item_title']; ?></a></td>
+        <?php if ($provideRelationComments): ?><td><?php echo $subjectRelation['relation_comment']; ?></td><?php endif; ?>
         <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $subjectRelation['item_relation_id']; ?>" /></td>
     </tr>
     <?php endforeach; ?>
@@ -41,6 +44,7 @@ echo __('Here you can relate this item to another item and delete existing '
         <td><a href="<?php echo url('items/show/' . $objectRelation['subject_item_id']); ?>" target="_blank"><?php echo $objectRelation['subject_item_title']; ?></a></td>
         <td><?php echo $objectRelation['relation_text']; ?></td>
         <td><?php echo __('This Item'); ?></td>
+        <?php if ($provideRelationComments): ?><td><?php echo $objectRelation['relation_comment']; ?></td><?php endif; ?>
         <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $objectRelation['item_relation_id']; ?>" /></td>
     </tr>
     <?php endforeach; ?>
@@ -54,6 +58,9 @@ echo __('Here you can relate this item to another item and delete existing '
 						<?php echo get_view()->formText('item_relations_item_relation_object_item_id[]', null, array('size' => 8)); ?>
 					</span>
 				</td>
+				<?php if ($provideRelationComments): ?>
+				<td><?php echo get_view()->formText('item_relations_item_relation_relation_comment[]', null, array('size' => 8)); ?></td>
+				<?php endif; ?>
         <td><span style="color:#ccc;"><?php echo __("[n/a]") ?></span></td>
     </tr>
     </tbody>

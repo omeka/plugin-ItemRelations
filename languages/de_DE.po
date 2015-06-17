@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Item Relations\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2015-05-29 17:53+0100\n"
+"PO-Revision-Date: 2015-06-17 17:16+0100\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,14 +55,22 @@ msgid "Check this if you want to display an item's relations on its public show 
 msgstr "Aktivieren Sie diese Einstellung, wenn Sie die Objekt-Beziehungen auf der öffentlichen Seite anzeigen wollen."
 
 #: config_form.php:17
+msgid "Provide comment field for relations"
+msgstr "Kommentarfeld für Relationen anbieten"
+
+#: config_form.php:22
+msgid "Check this if you want to be able to enter a comment to a relation."
+msgstr "Aktivieren Sie diese Einstellung, wenn Sie zu einer Relation einen Kommentar eingeben möchten."
+
+#: config_form.php:29
 msgid "Relation Format"
 msgstr "Beziehungs-Format"
 
-#: config_form.php:22
+#: config_form.php:35
 msgid "Select the format of an item's relations that you would prefer to show. If one is unavailable the other will be used."
 msgstr "Wählen Sie das Format einer Objekt-Beziehung, die Sie vornehmlich anzeigen möchten. Ist eine davon nicht verfügbar, wird die andere verwendet."
 
-#: config_form.php:26
+#: config_form.php:39
 msgid "prefix:localPart"
 msgstr "Präfix:Lokaler Teil"
 

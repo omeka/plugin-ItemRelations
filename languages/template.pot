@@ -60,16 +60,24 @@ msgid ""
 msgstr ""
 
 #: config_form.php:17
-msgid "Relation Format"
+msgid "Provide comment field for relations"
 msgstr ""
 
 #: config_form.php:22
+msgid "Check this if you want to be able to enter a comment to a relation."
+msgstr ""
+
+#: config_form.php:29
+msgid "Relation Format"
+msgstr ""
+
+#: config_form.php:35
 msgid ""
 "Select the format of an item's relations that you would prefer to show. If "
 "one is unavailable the other will be used."
 msgstr ""
 
-#: config_form.php:26
+#: config_form.php:39
 msgid "prefix:localPart"
 msgstr ""
 
