@@ -106,6 +106,7 @@ $provideRelationComments = get_option('item_relations_provide_relation_comments'
 						FROM {$db->Item} items
 						LEFT JOIN {$db->Element_Texts} elementtexts on (items.id=elementtexts.record_id)
 						WHERE elementtexts.element_id=50 $item_id_suffix
+						GROUP BY elementtexts.record_id
 						ORDER BY items.item_type_id ASC, text ASC";
 		$items = $db->fetchAll($sql);
 	}
