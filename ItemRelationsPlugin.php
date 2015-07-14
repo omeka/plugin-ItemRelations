@@ -22,7 +22,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         'define_acl',
         'initialize',
         'after_save_item',
-        'admin_items_show_sidebar',
+        'admin_items_show',
         'admin_items_search',
         'admin_items_batch_edit_form',
         'items_batch_edit_custom',
@@ -275,7 +275,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
      *
      * @param Item $item
      */
-    public function hookAdminItemsShowSidebar($args)
+    public function hookAdminItemsShow($args) // _sidebar
     {
         $item = $args['item'];
 
