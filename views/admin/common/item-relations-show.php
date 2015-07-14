@@ -1,6 +1,6 @@
 <?php $provideRelationComments = get_option('item_relations_provide_relation_comments'); ?>
-<div class="item-relations panel">
-    <h4><?php echo __('Item Relations'); ?></h4>
+<div class="element_set">
+    <h2><?php echo __('Item Relations'); ?></h2>
     <div>
         <?php if (!$subjectRelations && !$objectRelations): ?>
         <p><?php echo __('This item has no relations.'); ?></p>
