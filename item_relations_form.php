@@ -49,7 +49,8 @@ echo __('Here you can relate this item to another item and delete existing '
         <td><?php echo get_view()->formSelect('item_relations_property_id[]', null, array('multiple' => false), $formSelectProperties); ?></td>
         <td>
                     <span class="item_relations_idbox">
-                        <?php echo __('Item ID'); ?><br>
+                        <span class="item_relations_idbox_label"></span>
+                        <span class="item_relations_idbox_prompt"><?php echo __('Item ID'); ?></span><br>
                         <a href="#" class="selectObjectIdHref">[<?php echo __('Select ID'); ?>]</a><br>
                         <?php echo get_view()->formText('item_relations_item_relation_object_item_id[]', null, array('size' => 8)); ?>
                     </span>

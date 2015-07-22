@@ -13,6 +13,7 @@ jQuery(document).ready(function () {
     $('.item-relations-add-relation').click(function () {
         var oldRow = $('.item-relations-entry').last();
         var newRow = oldRow.clone();
+        newRow.find('.item_relations_idbox_label').html('').closest('span').find('.item_relations_idbox_prompt').show();
         oldRow.after(newRow);
         var inputs = newRow.find('input, select');
         inputs.val('');
@@ -163,7 +164,7 @@ jQuery(document).ready(function () {
     function allItemIdsChange() {
         // console.log("allItemIdsChange - "+this.value);
         if (this.value!="") {
-            $(my_input).val(this.value);
+            $(my_input).val(this.value).closest('span').find('.item_relations_idbox_label').html($('option[value="' + this.value + '"]').text()).closest('span').find('.item_relations_idbox_prompt').hide();
             lightbox.close();
         }
         return false;
