@@ -1,12 +1,3 @@
-<?php
-    // All code related to 'SIMULATION' and 'if (defined("SIMULATION"))'
-    // is meant only to tickle the complexity to check scalability
-    # DEFINE("SIMULATION", true); // uncomment this line to use simulation
-    DEFINE("SIM_CATEGORIES",12);
-    DEFINE("SIM_CATLEN",16);
-    DEFINE("SIM_ITEMS",5000);
-    DEFINE("SIM_ITEMLEN",48);
-?>
 <p>
 <?php
 $link = '<a href="' . url('item-relations/vocabularies/') . '">'
