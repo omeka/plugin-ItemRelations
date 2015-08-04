@@ -10,3 +10,11 @@
 #allItemIds { width:28em; }
 
 .inlineselect { display: inline-block; }
+
+.pg_disabled {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}

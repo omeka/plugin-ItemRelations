@@ -1,6 +1,7 @@
 <?php
 /**
  * Item Relations
+ * LookupController
  * @copyright 2015 Michael Slone
  * @license http://www.gnu.org/licenses/gpl-3.0.txt GNU GPLv3
  */
@@ -27,7 +28,7 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
             $this->_setParam('per_page', 15);
         }
 
-        $partial = preg_replace('/[^\p{L}\p{N}\p{Mc}]/ui', '', $this->_getParam('partial'));
+        $partial = preg_replace('/[^ \.,\!\?\p{L}\p{N}\p{Mc}]/ui', '', $this->_getParam('partial'));
         $where_text = '';
         if (strlen($partial) > 0) {
             $where_text = "AND text RLIKE '$partial'";
@@ -64,7 +65,24 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
 
         $title = 50;
         $db = get_db();
-#SELECT items.id AS id, text, item_type_id, UNIX_TIMESTAMP(modified)
+        $query = <<<QCOUNT
+SELECT count(*) AS count
+FROM {$db->Item} items
+LEFT JOIN {$db->Element_Texts} elementtexts
+ON (items.id = elementtexts.record_id)
+WHERE elementtexts.element_id = $title
+$where_item_type
+$where_text
+GROUP BY elementtexts.record_id
+QCOUNT;
+        $m_count = count($db->fetchAll($query));
+
+        $max_page = floor($m_count / $per_page);
+        if ($page > $max_page) {
+            $page = $max_page;
+            $offset = $page * $per_page;
+        }
+
         $query = <<<QUERY
 SELECT items.id AS id, text
 FROM {$db->Item} items
@@ -79,19 +97,18 @@ LIMIT $per_page
 OFFSET $offset
 QUERY;
         $items = $db->fetchAll($query);
-        $metadata = array(
-            'response' => array(
-                'numFound' => count($items),
-                'docs' => array(),
-            ),
-        );
+        $m_items = array();
+
         foreach ($items as $item) {
-            $metadata['response']['docs'][] = array(
-                'id' => $item['id'],
-                'text' => $item['text'],
+            $m_items[] = array(
+                'value' => $item['id'],
+                'label' => $item['text'],
             );
         }
 
-        $this->view->metadata = $metadata;
+        $this->view->metadata = array(
+            'count' => $m_count,
+            'items' => $m_items,
+        );
     }
 }
