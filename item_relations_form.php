@@ -51,7 +51,7 @@ $db = get_db();
 $sql = "SELECT id, name from {$db->Item_Types} ORDER BY id";
 $itemtypes = $db->fetchAll($sql);
 $m = array(
-    '-1' => 'All',
+    '-1' => __('All'),
 );
 foreach ($itemtypes as $type) {
     $m[$type['id']] = $type['name'];
@@ -70,10 +70,10 @@ foreach ($itemtypes as $type) {
     <?php echo __('Item Sort'); ?>:
     <fieldset>
         <input type="radio" name="itemsListSort" id="new_selectObjectSortTimestamp" value="timestamp" checked>
-        <label for="selectObjectSortTimeStamp">Most recently updated</label>
+        <label for="selectObjectSortTimeStamp"><?php echo __('Most recently updated'); ?></label>
 
         <input type="radio" name="itemsListSort" id="new_selectObjectSortName" value="name">
-        <label for="selectObjectSortName">Alphabetically</label>
+        <label for="selectObjectSortName"><?php echo __('Alphabetically'); ?></label>
     </fieldset>
     </p>
 
