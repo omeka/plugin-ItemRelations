@@ -29,10 +29,10 @@ $provideRelationComments = get_option('item_relations_provide_relation_comments'
           $db = get_db();
           $sql = "SELECT id from {$db->ItemRelationsProperty} where label = '$subject'";
           $subject_id = $db->fetchOne($sql); //default value to be selected in dropdown
-          echo get_view()->formSelect('item_relations_subject_property[]', $subject_id , array( 'id' => 'item_relations_subject_property_'.$subjectRelation['item_relation_id'] , 'multiple' => false, 'style' => 'width: 150px;'), array_slice($formSelectProperties,1));
+          echo get_view()->formSelect('item_relations_subject_property['.$subjectRelation['item_relation_id'].']', $subject_id , array( 'id' => 'item_relations_subject_property_'.$subjectRelation['item_relation_id'] , 'multiple' => false, 'style' => 'width: 150px;'), array_slice($formSelectProperties,1));
           ?></td>
           <td><a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>" target="_blank"><?php echo $subjectRelation['object_item_title']; ?></a></td>
-          <?php if ($provideRelationComments): ?><td><input name="item_relations_subject_comment[]" id="item_relations_subject_comment_<?php echo $subjectRelation['item_relation_id']; ?>" size="10" maxlength="10" value="<?php echo $subjectRelation['relation_comment'];  ?>" /></td><?php endif; ?>
+          <?php if ($provideRelationComments): ?><td><input name="item_relations_subject_comment[<?php echo $subjectRelation['item_relation_id']; ?>]" id="item_relations_subject_comment_<?php echo $subjectRelation['item_relation_id']; ?>" size="10" maxlength="60" value="<?php echo $subjectRelation['relation_comment'];  ?>" /></td><?php endif; ?>
             <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $subjectRelation['item_relation_id']; ?>" /></td>
           </tr>
         <?php endforeach; ?>
@@ -107,7 +107,7 @@ $provideRelationComments = get_option('item_relations_provide_relation_comments'
             <?php if ($provideRelationComments): ?>
 
               <br>
-              <p><?php echo __('Comment'); ?>:	<?php echo get_view()->formText('relation_comment', null, array('size' => 8)); ?></p>
+              <p><?php echo __('Comment'); ?>:	<?php echo get_view()->formText('relation_comment', null, array('size' => 10, 'maxlength' => 60)); ?></p>
 
             <?php endif; ?>
 

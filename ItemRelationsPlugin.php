@@ -357,11 +357,12 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
   // update the comment when the comment is edited in subject
   if (isset($post['item_relations_item_relation_subject_comment'])) {
     if (isset($post['item_relations_subject_comment'])) {
-      foreach($post['item_relations_item_relation_subject_comment'] as $key => $val) {
-				$post['item_relations_item_relation_subject_comment'][$key] = intval($val);
-			}
-      $comments = array_combine($post['item_relations_item_relation_subject_comment'], $post['item_relations_subject_comment']);
-      $commentIds = implode(',', array_keys($comments));
+      $comments = array();
+      foreach($post['item_relations_item_relation_subject_comment'] as $key) {
+        $key = intval($key);
+        if ($key) { $comments[$key] = $post['item_relations_subject_comment'][$key]; }
+      }
+      $commentIds = implode(",", array_keys($comments));
 
       //Optimized the update query to avoid multiple execution
       $sql = "UPDATE `$db->ItemRelationsRelation` set relation_comment = case id ";
@@ -379,14 +380,15 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
   // update the relation when the relation is edited in subject
   if (isset($post['item_relations_item_relation_subject_property'])) {
     if (isset($post['item_relations_subject_property'])) {
-      foreach($post['item_relations_item_relation_subject_property'] as $key => $val) {
-				$post['item_relations_item_relation_subject_property'][$key] = intval($val);
-			}
-      foreach($post['item_relations_subject_property'] as $key => $val) {
-				$post['item_relations_subject_property'][$key] = intval($val);
-			}
-      $properties = array_combine($post['item_relations_item_relation_subject_property'], $post['item_relations_subject_property']);
-      $propertyIds = implode(',', array_keys($properties));
+      $properties = array();
+      foreach($post['item_relations_item_relation_subject_property'] as $key) {
+        $key = intval($key);
+        if ($key) {
+          $val = intval($post['item_relations_subject_property'][$key]);
+          if ($val) { $properties[$key] = $val; }
+        }
+      }
+      $propertyIds = implode(",", array_keys($properties));
 
       //Optimized the update query to avoid multiple execution
       $sql = "UPDATE `$db->ItemRelationsRelation` set property_id = case id ";
