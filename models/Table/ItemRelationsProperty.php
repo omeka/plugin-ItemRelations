@@ -46,7 +46,7 @@ class Table_ItemRelationsProperty extends Omeka_Db_Table
         
         $select->where('vocabulary_id = ?', (int) $id)
                ->reset(Zend_Db_Select::ORDER)
-               ->order('id');
+               ->order('label');
         
         return $this->fetchObjects($select);
     }

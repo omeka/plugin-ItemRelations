@@ -14,6 +14,20 @@
 </div>
 <div class="field">
     <div class="two columns alpha">
+        <?php echo get_view()->formLabel('item_relations_admin_sidebar_or_maincontent', __('Display position in admin view')); ?>
+    </div>
+    <div class="inputs five columns omega">
+        <p class="explanation">
+            <?php
+            echo __('Select the position where you would prefer to display the relations in admin view: '.
+										'In the side bar in the lower right (default) or underneath the regular field values to the left.');
+            ?>
+        </p>
+        <?php echo get_view()->formSelect('item_relations_admin_sidebar_or_maincontent', $adminSidebarOrMaincontent, null, array('sidebar' => __('Side bar'), 'maincontent' => __('Main content'))); ?>
+    </div>
+</div>
+<div class="field">
+    <div class="two columns alpha">
         <?php echo get_view()->formLabel('item_relations_provide_relation_comments', __('Provide comment field for relations')); ?>
     </div>
     <div class="inputs five columns omega">

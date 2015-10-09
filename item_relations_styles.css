@@ -1,14 +1,7 @@
-#selectObjectId {
-	// display:block !IMPORTANT; 
-	background:#fff;
-	padding:1.5em;
-	width:460px;
-	height:460px;
-	overflow:hidden; // scroll;
+.pg_disabled {
+    visibility: hidden;
 }
 
-#allItemIds { width:28em; }
-
-.inlineselect { display: inline-block; }
-
-#item_relations_property_id { width:10em; }
+.hidden {
+    display: none;
+}

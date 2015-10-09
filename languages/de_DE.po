@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: Item Relations\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2015-06-17 17:16+0100\n"
+"PO-Revision-Date: 2015-08-25 17:57+0200\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.4\n"
 
 #: ItemRelationsPlugin.php:116
 msgid "Custom"
@@ -88,14 +88,13 @@ msgstr "Vokabular durchsuchen"
 
 #: item_relations_form.php:6
 #, php-format
-msgid ""
-"Here you can relate this item to another item and delete existing relations. For descriptions of the relations, see the %s page. Invalid item IDs will be ignored."
+msgid "Here you can relate this item to another item and delete existing relations. For descriptions of the relations, see the %s page. Invalid item IDs will be ignored."
 msgstr ""
-"Hier können Sie ein Objekt mit einem anderen Objekt in Beziehung setzen oder bestehende Beziehungen löschen. Für die Beschreibungen der Beziehungen, lesen Sie bitte "
-"unter %s weiter. Unzulässige Objekt-IDs werden ignoriert."
+"Hier können Sie ein Objekt mit einem anderen Objekt in Beziehung setzen oder bestehende Beziehungen löschen. Für die Beschreibungen der Beziehungen, lesen Sie bitte unter %s weiter. Unzulässige Objekt-"
+"IDs werden ignoriert."
 
-#: item_relations_form.php:24 item_relations_form.php:34 item_relations_form.php:39 views/admin/common/item-relations-show.php:10
-#: views/admin/common/item-relations-show.php:19 views/public/common/item-relations-show.php:9 views/public/common/item-relations-show.php:18
+#: item_relations_form.php:24 item_relations_form.php:34 item_relations_form.php:39 views/admin/common/item-relations-show.php:10 views/admin/common/item-relations-show.php:19
+#: views/public/common/item-relations-show.php:9 views/public/common/item-relations-show.php:18
 msgid "This Item"
 msgstr "Dieses Objekt"
 
@@ -109,7 +108,7 @@ msgstr "[n.v.]"
 
 #: item_relations_form.php:52
 msgid "Add a Relation"
-msgstr "Beziehung hinzufügen"
+msgstr "Eine Beziehung hinzufügen"
 
 #: models/ItemRelationsProperty.php:94
 msgid "All"
@@ -157,12 +156,11 @@ msgstr "Benutzerdefiniertes Vokabular editieren"
 
 #: views/admin/vocabularies/edit.php:8
 msgid ""
-"Here you can add, edit, and delete properties in your custom vocabulary. Property labels must be unique. You cannot edit property labels once they have been created, "
-"so make sure they are spelled correctly and convey the exact relation you want them to convey."
+"Here you can add, edit, and delete properties in your custom vocabulary. Property labels must be unique. You cannot edit property labels once they have been created, so make sure they are spelled "
+"correctly and convey the exact relation you want them to convey."
 msgstr ""
-"Hier können Sie Eigenschaften in das benutzerdefinierte Vokabular hinzufügen, sowie bestehende editieren oder löschen. Die Eigenschafts-Bezeichnungen müssen "
-"eindeutig sein. Sie können die Eigenschafts-Bezeichnungen nach dem Anlegen nicht mehr nachträglich editieren. Stellen Sie daher bitte sicher, dass diese fehlerfrei "
-"geschrieben sind und die zu definierende Beziehung exakt beschreiben."
+"Hier können Sie Eigenschaften in das benutzerdefinierte Vokabular hinzufügen, sowie bestehende editieren oder löschen. Die Eigenschafts-Bezeichnungen müssen eindeutig sein. Sie können die Eigenschafts-"
+"Bezeichnungen nach dem Anlegen nicht mehr nachträglich editieren. Stellen Sie daher bitte sicher, dass diese fehlerfrei geschrieben sind und die zu definierende Beziehung exakt beschreiben."
 
 #: views/admin/vocabularies/edit.php:37
 msgid "Add a Property"
@@ -188,14 +186,47 @@ msgstr "Möchten Sie einige hinzufügen?"
 msgid "Local Part"
 msgstr "Lokaler Teil"
 
-#: views/shared/common/item-relations-advanced-search.php:8
+#: views/shared/common/item-relations-advanced-search.php:11
 msgid ""
-"Filter this search for items with the selected relation. For example, when selecting \"Subject\" items with the \"hasPart\" relation, the search will return all "
-"items that have parts. When selecting \"Object\" items with the same relation, the search will return all items that are parts of other items."
+"Filter this search for items with the selected relation. For example, when selecting \"Subject\" items with the \"hasPart\" relation, the search will return all items that have parts. When selecting "
+"\"Object\" items with the same relation, the search will return all items that are parts of other items."
 msgstr ""
-"Diese Suche auf Objekte mit einer bestimmten Beziehung begrenzen. Wenn Sie z.B. eine \"Subjekt-Ressource“ mit der \"Enthält Teil\"-Beziehung auswählen, wird diese "
-"Suche alle Objekte auflisten, die Teile enthalten. Wenn Sie eine \"Objekt-Ressource“ mit derselben Beziehung auswählen, wird die Suche alle Objekte auflisten, die "
-"Teile anderer Objekte sind."
+"Diese Suche auf Objekte mit einer bestimmten Beziehung begrenzen. Wenn Sie z.B. eine „Subjekt-Ressource” mit der „Enthält Teil”-Beziehung auswählen, wird diese Suche alle Objekte auflisten, die Teile "
+"enthalten. Wenn Sie eine „Objekt-Ressource“ mit derselben Beziehung auswählen, wird die Suche alle Objekte auflisten, die Teile anderer Objekte sind."
+
+#: views/shared/common/item-relations-advanced-search.php:22
+msgid "Filter this search for items being \"Subject\" (or \"Object\", respectively) in relations that contain a certain text portion in their comments."
+msgstr "Diese Suche auf Objekte einschränken, die „Subjekt-Ressource” (bzw. „Objekt-Ressource”) in Beziehungen sind, die einen bestimmten Text in ihren Kommentaren enthalten."
+
+msgid "Item Sort"
+msgstr "Objektsortierung"
+
+msgid "Most recently updated"
+msgstr "Kürzlich bearbeitet"
+
+msgid "Alphabetically"
+msgstr "Alphabetisch"
+
+msgid "Object Title"
+msgstr "Objekt-Titel"
+
+msgid "Partial Object Title"
+msgstr "Teilweiser Objekt-Titel"
+
+msgid "Add Relation"
+msgstr "Beziehung hinzufügen"
+
+msgid "Display position in admin view"
+msgstr "Anzeigeposition in Admin-Ansicht"
+
+msgid "Select the position where you would prefer to display the relations in admin view: In the side bar in the lower right (default) or underneath the regular field values to the left."
+msgstr "Wählen Sie die Anzeigeposition, die Sie für die Beziehungen in der Admin-Ansicht bevorzugen: In der Seitenleiste unten rechts (Default) oder unterhalb der regulären Feldern auf der linken Seite."
+
+msgid "Side bar"
+msgstr "Seitenleiste"
+
+msgid "Main content"
+msgstr "Hauptinhalt"
 
 # --------------------------------------------------
 msgid "Relations defined by DCMI Metadata Terms: http://dublincore.org/documents/dcmi-terms/"
@@ -337,8 +368,7 @@ msgid "Coverage"
 msgstr "Abdeckung"
 
 msgid "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."
-msgstr ""
-"Das räumliche oder zeitliche Rahmen der Ressource, die räumliche Anwendbarkeit der Ressource, oder der Zuständigkeitsbereich, für die die Ressource relevant ist."
+msgstr "Das räumliche oder zeitliche Rahmen der Ressource, die räumliche Anwendbarkeit der Ressource, oder der Zuständigkeitsbereich, für die die Ressource relevant ist."
 
 msgid "Creator"
 msgstr "Urheber"
@@ -356,8 +386,7 @@ msgid "Audience Education Level"
 msgstr "Zielgruppen-Bildungsgrad"
 
 msgid "A class of entity, defined in terms of progression through an educational or training context, for which the described resource is intended."
-msgstr ""
-"Eine Klasse von Personen oder Organisationen, definiert in Hinblick auf deren Bildungs- oder Ausbildungsfortschritt, für den die bezeichnete Ressource gedacht ist."
+msgstr "Eine Klasse von Personen oder Organisationen, definiert in Hinblick auf deren Bildungs- oder Ausbildungsfortschritt, für den die bezeichnete Ressource gedacht ist."
 
 msgid "Extent"
 msgstr "Umfang"
@@ -375,8 +404,7 @@ msgid "Instructional Method"
 msgstr "Lehrmethode"
 
 msgid "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support."
-msgstr ""
-"Ein Prozess, der dazu verwendet wird, Wissen, Einstellungen und Fertigkeiten hervorzubringen, zu dessen Unterstützung die bezeichnete Ressource entwickelt wurde."
+msgstr "Ein Prozess, der dazu verwendet wird, Wissen, Einstellungen und Fertigkeiten hervorzubringen, zu dessen Unterstützung die bezeichnete Ressource entwickelt wurde."
 
 msgid "Language"
 msgstr "Sprache"
@@ -406,8 +434,7 @@ msgid "Provenance"
 msgstr "Herkunft"
 
 msgid "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
-msgstr ""
-"Eine Aussage über jedwede Änderung der Eigentümerschaft der Ressource seit ihrer Erstellung, die Bedeutung für ihre Authentizität, Richtigkeit und Deutung besitzt."
+msgstr "Eine Aussage über jedwede Änderung der Eigentümerschaft der Ressource seit ihrer Erstellung, die Bedeutung für ihre Authentizität, Richtigkeit und Deutung besitzt."
 
 msgid "Publisher"
 msgstr "Verleger"
@@ -477,9 +504,7 @@ msgid "cites"
 msgstr "zitiert"
 
 msgid "Relates a document to another document that is cited by the first document as reference, comment, review, quotation or for another purpose."
-msgstr ""
-"Setzt ein Dokument mit einem anderen Dokument in Beziehung, das von ersterem Dokument referenziert, kommentiert, rezensiert, zitiert oder auf andere Weise genannt "
-"wird."
+msgstr "Setzt ein Dokument mit einem anderen Dokument in Beziehung, das von ersterem Dokument referenziert, kommentiert, rezensiert, zitiert oder auf andere Weise genannt wird."
 
 msgid "review of"
 msgstr "Rezension von"
@@ -556,9 +581,7 @@ msgid "image"
 msgstr "Bild"
 
 msgid "An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage)."
-msgstr ""
-"Ein Bild, das dazu verwendet werden kann, etwas zu repräsentieren (d.h. solcherlei Darstellungen, die besonders repräsentativ für etwas sind, beispielsweise das "
-"Porträtfoto auf einer Homepage)."
+msgstr "Ein Bild, das dazu verwendet werden kann, etwas zu repräsentieren (d.h. solcherlei Darstellungen, die besonders repräsentativ für etwas sind, beispielsweise das Porträtfoto auf einer Homepage)."
 
 msgid "is primary topic of"
 msgstr "ist Hauptthema von"

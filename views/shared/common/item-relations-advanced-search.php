@@ -1,3 +1,6 @@
+<?php
+  $provideRelationComments = get_option('item_relations_provide_relation_comments');
+?>
 <div class="field">
     <div class="two columns alpha">
         <?php echo $this->formLabel('item_relations_item_relation', __('Item Relations')); ?>
@@ -12,10 +15,21 @@
             . 'search will return all items that are parts of other items.');
         ?>
         </p>
+        <?php echo $this->formSelect('item_relations_property_id', @$_GET['item_relations_property_id'], array(), $formSelectProperties); ?>
+        <?php if ($provideRelationComments) : ?>
+        <p class="explanation">
+        <?php
+        echo __('Filter this search for items being "Subject" (or "Object", respectively) '.
+								'in relations that contain a certain text portion in their comments.');
+        ?>
+        </p>
+        <p>
+            <?php echo $this->formText('item_relations_comment', @$_GET['item_relations_comment'], array('size' => 8)); ?>
+        </p>
+        <?php endif; ?>
         <p>
             <input type="radio" name="item_relations_clause_part" value="subject" checked="checked" /><?php echo __('Subject '); ?>
             <input type="radio" name="item_relations_clause_part" value="object" /><?php echo __('Object'); ?>
         </p>
-        <?php echo $this->formSelect('item_relations_property_id', @$_GET['item_relations_property_id'], array(), $formSelectProperties); ?>
     </div>
 </div>
