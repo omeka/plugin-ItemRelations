@@ -29,6 +29,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     'admin_items_batch_edit_form',
     'items_batch_edit_custom',
     'public_items_show',
+    'public_items_search',
     'items_browse_sql',
   );
 
@@ -317,14 +318,24 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
   }
 
   /**
-  * Display the item relations form on the admin advanced search page.
+  * Display the item relations form on the advanced search page.
   */
-  public function hookAdminItemsSearch()
+  protected function _ItemsSearch()
   {
     echo common('item-relations-advanced-search', array(
       'formSelectProperties' => get_table_options('ItemRelationsProperty'))
     );
   }
+
+  /**
+  * Display the item relations form on the admin advanced search page.
+  */
+  public function hookAdminItemsSearch() { SELF::_itemsSearch();  }
+
+  /**
+  * Display the item relations form on the public advanced search page.
+  */
+  public function hookPublicItemsSearch() { SELF::_itemsSearch();  }
 
   /**
   * Save the item relations after saving an item add/edit form.
