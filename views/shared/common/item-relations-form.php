@@ -31,7 +31,7 @@
                     ),
                     array_slice($formSelectProperties, 1));
             ?></td>
-            <td><a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>" target="_blank"><?php echo $subjectRelation['object_item_title']; ?></a></td>
+            <td><?php echo link_to_item($subjectRelation['object_item_title'], array('target' => '_blank'), 'show', $subjectRelation['object_item']); ?></td>
             <?php if ($provideRelationComments): ?>
             <td><input name="item_relations_subject_comment[<?php echo $subjectRelation['item_relation_id']; ?>]" id="item_relations_subject_comment_<?php echo $subjectRelation['item_relation_id']; ?>" size="10" maxlength="60" value="<?php echo $subjectRelation['relation_comment'];  ?>" /></td>
             <?php endif; ?>
@@ -40,7 +40,7 @@
         <?php endforeach; ?>
         <?php foreach ($objectRelations as $objectRelation): ?>
         <tr class="item-relations-entry">
-            <td><a href="<?php echo url('items/show/' . $objectRelation['subject_item_id']); ?>" target="_blank"><?php echo $objectRelation['subject_item_title']; ?></a></td>
+            <td><?php echo link_to_item($objectRelation['subject_item_title'], array('target' => '_blank'), 'show', $objectRelation['subject_item']); ?></td>
             <td><?php echo $objectRelation['relation_text']; ?></td>
             <td><?php echo __('This Item'); ?></td>
             <?php if ($provideRelationComments): ?>

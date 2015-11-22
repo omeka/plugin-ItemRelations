@@ -52,6 +52,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         'item_relations_relation_format' => 'prefix_local_part',
         'item_relations_admin_sidebar_or_maincontent' => 'sidebar',
         'item_relations_public_append_to_items_show' => 1,
+        'item_relations_public_display_mode' => 'table',
     );
 
     /**
@@ -276,6 +277,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             $item = get_current_record('item');
 
             echo common('item-relations-show', array(
+                'item' => $item,
                 'subjectRelations' => self::prepareSubjectRelations($item),
                 'objectRelations' => self::prepareObjectRelations($item),
             ));
@@ -294,6 +296,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             $item = $args['item'];
 
             echo common('item-relations-show', array(
+                'item' => $item,
                 'subjectRelations' => self::prepareSubjectRelations($item),
                 'objectRelations' => self::prepareObjectRelations($item),
             ));
@@ -312,6 +315,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             $item = $args['item'];
 
             echo common('item-relations-show', array(
+                'item' => $item,
                 'subjectRelations' => self::prepareSubjectRelations($item),
                 'objectRelations' => self::prepareObjectRelations($item),
             ));
@@ -608,12 +612,11 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     {
         $subjects = get_db()->getTable('ItemRelationsRelation')->findBySubjectItemId($item->id, true);
         $subjectRelations = array();
-
         foreach ($subjects as $subject) {
             $objectItem = get_record_by_id('Item', $subject->object_item_id);
             $subjectRelations[] = array(
                 'item_relation_id' => $subject->id,
-                'object_item_id' => $subject->object_item_id,
+                'object_item' => $objectItem,
                 'object_item_title' => self::getItemTitle($objectItem),
                 'relation_comment' => $subject->relation_comment,
                 'relation_text' => $subject->getPropertyText(),
@@ -637,7 +640,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             $subjectItem = get_record_by_id('Item', $object->subject_item_id);
             $objectRelations[] = array(
                 'item_relation_id' => $object->id,
-                'subject_item_id' => $object->subject_item_id,
+                'subject_item' => $subjectItem,
                 'subject_item_title' => self::getItemTitle($subjectItem),
                 'relation_comment' => $object->relation_comment,
                 'relation_text' => $object->getPropertyText(),
