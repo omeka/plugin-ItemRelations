@@ -108,9 +108,11 @@ QUERY;
             );
         }
 
-        $this->view->metadata = array(
+        $metadata = array(
             'count' => $m_count,
             'items' => $m_items,
         );
+
+        $this->_helper->json($metadata);
     }
 }
