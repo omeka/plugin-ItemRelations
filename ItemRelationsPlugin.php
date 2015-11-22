@@ -606,18 +606,16 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
      */
     public static function prepareSubjectRelations(Item $item)
     {
-        $subjects = get_db()->getTable('ItemRelationsRelation')->findBySubjectItemId($item->id);
+        $subjects = get_db()->getTable('ItemRelationsRelation')->findBySubjectItemId($item->id, true);
         $subjectRelations = array();
 
         foreach ($subjects as $subject) {
-            if (!($item = get_record_by_id('item', $subject->object_item_id))) {
-                continue;
-            }
+            $objectItem = get_record_by_id('Item', $subject->object_item_id);
             $subjectRelations[] = array(
                 'item_relation_id' => $subject->id,
                 'object_item_id' => $subject->object_item_id,
+                'object_item_title' => self::getItemTitle($objectItem),
                 'relation_comment' => $subject->relation_comment,
-                'object_item_title' => self::getItemTitle($item),
                 'relation_text' => $subject->getPropertyText(),
                 'relation_description' => $subject->property_description,
             );
@@ -633,17 +631,15 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
      */
     public static function prepareObjectRelations(Item $item)
     {
-        $objects = get_db()->getTable('ItemRelationsRelation')->findByObjectItemId($item->id);
+        $objects = get_db()->getTable('ItemRelationsRelation')->findByObjectItemId($item->id, true);
         $objectRelations = array();
         foreach ($objects as $object) {
-            if (!($item = get_record_by_id('item', $object->subject_item_id))) {
-                continue;
-            }
+            $subjectItem = get_record_by_id('Item', $object->subject_item_id);
             $objectRelations[] = array(
                 'item_relation_id' => $object->id,
                 'subject_item_id' => $object->subject_item_id,
+                'subject_item_title' => self::getItemTitle($subjectItem),
                 'relation_comment' => $object->relation_comment,
-                'subject_item_title' => self::getItemTitle($item),
                 'relation_text' => $object->getPropertyText(),
                 'relation_description' => $object->property_description,
             );

@@ -20,7 +20,7 @@ class Table_ItemRelationsRelation extends Omeka_Db_Table
      */
     public function getSelect()
     {
-        $db = $this->getDb();
+        $db = $this->_db;
         return parent::getSelect()
             ->join(
                 array('item_relations_properties' => $db->ItemRelationsProperty),
@@ -41,27 +41,45 @@ class Table_ItemRelationsRelation extends Omeka_Db_Table
 
     /**
      * Find item relations by subject item ID.
-     * 
+     *
+     * @param integer $subjectItemId
+     * @param boolean $onlyExistingObjectItems
      * @return array
      */
-    public function findBySubjectItemId($subjectItemId)
+    public function findBySubjectItemId($subjectItemId, $onlyExistingObjectItems = true)
     {
         $db = $this->getDb();
         $select = $this->getSelect()
             ->where('item_relations_relations.subject_item_id = ?', (int) $subjectItemId);
+        if ($onlyExistingObjectItems) {
+            $select->join(
+                array('items' => $db->Item),
+                'items.id = item_relations_relations.object_item_id',
+                array()
+            );
+        }
         return $this->fetchObjects($select);
     }
-    
+
     /**
      * Find item relations by object item ID.
-     * 
+     *
+     * @param integer $objectItemId
+     * @param boolean $onlyExistingSubjectItems
      * @return array
      */
-    public function findByObjectItemId($objectItemId)
+    public function findByObjectItemId($objectItemId, $onlyExistingSubjectItems = true)
     {
         $db = $this->getDb();
         $select = $this->getSelect()
             ->where('item_relations_relations.object_item_id = ?', (int) $objectItemId);
+        if ($onlyExistingSubjectItems) {
+            $select->join(
+                array('items' => $db->Item),
+                'items.id = item_relations_relations.subject_item_id',
+                array()
+            );
+        }
         return $this->fetchObjects($select);
     }
 }
