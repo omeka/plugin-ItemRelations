@@ -1,6 +1,3 @@
-<?php
-    $db = get_db();
-?>
 <p><?php
     $link = '<a href="' . url('item-relations/vocabularies/') . '">'
         . __('Browse Vocabularies') . '</a>';
@@ -25,13 +22,8 @@
         <tr class="item-relations-entry">
             <td><?php echo __('This Item'); ?></td>
             <td><?php
-                // Get the default value to be selected in dropdown.
-                $subject = $subjectRelation['relation_text'];
-                $sql = "SELECT id from {$db->ItemRelationsProperty} where label = '$subject'";
-                $subject_id = $db->fetchOne($sql);
-
                 echo $this->formSelect('item_relations_subject_property[' . $subjectRelation['item_relation_id'] . ']',
-                    $subject_id,
+                    $subjectRelation['subject_id'],
                     array(
                         'id' => 'item_relations_subject_property_' . $subjectRelation['item_relation_id'],
                         'multiple' => false,
