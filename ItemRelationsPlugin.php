@@ -571,17 +571,7 @@ public function filterAdminNavigationMain($nav)
 public function filterAdminItemsFormTabs($tabs, $args)
 {
   $item = $args['item'];
-
-  $formSelectProperties = get_table_options('ItemRelationsProperty');
-  $subjectRelations = self::prepareSubjectRelations($item);
-  $objectRelations = self::prepareObjectRelations($item);
-
-  ob_start();
-  include 'item_relations_form.php';
-  $content = ob_get_contents();
-  ob_end_clean();
-
-  $tabs['Item Relations'] = $content;
+  $tabs['Item Relations'] = get_view()->itemRelationsForm($item);
   return $tabs;
 }
 
@@ -668,14 +658,16 @@ public static function insertItemRelation($subjectItem, $propertyId, $objectItem
     return false;
   }
 
+  $db = get_db();
+
   // Set the subject item.
   if (!($subjectItem instanceOf Item)) {
-    $subjectItem = get_db()->getTable('Item')->find($subjectItem);
+    $subjectItem = $db->getTable('Item')->find($subjectItem);
   }
 
   // Set the object item.
   if (!($objectItem instanceOf Item)) {
-    $objectItem = get_db()->getTable('Item')->find($objectItem);
+    $objectItem = $db->getTable('Item')->find($objectItem);
   }
 
   // Don't save the relation if the subject or object items don't exist.
