@@ -40,12 +40,14 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     protected $_filters = array(
         'admin_items_form_tabs',
         'admin_navigation_main',
+        'item_relations_properties_select_options',
     );
 
     /**
      * @var array Options and their default values.
      */
     protected $_options = array(
+        'item_relations_allow_vocabularies' => '[]',
         'item_relations_provide_relation_comments' => 0,
         'item_relations_relation_format' => 'prefix_local_part',
         'item_relations_admin_sidebar_or_maincontent' => 'sidebar',
@@ -170,6 +172,11 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     {
         $post = $args['post'];
         foreach ($this->_options as $optionKey => $optionValue) {
+            if (in_array($optionKey, array(
+                    'item_relations_allow_vocabularies',
+                ))) {
+                $post[$optionKey] = json_encode($post[$optionKey]) ?: json_encode(array());
+            }
             if (isset($post[$optionKey])) {
                 set_option($optionKey, $post[$optionKey]);
             }
@@ -575,6 +582,20 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $item = $args['item'];
         $tabs['Item Relations'] = get_view()->itemRelationsForm($item);
         return $tabs;
+    }
+
+    /**
+     * Add the "Item Relations" tab to the admin items add/edit page.
+     *
+     * @return array
+     */
+    public function filterItemRelationsPropertiesSelectOptions($selectOptions)
+    {
+        $allowedVocabularies = json_decode(get_option('item_relations_allow_vocabularies'));
+        if (!empty($allowedVocabularies)) {
+            $selectOptions = array_intersect_key($selectOptions, array_flip($allowedVocabularies));
+        }
+        return $selectOptions;
     }
 
     /**

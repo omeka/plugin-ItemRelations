@@ -1,6 +1,36 @@
 <fieldset id="fieldset-item-relations-input"><legend><?php echo __('Input'); ?></legend>
     <div class="field">
         <div class="two columns alpha">
+            <?php echo $this->formLabel('item_relations_allow_vocabularies',
+            __('Limit Relations to Vocabularies')); ?>
+            </p>
+        </div>
+        <div class="inputs five columns omega">
+            <p class="explanation">
+                <?php
+                echo __('Check the vocabularies that can be used to set relations.');
+                echo ' ' . __('If none is checked, all vocabularies will be allowed.');
+                ?>
+            </p>
+            <div class="input-block">
+                <?php
+                    $currentVocabularies = json_decode(get_option('item_relations_allow_vocabularies')) ?: array();
+                    $vocabularies = get_records('ItemRelationsVocabulary', array(), 0);
+                    echo '<ul style="list-style-type: none;">';
+                    foreach ($vocabularies as $vocabulary) {
+                        echo '<li>';
+                        echo $this->formCheckbox('item_relations_allow_vocabularies[]', $vocabulary->name,
+                            array('checked' => in_array($vocabulary->name, $currentVocabularies) ? 'checked' : ''));
+                        echo $vocabulary->name;
+                        echo '</li>';
+                    }
+                    echo '</ul>';
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <div class="two columns alpha">
             <?php echo $this->formLabel('item_relations_provide_relation_comments',
                 __('Provide comment field for relations')); ?>
         </div>
