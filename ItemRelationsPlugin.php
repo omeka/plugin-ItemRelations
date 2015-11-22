@@ -373,14 +373,14 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                         $comments[$key] = $post['item_relations_subject_comment'][$key];
                     }
                 }
-                $commentIds = implode(",", array_keys($comments));
+                $commentIds = implode(',', array_keys($comments));
 
                 // Optimized the update query to avoid multiple execution.
-                $sql = "UPDATE `$db->ItemRelationsRelation` set relation_comment = case id ";
+                $sql = "UPDATE `$db->ItemRelationsRelation` SET relation_comment = CASE id ";
                 foreach ($comments as $commentId => $comment) {
-                    $sql .= sprintf(" when %d then '%s'", $commentId, addslashes($comment) );
+                    $sql .= sprintf(' WHEN %d THEN %s', $commentId, $db->quote($comment));
                 }
-                $sql .= " end where id in ($commentIds)";
+                $sql .= " END WHERE id IN ($commentIds)";
                 $db->query($sql);
             }
             else {
@@ -401,14 +401,14 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                         }
                     }
                 }
-                $propertyIds = implode(",", array_keys($properties));
+                $propertyIds = implode(',', array_keys($properties));
 
                 // Optimized the update query to avoid multiple execution.
-                $sql = "UPDATE `$db->ItemRelationsRelation` set property_id = case id ";
+                $sql = "UPDATE `$db->ItemRelationsRelation` SET property_id = CASE id ";
                 foreach ($properties as $propertyId => $property) {
-                    $sql .= sprintf(" when %d then %d", $propertyId, $property);
+                    $sql .= sprintf(' WHEN %d THEN %d', $propertyId, $property);
                 }
-                $sql .= " end where id in ($propertyIds)";
+                $sql .= " END WHERE id IN ($propertyIds)";
                 $db->query($sql);
             }
             else {
