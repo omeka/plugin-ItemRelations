@@ -11,10 +11,7 @@
  */
 class ItemRelations_LookupController extends Omeka_Controller_AbstractActionController
 {
-    public function indexAction()
-    {
-        $db = get_db();
-
+    public function indexAction() {
         if (!$this->_hasParam('partial')) {
             $this->_setParam('partial', '');
         }
@@ -34,7 +31,7 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         $partial = preg_replace('/[^ \.,\!\?\p{L}\p{N}\p{Mc}]/ui', '', $this->_getParam('partial'));
         $where_text = '';
         if (strlen($partial) > 0) {
-            $where_text = 'AND text RLIKE ' . $db->quote($partial);
+            $where_text = "AND text RLIKE '$partial'";
         }
 
         $item_type = intval($this->_getParam('item_type'));
@@ -66,13 +63,14 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
             break;
         }
 
-        $titleId = 50;
+        $title = 50;
+        $db = get_db();
         $query = <<<QCOUNT
 SELECT count(*) AS count
 FROM {$db->Item} items
 LEFT JOIN {$db->Element_Texts} elementtexts
 ON (items.id = elementtexts.record_id)
-WHERE elementtexts.element_id = $titleId
+WHERE elementtexts.element_id = $title
 $where_item_type
 $where_text
 GROUP BY elementtexts.record_id
@@ -90,7 +88,7 @@ SELECT items.id AS id, text
 FROM {$db->Item} items
 LEFT JOIN {$db->Element_Texts} elementtexts
 ON (items.id = elementtexts.record_id)
-WHERE elementtexts.element_id = $titleId
+WHERE elementtexts.element_id = $title
 $where_item_type
 $where_text
 GROUP BY elementtexts.record_id
@@ -108,11 +106,9 @@ QUERY;
             );
         }
 
-        $metadata = array(
+        $this->view->metadata = array(
             'count' => $m_count,
             'items' => $m_items,
         );
-
-        $this->_helper->json($metadata);
     }
 }
