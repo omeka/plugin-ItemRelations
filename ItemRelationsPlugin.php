@@ -53,6 +53,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         'item_relations_admin_sidebar_or_maincontent' => 'sidebar',
         'item_relations_public_append_to_items_show' => 1,
         'item_relations_public_display_mode' => 'table',
+        'item_relations_admin_display_mode' => 'table',
     );
 
     /**
@@ -276,11 +277,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         if (get_option('item_relations_public_append_to_items_show')) {
             $item = get_current_record('item');
 
-            echo common('item-relations-show', array(
-                'item' => $item,
-                'subjectRelations' => self::prepareSubjectRelations($item),
-                'objectRelations' => self::prepareObjectRelations($item),
-            ));
+            echo common('item-relations-show', array('item' => $item));
         }
     }
 
@@ -295,11 +292,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         if ($adminSidebarOrMaincontent == "maincontent") {
             $item = $args['item'];
 
-            echo common('item-relations-show', array(
-                'item' => $item,
-                'subjectRelations' => self::prepareSubjectRelations($item),
-                'objectRelations' => self::prepareObjectRelations($item),
-            ));
+            echo common('item-relations-show', array('item' => $item));
         }
     }
 
@@ -314,11 +307,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         if ($adminSidebarOrMaincontent != "maincontent") {
             $item = $args['item'];
 
-            echo common('item-relations-show', array(
-                'item' => $item,
-                'subjectRelations' => self::prepareSubjectRelations($item),
-                'objectRelations' => self::prepareObjectRelations($item),
-            ));
+            echo common('item-relations-show', array('item' => $item));
         }
     }
 
@@ -648,6 +637,66 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             );
         }
         return $objectRelations;
+    }
+
+    /**
+    * Prepare all item relations (subject & object) for display.
+    * ... Should (could?) replace prepareSubjectRelations + prepareObjectRelations entirely
+    * ... Currently, the two are necessary for (new) show relations by show-list-by-item-type
+    *
+    * @param Item $item
+    * @return array
+    */
+    public static function prepareAllRelations(Item $item)
+    {
+      if (!isset($item->id)) { return array(); }
+
+      $db = get_db();
+      $query = "SELECT *, irr.id irrid, irp.description irpdesc".
+               " FROM `$db->ItemRelationsRelations` irr".
+               " JOIN `$db->ItemRelationsProperty` irp on irr.property_id = irp.id".
+               " JOIN `$db->ItemRelationsVocabulary` irv on irp.vocabulary_id = irv.id".
+               " WHERE irr.subject_item_id = $item->id".
+               " OR irr.object_item_id = $item->id".
+               " ORDER BY irv.name ASC, irp.vocabulary_id ASC".
+               "";
+      # echo "<pre>$query</pre>";
+      $partners = $db->fetchAll($query);
+      # echo "<pre>$query:\n" . print_r($partners,true) . "</pre>";
+
+      $relations = array();
+
+      foreach($partners as $partner) {
+        $otherItemType = ( $item->id == $partner["subject_item_id"] ? "object" : "subject" );
+        $otherItem = get_record_by_id('item', $partner[$otherItemType."_item_id"]);
+        # echo "<pre>".$otherItem->id." = $otherItemType</pre>";
+        if ($otherItem) {
+          $relation = array(
+            'item_relation_id' => $partner["irrid"],
+            'relation_comment' => $partner["relation_comment"],
+            'relation_text' => $partner["label"],
+            'relation_property' => $partner["property_id"],
+            'relation_description' => $partner["irpdesc"],
+            'vocabulary_id' => $partner["vocabulary_id"],
+            'vocabulary' => $partner["name"],
+            'vocabulary_desc' => $partner["description"],
+            'subject_item_id' => $partner["subject_item_id"],
+            'object_item_id' => $partner["object_item_id"],
+          );
+          if ($otherItemType=="subject") {
+           $relation['subject_item_title'] = self::getItemTitle($otherItem);
+           $relation['object_item_title'] = self::getItemTitle($item);
+          }
+          else {
+            $relation['subject_item_title'] = self::getItemTitle($item);
+            $relation['object_item_title'] = self::getItemTitle($otherItem);
+          }
+          $relations[] = $relation;
+        }
+      }
+
+      # echo "<pre>" . print_r($relations, true) . "</pre>";
+      return $relations;
     }
 
     /**

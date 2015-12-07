@@ -17,149 +17,1185 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ItemRelationsPlugin.php:116
+#: ItemRelationsPlugin.php:127
 msgid "Custom"
 msgstr ""
 
-#: ItemRelationsPlugin.php:117
+#: ItemRelationsPlugin.php:128
 msgid "Custom vocabulary containing relations defined for this Omeka instance."
 msgstr ""
 
-#: ItemRelationsPlugin.php:357 ItemRelationsPlugin.php:407
-#: views/admin/common/item-relations-show.php:2
+#: ItemRelationsPlugin.php:402
+msgid "There was an error in the item relation comments."
+msgstr ""
+
+#: ItemRelationsPlugin.php:430
+msgid "There was an error in listing the item relation."
+msgstr ""
+
+#: ItemRelationsPlugin.php:523 ItemRelationsPlugin.php:575
+#: views/admin/common/item-relations-show.php:7
 #: views/public/common/item-relations-show.php:2
-#: views/shared/common/item-relations-advanced-search.php:3
+#: views/shared/common/item-relations-advanced-search.php:6
 msgid "Item Relations"
 msgstr ""
 
-#: ItemRelationsPlugin.php:361
+#: ItemRelationsPlugin.php:527
 msgid "Subjects"
 msgstr ""
 
-#: ItemRelationsPlugin.php:363 item_relations_form.php:17
-#: views/shared/common/item-relations-advanced-search.php:17
+#: ItemRelationsPlugin.php:529
+#: views/shared/common/item-relations-advanced-search.php:32
+#: views/shared/common/item-relations-form.php:13
 msgid "Object"
 msgstr ""
 
-#: ItemRelationsPlugin.php:368
+#: ItemRelationsPlugin.php:534
 msgid "These Items"
 msgstr ""
 
-#: ItemRelationsPlugin.php:371 item_relations_form.php:41
+#: ItemRelationsPlugin.php:537
 msgid "Item ID"
 msgstr ""
 
-#: config_form.php:3
-msgid "Append to Public Items Show"
+#: controllers/VocabulariesController.php:37
+msgid "The vocabulary name already exists. Please choose a different one."
 msgstr ""
 
-#: config_form.php:8
-msgid ""
-"Check this if you want to display an item's relations on its public show "
-"page."
-msgstr ""
-
-#: config_form.php:17
-msgid "Provide comment field for relations"
-msgstr ""
-
-#: config_form.php:22
-msgid "Check this if you want to be able to enter a comment to a relation."
-msgstr ""
-
-#: config_form.php:29
-msgid "Relation Format"
-msgstr ""
-
-#: config_form.php:35
-msgid ""
-"Select the format of an item's relations that you would prefer to show. If "
-"one is unavailable the other will be used."
-msgstr ""
-
-#: config_form.php:39
-msgid "prefix:localPart"
-msgstr ""
-
-#: config_form.php:26
-msgid "label"
+#: controllers/VocabulariesController.php:47
+msgid "The vocabulary is successfully added."
 msgstr ""
 
 #: controllers/VocabulariesController.php:50
+msgid "The vocabulary cannot be added."
+msgstr ""
+
+#: controllers/VocabulariesController.php:70
+#: controllers/VocabulariesController.php:105
 msgid "The vocabulary was successfully edited."
 msgstr ""
 
-#: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
-msgid "Browse Vocabularies"
+#: controllers/VocabulariesController.php:73
+msgid "The vocabulary name cannot be empty."
 msgstr ""
 
-#: item_relations_form.php:6
-#, php-format
+#: formal_vocabularies.php:11
 msgid ""
-"Here you can relate this item to another item and delete existing relations. "
-"For descriptions of the relations, see the %s page. Invalid item IDs will be "
-"ignored."
+"Relations defined by DCMI Metadata Terms: http://dublincore.org/documents/"
+"dcmi-terms/"
 msgstr ""
 
-#: item_relations_form.php:24 item_relations_form.php:34
-#: item_relations_form.php:39 views/admin/common/item-relations-show.php:10
-#: views/admin/common/item-relations-show.php:19
-#: views/public/common/item-relations-show.php:9
-#: views/public/common/item-relations-show.php:18
-msgid "This Item"
+#: formal_vocabularies.php:18
+msgid "A related resource."
 msgstr ""
 
-#: item_relations_form.php:44
-msgid "Select ID"
+#: formal_vocabularies.php:22
+msgid "Conforms To"
 msgstr ""
 
-#: item_relations_form.php:48
-msgid "[n/a]"
+#: formal_vocabularies.php:23
+msgid "An established standard to which the described resource conforms."
 msgstr ""
 
-#: item_relations_form.php:52
-msgid "Add a Relation"
+#: formal_vocabularies.php:27
+msgid "Has Format"
 msgstr ""
 
-#: models/ItemRelationsProperty.php:94
-msgid "All"
+#: formal_vocabularies.php:28
+msgid ""
+"A related resource that is substantially the same as the pre-existing "
+"described resource, but in another format."
 msgstr ""
 
-#: models/ItemRelationsProperty.php:96
-msgid "Sort within item types by"
+#: formal_vocabularies.php:32
+msgid "Has Part"
 msgstr ""
 
-#: models/ItemRelationsProperty.php:97
-msgid "Last Update (desc)"
+#: formal_vocabularies.php:33
+msgid ""
+"A related resource that is included either physically or logically in the "
+"described resource."
 msgstr ""
 
-#: models/ItemRelationsProperty.php:98
-msgid "Name (asc)"
+#: formal_vocabularies.php:37
+msgid "Has Version"
 msgstr ""
 
-#: models/ItemRelationsProperty.php:99
-msgid "Search Term"
+#: formal_vocabularies.php:38
+msgid ""
+"A related resource that is a version, edition, or adaptation of the "
+"described resource."
 msgstr ""
 
-#: models/ItemRelationsProperty.php:100
-msgid "Reset"
+#: formal_vocabularies.php:42
+msgid "Is Format Of"
+msgstr ""
+
+#: formal_vocabularies.php:43
+msgid ""
+"A related resource that is substantially the same as the described resource, "
+"but in another format."
+msgstr ""
+
+#: formal_vocabularies.php:47
+msgid "Is Part Of"
+msgstr ""
+
+#: formal_vocabularies.php:48
+msgid ""
+"A related resource in which the described resource is physically or "
+"logically included."
+msgstr ""
+
+#: formal_vocabularies.php:52
+msgid "Is Referenced By"
+msgstr ""
+
+#: formal_vocabularies.php:53
+msgid ""
+"A related resource that references, cites, or otherwise points to the "
+"described resource."
+msgstr ""
+
+#: formal_vocabularies.php:57
+msgid "Is Replaced By"
+msgstr ""
+
+#: formal_vocabularies.php:58
+msgid ""
+"A related resource that supplants, displaces, or supersedes the described "
+"resource."
+msgstr ""
+
+#: formal_vocabularies.php:62
+msgid "Is Required By"
+msgstr ""
+
+#: formal_vocabularies.php:63
+msgid ""
+"A related resource that requires the described resource to support its "
+"function, delivery, or coherence."
+msgstr ""
+
+#: formal_vocabularies.php:67
+msgid "Is Version Of"
+msgstr ""
+
+#: formal_vocabularies.php:68
+msgid ""
+"A related resource of which the described resource is a version, edition, or "
+"adaptation."
+msgstr ""
+
+#: formal_vocabularies.php:72
+msgid "References"
+msgstr ""
+
+#: formal_vocabularies.php:73
+msgid ""
+"A related resource that is referenced, cited, or otherwise pointed to by the "
+"described resource."
+msgstr ""
+
+#: formal_vocabularies.php:77
+msgid "Replaces"
+msgstr ""
+
+#: formal_vocabularies.php:78
+msgid ""
+"A related resource that is supplanted, displaced, or superseded by the "
+"described resource."
+msgstr ""
+
+#: formal_vocabularies.php:82
+msgid "Requires"
+msgstr ""
+
+#: formal_vocabularies.php:83
+msgid ""
+"A related resource that is required by the described resource to support its "
+"function, delivery, or coherence."
+msgstr ""
+
+#: formal_vocabularies.php:88
+msgid "A related resource from which the described resource is derived."
+msgstr ""
+
+#: formal_vocabularies.php:92
+msgid "Abstract"
+msgstr ""
+
+#: formal_vocabularies.php:93
+msgid "A summary of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:97
+msgid "Access Rights"
+msgstr ""
+
+#: formal_vocabularies.php:98
+msgid ""
+"Information about who can access the resource or an indication of its "
+"security status."
+msgstr ""
+
+#: formal_vocabularies.php:102
+msgid "Accrual Method"
+msgstr ""
+
+#: formal_vocabularies.php:103
+msgid "The method by which items are added to a collection."
+msgstr ""
+
+#: formal_vocabularies.php:107
+msgid "Accrual Periodicity"
+msgstr ""
+
+#: formal_vocabularies.php:108
+msgid "The frequency with which items are added to a collection."
+msgstr ""
+
+#: formal_vocabularies.php:112
+msgid "Accrual Policy"
+msgstr ""
+
+#: formal_vocabularies.php:113
+msgid "The policy governing the addition of items to a collection."
+msgstr ""
+
+#: formal_vocabularies.php:117
+msgid "Audience"
+msgstr ""
+
+#: formal_vocabularies.php:118
+msgid "A class of entity for whom the resource is intended or useful."
+msgstr ""
+
+#: formal_vocabularies.php:123
+msgid "An entity responsible for making contributions to the resource."
+msgstr ""
+
+#: formal_vocabularies.php:128
+msgid ""
+"The spatial or temporal topic of the resource, the spatial applicability of "
+"the resource, or the jurisdiction under which the resource is relevant."
+msgstr ""
+
+#: formal_vocabularies.php:133
+msgid "An entity primarily responsible for making the resource."
+msgstr ""
+
+#: formal_vocabularies.php:138
+msgid "An account of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:142
+msgid "Audience Education Level"
+msgstr ""
+
+#: formal_vocabularies.php:143
+msgid ""
+"A class of entity, defined in terms of progression through an educational or "
+"training context, for which the described resource is intended."
+msgstr ""
+
+#: formal_vocabularies.php:147
+msgid "Extent"
+msgstr ""
+
+#: formal_vocabularies.php:148
+msgid "The size or duration of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:153
+msgid "The file format, physical medium, or dimensions of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:157
+msgid "Instructional Method"
+msgstr ""
+
+#: formal_vocabularies.php:158
+msgid ""
+"A process, used to engender knowledge, attitudes and skills, that the "
+"described resource is designed to support."
+msgstr ""
+
+#: formal_vocabularies.php:163
+msgid "A language of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:167
+msgid "License"
+msgstr ""
+
+#: formal_vocabularies.php:168
+msgid ""
+"A legal document giving official permission to do something with the "
+"resource."
+msgstr ""
+
+#: formal_vocabularies.php:172
+msgid "Mediator"
+msgstr ""
+
+#: formal_vocabularies.php:173
+msgid ""
+"An entity that mediates access to the resource and for whom the resource is "
+"intended or useful."
+msgstr ""
+
+#: formal_vocabularies.php:177
+msgid "Medium"
+msgstr ""
+
+#: formal_vocabularies.php:178
+msgid "The material or physical carrier of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:182
+msgid "Provenance"
+msgstr ""
+
+#: formal_vocabularies.php:183
+msgid ""
+"A statement of any changes in ownership and custody of the resource since "
+"its creation that are significant for its authenticity, integrity, and "
+"interpretation."
+msgstr ""
+
+#: formal_vocabularies.php:188
+msgid "An entity responsible for making the resource available."
+msgstr ""
+
+#: formal_vocabularies.php:193
+msgid "Information about rights held in and over the resource."
+msgstr ""
+
+#: formal_vocabularies.php:197
+msgid "Rights Holder"
+msgstr ""
+
+#: formal_vocabularies.php:198
+msgid "A person or organization owning or managing rights over the resource."
+msgstr ""
+
+#: formal_vocabularies.php:202
+msgid "Spatial Coverage"
+msgstr ""
+
+#: formal_vocabularies.php:203
+msgid "Spatial characteristics of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:208
+msgid "The topic of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:212
+msgid "Table Of Contents"
+msgstr ""
+
+#: formal_vocabularies.php:213
+msgid "A list of subunits of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:217
+msgid "Temporal Coverage"
+msgstr ""
+
+#: formal_vocabularies.php:218
+msgid "Temporal characteristics of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:223
+msgid "The nature or genre of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:229
+msgid ""
+"Relations defined by the Bibliographic Ontology (BIBO): http://bibotools."
+"googlecode.com/svn/bibo-ontology/trunk/doc/index.html"
+msgstr ""
+
+#: formal_vocabularies.php:235
+msgid "annotates"
+msgstr ""
+
+#: formal_vocabularies.php:236
+msgid "Critical or explanatory note for a Document."
+msgstr ""
+
+#: formal_vocabularies.php:240
+msgid "cited by"
+msgstr ""
+
+#: formal_vocabularies.php:241
+msgid "Relates a document to another document that cites the first document."
+msgstr ""
+
+#: formal_vocabularies.php:245
+msgid "cites"
+msgstr ""
+
+#: formal_vocabularies.php:246
+msgid ""
+"Relates a document to another document that is cited by the first document "
+"as reference, comment, review, quotation or for another purpose."
+msgstr ""
+
+#: formal_vocabularies.php:250
+msgid "review of"
+msgstr ""
+
+#: formal_vocabularies.php:251
+msgid "Relates a review document to a reviewed thing (resource, item, etc.)."
+msgstr ""
+
+#: formal_vocabularies.php:255
+msgid "reproduced in"
+msgstr ""
+
+#: formal_vocabularies.php:256
+msgid "The resource in which another resource is reproduced."
+msgstr ""
+
+#: formal_vocabularies.php:260
+msgid "affirmed by"
+msgstr ""
+
+#: formal_vocabularies.php:261
+msgid "A legal decision that affirms a ruling."
+msgstr ""
+
+#: formal_vocabularies.php:265
+msgid "reversed by"
+msgstr ""
+
+#: formal_vocabularies.php:266
+msgid "A legal decision that reverses a ruling."
+msgstr ""
+
+#: formal_vocabularies.php:270
+msgid "subsequent legal decision"
+msgstr ""
+
+#: formal_vocabularies.php:271
+msgid ""
+"A legal decision on appeal that takes action on a case (affirming it, "
+"reversing it, etc.)."
+msgstr ""
+
+#: formal_vocabularies.php:275
+msgid "transcript of"
+msgstr ""
+
+#: formal_vocabularies.php:276
+msgid "Relates a document to some transcribed original."
+msgstr ""
+
+#: formal_vocabularies.php:280 formal_vocabularies.php:601
+msgid "translation of"
+msgstr ""
+
+#: formal_vocabularies.php:281
+msgid "Relates a translated document to the original document."
+msgstr ""
+
+#: formal_vocabularies.php:287
+msgid ""
+"Relations defined by the Friend of a Friend vocabulary (FOAF): http://xmlns."
+"com/foaf/spec/"
+msgstr ""
+
+#: formal_vocabularies.php:293
+msgid "based near"
+msgstr ""
+
+#: formal_vocabularies.php:294
+msgid ""
+"A location that something is based near, for some broadly human notion of "
+"near."
+msgstr ""
+
+#: formal_vocabularies.php:298
+msgid "depiction"
+msgstr ""
+
+#: formal_vocabularies.php:299
+msgid "A depiction of some thing."
+msgstr ""
+
+#: formal_vocabularies.php:303
+msgid "depicts"
+msgstr ""
+
+#: formal_vocabularies.php:304
+msgid "A thing depicted in this representation."
+msgstr ""
+
+#: formal_vocabularies.php:308
+msgid "funded by"
+msgstr ""
+
+#: formal_vocabularies.php:309
+msgid "An organization funding a project or person."
+msgstr ""
+
+#: formal_vocabularies.php:313
+msgid "image"
+msgstr ""
+
+#: formal_vocabularies.php:314
+msgid ""
+"An image that can be used to represent some thing (ie. those depictions "
+"which are particularly representative of something, eg. one's photo on a "
+"homepage)."
+msgstr ""
+
+#: formal_vocabularies.php:318
+msgid "is primary topic of"
+msgstr ""
+
+#: formal_vocabularies.php:319
+msgid "A document that this thing is the primary topic of."
+msgstr ""
+
+#: formal_vocabularies.php:323
+msgid "knows"
+msgstr ""
+
+#: formal_vocabularies.php:324
+msgid ""
+"A person known by this person (indicating some level of reciprocated "
+"interaction between the parties)."
+msgstr ""
+
+#: formal_vocabularies.php:328
+msgid "logo"
+msgstr ""
+
+#: formal_vocabularies.php:329
+msgid "A logo representing some thing."
+msgstr ""
+
+#: formal_vocabularies.php:333
+msgid "made"
+msgstr ""
+
+#: formal_vocabularies.php:334
+msgid "Something that was made by this agent."
+msgstr ""
+
+#: formal_vocabularies.php:338
+msgid "maker"
+msgstr ""
+
+#: formal_vocabularies.php:339
+msgid "An agent that made this thing."
+msgstr ""
+
+#: formal_vocabularies.php:343
+msgid "member"
+msgstr ""
+
+#: formal_vocabularies.php:344
+msgid "Indicates a member of a Group."
+msgstr ""
+
+#: formal_vocabularies.php:348
+msgid "page"
+msgstr ""
+
+#: formal_vocabularies.php:349
+msgid "A page or document about this thing."
+msgstr ""
+
+#: formal_vocabularies.php:353
+msgid "primary topic"
+msgstr ""
+
+#: formal_vocabularies.php:354
+msgid "The primary topic of some page or document."
+msgstr ""
+
+#: formal_vocabularies.php:358
+msgid "thumbnail"
+msgstr ""
+
+#: formal_vocabularies.php:359
+msgid "A derived thumbnail image."
+msgstr ""
+
+#: formal_vocabularies.php:365
+msgid ""
+"Relations defined by the Functional Requirements for Bibliographic Records "
+"(FRBR): http://vocab.org/frbr/core.html"
+msgstr ""
+
+#: formal_vocabularies.php:371
+msgid "abridgement"
+msgstr ""
+
+#: formal_vocabularies.php:372
+msgid "A property representing an abridgment of an expression."
+msgstr ""
+
+#: formal_vocabularies.php:376
+msgid "abridgement of"
+msgstr ""
+
+#: formal_vocabularies.php:377
+msgid "A property representing an expression that is abridged."
+msgstr ""
+
+#: formal_vocabularies.php:381
+msgid "adaption"
+msgstr ""
+
+#: formal_vocabularies.php:382
+msgid "A property representing an adaption of a work or expression."
+msgstr ""
+
+#: formal_vocabularies.php:386
+msgid "adaption of"
+msgstr ""
+
+#: formal_vocabularies.php:387
+msgid "A property representing a work or expression that is adapted."
+msgstr ""
+
+#: formal_vocabularies.php:391
+msgid "alternate"
+msgstr ""
+
+#: formal_vocabularies.php:392
+msgid "A property representing an alternative to a manifestation."
+msgstr ""
+
+#: formal_vocabularies.php:396
+msgid "alternate of"
+msgstr ""
+
+#: formal_vocabularies.php:397
+msgid "A property representing a manifestation that is alternated."
+msgstr ""
+
+#: formal_vocabularies.php:401
+msgid "arrangement"
+msgstr ""
+
+#: formal_vocabularies.php:402
+msgid "A property representing an arrangement of an expression."
+msgstr ""
+
+#: formal_vocabularies.php:406
+msgid "arrangement of"
+msgstr ""
+
+#: formal_vocabularies.php:407
+msgid "A property representing an expression that is arranged."
+msgstr ""
+
+#: formal_vocabularies.php:411
+msgid "complement"
+msgstr ""
+
+#: formal_vocabularies.php:412
+msgid "A property representing a complement to a work or expression."
+msgstr ""
+
+#: formal_vocabularies.php:416
+msgid "complement of"
+msgstr ""
+
+#: formal_vocabularies.php:417
+msgid "A property representing a work or expression that is complemented."
+msgstr ""
+
+#: formal_vocabularies.php:421
+msgid "creator"
+msgstr ""
+
+#: formal_vocabularies.php:422
+msgid ""
+"A property representing an entity in some way responsible for the creation "
+"of a work."
+msgstr ""
+
+#: formal_vocabularies.php:426
+msgid "creator of"
+msgstr ""
+
+#: formal_vocabularies.php:427
+msgid ""
+"A property representing a work that was in some way created by of an entity."
+msgstr ""
+
+#: formal_vocabularies.php:431
+msgid "embodiment"
+msgstr ""
+
+#: formal_vocabularies.php:432
+msgid "A property representing a manifestation that embodies an expression."
+msgstr ""
+
+#: formal_vocabularies.php:436
+msgid "embodiment of"
+msgstr ""
+
+#: formal_vocabularies.php:437
+msgid ""
+"A property representing an expression that is embodied by a manifestation."
+msgstr ""
+
+#: formal_vocabularies.php:441
+msgid "exemplar"
+msgstr ""
+
+#: formal_vocabularies.php:442
+msgid "A property representing an item that is an exemplar of a manifestation."
+msgstr ""
+
+#: formal_vocabularies.php:446
+msgid "exemplar of"
+msgstr ""
+
+#: formal_vocabularies.php:447
+msgid ""
+"A property representing the manifestation that is exemplified by a item."
+msgstr ""
+
+#: formal_vocabularies.php:451
+msgid "imitation"
+msgstr ""
+
+#: formal_vocabularies.php:452
+msgid "A property representing an imitation of a work or expression."
+msgstr ""
+
+#: formal_vocabularies.php:456
+msgid "imitation of"
+msgstr ""
+
+#: formal_vocabularies.php:457
+msgid "A property representing a work or expression that is imitated."
+msgstr ""
+
+#: formal_vocabularies.php:461
+msgid "owner"
+msgstr ""
+
+#: formal_vocabularies.php:462
+msgid "A property representing an entity that owns an item."
+msgstr ""
+
+#: formal_vocabularies.php:466
+msgid "owner of"
+msgstr ""
+
+#: formal_vocabularies.php:467
+msgid "A property representing an item that is in some way owned an entity."
+msgstr ""
+
+#: formal_vocabularies.php:471
+msgid "part"
+msgstr ""
+
+#: formal_vocabularies.php:472
+msgid "A property representing a part of an endeavour."
+msgstr ""
+
+#: formal_vocabularies.php:476
+msgid "part of"
+msgstr ""
+
+#: formal_vocabularies.php:477
+msgid "A property representing an endeavour incorporating an endeavour."
+msgstr ""
+
+#: formal_vocabularies.php:481
+msgid "producer"
+msgstr ""
+
+#: formal_vocabularies.php:482
+msgid ""
+"A property representing an entity in some way responsible for producing a "
+"manifestation."
+msgstr ""
+
+#: formal_vocabularies.php:486
+msgid "producer of"
+msgstr ""
+
+#: formal_vocabularies.php:487
+msgid ""
+"A property representing a manifestation that was in some way produced an "
+"entity."
+msgstr ""
+
+#: formal_vocabularies.php:491
+msgid "realization"
+msgstr ""
+
+#: formal_vocabularies.php:492
+msgid ""
+"A property representing an expression that is an intellectual or artistic "
+"realization of a work."
+msgstr ""
+
+#: formal_vocabularies.php:496
+msgid "realization of"
+msgstr ""
+
+#: formal_vocabularies.php:497
+msgid ""
+"A property representing the work that has been realized by an expression."
+msgstr ""
+
+#: formal_vocabularies.php:501
+msgid "realizer"
+msgstr ""
+
+#: formal_vocabularies.php:502
+msgid ""
+"A property representing an entity in some way responsible for realizing an "
+"expression."
+msgstr ""
+
+#: formal_vocabularies.php:506
+msgid "realizer of"
+msgstr ""
+
+#: formal_vocabularies.php:507
+msgid ""
+"A property representing an expression that was in some way realized by an "
+"entity."
+msgstr ""
+
+#: formal_vocabularies.php:511
+msgid "reconfiguration"
+msgstr ""
+
+#: formal_vocabularies.php:512
+msgid "A property representing a recongifuration of an item."
+msgstr ""
+
+#: formal_vocabularies.php:516
+msgid "reconfiguration of"
+msgstr ""
+
+#: formal_vocabularies.php:517
+msgid "A property representing an item that is reconfigured."
+msgstr ""
+
+#: formal_vocabularies.php:521
+msgid "related endeavour"
+msgstr ""
+
+#: formal_vocabularies.php:522
+msgid ""
+"A property representing another endeavour that is related in some way to an "
+"endeavour."
+msgstr ""
+
+#: formal_vocabularies.php:526
+msgid "reproduction"
+msgstr ""
+
+#: formal_vocabularies.php:527
+msgid "A property representing a reproduction of a manifestation or item."
+msgstr ""
+
+#: formal_vocabularies.php:531
+msgid "reproduction of"
+msgstr ""
+
+#: formal_vocabularies.php:532
+msgid "A property representing a manifestation or item that is reproduced."
+msgstr ""
+
+#: formal_vocabularies.php:536
+msgid "responsible entity"
+msgstr ""
+
+#: formal_vocabularies.php:537
+msgid ""
+"A property representing an entity in some way responsible for an endeavour."
+msgstr ""
+
+#: formal_vocabularies.php:541
+msgid "responsible entity of"
+msgstr ""
+
+#: formal_vocabularies.php:542
+msgid ""
+"A property representing an endeavour that is the responsibility of an entity."
+msgstr ""
+
+#: formal_vocabularies.php:546
+msgid "revision"
+msgstr ""
+
+#: formal_vocabularies.php:547
+msgid "A property representing a revision of an expression."
+msgstr ""
+
+#: formal_vocabularies.php:551
+msgid "revision of"
+msgstr ""
+
+#: formal_vocabularies.php:552
+msgid "A property representing an expression that is revised."
+msgstr ""
+
+#: formal_vocabularies.php:556
+msgid "successor"
+msgstr ""
+
+#: formal_vocabularies.php:557
+msgid "A property representing a successor to a work or expression."
+msgstr ""
+
+#: formal_vocabularies.php:561
+msgid "successor of"
+msgstr ""
+
+#: formal_vocabularies.php:562
+msgid "A property representing a work or expression that is succeeded."
+msgstr ""
+
+#: formal_vocabularies.php:566
+msgid "summarization"
+msgstr ""
+
+#: formal_vocabularies.php:567
+msgid "A property representing a summarization of a work or expression."
+msgstr ""
+
+#: formal_vocabularies.php:571
+msgid "summarization of"
+msgstr ""
+
+#: formal_vocabularies.php:572
+msgid "A property representing a work or expression that is summarized."
+msgstr ""
+
+#: formal_vocabularies.php:576
+msgid "supplement"
+msgstr ""
+
+#: formal_vocabularies.php:577
+msgid "A property representing a supplement to a work or expression."
+msgstr ""
+
+#: formal_vocabularies.php:581
+msgid "supplement of"
+msgstr ""
+
+#: formal_vocabularies.php:582
+msgid "A property representing a work or expression that is supplemented."
+msgstr ""
+
+#: formal_vocabularies.php:586
+msgid "transformation"
+msgstr ""
+
+#: formal_vocabularies.php:587
+msgid "A property representing a transformation of a work or expression."
+msgstr ""
+
+#: formal_vocabularies.php:591
+msgid "transformation of"
+msgstr ""
+
+#: formal_vocabularies.php:592
+msgid "A property representing a work or expression that is transformed."
+msgstr ""
+
+#: formal_vocabularies.php:596
+msgid "translation"
+msgstr ""
+
+#: formal_vocabularies.php:597
+msgid "A property representing a translation of an expression."
+msgstr ""
+
+#: formal_vocabularies.php:602
+msgid "A property representing an expression that is translated."
 msgstr ""
 
 #: models/ItemRelationsProperty.php:62
 msgid "[unknown]"
 msgstr ""
 
-#: views/admin/common/item-relations-show.php:5
+#: views/admin/common/item-relations-show.php:10
 #: views/public/common/item-relations-show.php:4
 msgid "This item has no relations."
 msgstr ""
 
-#: views/admin/vocabularies/browse.php:8
+#: views/admin/plugins/item-relations-config-form.php:1
+msgid "Input"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:5
+msgid "Limit Relations to Vocabularies"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:11
+msgid "Check the vocabularies that can be used to set relations."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:12
+msgid "If none is checked, all vocabularies will be allowed."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:35
+msgid "Provide comment field for relations"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:40
+msgid "Check this if you want to be able to enter a comment to a relation."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:48
+msgid "Display"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:52
+msgid "Relation Format"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:57
+msgid ""
+"Select the format of an item's relations that you would prefer to show. If "
+"one is unavailable the other will be used."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:63
+msgid "prefix:localPart"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:64
+msgid "label"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:71
+msgid "Display position in admin view"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:76
+msgid ""
+"Select the position where you would prefer to display the relations in admin "
+"view: In the side bar in the lower right (default) or underneath the regular "
+"field values to the left."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:82
+msgid "Side bar"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:83
+msgid "Main content"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:90
+msgid "Append to Public Items Show"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:95
+msgid ""
+"Check this if you want to display an item's relations on its public show "
+"page."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:105
+msgid "Public Display Mode"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:110
+msgid "Set how to display the list of relations in the public view."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:111
+#: views/admin/plugins/item-relations-config-form.php:131
+msgid "Anyway, the view can be themed."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:116
+#: views/admin/plugins/item-relations-config-form.php:136
+msgid "As a table"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:117
+#: views/admin/plugins/item-relations-config-form.php:137
+msgid "As a list"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:118
+#: views/admin/plugins/item-relations-config-form.php:138
+msgid "By item type"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:125
+msgid "Admin Display Mode"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:130
+msgid "Set how to display the list of relations in the admin view."
+msgstr ""
+
+#: views/admin/vocabularies/add.php:2
+msgid "Add New Vocabulary"
+msgstr ""
+
+#: views/admin/vocabularies/add.php:6
+msgid "Vocabulary Name"
+msgstr ""
+
+#: views/admin/vocabularies/add.php:9
+msgid "Vocabulary Description"
+msgstr ""
+
+#: views/admin/vocabularies/add.php:11 views/admin/vocabularies/show.php:19
+msgid "Save Vocabulary"
+msgstr ""
+
+#: views/admin/vocabularies/browse.php:3
+#: views/shared/common/item-relations-form.php:3
+msgid "Browse Vocabularies"
+msgstr ""
+
+#: views/admin/vocabularies/browse.php:7
+msgid "Add Vocabulary"
+msgstr ""
+
+#: views/admin/vocabularies/browse.php:12
+msgid "Allowed"
+msgstr ""
+
+#: views/admin/vocabularies/browse.php:15
 msgid "Namespace Prefix"
 msgstr ""
 
-#: views/admin/vocabularies/browse.php:9
+#: views/admin/vocabularies/browse.php:16
 msgid "Namespace URI"
+msgstr ""
+
+#: views/admin/vocabularies/delete.php:2 views/admin/vocabularies/show.php:22
+msgid "Delete Vocabulary"
+msgstr ""
+
+#: views/admin/vocabularies/delete.php:18
+msgid "You have successfully deleted the vocabulary."
+msgstr ""
+
+#: views/admin/vocabularies/delete.php:21
+msgid "The vocabulary name cannot be deleted"
+msgstr ""
+
+#: views/admin/vocabularies/delete.php:29
+msgid "Back"
 msgstr ""
 
 #: views/admin/vocabularies/edit.php:1
@@ -182,20 +1218,24 @@ msgstr ""
 msgid "Vocabulary Properties"
 msgstr ""
 
-#: views/admin/vocabularies/show.php:7
+#: views/admin/vocabularies/show.php:16
 msgid "Edit Vocabulary"
 msgstr ""
 
-#: views/admin/vocabularies/show.php:14
+#: views/admin/vocabularies/show.php:24
 msgid "This vocabulary has no properties."
 msgstr ""
 
-#: views/admin/vocabularies/show.php:16
+#: views/admin/vocabularies/show.php:26
 msgid "Why don't you add some?"
 msgstr ""
 
-#: views/admin/vocabularies/show.php:23
+#: views/admin/vocabularies/show.php:33
 msgid "Local Part"
+msgstr ""
+
+#: views/helpers/ItemRelationsForm.php:20
+msgid "All"
 msgstr ""
 
 #: views/shared/common/item-relations-advanced-search.php:11
@@ -213,736 +1253,85 @@ msgid ""
 "in relations that contain a certain text portion in their comments."
 msgstr ""
 
-msgid "Item Sort"
-msgstr ""
-
-msgid "Most recently updated"
-msgstr ""
-
-msgid "Alphabetically"
-msgstr ""
-
-msgid "Object Title"
-msgstr ""
-
-msgid "Partial Object Title"
-msgstr ""
-
-msgid "Add Relation"
-msgstr ""
-
-msgid "Display position in admin view"
-msgstr ""
-
-msgid "Select the position where you would prefer to display the relations in admin view: In the side bar in the lower right (default) or underneath the regular field values to the left."
-msgstr ""
-
-msgid "Side bar"
-msgstr ""
-
-msgid "Main content"
-msgstr ""
-
-# --------------------------------------------------
-
-msgid "Relations defined by DCMI Metadata Terms: http://dublincore.org/documents/dcmi-terms/"
-msgstr ""
-
-msgid "Relation"
-msgstr ""
-
-msgid "A related resource."
-msgstr ""
-
-msgid "Conforms To"
-msgstr ""
-
-msgid "An established standard to which the described resource conforms."
-msgstr ""
-
-msgid "Has Format"
-msgstr ""
-
-msgid "A related resource that is substantially the same as the pre-existing described resource, but in another format."
-msgstr ""
-
-msgid "Has Part"
-msgstr ""
-
-msgid "A related resource that is included either physically or logically in the described resource."
-msgstr ""
-
-msgid "Has Version"
-msgstr ""
-
-msgid "A related resource that is a version, edition, or adaptation of the described resource."
-msgstr ""
-
-msgid "Is Format Of"
-msgstr ""
-
-msgid "A related resource that is substantially the same as the described resource, but in another format."
-msgstr ""
-
-msgid "Is Part Of"
-msgstr ""
-
-msgid "A related resource in which the described resource is physically or logically included."
-msgstr ""
-
-msgid "Is Referenced By"
-msgstr ""
-
-msgid "A related resource that references, cites, or otherwise points to the described resource."
-msgstr ""
-
-msgid "Is Replaced By"
-msgstr ""
-
-msgid "A related resource that supplants, displaces, or supersedes the described resource."
-msgstr ""
-
-msgid "Is Required By"
-msgstr ""
-
-msgid "A related resource that requires the described resource to support its function, delivery, or coherence."
-msgstr ""
-
-msgid "Is Version Of"
-msgstr ""
-
-msgid "A related resource of which the described resource is a version, edition, or adaptation."
-msgstr ""
-
-msgid "References"
-msgstr ""
-
-msgid "A related resource that is referenced, cited, or otherwise pointed to by the described resource."
-msgstr ""
-
-msgid "Replaces"
-msgstr ""
-
-msgid "A related resource that is supplanted, displaced, or superseded by the described resource."
-msgstr ""
-
-msgid "Requires"
-msgstr ""
-
-msgid "A related resource that is required by the described resource to support its function, delivery, or coherence."
-msgstr ""
-
-msgid "Source"
-msgstr ""
-
-msgid "A related resource from which the described resource is derived."
-msgstr ""
-
-msgid "Abstract"
-msgstr ""
-
-msgid "A summary of the resource."
-msgstr ""
-
-msgid "Access Rights"
-msgstr ""
-
-msgid "Information about who can access the resource or an indication of its security status."
-msgstr ""
-
-msgid "Accrual Method"
-msgstr ""
-
-msgid "The method by which items are added to a collection."
-msgstr ""
-
-msgid "Accrual Periodicity"
-msgstr ""
-
-msgid "The frequency with which items are added to a collection."
-msgstr ""
-
-msgid "Accrual Policy"
-msgstr ""
-
-msgid "The policy governing the addition of items to a collection."
-msgstr ""
-
-msgid "Audience"
-msgstr ""
-
-msgid "A class of entity for whom the resource is intended or useful."
-msgstr ""
-
-msgid "Contributor"
-msgstr ""
-
-msgid "An entity responsible for making contributions to the resource."
-msgstr ""
-
-msgid "Coverage"
-msgstr ""
-
-msgid "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."
-msgstr ""
-
-msgid "Creator"
-msgstr ""
-
-msgid "An entity primarily responsible for making the resource."
-msgstr ""
-
-msgid "Description"
-msgstr ""
-
-msgid "An account of the resource."
-msgstr ""
-
-msgid "Audience Education Level"
-msgstr ""
-
-msgid "A class of entity, defined in terms of progression through an educational or training context, for which the described resource is intended."
-msgstr ""
-
-msgid "Extent"
-msgstr ""
-
-msgid "The size or duration of the resource."
-msgstr ""
-
-msgid "Format"
-msgstr ""
-
-msgid "The file format, physical medium, or dimensions of the resource."
-msgstr ""
-
-msgid "Instructional Method"
-msgstr ""
-
-msgid "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support."
-msgstr ""
-
-msgid "Language"
-msgstr ""
-
-msgid "A language of the resource."
-msgstr ""
-
-msgid "License"
-msgstr ""
-
-msgid "A legal document giving official permission to do something with the resource."
-msgstr ""
-
-msgid "Mediator"
-msgstr ""
-
-msgid "An entity that mediates access to the resource and for whom the resource is intended or useful."
-msgstr ""
-
-msgid "Medium"
-msgstr ""
-
-msgid "The material or physical carrier of the resource."
-msgstr ""
-
-msgid "Provenance"
-msgstr ""
-
-msgid "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
-msgstr ""
-
-msgid "Publisher"
-msgstr ""
-
-msgid "An entity responsible for making the resource available."
-msgstr ""
-
-msgid "Rights"
-msgstr ""
-
-msgid "Information about rights held in and over the resource."
-msgstr ""
-
-msgid "Rights Holder"
-msgstr ""
-
-msgid "A person or organization owning or managing rights over the resource."
-msgstr ""
-
-msgid "Spatial Coverage"
-msgstr ""
-
-msgid "Spatial characteristics of the resource."
-msgstr ""
-
+#: views/shared/common/item-relations-advanced-search.php:31
+#: views/shared/common/item-relations-form.php:11
 msgid "Subject "
 msgstr ""
 
-msgid "The topic of the resource."
+#: views/shared/common/item-relations-form.php:4
+msgid ""
+"Here you can relate this item to another item and delete existing relations."
 msgstr ""
 
-msgid "Table Of Contents"
+#: views/shared/common/item-relations-form.php:5
+#, php-format
+msgid "For descriptions of the relations, see the %s page."
 msgstr ""
 
-msgid "A list of subunits of the resource."
+#: views/shared/common/item-relations-form.php:6
+msgid "Invalid item IDs will be ignored."
 msgstr ""
 
-msgid "Temporal Coverage"
+#: views/shared/common/item-relations-form.php:38
+#: views/shared/common/item-relations-form.php:55
+#: views/shared/common/item-relations-form.php:78
+#: views/shared/common/item-relations-form.php:91
+#: views/shared/common/item-relations-show-list.php:16
+#: views/shared/common/item-relations-show-list.php:21
+#: views/shared/common/item-relations-show-table.php:18
+#: views/shared/common/item-relations-show-table.php:25
+msgid "This Item"
 msgstr ""
 
-msgid "Temporal characteristics of the resource."
+#: views/shared/common/item-relations-form.php:82
+msgid "[n/a]"
 msgstr ""
 
-msgid "Type"
+#: views/shared/common/item-relations-form.php:87
+msgid "Add a Relation"
 msgstr ""
 
-msgid "The nature or genre of the resource."
+#: views/shared/common/item-relations-form.php:98
+msgid "Item Sort"
 msgstr ""
 
-# --------------------------------------------------
-
-msgid "Relations defined by the Bibliographic Ontology (BIBO): http://bibotools.googlecode.com/svn/bibo-ontology/trunk/doc/index.html"
-msgstr ""
-
-msgid "annotates"
-msgstr ""
-
-msgid "Critical or explanatory note for a Document."
-msgstr ""
-
-msgid "cited by"
-msgstr ""
-
-msgid "Relates a document to another document that cites the first document."
-msgstr ""
-
-msgid "cites"
-msgstr ""
-
-msgid "Relates a document to another document that is cited by the first document as reference, comment, review, quotation or for another purpose."
-msgstr ""
-
-msgid "review of"
-msgstr ""
-
-msgid "Relates a review document to a reviewed thing (resource, item, etc.)."
-msgstr ""
-
-msgid "reproduced in"
-msgstr ""
-
-msgid "The resource in which another resource is reproduced."
-msgstr ""
-
-msgid "affirmed by"
-msgstr ""
-
-msgid "A legal decision that affirms a ruling."
-msgstr ""
-
-msgid "reversed by"
-msgstr ""
-
-msgid "A legal decision that reverses a ruling."
-msgstr ""
-
-msgid "subsequent legal decision"
-msgstr ""
-
-msgid "A legal decision on appeal that takes action on a case (affirming it, reversing it, etc.)."
-msgstr ""
-
-msgid "transcript of"
-msgstr ""
-
-msgid "Relates a document to some transcribed original."
-msgstr ""
-
-# double - see below
-msgid "translation of"
-msgstr ""
-
-msgid "Relates a translated document to the original document."
-msgstr ""
-
-
-# --------------------------------------------------
-
-msgid "Relations defined by the Friend of a Friend vocabulary (FOAF): http://xmlns.com/foaf/spec/"
-msgstr ""
-
-msgid "based near"
-msgstr ""
-
-msgid "A location that something is based near, for some broadly human notion of near."
-msgstr ""
-
-msgid "depiction"
-msgstr ""
-
-msgid "A depiction of some thing."
-msgstr ""
-
-msgid "depicts"
-msgstr ""
-
-msgid "A thing depicted in this representation."
-msgstr ""
-
-msgid "funded by"
-msgstr ""
-
-msgid "An organization funding a project or person."
-msgstr ""
-
-msgid "image"
-msgstr ""
-
-msgid "An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage)."
-msgstr ""
-
-msgid "is primary topic of"
-msgstr ""
-
-msgid "A document that this thing is the primary topic of."
-msgstr ""
-
-msgid "knows"
-msgstr ""
-
-msgid "A person known by this person (indicating some level of reciprocated interaction between the parties)."
-msgstr ""
-
-msgid "logo"
-msgstr ""
-
-msgid "A logo representing some thing."
-msgstr ""
-
-msgid "made"
-msgstr ""
-
-msgid "Something that was made by this agent."
-msgstr ""
-
-msgid "maker"
-msgstr ""
-
-msgid "An agent that made this thing."
-msgstr ""
-
-msgid "member"
-msgstr ""
-
-msgid "Indicates a member of a Group."
-msgstr ""
-
-msgid "page"
-msgstr ""
-
-msgid "A page or document about this thing."
-msgstr ""
-
-msgid "primary topic"
-msgstr ""
-
-msgid "The primary topic of some page or document."
-msgstr ""
-
-msgid "thumbnail"
-msgstr ""
-
-msgid "A derived thumbnail image."
-msgstr ""
-
-
-# --------------------------------------------------
-
-msgid "Relations defined by the Functional Requirements for Bibliographic Records (FRBR): http://vocab.org/frbr/core.html"
-msgstr ""
-
-msgid "abridgement"
-msgstr ""
-
-msgid "A property representing an abridgment of an expression."
-msgstr ""
-
-msgid "abridgement of"
-msgstr ""
-
-msgid "A property representing an expression that is abridged."
-msgstr ""
-
-msgid "adaption"
-msgstr ""
-
-msgid "A property representing an adaption of a work or expression."
-msgstr ""
-
-msgid "adaption of"
-msgstr ""
-
-msgid "A property representing a work or expression that is adapted."
-msgstr ""
-
-msgid "alternate"
-msgstr ""
-
-msgid "A property representing an alternative to a manifestation."
-msgstr ""
-
-msgid "alternate of"
-msgstr ""
-
-msgid "A property representing a manifestation that is alternated."
-msgstr ""
-
-msgid "arrangement"
-msgstr ""
-
-msgid "A property representing an arrangement of an expression."
-msgstr ""
-
-msgid "arrangement of"
-msgstr ""
-
-msgid "A property representing an expression that is arranged."
+#: views/shared/common/item-relations-form.php:101
+msgid "Most recently updated"
 msgstr ""
 
-msgid "complement"
+#: views/shared/common/item-relations-form.php:103
+msgid "Alphabetically"
 msgstr ""
 
-msgid "A property representing a complement to a work or expression."
+#: views/shared/common/item-relations-form.php:107
+msgid "Object Title"
 msgstr ""
 
-msgid "complement of"
+#: views/shared/common/item-relations-form.php:109
+msgid "Partial Object Title"
 msgstr ""
 
-msgid "A property representing a work or expression that is complemented."
+#: views/shared/common/item-relations-form.php:126
+msgid "Add Relation"
 msgstr ""
 
-msgid "creator"
+#: views/shared/common/item-relations-show-list-by-item-type.php:20
+msgid "Relation from this item"
 msgstr ""
 
-msgid "A property representing an entity in some way responsible for the creation of a work."
+#: views/shared/common/item-relations-show-list-by-item-type.php:22
+msgid "This item has no relation to other records."
 msgstr ""
 
-msgid "creator of"
+#: views/shared/common/item-relations-show-list-by-item-type.php:27
+#: views/shared/common/item-relations-show-list-by-item-type.php:53
+msgid "No Item Type"
 msgstr ""
 
-msgid "A property representing a work that was in some way created by of an entity."
+#: views/shared/common/item-relations-show-list-by-item-type.php:46
+msgid "Relations to this item"
 msgstr ""
 
-msgid "embodiment"
+#: views/shared/common/item-relations-show-list-by-item-type.php:48
+msgid "No record is related to this item."
 msgstr ""
-
-msgid "A property representing a manifestation that embodies an expression."
-msgstr ""
-
-msgid "embodiment of"
-msgstr ""
-
-msgid "A property representing an expression that is embodied by a manifestation."
-msgstr ""
-
-msgid "exemplar"
-msgstr ""
-
-msgid "A property representing an item that is an exemplar of a manifestation."
-msgstr ""
-
-msgid "exemplar of"
-msgstr ""
-
-msgid "A property representing the manifestation that is exemplified by a item."
-msgstr ""
-
-msgid "imitation"
-msgstr ""
-
-msgid "A property representing an imitation of a work or expression."
-msgstr ""
-
-msgid "imitation of"
-msgstr ""
-
-msgid "A property representing a work or expression that is imitated."
-msgstr ""
-
-msgid "owner"
-msgstr ""
-
-msgid "A property representing an entity that owns an item."
-msgstr ""
-
-msgid "owner of"
-msgstr ""
-
-msgid "A property representing an item that is in some way owned an entity."
-msgstr ""
-
-msgid "part"
-msgstr ""
-
-msgid "A property representing a part of an endeavour."
-msgstr ""
-
-msgid "part of"
-msgstr ""
-
-msgid "A property representing an endeavour incorporating an endeavour."
-msgstr ""
-
-msgid "producer"
-msgstr ""
-
-msgid "A property representing an entity in some way responsible for producing a manifestation."
-msgstr ""
-
-msgid "producer of"
-msgstr ""
-
-msgid "A property representing a manifestation that was in some way produced an entity."
-msgstr ""
-
-msgid "realization"
-msgstr ""
-
-msgid "A property representing an expression that is an intellectual or artistic realization of a work."
-msgstr ""
-
-msgid "realization of"
-msgstr ""
-
-msgid "A property representing the work that has been realized by an expression."
-msgstr ""
-
-msgid "realizer"
-msgstr ""
-
-msgid "A property representing an entity in some way responsible for realizing an expression."
-msgstr ""
-
-msgid "realizer of"
-msgstr ""
-
-msgid "A property representing an expression that was in some way realized by an entity."
-msgstr ""
-
-msgid "reconfiguration"
-msgstr ""
-
-msgid "A property representing a recongifuration of an item."
-msgstr ""
-
-msgid "reconfiguration of"
-msgstr ""
-
-msgid "A property representing an item that is reconfigured."
-msgstr ""
-
-msgid "related endeavour"
-msgstr ""
-
-msgid "A property representing another endeavour that is related in some way to an endeavour."
-msgstr ""
-
-msgid "reproduction"
-msgstr ""
-
-msgid "A property representing a reproduction of a manifestation or item."
-msgstr ""
-
-msgid "reproduction of"
-msgstr ""
-
-msgid "A property representing a manifestation or item that is reproduced."
-msgstr ""
-
-msgid "responsible entity"
-msgstr ""
-
-msgid "A property representing an entity in some way responsible for an endeavour."
-msgstr ""
-
-msgid "responsible entity of"
-msgstr ""
-
-msgid "A property representing an endeavour that is the responsibility of an entity."
-msgstr ""
-
-msgid "revision"
-msgstr ""
-
-msgid "A property representing a revision of an expression."
-msgstr ""
-
-msgid "revision of"
-msgstr ""
-
-msgid "A property representing an expression that is revised."
-msgstr ""
-
-msgid "successor"
-msgstr ""
-
-msgid "A property representing a successor to a work or expression."
-msgstr ""
-
-msgid "successor of"
-msgstr ""
-
-msgid "A property representing a work or expression that is succeeded."
-msgstr ""
-
-msgid "summarization"
-msgstr ""
-
-msgid "A property representing a summarization of a work or expression."
-msgstr ""
-
-msgid "summarization of"
-msgstr ""
-
-msgid "A property representing a work or expression that is summarized."
-msgstr ""
-
-msgid "supplement"
-msgstr ""
-
-msgid "A property representing a supplement to a work or expression."
-msgstr ""
-
-msgid "supplement of"
-msgstr ""
-
-msgid "A property representing a work or expression that is supplemented."
-msgstr ""
-
-msgid "transformation"
-msgstr ""
-
-msgid "A property representing a transformation of a work or expression."
-msgstr ""
-
-msgid "transformation of"
-msgstr ""
-
-msgid "A property representing a work or expression that is transformed."
-msgstr ""
-
-msgid "translation"
-msgstr ""
-
-msgid "A property representing a translation of an expression."
-msgstr ""
-
-# double - see above
-# msgid "translation of"
-# msgstr ""
-
-msgid "A property representing an expression that is translated."
-msgstr ""
-
-# --------------------------------------------------

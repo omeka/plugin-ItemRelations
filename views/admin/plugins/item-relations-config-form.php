@@ -20,8 +20,15 @@
                     foreach ($vocabularies as $vocabulary) {
                         echo '<li>';
                         echo $this->formCheckbox('item_relations_allow_vocabularies[]', $vocabulary->name,
-                            array('checked' => in_array($vocabulary->name, $currentVocabularies) ? 'checked' : ''));
-                        echo $vocabulary->name;
+                            array('checked' => in_array($vocabulary->name, $currentVocabularies) ? 'checked' : '',
+                                  'id' => 'item_relations_vocab_id_'.$vocabulary->id,
+                                  )
+                          );
+                        echo " " .
+                              $this->formLabel('item_relations_vocab_id_'.$vocabulary->id,
+                                                $vocabulary->name,
+                                                array( "style" => "float:none;" )
+                                              );
                         echo '</li>';
                     }
                     echo '</ul>';
@@ -81,6 +88,26 @@
                     get_option('item_relations_admin_sidebar_or_maincontent'), null, array(
                         'sidebar' => __('Side bar'),
                         'maincontent' => __('Main content'),
+                    )); ?>
+        </div>
+    </div>
+    <div class="field">
+        <div class="two columns alpha">
+            <?php echo $this->formLabel('item_relations_admin_display_mode',
+            __('Admin Display Mode')); ?>
+        </div>
+        <div class="inputs five columns omega">
+            <p class="explanation">
+                <?php
+                echo __('Set how to display the list of relations in the admin view.');
+                echo ' ' . __('Anyway, the view can be themed.');
+                ?>
+            </p>
+            <?php echo $this->formSelect('item_relations_admin_display_mode',
+                    get_option('item_relations_admin_display_mode'), null, array(
+                        'table' => __('As a table'),
+                        'list' => __('As a list'),
+                        'list-by-item-type' => __('By item type'),
                     )); ?>
         </div>
     </div>
