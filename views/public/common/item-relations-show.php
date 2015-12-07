@@ -1,30 +1,42 @@
 <?php $provideRelationComments = get_option('item_relations_provide_relation_comments'); ?>
 <div id="item-relations-display-item-relations">
     <h2><?php echo __('Item Relations'); ?></h2>
-    <?php if (!$subjectRelations && !$objectRelations): ?>
-    <p><?php echo __('This item has no relations.'); ?></p>
-    <?php else: ?>
-    <table>
-        <?php foreach ($subjectRelations as $subjectRelation): ?>
-        <tr>
-            <td><?php echo __('This Item'); ?></td>
-            <td><span title="<?php echo html_escape($subjectRelation['relation_description']); ?>"><?php echo $subjectRelation['relation_text']; ?></span></td>
-            <td>Item: <a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>"><?php echo $subjectRelation['object_item_title']; ?></a></td>
-            <?php if ($provideRelationComments): ?>
-            <td><?php if (($subjectRelation['relation_comment'])) { echo "(".$subjectRelation['relation_comment'].")"; } ?></td>
-            <?php endif; ?>
-        </tr>
-        <?php endforeach; ?>
-        <?php foreach ($objectRelations as $objectRelation): ?>
-        <tr>
-            <td>Item: <a href="<?php echo url('items/show/' . $objectRelation['subject_item_id']); ?>"><?php echo $objectRelation['subject_item_title']; ?></a></td>
-            <td><span title="<?php echo html_escape($objectRelation['relation_description']); ?>"><?php echo $objectRelation['relation_text']; ?></span></td>
-            <td><?php echo __('This Item'); ?></td>
-            <?php if ($provideRelationComments): ?>
-            <td><?php if ($objectRelation['relation_comment']) { echo "(".$objectRelation['relation_comment'].")"; } ?></td>
-            <?php endif; ?>
-        </tr>
-        <?php endforeach; ?>
-    </table>
-    <?php endif; ?>
+    <?php
+  		if (!$allRelations) {
+  			echo "<p>" . __('This item has no relations.') . "</p>";
+  		} # if
+  		else {
+        echo "<table><tbody>";
+        $colspan = ($provideRelationComments ? 4 : 3);
+  			$lastVocab = -1;
+  			foreach ($allRelations as $relation) {
+  				if ($lastVocab != $relation["vocabulary_id"]) {
+  					echo "<tr><th colspan='$colspan'>"
+  					."<span title='".$relation["vocabulary_desc"]."'>"
+  					.$relation["vocabulary"]
+  					."</span><th></tr>";
+  					$lastVocab = $relation["vocabulary_id"];
+  				}
+          echo "<tr>";
+          echo "<td>" .
+  				      ( $relation['subject_item_id']==$thisItemId ? __('This Item')
+  								: "<a href='".url('items/show/' . $relation['subject_item_id'])."'>".
+  										$relation['subject_item_title'] . "</a>"
+  							) .
+                "</td>";
+  				echo "<td><strong>" . $relation['relation_text'] . "</strong></td>";
+          echo "<td>" .
+        				( $relation['object_item_id']==$thisItemId ? __('This Item')
+  								: "<a href='".url('items/show/' . $relation['object_item_id'])."'>".
+  										$relation['object_item_title'] . "</a>"
+  							).
+                "</td>";
+  				if ( ($provideRelationComments) and ($relation['relation_comment']) ) {
+  					echo "<td>(".$relation['relation_comment'].")</td>";
+  				}
+          echo "</tr>";
+  			} # foreach
+  		} # else
+      echo "</table>";
+  	?>
 </div>

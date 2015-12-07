@@ -5,37 +5,38 @@
 	$relationsclass = ($adminSidebarOrMaincontent == "maincontent" ? "element_set" : "item-relations panel");
 ?>
 <div class="<?php echo $relationsclass; ?>">
-    <h<?php echo $h4h2; ?>><?php echo __('Item Relations'); ?></h<?php echo $h4h2; ?>>
-    <div>
-        <?php if (!$subjectRelations && !$objectRelations): ?>
-        <p><?php echo __('This item has no relations.'); ?></p>
-        <?php else: ?>
-        <ul>
-            <?php foreach ($subjectRelations as $subjectRelation): ?>
-            <li>
-                <?php echo __('This Item'); ?>
-                <strong><?php echo $subjectRelation['relation_text']; ?></strong>
-                <a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>"><?php echo $subjectRelation['object_item_title']; ?></a>
-                <?php
-                  if ( ($provideRelationComments) and ($subjectRelation['relation_comment']) ):
-                    echo "(".$subjectRelation['relation_comment'].")";
-                  endif;
-                ?>
-            </li>
-            <?php endforeach; ?>
-            <?php foreach ($objectRelations as $objectRelation): ?>
-            <li>
-                <a href="<?php echo url('items/show/' . $objectRelation['subject_item_id']); ?>"><?php echo $objectRelation['subject_item_title']; ?></a>
-                <strong><?php echo $objectRelation['relation_text']; ?></strong>
-                <?php echo __('This Item'); ?>
-                <?php
-                  if ( ($provideRelationComments) and ($objectRelation['relation_comment']) ):
-                    echo "(".$objectRelation['relation_comment'].")";
-                  endif;
-                ?>
-            </li>
-            <?php endforeach; ?>
-        </ul>
-        <?php endif; ?>
-    </div>
+	<h<?php echo $h4h2; ?>><?php echo __('Item Relations'); ?></h<?php echo $h4h2; ?>>
+	<?php
+		if (!$allRelations) {
+			echo "<p>" . __('This item has no relations.') . "</p>";
+		} # if
+		else {
+			$lastVocab = -1;
+			foreach ($allRelations as $relation) {
+				if ($lastVocab != $relation["vocabulary_id"]) {
+					if ($lastVocab != -1) { echo "</ul>"; }
+					echo "<h5>"
+					."<span title='".$relation["vocabulary_desc"]."'>"
+					.$relation["vocabulary"]
+					."</span></h5><ul>";
+					$lastVocab = $relation["vocabulary_id"];
+				}
+				echo "<li>";
+				echo ( $relation['subject_item_id']==$thisItemId ? __('This Item')
+								: "<a href='".url('items/show/' . $relation['subject_item_id'])."'>".
+										$relation['subject_item_title'] . "</a>"
+							);
+				echo " <strong>" . $relation['relation_text'] . "</strong> ";
+				echo ( $relation['object_item_id']==$thisItemId ? __('This Item')
+								: "<a href='".url('items/show/' . $relation['object_item_id'])."'>".
+										$relation['object_item_title'] . "</a>"
+							);
+				if ( ($provideRelationComments) and ($relation['relation_comment']) ) {
+					echo " (".$relation['relation_comment'].")";
+				}
+				echo "</li>";
+			} # foreach
+			echo "</ul>";
+		} # else
+	?>
 </div>

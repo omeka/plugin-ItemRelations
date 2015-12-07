@@ -1,5 +1,8 @@
 <?php echo head(array('title' => __('Browse Vocabularies'))); ?>
 <?php echo flash(); ?>
+<div class="table-actions">
+  <a href="<?php echo html_escape(url('item-relations/vocabularies/add')); ?>" class="add green button"><?php echo __('Add Vocabulary'); ?></a>
+</div>
 <table>
     <thead>
     <tr>
