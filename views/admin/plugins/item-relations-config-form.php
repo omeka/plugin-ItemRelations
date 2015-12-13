@@ -3,7 +3,6 @@
         <div class="two columns alpha">
             <?php echo $this->formLabel('item_relations_allow_vocabularies',
             __('Limit Relations to Vocabularies')); ?>
-            </p>
         </div>
         <div class="inputs five columns omega">
             <p class="explanation">
