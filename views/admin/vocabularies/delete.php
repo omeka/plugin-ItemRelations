@@ -26,7 +26,7 @@ if (isset($_GET['vocabulary_id'])) { $vocabularyId = intval($_GET['vocabulary_id
     </section>
     <section class="three columns omega">
       <div id="save" class="panel">
-        <a href="<?php echo html_escape(url('item-relations/vocabularies/browse')); ?>" class="add big green button"><?php echo __('Back'); ?></a>
+        <a href="<?php echo html_escape(url('item-relations/vocabularies/show')); ?>" class="add big green button"><?php echo __('Back'); ?></a>
       </div>
     </section>
     <?php echo foot(); ?>
