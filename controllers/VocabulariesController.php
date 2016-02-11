@@ -67,11 +67,12 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_AbstractActi
         $db = get_db();
         $sql = "UPDATE `$db->ItemRelationsVocabulary` set name = ?, description = ?  where id = $vocabularyId";
         $db->query($sql, array(addslashes($vocabularyName) ,addslashes($vocabularyDescription)));
-        $this->_helper->flashMessenger(__('The vocabulary was successfully edited.'), 'success');
+       $this->_helper->flashMessenger(__('The vocabulary was successfully edited.'), 'success');
       }
       else {
         $this->_helper->flashMessenger(__('The vocabulary name cannot be empty.'), 'error');
       }
+
 
       $this->_helper->redirector('browse');
       return;
@@ -99,16 +100,15 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_AbstractActi
 
     // Handle edit vocabulary form.
     if ($this->getRequest()->isPost()) {
-      $this->_handleEditVocabularyForm($vocabulary->id);
 
-      // Redirect to browse.
-      $this->_helper->flashMessenger(__('The vocabulary was successfully edited.'), 'success');
-      $this->_helper->redirector('browse');
+      $this->_handleEditVocabularyForm($vocabulary->id);
+      // Redirect to Show instead of browse.
+      $this->_helper->redirector('show', null, null, array('id'=>$vocabulary->id));
       return;
     }
-
     $properties = $vocabulary->getProperties();
     $this->view->properties = $properties;
+
   }
 
   /**
@@ -120,9 +120,20 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_AbstractActi
   {
     // Edit existing properties.
     $propertyDescriptions = $this->_getParam('property_description');
+    $propertyLabels = $this->_getParam('property_label');
+
+    // Edit property Descriptions
     foreach ($propertyDescriptions as $propertyId => $propertyDescription) {
       $property = $this->_helper->db->getTable('ItemRelationsProperty')->find($propertyId);
       $property->description = $propertyDescription;
+      $property->save();
+    }
+
+    // Edit property Labels
+    foreach ($propertyLabels as $propertyId => $propertyLabel) {
+      $property = $this->_helper->db->getTable('ItemRelationsProperty')->find($propertyId);
+
+      $property->label = $propertyLabel;
       $property->save();
     }
 
@@ -140,8 +151,9 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_AbstractActi
 
       // Labels must be unique.
       if ($this->_helper->db->getTable('ItemRelationsProperty')->findByLabel($newPropertyLabel)) {
-        continue;
-      }
+          $this->_helper->flashMessenger(__('Existing vocabulary properties cannot be added again.'), 'error');
+          continue;
+        }
 
       $newProperty = new ItemRelationsProperty;
       $newProperty->vocabulary_id = $vocabularyId;
@@ -149,6 +161,7 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_AbstractActi
       $newProperty->label = $newPropertyLabel;
       $newProperty->description = $newPropertyDescription;
       $newProperty->save();
+
     }
 
     // Delete existing properties.
@@ -158,5 +171,9 @@ class ItemRelations_VocabulariesController extends Omeka_Controller_AbstractActi
         $this->_helper->db->getTable('ItemRelationsProperty')->find($propertyId)->delete();
       }
     }
+
+    $this->_helper->flashMessenger(__('The vocabulary was successfully edited.'), 'success');
+
   }
+
 }

@@ -7,109 +7,56 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Item Relations\n"
-"Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
+"Report-Msgid-Bugs-To: http://github.com/GerZah/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Last-Translator: Gero Zahn<gero.zahn@upb.de>\n"
+"Language-Team: English (https://www.transifex.com/upb/wesa-omeka/language/"
+"en/)\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ItemRelationsPlugin.php:122
+#: ItemRelationsPlugin.php:127
 msgid "Custom"
 msgstr ""
 
-#: ItemRelationsPlugin.php:123
+#: ItemRelationsPlugin.php:128
 msgid "Custom vocabulary containing relations defined for this Omeka instance."
 msgstr ""
 
-#: ItemRelationsPlugin.php:387
+#: ItemRelationsPlugin.php:405
 msgid "There was an error in the item relation comments."
 msgstr ""
 
-#: ItemRelationsPlugin.php:413
+#: ItemRelationsPlugin.php:433
 msgid "There was an error in listing the item relation."
 msgstr ""
 
-#: ItemRelationsPlugin.php:507 ItemRelationsPlugin.php:558
-#: views/admin/common/item-relations-show.php:8
-#: views/public/common/item-relations-show.php:3
+#: ItemRelationsPlugin.php:551 ItemRelationsPlugin.php:603
+#: views/admin/common/item-relations-show.php:18
+#: views/public/common/item-relations-show.php:14
 #: views/shared/common/item-relations-advanced-search.php:6
 msgid "Item Relations"
 msgstr ""
 
-#: ItemRelationsPlugin.php:511
+#: ItemRelationsPlugin.php:555
 msgid "Subjects"
 msgstr ""
 
-#: ItemRelationsPlugin.php:513 item_relations_form.php:18
+#: ItemRelationsPlugin.php:557
 #: views/shared/common/item-relations-advanced-search.php:32
+#: views/shared/common/item-relations-form.php:13
 msgid "Object"
 msgstr ""
 
-#: ItemRelationsPlugin.php:518
+#: ItemRelationsPlugin.php:562
 msgid "These Items"
 msgstr ""
 
-#: ItemRelationsPlugin.php:521
+#: ItemRelationsPlugin.php:565
 msgid "Item ID"
-msgstr ""
-
-#: config_form.php:3
-msgid "Append to Public Items Show"
-msgstr ""
-
-#: config_form.php:8
-msgid ""
-"Check this if you want to display an item's relations on its public show "
-"page."
-msgstr ""
-
-#: config_form.php:17
-msgid "Display position in admin view"
-msgstr ""
-
-#: config_form.php:22
-msgid ""
-"Select the position where you would prefer to display the relations in admin "
-"view: In the side bar in the lower right (default) or underneath the regular "
-"field values to the left."
-msgstr ""
-
-#: config_form.php:26
-msgid "Side bar"
-msgstr ""
-
-#: config_form.php:26
-msgid "Main content"
-msgstr ""
-
-#: config_form.php:31
-msgid "Provide comment field for relations"
-msgstr ""
-
-#: config_form.php:36
-msgid "Check this if you want to be able to enter a comment to a relation."
-msgstr ""
-
-#: config_form.php:44
-msgid "Relation Format"
-msgstr ""
-
-#: config_form.php:49
-msgid ""
-"Select the format of an item's relations that you would prefer to show. If "
-"one is unavailable the other will be used."
-msgstr ""
-
-#: config_form.php:53
-msgid "prefix:localPart"
-msgstr ""
-
-#: config_form.php:53
-msgid "label"
 msgstr ""
 
 #: controllers/VocabulariesController.php:37
@@ -125,12 +72,16 @@ msgid "The vocabulary cannot be added."
 msgstr ""
 
 #: controllers/VocabulariesController.php:70
-#: controllers/VocabulariesController.php:105
+#: controllers/VocabulariesController.php:175
 msgid "The vocabulary was successfully edited."
 msgstr ""
 
 #: controllers/VocabulariesController.php:73
 msgid "The vocabulary name cannot be empty."
+msgstr ""
+
+#: controllers/VocabulariesController.php:154
+msgid "Existing vocabulary properties cannot be added again."
 msgstr ""
 
 #: formal_vocabularies.php:11
@@ -1079,75 +1030,124 @@ msgstr ""
 msgid "A property representing an expression that is translated."
 msgstr ""
 
-#: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
-msgid "Browse Vocabularies"
-msgstr ""
-
-#: item_relations_form.php:6
-#, php-format
-msgid ""
-"Here you can relate this item to another item and delete existing relations. "
-"For descriptions of the relations, see the %s page. Invalid item IDs will be "
-"ignored."
-msgstr ""
-
-#: item_relations_form.php:16
-#: views/shared/common/item-relations-advanced-search.php:31
-msgid "Subject "
-msgstr ""
-
-#: item_relations_form.php:41 item_relations_form.php:58
-#: item_relations_form.php:81 item_relations_form.php:106
-#: views/admin/common/item-relations-show.php:25
-#: views/admin/common/item-relations-show.php:30
-#: views/public/common/item-relations-show.php:22
-#: views/public/common/item-relations-show.php:29
-msgid "This Item"
-msgstr ""
-
-#: item_relations_form.php:85
-msgid "[n/a]"
-msgstr ""
-
-#: item_relations_form.php:90
-msgid "Add a Relation"
-msgstr ""
-
-#: item_relations_form.php:97
-msgid "All"
-msgstr ""
-
-#: item_relations_form.php:113
-msgid "Item Sort"
-msgstr ""
-
-#: item_relations_form.php:116
-msgid "Most recently updated"
-msgstr ""
-
-#: item_relations_form.php:119
-msgid "Alphabetically"
-msgstr ""
-
-#: item_relations_form.php:123
-msgid "Object Title"
-msgstr ""
-
-#: item_relations_form.php:126
-msgid "Partial Object Title"
-msgstr ""
-
-#: item_relations_form.php:147
-msgid "Add Relation"
-msgstr ""
-
 #: models/ItemRelationsProperty.php:62
 msgid "[unknown]"
 msgstr ""
 
-#: views/admin/common/item-relations-show.php:11
-#: views/public/common/item-relations-show.php:6
+#: views/admin/common/item-relations-show.php:21
+#: views/public/common/item-relations-show.php:16
 msgid "This item has no relations."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:1
+msgid "Input"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:5
+msgid "Limit Relations to Vocabularies"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:11
+msgid "Check the vocabularies that can be used to set relations."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:12
+msgid "If none is checked, all vocabularies will be allowed."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:42
+msgid "Provide comment field for relations"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:47
+msgid "Check this if you want to be able to enter a comment to a relation."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:55
+msgid "Display"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:59
+msgid "Relation Format"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:64
+msgid ""
+"Select the format of an item's relations that you would prefer to show. If "
+"one is unavailable the other will be used."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:70
+msgid "prefix:localPart"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:71
+msgid "label"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:78
+msgid "Display position in admin view"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:83
+msgid ""
+"Select the position where you would prefer to display the relations in admin "
+"view: In the side bar in the lower right (default) or underneath the regular "
+"field values to the left."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:89
+msgid "Side bar"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:90
+msgid "Main content"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:97
+msgid "Admin Display Mode"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:102
+msgid "Set how to display the list of relations in the admin view."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:103
+#: views/admin/plugins/item-relations-config-form.php:138
+msgid "Anyway, the view can be themed."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:108
+#: views/admin/plugins/item-relations-config-form.php:143
+msgid "As a table"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:109
+#: views/admin/plugins/item-relations-config-form.php:144
+msgid "As a list"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:110
+#: views/admin/plugins/item-relations-config-form.php:145
+msgid "By item type"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:117
+msgid "Append to Public Items Show"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:122
+msgid ""
+"Check this if you want to display an item's relations on its public show "
+"page."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:132
+msgid "Public Display Mode"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:137
+msgid "Set how to display the list of relations in the public view."
 msgstr ""
 
 #: views/admin/vocabularies/add.php:2
@@ -1162,23 +1162,32 @@ msgstr ""
 msgid "Vocabulary Description"
 msgstr ""
 
-#: views/admin/vocabularies/add.php:11 views/admin/vocabularies/show.php:19
+#: views/admin/vocabularies/add.php:11 views/admin/vocabularies/show.php:20
 msgid "Save Vocabulary"
 msgstr ""
 
-#: views/admin/vocabularies/browse.php:4
+#: views/admin/vocabularies/browse.php:3
+#: views/shared/common/item-relations-form.php:3
+msgid "Browse Vocabularies"
+msgstr ""
+
+#: views/admin/vocabularies/browse.php:7
 msgid "Add Vocabulary"
 msgstr ""
 
-#: views/admin/vocabularies/browse.php:11
+#: views/admin/vocabularies/browse.php:12
+msgid "Allowed"
+msgstr ""
+
+#: views/admin/vocabularies/browse.php:15
 msgid "Namespace Prefix"
 msgstr ""
 
-#: views/admin/vocabularies/browse.php:12
+#: views/admin/vocabularies/browse.php:16
 msgid "Namespace URI"
 msgstr ""
 
-#: views/admin/vocabularies/delete.php:2 views/admin/vocabularies/show.php:22
+#: views/admin/vocabularies/delete.php:2 views/admin/vocabularies/show.php:23
 msgid "Delete Vocabulary"
 msgstr ""
 
@@ -1214,20 +1223,24 @@ msgstr ""
 msgid "Vocabulary Properties"
 msgstr ""
 
-#: views/admin/vocabularies/show.php:16
+#: views/admin/vocabularies/show.php:17
 msgid "Edit Vocabulary"
 msgstr ""
 
-#: views/admin/vocabularies/show.php:24
+#: views/admin/vocabularies/show.php:25
 msgid "This vocabulary has no properties."
 msgstr ""
 
-#: views/admin/vocabularies/show.php:26
+#: views/admin/vocabularies/show.php:27
 msgid "Why don't you add some?"
 msgstr ""
 
-#: views/admin/vocabularies/show.php:33
+#: views/admin/vocabularies/show.php:34
 msgid "Local Part"
+msgstr ""
+
+#: views/helpers/ItemRelationsForm.php:20
+msgid "All"
 msgstr ""
 
 #: views/shared/common/item-relations-advanced-search.php:11
@@ -1243,4 +1256,87 @@ msgstr ""
 msgid ""
 "Filter this search for items being \"Subject\" (or \"Object\", respectively) "
 "in relations that contain a certain text portion in their comments."
+msgstr ""
+
+#: views/shared/common/item-relations-advanced-search.php:31
+#: views/shared/common/item-relations-form.php:11
+msgid "Subject "
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:4
+msgid ""
+"Here you can relate this item to another item and delete existing relations."
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:5
+#, php-format
+msgid "For descriptions of the relations, see the %s page."
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:6
+msgid "Invalid item IDs will be ignored."
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:38
+#: views/shared/common/item-relations-form.php:55
+#: views/shared/common/item-relations-form.php:78
+#: views/shared/common/item-relations-form.php:91
+#: views/shared/common/item-relations-show-list.php:16
+#: views/shared/common/item-relations-show-list.php:21
+#: views/shared/common/item-relations-show-table.php:18
+#: views/shared/common/item-relations-show-table.php:25
+msgid "This Item"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:82
+msgid "[n/a]"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:87
+msgid "Add a Relation"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:98
+msgid "Item Sort"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:101
+msgid "Most recently updated"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:103
+msgid "Alphabetically"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:107
+msgid "Object Title"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:109
+msgid "Partial Object Title"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:126
+msgid "Add Relation"
+msgstr ""
+
+#: views/shared/common/item-relations-show-list-by-item-type.php:20
+msgid "Relation from this item"
+msgstr ""
+
+#: views/shared/common/item-relations-show-list-by-item-type.php:22
+msgid "This item has no relation to other records."
+msgstr ""
+
+#: views/shared/common/item-relations-show-list-by-item-type.php:27
+#: views/shared/common/item-relations-show-list-by-item-type.php:53
+msgid "No Item Type"
+msgstr ""
+
+#: views/shared/common/item-relations-show-list-by-item-type.php:46
+msgid "Relations to this item"
+msgstr ""
+
+#: views/shared/common/item-relations-show-list-by-item-type.php:48
+msgid "No record is related to this item."
 msgstr ""

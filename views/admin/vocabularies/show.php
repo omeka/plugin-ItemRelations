@@ -2,6 +2,7 @@
 echo head(array('title' => __('Vocabulary Properties')));
 $vocabulary = $this->item_relations_vocabulary;
 $properties = $vocabulary->getProperties();
+echo flash();
 ?>
 
 <form method="post" action="<?php echo url('item-relations/vocabularies/save', array('vocabulary_id' => $vocabulary->id)); ?>">

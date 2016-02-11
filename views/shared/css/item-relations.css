@@ -1,0 +1,15 @@
+.pg_disabled {
+    visibility: hidden;
+}
+.hidden {
+    display: none;
+}
+ul#lookup-results li {
+    cursor: pointer;
+}
+ul#lookup-results li:active {
+    background-color: #cccccc;
+}
+ul#lookup-results li:hover {
+    background-color: #f3f3e7;
+}
