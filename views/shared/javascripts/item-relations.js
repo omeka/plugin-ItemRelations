@@ -3,13 +3,8 @@ jQuery(document).ready(function () {
     var options = {};
 
     function resetOptions() {
-        options['partial'] = '';
-        options['item_type'] = -1;
-        options['collection'] = -1;
-        options['sort'] = 'mod_desc';
-        options['page'] = 0;
-        options['per_page'] = 15;
         options = {
+            subject_id: $('#subject_id').attr('data-subject-id'),
             partial: '',
             item_type: -1,
             collection: -1,

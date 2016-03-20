@@ -15,6 +15,9 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
     {
         $db = get_db();
 
+        if (!$this->_hasParam('subject_id')) {
+            $this->_setParam('subject_id', -1);
+        }
         if (!$this->_hasParam('partial')) {
             $this->_setParam('partial', '');
         }
@@ -32,6 +35,12 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         }
         if (!$this->_hasParam('per_page')) {
             $this->_setParam('per_page', 15);
+        }
+
+        $subject_id = intval($this->_getParam('subject_id'));
+        $where_subject_id = '';
+        if ($subject_id > 0) {
+            $where_subject_id = "AND items.id != $subject_id";
         }
 
         $partial = preg_replace('/[^ \.,\!\?\p{L}\p{N}\p{Mc}]/ui', '', $this->_getParam('partial'));
@@ -82,6 +91,7 @@ FROM {$db->Item} items
 LEFT JOIN {$db->Element_Texts} elementtexts
 ON (items.id = elementtexts.record_id) AND (elementtexts.record_type = 'Item')
 WHERE elementtexts.element_id = $titleId
+$where_subject_id
 $where_item_type
 $where_collection
 $where_text
@@ -101,6 +111,7 @@ FROM {$db->Item} items
 LEFT JOIN {$db->Element_Texts} elementtexts
 ON (items.id = elementtexts.record_id) AND (elementtexts.record_type = 'Item')
 WHERE elementtexts.element_id = $titleId
+$where_subject_id
 $where_item_type
 $where_collection
 $where_text

@@ -94,7 +94,7 @@
             <?php echo $this->formLabel('new_relation_property_id', __('This Subject')); ?>
         </div>
         <div class="inputs one column">
-            <span class="subject-id"><?php echo empty($item->id) ? __('[New]') : '#' . $item->id; ?></span>
+            <span id="subject_id" class="subject-id" <?php echo empty($item->id) ? '' : 'data-subject-id="' . $item->id . '"'; ?>><?php echo empty($item->id) ? __('[New]') : '#' . $item->id; ?></span>
         </div>
         <div class="nine columns omega">
             <?php echo empty($item->id) ? '' : metadata('item', array('Dublin Core', 'Title')); ?>
