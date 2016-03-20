@@ -104,6 +104,7 @@ jQuery(document).ready(function () {
 
     $('#lookup-results').on('click', 'li', function () {
         $('#new_relation_object_item_id').val($(this).attr('data-value'));
+        $('#object_id').html('<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">#' + $(this).attr('data-value') + '</a>');
         $('#object_title').html($(this).html());
     });
 

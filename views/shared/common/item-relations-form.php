@@ -90,11 +90,14 @@
 
 <div id="item-relation-selector" style="overflow: auto; padding: 20px; border-radius: 6px; background: #fff" class="lity-hide container-twelve">
     <div class="field">
-        <div class="three columns alpha">
+        <div class="two columns alpha">
             <?php echo $this->formLabel('new_relation_property_id', __('This Subject')); ?>
         </div>
+        <div class="inputs one column">
+            <span class="subject-id"><?php echo empty($item->id) ? __('[New]') : '#' . $item->id; ?></span>
+        </div>
         <div class="nine columns omega">
-            <?php echo isset($item->id) ? metadata('item', array('Dublin Core', 'Title')) : __('[New Record]'); ?>
+            <?php echo empty($item->id) ? '' : metadata('item', array('Dublin Core', 'Title')); ?>
         </div>
     </div>
     <div class="field">
@@ -107,8 +110,11 @@
         </div>
     </div>
     <div class="field">
-        <div class="inputs three columns alpha">
+        <div class="inputs two columns alpha">
             <?php echo $this->formLabel('object_title', __('With Object')); ?>
+        </div>
+        <div class="inputs one column">
+            <span id="object_id" class="object-id" data-base-url="<?php echo CURRENT_BASE_URL; ?>"></span>
         </div>
         <div class="inputs nine columns omega">
             <span id="object_title"><i><?php echo __('[Search and Select Below]'); ?></i></span>

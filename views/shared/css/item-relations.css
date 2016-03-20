@@ -1,3 +1,7 @@
+.subject-id,
+.object-id {
+    font-style: italic;
+}
 .pg_disabled {
     visibility: hidden;
 }
