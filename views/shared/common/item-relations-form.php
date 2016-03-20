@@ -76,12 +76,31 @@
             <?php
             echo '</tr>';
         } ?>
-        <tr class="hidden item-relations-entry">
+        <tr>
+            <th colspan="<?php echo $colspan; ?>">
+                <span><?php echo __('New Relations'); ?></span>
+            <th>
+        </tr>
+        <tr class="hidden item-relations-entry new">
             <td><?php echo __('This Item'); ?><span class="item-relations-hidden"></span></td>
-            <td class="item-relations-property"></td>
+            <td class="item-relations-property">
+                <?php
+                echo $this->formSelect('item_relations_subject_property[]',
+                    null,
+                    array(
+                        'multiple' => false,
+                        'style' => 'width: 150px;',
+                    ),
+                    array_slice($formSelectProperties, 1));
+                ?>
+            </td>
             <td class="item-relations-object"><a href="<?php echo url('items/show/'); ?>" target="_blank">.</a></td>
-            <?php if ($provideRelationComments): ?><td class="item-relations-comment"></td><?php endif; ?>
-            <td><span style="color:#ccc;"><?php echo __("[n/a]") ?></span></td>
+            <?php if ($provideRelationComments): ?>
+                <td class="item-relations-comment">
+                    <input name="item_relations_subject_comment[]" size="10" maxlength="60" value="" />
+                </td>
+            <?php endif; ?>
+            <td><a href="#" class="delete-new-relation"><?php echo __('Delete now'); ?></a></td>
         </tr>
     </tbody>
 </table>
