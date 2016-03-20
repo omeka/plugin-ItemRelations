@@ -134,8 +134,15 @@
 
     <input id="new_relation_object_item_id" type="hidden">
 
-    <div class="action alpha">
-        <a href="#" id="add-relation" class="green button" data-lity-close><?php echo __('Add this Relation'); ?></a>
+    <div class="action">
+        <div class="nine columns alpha">
+            <a href="#" id="add-relation" class="green button" data-lity-close><?php echo __('Add this Relation'); ?></a>
+        </div>
+        <div class="three columns omega">
+            <div class="right">
+                <a href="#" id="cancel-relation" class="red button" data-lity-close><?php echo __('Cancel'); ?></a>
+            </div>
+        </div>
     </div>
 
     <div class="twelve columns alpha omega">
