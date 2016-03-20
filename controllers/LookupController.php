@@ -71,7 +71,7 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
 SELECT count(*) AS count
 FROM {$db->Item} items
 LEFT JOIN {$db->Element_Texts} elementtexts
-ON (items.id = elementtexts.record_id)
+ON (items.id = elementtexts.record_id) AND (elementtexts.record_type = 'Item')
 WHERE elementtexts.element_id = $titleId
 $where_item_type
 $where_text
@@ -89,7 +89,7 @@ QCOUNT;
 SELECT items.id AS id, text
 FROM {$db->Item} items
 LEFT JOIN {$db->Element_Texts} elementtexts
-ON (items.id = elementtexts.record_id)
+ON (items.id = elementtexts.record_id) AND (elementtexts.record_type = 'Item')
 WHERE elementtexts.element_id = $titleId
 $where_item_type
 $where_text
