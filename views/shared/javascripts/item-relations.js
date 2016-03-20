@@ -189,6 +189,10 @@ jQuery(document).ready(function () {
 
     /* Search and select an object to create a new relation. */
 
+    $('#refresh-results').click(function () {
+        updateChoices();
+    });
+
     $('#new_relation_object_item_type_id').change(function () {
         updateChoices();
     });

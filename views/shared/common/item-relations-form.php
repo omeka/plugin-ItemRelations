@@ -164,8 +164,16 @@
         </div>
     </div>
 
-    <div class="twelve columns alpha omega">
+    <div class="nine columns alpha">
         <h3><?php echo __('Search and Select a Record'); ?></h3>
+    </div>
+    <div class="action three columns omega">
+        <div class="right">
+            <a href="<?php echo url('/items/add'); ?>" id="create-record" class="blue button" target="_blank"><?php echo __('Create a new Record'); ?></a>
+        </div>
+        <div class="right">
+            <a href="#" id="refresh-results" class="green button"><?php echo __('Refresh'); ?></a>
+        </div>
     </div>
     <div class="field">
         <div class="three columns alpha">
