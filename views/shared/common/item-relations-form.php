@@ -144,6 +144,15 @@
                 null, array('multiple' => false), $itemTypesList); ?>
         </div>
     </div>
+    <div class="field">
+        <div class="three columns alpha">
+            <?php echo $this->formLabel('new_relation_object_collection_id', __('By Collection')); ?>
+        </div>
+        <div class="inputs nine columns omega">
+            <?php echo $this->formSelect('new_relation_object_collection_id',
+                null, array('multiple' => false), get_table_options('Collection')); ?>
+        </div>
+    </div>
 
     <div class="field">
         <div class="three columns alpha">

@@ -5,12 +5,14 @@ jQuery(document).ready(function () {
     function resetOptions() {
         options['partial'] = '';
         options['item_type'] = -1;
+        options['collection'] = -1;
         options['sort'] = 'mod_desc';
         options['page'] = 0;
         options['per_page'] = 15;
         options = {
             partial: '',
             item_type: -1,
+            collection: -1,
             sort: 'mod_desc',
             page: 0,
             per_page: 15,
@@ -24,6 +26,7 @@ jQuery(document).ready(function () {
     function updateChoices() {
         options['partial'] = $('#partial_object_title').val();
         options['item_type'] = $('#new_relation_object_item_type_id').val();
+        options['collection'] = $('#new_relation_object_collection_id').val();
         if ($('input[name=itemsListSort]:checked').val() === 'timestamp') {
             options['sort'] = 'mod_desc';
         }
@@ -119,6 +122,10 @@ jQuery(document).ready(function () {
     });
 
     $('#new_relation_object_item_type_id').change(function () {
+        updateChoices();
+    });
+
+    $('#new_relation_object_collection_id').change(function () {
         updateChoices();
     });
 

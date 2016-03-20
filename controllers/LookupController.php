@@ -21,6 +21,9 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         if (!$this->_hasParam('item_type')) {
             $this->_setParam('item_type', -1);
         }
+        if (!$this->_hasParam('collection')) {
+            $this->_setParam('collection', -1);
+        }
         if (!$this->_hasParam('sort')) {
             $this->_setParam('sort', 'mod_desc');
         }
@@ -41,6 +44,12 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         $where_item_type = '';
         if ($item_type > 0) {
             $where_item_type = "AND items.item_type_id = $item_type";
+        }
+
+        $collection = intval($this->_getParam('collection'));
+        $where_collection = '';
+        if ($collection > 0) {
+            $where_collection = "AND items.collection_id = $collection";
         }
 
         $per_page = intval($this->_getParam('per_page'));
@@ -74,6 +83,7 @@ LEFT JOIN {$db->Element_Texts} elementtexts
 ON (items.id = elementtexts.record_id) AND (elementtexts.record_type = 'Item')
 WHERE elementtexts.element_id = $titleId
 $where_item_type
+$where_collection
 $where_text
 GROUP BY elementtexts.record_id
 QCOUNT;
@@ -92,6 +102,7 @@ LEFT JOIN {$db->Element_Texts} elementtexts
 ON (items.id = elementtexts.record_id) AND (elementtexts.record_type = 'Item')
 WHERE elementtexts.element_id = $titleId
 $where_item_type
+$where_collection
 $where_text
 GROUP BY elementtexts.record_id
 $order_clause
