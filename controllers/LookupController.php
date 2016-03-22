@@ -15,11 +15,17 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
     {
         $db = get_db();
 
+        if (!$this->_hasParam('subject_id')) {
+            $this->_setParam('subject_id', -1);
+        }
         if (!$this->_hasParam('partial')) {
             $this->_setParam('partial', '');
         }
         if (!$this->_hasParam('item_type')) {
             $this->_setParam('item_type', -1);
+        }
+        if (!$this->_hasParam('collection')) {
+            $this->_setParam('collection', -1);
         }
         if (!$this->_hasParam('sort')) {
             $this->_setParam('sort', 'mod_desc');
@@ -29,6 +35,12 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         }
         if (!$this->_hasParam('per_page')) {
             $this->_setParam('per_page', 15);
+        }
+
+        $subject_id = intval($this->_getParam('subject_id'));
+        $where_subject_id = '';
+        if ($subject_id > 0) {
+            $where_subject_id = "AND items.id != $subject_id";
         }
 
         $partial = preg_replace('/[^ \.,\!\?\p{L}\p{N}\p{Mc}]/ui', '', $this->_getParam('partial'));
@@ -41,6 +53,12 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         $where_item_type = '';
         if ($item_type > 0) {
             $where_item_type = "AND items.item_type_id = $item_type";
+        }
+
+        $collection = intval($this->_getParam('collection'));
+        $where_collection = '';
+        if ($collection > 0) {
+            $where_collection = "AND items.collection_id = $collection";
         }
 
         $per_page = intval($this->_getParam('per_page'));
@@ -71,9 +89,11 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
 SELECT count(*) AS count
 FROM {$db->Item} items
 LEFT JOIN {$db->Element_Texts} elementtexts
-ON (items.id = elementtexts.record_id)
+ON (items.id = elementtexts.record_id) AND (elementtexts.record_type = 'Item')
 WHERE elementtexts.element_id = $titleId
+$where_subject_id
 $where_item_type
+$where_collection
 $where_text
 GROUP BY elementtexts.record_id
 QCOUNT;
@@ -89,9 +109,11 @@ QCOUNT;
 SELECT items.id AS id, text
 FROM {$db->Item} items
 LEFT JOIN {$db->Element_Texts} elementtexts
-ON (items.id = elementtexts.record_id)
+ON (items.id = elementtexts.record_id) AND (elementtexts.record_type = 'Item')
 WHERE elementtexts.element_id = $titleId
+$where_subject_id
 $where_item_type
+$where_collection
 $where_text
 GROUP BY elementtexts.record_id
 $order_clause

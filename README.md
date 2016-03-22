@@ -75,7 +75,7 @@ Copyright
 
 * Copyright Center for History and New Media, 2011-2015
 * Copyright GerZah, 2015
-* Copyright Daniel Berthereau, 2015
+* Copyright Daniel Berthereau, 2015-2016
 
 
 [Item Relations]: https://github.com/omeka/plugin-ItemRelations
