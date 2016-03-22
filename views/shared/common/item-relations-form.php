@@ -210,11 +210,11 @@
         <fieldset class="inputs nine columns omega">
             <div class="four columns alpha">
                 <input type="radio" name="itemsListSort" id="new_selectObjectSortTimestamp" value="timestamp" checked>
-                <label for="selectObjectSortTimeStamp"><?php echo __("Most recently updated"); ?></label>
+                <label for="new_selectObjectSortTimestamp"><?php echo __("Most recently updated"); ?></label>
             </div>
             <div class="four columns omega">
                 <input type="radio" name="itemsListSort" id="new_selectObjectSortName" value="name">
-                <label for="selectObjectSortName"><?php echo __("Alphabetically"); ?></label>
+                <label for="new_selectObjectSortName"><?php echo __("Alphabetically"); ?></label>
                 </div>
         </fieldset>
     </div>
