@@ -83,6 +83,36 @@ jQuery(document).ready(function () {
                 }
             }
         });
+
+        // Update the list of item types.
+        $.ajax({
+            url: url + 'list-item-types',
+            dataType: 'json',
+            success: function (data) {
+                _loadList('select#new_relation_object_item_type_id', data);
+            }
+        });
+
+        // Update the list of collections.
+        $.ajax({
+            url: url + 'list-collections',
+            dataType: 'json',
+            success: function (data) {
+                _loadList('select#new_relation_object_collection_id', data);
+            }
+        });
+    }
+
+    function _loadList(element, data) {
+        var currentValue = $(element).val();
+        $(element).empty();
+        $.each(data['id'], function(i, id) {
+            $(element).append(
+                $('<option></option>')
+                    .val(id)
+                    .html(data['label'][i]));
+        });
+        $(element).val(currentValue);
     }
 
     function updateAddButton() {
