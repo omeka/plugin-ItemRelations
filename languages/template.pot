@@ -1047,106 +1047,106 @@ msgstr ""
 msgid "Limit Relations to Vocabularies"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:11
+#: views/admin/plugins/item-relations-config-form.php:10
 msgid "Check the vocabularies that can be used to set relations."
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:12
+#: views/admin/plugins/item-relations-config-form.php:11
 msgid "If none is checked, all vocabularies will be allowed."
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:42
+#: views/admin/plugins/item-relations-config-form.php:41
 msgid "Provide comment field for relations"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:47
+#: views/admin/plugins/item-relations-config-form.php:46
 msgid "Check this if you want to be able to enter a comment to a relation."
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:55
+#: views/admin/plugins/item-relations-config-form.php:54
 msgid "Display"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:59
+#: views/admin/plugins/item-relations-config-form.php:58
 msgid "Relation Format"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:64
+#: views/admin/plugins/item-relations-config-form.php:63
 msgid ""
 "Select the format of an item's relations that you would prefer to show. If "
 "one is unavailable the other will be used."
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:70
+#: views/admin/plugins/item-relations-config-form.php:69
 msgid "prefix:localPart"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:71
+#: views/admin/plugins/item-relations-config-form.php:70
 msgid "label"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:78
+#: views/admin/plugins/item-relations-config-form.php:77
 msgid "Display position in admin view"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:83
+#: views/admin/plugins/item-relations-config-form.php:82
 msgid ""
 "Select the position where you would prefer to display the relations in admin "
 "view: In the side bar in the lower right (default) or underneath the regular "
 "field values to the left."
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:89
+#: views/admin/plugins/item-relations-config-form.php:88
 msgid "Side bar"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:90
+#: views/admin/plugins/item-relations-config-form.php:89
 msgid "Main content"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:97
+#: views/admin/plugins/item-relations-config-form.php:96
 msgid "Admin Display Mode"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:102
+#: views/admin/plugins/item-relations-config-form.php:101
 msgid "Set how to display the list of relations in the admin view."
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:103
-#: views/admin/plugins/item-relations-config-form.php:138
+#: views/admin/plugins/item-relations-config-form.php:102
+#: views/admin/plugins/item-relations-config-form.php:137
 msgid "Anyway, the view can be themed."
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:107
+#: views/admin/plugins/item-relations-config-form.php:142
+msgid "As a table"
 msgstr ""
 
 #: views/admin/plugins/item-relations-config-form.php:108
 #: views/admin/plugins/item-relations-config-form.php:143
-msgid "As a table"
+msgid "As a list"
 msgstr ""
 
 #: views/admin/plugins/item-relations-config-form.php:109
 #: views/admin/plugins/item-relations-config-form.php:144
-msgid "As a list"
-msgstr ""
-
-#: views/admin/plugins/item-relations-config-form.php:110
-#: views/admin/plugins/item-relations-config-form.php:145
 msgid "By item type"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:117
+#: views/admin/plugins/item-relations-config-form.php:116
 msgid "Append to Public Items Show"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:122
+#: views/admin/plugins/item-relations-config-form.php:121
 msgid ""
 "Check this if you want to display an item's relations on its public show "
 "page."
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:132
+#: views/admin/plugins/item-relations-config-form.php:131
 msgid "Public Display Mode"
 msgstr ""
 
-#: views/admin/plugins/item-relations-config-form.php:137
+#: views/admin/plugins/item-relations-config-form.php:136
 msgid "Set how to display the list of relations in the public view."
 msgstr ""
 
@@ -1278,9 +1278,8 @@ msgid "Invalid item IDs will be ignored."
 msgstr ""
 
 #: views/shared/common/item-relations-form.php:38
-#: views/shared/common/item-relations-form.php:55
-#: views/shared/common/item-relations-form.php:78
-#: views/shared/common/item-relations-form.php:91
+#: views/shared/common/item-relations-form.php:59
+#: views/shared/common/item-relations-form.php:85
 #: views/shared/common/item-relations-show-list.php:16
 #: views/shared/common/item-relations-show-list.php:21
 #: views/shared/common/item-relations-show-table.php:18
@@ -1288,36 +1287,76 @@ msgstr ""
 msgid "This Item"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:82
-msgid "[n/a]"
-msgstr ""
-
-#: views/shared/common/item-relations-form.php:87
-msgid "Add a Relation"
-msgstr ""
-
-#: views/shared/common/item-relations-form.php:98
-msgid "Item Sort"
-msgstr ""
-
-#: views/shared/common/item-relations-form.php:101
-msgid "Most recently updated"
+#: views/shared/common/item-relations-form.php:81
+msgid "New Relations"
 msgstr ""
 
 #: views/shared/common/item-relations-form.php:103
+msgid "Delete now"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:108
+msgid "Add a Relation"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:113
+msgid "This Subject"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:116
+msgid "[New]"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:124
+msgid "Is Related By"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:133
+msgid "With Object"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:139
+msgid "[Search and Select Below]"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:158
+msgid "Add this Relation"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:168
+msgid "Search and Select a Record"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:172
+msgid "Create a new Relation"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:175
+msgid "Refresh"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:180
+msgid "By Item Types"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:189
+msgid "By Collection"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:199
+msgid "By Partial Title"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:208
+msgid "Sort By"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:213
+msgid "Most recently updated"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:217
 msgid "Alphabetically"
-msgstr ""
-
-#: views/shared/common/item-relations-form.php:107
-msgid "Object Title"
-msgstr ""
-
-#: views/shared/common/item-relations-form.php:109
-msgid "Partial Object Title"
-msgstr ""
-
-#: views/shared/common/item-relations-form.php:126
-msgid "Add Relation"
 msgstr ""
 
 #: views/shared/common/item-relations-show-list-by-item-type.php:20

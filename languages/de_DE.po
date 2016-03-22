@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: WeSa Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/GerZah/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2016-02-10 14:20+0100\n"
-"Last-Translator: githanjalli <anjallinhere@gmail.com>\n"
+"PO-Revision-Date: 2016-03-22 11:23+0100\n"
+"Last-Translator: Gero Zahn <gerozahn@campus.uni-paderborn.de>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/upb/wesa-omeka/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #: ItemRelationsPlugin.php:127
 msgid "Custom"
@@ -963,95 +963,95 @@ msgstr "Eingabe"
 msgid "Limit Relations to Vocabularies"
 msgstr "Beziehungen auf Vokabulare beschränken"
 
-#: views/admin/plugins/item-relations-config-form.php:11
+#: views/admin/plugins/item-relations-config-form.php:10
 msgid "Check the vocabularies that can be used to set relations."
 msgstr "Markieren Sie die Vokabulare, die in Beziehungen verwendet werden können."
 
-#: views/admin/plugins/item-relations-config-form.php:12
+#: views/admin/plugins/item-relations-config-form.php:11
 msgid "If none is checked, all vocabularies will be allowed."
 msgstr "Wenn kein Vokabular markiert ist, sind alle zugelassen."
 
-#: views/admin/plugins/item-relations-config-form.php:42
+#: views/admin/plugins/item-relations-config-form.php:41
 msgid "Provide comment field for relations"
 msgstr "Kommentarfeld für Relationen anbieten"
 
-#: views/admin/plugins/item-relations-config-form.php:47
+#: views/admin/plugins/item-relations-config-form.php:46
 msgid "Check this if you want to be able to enter a comment to a relation."
 msgstr "Aktivieren Sie diese Einstellung, wenn Sie zu einer Relation einen Kommentar eingeben möchten."
 
-#: views/admin/plugins/item-relations-config-form.php:55
+#: views/admin/plugins/item-relations-config-form.php:54
 msgid "Display"
 msgstr "Anzeige"
 
-#: views/admin/plugins/item-relations-config-form.php:59
+#: views/admin/plugins/item-relations-config-form.php:58
 msgid "Relation Format"
 msgstr "Beziehungs-Format"
 
-#: views/admin/plugins/item-relations-config-form.php:64
+#: views/admin/plugins/item-relations-config-form.php:63
 msgid "Select the format of an item's relations that you would prefer to show. If one is unavailable the other will be used."
 msgstr "Wählen Sie das Format einer Objekt-Beziehung, die Sie vornehmlich anzeigen möchten. Ist eine davon nicht verfügbar, wird die andere verwendet."
 
-#: views/admin/plugins/item-relations-config-form.php:70
+#: views/admin/plugins/item-relations-config-form.php:69
 msgid "prefix:localPart"
 msgstr "Präfix:Lokaler Teil"
 
-#: views/admin/plugins/item-relations-config-form.php:71
+#: views/admin/plugins/item-relations-config-form.php:70
 msgid "label"
 msgstr "Bezeichnung"
 
-#: views/admin/plugins/item-relations-config-form.php:78
+#: views/admin/plugins/item-relations-config-form.php:77
 msgid "Display position in admin view"
 msgstr "Anzeigeposition in Admin-Ansicht"
 
-#: views/admin/plugins/item-relations-config-form.php:83
+#: views/admin/plugins/item-relations-config-form.php:82
 msgid "Select the position where you would prefer to display the relations in admin view: In the side bar in the lower right (default) or underneath the regular field values to the left."
 msgstr "Wählen Sie die Anzeigeposition, die Sie für die Beziehungen in der Admin-Ansicht bevorzugen: In der Seitenleiste unten rechts (Default) oder unterhalb der regulären Feldern auf der linken Seite."
 
-#: views/admin/plugins/item-relations-config-form.php:89
+#: views/admin/plugins/item-relations-config-form.php:88
 msgid "Side bar"
 msgstr "Seitenleiste"
 
-#: views/admin/plugins/item-relations-config-form.php:90
+#: views/admin/plugins/item-relations-config-form.php:89
 msgid "Main content"
 msgstr "Hauptinhalt"
 
-#: views/admin/plugins/item-relations-config-form.php:97
+#: views/admin/plugins/item-relations-config-form.php:96
 msgid "Admin Display Mode"
 msgstr "Admin-Anzeigemodus"
 
-#: views/admin/plugins/item-relations-config-form.php:102
+#: views/admin/plugins/item-relations-config-form.php:101
 msgid "Set how to display the list of relations in the admin view."
 msgstr "Definieren Sie, wie die Beziehungsliste in der Admin-Ansicht angezeigt werden soll."
 
-#: views/admin/plugins/item-relations-config-form.php:103 views/admin/plugins/item-relations-config-form.php:138
+#: views/admin/plugins/item-relations-config-form.php:102 views/admin/plugins/item-relations-config-form.php:137
 msgid "Anyway, the view can be themed."
 msgstr "Die Darstellung ist in jedem Fall im Theme definierbar."
 
-#: views/admin/plugins/item-relations-config-form.php:108 views/admin/plugins/item-relations-config-form.php:143
+#: views/admin/plugins/item-relations-config-form.php:107 views/admin/plugins/item-relations-config-form.php:142
 msgid "As a table"
 msgstr "Als Tabelle"
 
-#: views/admin/plugins/item-relations-config-form.php:109 views/admin/plugins/item-relations-config-form.php:144
+#: views/admin/plugins/item-relations-config-form.php:108 views/admin/plugins/item-relations-config-form.php:143
 msgid "As a list"
 msgstr "Als Liste"
 
-#: views/admin/plugins/item-relations-config-form.php:110 views/admin/plugins/item-relations-config-form.php:145
+#: views/admin/plugins/item-relations-config-form.php:109 views/admin/plugins/item-relations-config-form.php:144
 msgid "By item type"
 msgstr "Nach Objekttyp"
 
-#: views/admin/plugins/item-relations-config-form.php:117
+#: views/admin/plugins/item-relations-config-form.php:116
 msgid "Append to Public Items Show"
 msgstr "Auf der öffentlichen Seite anzeigen"
 
-#: views/admin/plugins/item-relations-config-form.php:122
+#: views/admin/plugins/item-relations-config-form.php:121
 msgid "Check this if you want to display an item's relations on its public show page."
 msgstr "Aktivieren Sie diese Einstellung, wenn Sie die Objekt-Beziehungen auf der öffentlichen Seite anzeigen wollen."
 
-#: views/admin/plugins/item-relations-config-form.php:132
+#: views/admin/plugins/item-relations-config-form.php:131
 msgid "Public Display Mode"
 msgstr "Öffentlicher Anzeigemodus"
 
-#: views/admin/plugins/item-relations-config-form.php:137
+#: views/admin/plugins/item-relations-config-form.php:136
 msgid "Set how to display the list of relations in the public view."
 msgstr "Definieren Sie, wie die Beziehungsliste in der öffentlichen Ansicht angezeigt werden soll."
 
@@ -1168,42 +1168,81 @@ msgstr "Für die Beschreibungen der Beziehungen, lesen Sie bitte unter %s weiter
 msgid "Invalid item IDs will be ignored."
 msgstr "Invalid item IDs will be ignored."
 
-#: views/shared/common/item-relations-form.php:38 views/shared/common/item-relations-form.php:55 views/shared/common/item-relations-form.php:78 views/shared/common/item-relations-form.php:91 views/shared/common/item-relations-show-list.php:16 views/shared/common/item-relations-show-list.php:21 views/shared/common/item-relations-show-table.php:18
-#: views/shared/common/item-relations-show-table.php:25
+#: views/shared/common/item-relations-form.php:38 views/shared/common/item-relations-form.php:59 views/shared/common/item-relations-form.php:85 views/shared/common/item-relations-show-list.php:16 views/shared/common/item-relations-show-list.php:21 views/shared/common/item-relations-show-table.php:18 views/shared/common/item-relations-show-table.php:25
 msgid "This Item"
 msgstr "Dieses Objekt"
 
-#: views/shared/common/item-relations-form.php:82
-msgid "[n/a]"
-msgstr "[n.v.]"
+#: views/shared/common/item-relations-form.php:81
+msgid "New Relations"
+msgstr "Neue Beziehungen"
 
-#: views/shared/common/item-relations-form.php:87
+#: views/shared/common/item-relations-form.php:103
+msgid "Delete now"
+msgstr "Jetzt löschen"
+
+#: views/shared/common/item-relations-form.php:108
 msgid "Add a Relation"
 msgstr "Eine Beziehung hinzufügen"
 
-#: views/shared/common/item-relations-form.php:98
-msgid "Item Sort"
-msgstr "Objektsortierung"
+#: views/shared/common/item-relations-form.php:113
+msgid "This Subject"
+msgstr "Diese Subjekt-Resource"
 
-#: views/shared/common/item-relations-form.php:101
+#: views/shared/common/item-relations-form.php:116
+msgid "[New]"
+msgstr "[Neu]"
+
+#: views/shared/common/item-relations-form.php:124
+msgid "Is Related By"
+msgstr "steht in Beziehung"
+
+#: views/shared/common/item-relations-form.php:133
+msgid "With Object"
+msgstr "mit Objekt-Resource"
+
+#: views/shared/common/item-relations-form.php:139
+msgid "[Search and Select Below]"
+msgstr "[Unten suchen und auswählen]"
+
+#: views/shared/common/item-relations-form.php:158
+msgid "Add this Relation"
+msgstr "Diese Beziehung hinzufügen"
+
+#: views/shared/common/item-relations-form.php:168
+msgid "Search and Select a Record"
+msgstr "Objekt suchen und auswählen"
+
+#: views/shared/common/item-relations-form.php:172
+msgid "Create a new Relation"
+msgstr "Neue Beziehung erstellen"
+
+#: views/shared/common/item-relations-form.php:175
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+#: views/shared/common/item-relations-form.php:180
+msgid "By Item Types"
+msgstr "Nach Objekttyp"
+
+#: views/shared/common/item-relations-form.php:189
+msgid "By Collection"
+msgstr "Nach Sammlung"
+
+#: views/shared/common/item-relations-form.php:199
+msgid "By Partial Title"
+msgstr "Nach teilweisem Objekt-Titel"
+
+#: views/shared/common/item-relations-form.php:208
+msgid "Sort By"
+msgstr "Sortieren nach"
+
+#: views/shared/common/item-relations-form.php:213
 msgid "Most recently updated"
 msgstr "Kürzlich bearbeitet"
 
-#: views/shared/common/item-relations-form.php:103
+#: views/shared/common/item-relations-form.php:217
 msgid "Alphabetically"
 msgstr "Alphabetisch"
-
-#: views/shared/common/item-relations-form.php:107
-msgid "Object Title"
-msgstr "Objekt-Titel"
-
-#: views/shared/common/item-relations-form.php:109
-msgid "Partial Object Title"
-msgstr "Teilweiser Objekt-Titel"
-
-#: views/shared/common/item-relations-form.php:126
-msgid "Add Relation"
-msgstr "Beziehung hinzufügen"
 
 #: views/shared/common/item-relations-show-list-by-item-type.php:20
 msgid "Relation from this item"
