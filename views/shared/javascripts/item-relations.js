@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
 
         $('#new_relation_object_item_id').val('');
         $('#object_id').html('');
-        $('#object_title').html('<i>' + '[Search and Select Below]' + '</i>');
+        $('#object_title').html('<i>' + itemRelationsSearchAndSelect + '</i>');
         $('#new_relation_property_id').val('');
         $('#relation_comment').val('');
         $('#new_relation_object_item_type_id').val(-1);
