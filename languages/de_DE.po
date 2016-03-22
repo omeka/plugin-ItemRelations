@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: WeSa Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/GerZah/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2016-03-22 11:23+0100\n"
+"PO-Revision-Date: 2016-03-22 17:33+0100\n"
 "Last-Translator: Gero Zahn <gerozahn@campus.uni-paderborn.de>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/upb/wesa-omeka/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
@@ -54,6 +54,10 @@ msgstr "Diese Objekte"
 #: ItemRelationsPlugin.php:565
 msgid "Item ID"
 msgstr "Objekt-ID"
+
+#: ItemRelationsPlugin.php:620 views/shared/common/item-relations-form.php:139
+msgid "[Search and Select Below]"
+msgstr "[Unten suchen und auswählen]"
 
 #: controllers/VocabulariesController.php:37
 msgid "The vocabulary name already exists. Please choose a different one."
@@ -1200,10 +1204,6 @@ msgstr "steht in Beziehung"
 msgid "With Object"
 msgstr "mit Objekt-Resource"
 
-#: views/shared/common/item-relations-form.php:139
-msgid "[Search and Select Below]"
-msgstr "[Unten suchen und auswählen]"
-
 #: views/shared/common/item-relations-form.php:158
 msgid "Add this Relation"
 msgstr "Diese Beziehung hinzufügen"
@@ -1213,8 +1213,8 @@ msgid "Search and Select a Record"
 msgstr "Objekt suchen und auswählen"
 
 #: views/shared/common/item-relations-form.php:172
-msgid "Create a new Relation"
-msgstr "Neue Beziehung erstellen"
+msgid "Create a new Item"
+msgstr "Neues Objekt erstellen"
 
 #: views/shared/common/item-relations-form.php:175
 msgid "Refresh"

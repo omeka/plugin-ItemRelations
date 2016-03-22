@@ -169,7 +169,7 @@
     </div>
     <div class="action three columns omega">
         <div class="right">
-            <a href="<?php echo url('/items/add'); ?>" id="create-record" class="blue button" target="_blank"><?php echo __('Create a new Relation'); ?></a>
+            <a href="<?php echo url('/items/add'); ?>" id="create-record" class="blue button" target="_blank"><?php echo __('Create a new Item'); ?></a>
         </div>
         <div class="right">
             <a href="#" id="refresh-results" class="green button"><?php echo __('Refresh'); ?></a>

@@ -59,6 +59,10 @@ msgstr ""
 msgid "Item ID"
 msgstr ""
 
+#: ItemRelationsPlugin.php:620 views/shared/common/item-relations-form.php:139
+msgid "[Search and Select Below]"
+msgstr ""
+
 #: controllers/VocabulariesController.php:37
 msgid "The vocabulary name already exists. Please choose a different one."
 msgstr ""
@@ -1315,10 +1319,6 @@ msgstr ""
 msgid "With Object"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:139
-msgid "[Search and Select Below]"
-msgstr ""
-
 #: views/shared/common/item-relations-form.php:158
 msgid "Add this Relation"
 msgstr ""
@@ -1328,7 +1328,7 @@ msgid "Search and Select a Record"
 msgstr ""
 
 #: views/shared/common/item-relations-form.php:172
-msgid "Create a new Relation"
+msgid "Create a new Item"
 msgstr ""
 
 #: views/shared/common/item-relations-form.php:175
