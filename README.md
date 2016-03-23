@@ -66,7 +66,8 @@ Contact
 Current maintainers:
 
 * [Center for History & New Media]
-* [GerZah]
+* Gero Zahn (see [GerZah])
+* Michael Slone (see [cokernel])
 * Daniel Berthereau (see [Daniel-KM])
 
 
@@ -74,7 +75,8 @@ Copyright
 ---------
 
 * Copyright Center for History and New Media, 2011-2015
-* Copyright GerZah, 2015
+* Copyright Michael Slone, 2015
+* Copyright Gero Zahn, 2015-2016
 * Copyright Daniel Berthereau, 2015-2016
 
 
