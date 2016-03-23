@@ -137,4 +137,56 @@ QUERY;
 
         $this->_helper->json($metadata);
     }
+
+    public function listItemTypesAction()
+    {
+        $itemTypesList = array(
+            '' => '- ' . __('All') . ' -',
+        );
+        $itemTypesList += $this->_getUsedItemTypes();
+        // Convert to a pseudo-associative array to keep order of ids.
+        $json = array(
+            'id' => array_keys($itemTypesList),
+            'label' => array_values($itemTypesList),
+        );
+        $this->_helper->json($json);
+    }
+
+    public function listCollectionsAction()
+    {
+        $collections = get_table_options('Collection');
+        // Convert to a pseudo-associative array to keep order of ids.
+        $json = array(
+            'id' => array_keys($collections),
+            'label' => array_values($collections),
+        );
+        $this->_helper->json($json);
+    }
+
+    /**
+     * Get the list of used item types for select form.
+     *
+     * @return array
+     */
+    protected function _getUsedItemTypes()
+    {
+        $db = get_db();
+
+        $itemTypesTable = $db->getTable('ItemType');
+        $itemTypesAlias = $itemTypesTable->getTableAlias();
+
+        $select = $itemTypesTable->getSelect()
+            ->reset(Zend_Db_Select::COLUMNS)
+            ->from(array(), array($itemTypesAlias . '.id', $itemTypesAlias . '.name'))
+            ->joinInner(array('items' => $db->Item), "items.item_type_id = $itemTypesAlias.id", array())
+            ->group($itemTypesAlias . '.id')
+            ->order($itemTypesAlias . '.name ASC');
+
+        $permissions = new Omeka_Db_Select_PublicPermissions('Items');
+        $permissions->apply($select, 'items');
+
+        $itemTypes = $db->fetchPairs($select);
+
+        return $itemTypes;
+    }
 }

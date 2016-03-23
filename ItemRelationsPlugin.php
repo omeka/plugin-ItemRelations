@@ -616,9 +616,6 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     public function filterAdminItemsFormTabs($tabs, $args)
     {
         $item = $args['item'];
-        echo "<script>
-                var itemRelationsSearchAndSelect = '".__('[Search and Select Below]')."';
-              </script>";
         $tabs['Item Relations'] = get_view()->itemRelationsForm($item);
         return $tabs;
     }
