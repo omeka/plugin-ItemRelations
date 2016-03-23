@@ -67,7 +67,7 @@ Current maintainers:
 
 * [Center for History & New Media]
 * Gero Zahn (see [GerZah])
-* Michael Slone (see [cokernel])
+* Michael Slone (see [cokernel](https://github.com/cokernel))
 * Daniel Berthereau (see [Daniel-KM])
 
 
