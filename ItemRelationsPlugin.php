@@ -555,6 +555,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                     <th><?php echo __('Subjects'); ?></th>
                     <th><?php echo __('Relation'); ?></th>
                     <th><?php echo __('Object'); ?></th>
+                    <th><?php echo __('Comment'); ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -562,9 +563,13 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                     <td><?php echo __('These Items'); ?></td>
                     <td><?php echo get_view()->formSelect('custom[item_relations_property_id]',
                         null, array(), $formSelectProperties); ?></td>
-                    <td><?php echo __('Item ID'); ?>
-                        <?php echo get_view()->formText('custom[item_relations_item_relation_object_item_id]',
-                            null, array('size' => 6));
+                    <td><?php
+                        echo get_view()->formText('custom[item_relations_item_relation_object_item_id]',
+                            null, array('size' => 4, 'placeholder' => __('Item ID')));
+                    ?></td>
+                    <td><?php
+                        echo get_view()->formText('custom[item_relations_item_relation_relation_comment]',
+                            null, array('size' => 12));
                     ?></td>
                 </tr>
                 </tbody>
@@ -793,7 +798,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $itemRelation->subject_item_id = $subjectItem->id;
         $itemRelation->property_id = $propertyId;
         $itemRelation->object_item_id = $objectItem->id;
-        $itemRelation->relation_comment = ( $relationComment ? $relationComment : "");
+        $itemRelation->relation_comment = strlen($relationComment)? $relationComment : '';
         $itemRelation->save();
 
         return true;
