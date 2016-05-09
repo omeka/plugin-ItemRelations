@@ -546,6 +546,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     public function hookAdminItemsBatchEditForm()
     {
         $formSelectProperties = get_table_options('ItemRelationsProperty');
+        $provideRelationComments = get_option('item_relations_provide_relation_comments');
     ?>
         <fieldset id="item-relation-fields">
             <h2><?php echo __('Item Relations'); ?></h2>
@@ -555,7 +556,9 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                     <th><?php echo __('Subjects'); ?></th>
                     <th><?php echo __('Relation'); ?></th>
                     <th><?php echo __('Object'); ?></th>
+    <?php if ($provideRelationComments) { ?>
                     <th><?php echo __('Comment'); ?></th>
+    <?php } ?>
                 </tr>
                 </thead>
                 <tbody>
@@ -567,10 +570,12 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                         echo get_view()->formText('custom[item_relations_item_relation_object_item_id]',
                             null, array('size' => 4, 'placeholder' => __('Item ID')));
                     ?></td>
+    <?php if ($provideRelationComments) { ?>
                     <td><?php
                         echo get_view()->formText('custom[item_relations_item_relation_relation_comment]',
                             null, array('size' => 12));
                     ?></td>
+    <?php } ?>
                 </tr>
                 </tbody>
             </table>
