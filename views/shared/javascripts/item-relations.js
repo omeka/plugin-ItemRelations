@@ -44,7 +44,7 @@ jQuery(document).ready(function () {
     }
 
     function updateChoicesCore() {
-        clearTimeout(updateTimer); updateTimer = null;
+        if (updateTimer != null) { clearTimeout(updateTimer); updateTimer = null; }
 
         options['partial'] = $('#partial_object_title').val();
         options['id_limit'] = $('#id_limit').val();
@@ -232,7 +232,7 @@ jQuery(document).ready(function () {
     /* Search and select an object to create a new relation. */
 
     $('#refresh-results').click(function () {
-        updateChoices();
+        updateChoicesCore();
     });
 
     $('#new_relation_object_item_type_id').change(function () {
@@ -244,11 +244,11 @@ jQuery(document).ready(function () {
     });
 
     $('#new_selectObjectSortTimestamp').click(function () {
-        updateChoices();
+        updateChoicesCore();
     });
 
     $('#new_selectObjectSortName').click(function () {
-        updateChoices();
+        updateChoicesCore();
     });
 
     $('#partial_object_title').on('input', function () {
@@ -259,17 +259,19 @@ jQuery(document).ready(function () {
         updateChoices();
     });
 
-    $('#selector-previous-page').click(function () {
+    $('#selector-previous-page').click(function (e) {
+        e.preventDefault();
         if (0 < options['page']) {
             options['page']--;
-            updateChoices();
+            updateChoicesCore();
         }
     });
 
-    $('#selector-next-page').click(function () {
+    $('#selector-next-page').click(function (e) {
+        e.preventDefault();
         if (options['page'] < options['max_page']) {
             options['page']++;
-            updateChoices();
+            updateChoicesCore();
         }
     });
 
