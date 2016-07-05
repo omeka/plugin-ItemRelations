@@ -73,7 +73,10 @@ jQuery(document).ready(function () {
                 /* options */
                 $('#lookup-results').find('li').remove();
                 for (i = 0; i < data['items'].length; ++i) {
-                    items.push('<li data-value="' + data['items'][i]['value'] + '">' + data['items'][i]['label'] + '</li>');
+                    // items.push('<li data-value="' + data['items'][i]['value'] + '">' + data['items'][i]['label'] + '</li>');
+                    items.push('<li data-value="' + data['items'][i]['value'] + '">' +
+                    '<span class="relListItemId">#' + data['items'][i]['value'] + "</span> " +
+                    data['items'][i]['label'] + '</li>');
                 }
                 $('#lookup-results').append(items.join(''));
 
@@ -231,7 +234,8 @@ jQuery(document).ready(function () {
 
     /* Search and select an object to create a new relation. */
 
-    $('#refresh-results').click(function () {
+    $('#refresh-results').click(function (e) {
+        e.preventDefault();
         updateChoicesCore();
     });
 
@@ -259,7 +263,7 @@ jQuery(document).ready(function () {
         updateChoices();
     });
 
-    $('#selector-previous-page').click(function (e) {
+    $('#selector-previous-page a').click(function (e) {
         e.preventDefault();
         if (0 < options['page']) {
             options['page']--;
@@ -267,7 +271,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    $('#selector-next-page').click(function (e) {
+    $('#selector-next-page a').click(function (e) {
         e.preventDefault();
         if (options['page'] < options['max_page']) {
             options['page']++;
@@ -277,12 +281,24 @@ jQuery(document).ready(function () {
 
     $('#lookup-results').on('click', 'li', function () {
         $('#new_relation_object_item_id').val($(this).attr('data-value'));
-        $('#object_id').html('<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">#' + $(this).attr('data-value') + '</a>');
-        $('#object_title').html($(this).html());
+        $('#object_id').html(
+          '<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">#' +
+            $(this).attr('data-value') +
+          '</a>'
+        );
+        var htmlSansSpan = $(this).html();
+        htmlSansSpan = htmlSansSpan.substr(htmlSansSpan.indexOf("</span>")+8);
+        $('#object_title').html(
+          '<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">' +
+            htmlSansSpan +
+          '</a>'
+        );
         updateAddButton();
     });
 
     $('#new_relation_property_id').change(function () {
         updateAddButton();
     });
+
+    $('#cancel-relation').click(function(e) { e.preventDefault(); });
 });
