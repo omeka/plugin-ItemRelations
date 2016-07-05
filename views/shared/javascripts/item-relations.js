@@ -28,6 +28,7 @@ jQuery(document).ready(function () {
         options = {
             subject_id: $('#subject_id').attr('data-subject-id'),
             partial: '',
+            id_limit: '',
             item_type: -1,
             collection: -1,
             sort: 'mod_desc',
