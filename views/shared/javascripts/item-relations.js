@@ -2,6 +2,8 @@ jQuery(document).ready(function () {
     var $ = jQuery;
     var options = {};
 
+    var updateTimer = null;
+
     init();
 
     function init() {
@@ -34,8 +36,6 @@ jQuery(document).ready(function () {
             max_page: 0
         };
     }
-
-    var updateTimer = null;
 
     function updateChoices() {
       if (updateTimer != null) { clearTimeout(updateTimer); }
