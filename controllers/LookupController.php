@@ -13,6 +13,7 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
 {
     public function indexAction()
     {
+        // error_log(microtime());
         $db = get_db();
 
         if (!$this->_hasParam('subject_id')) {
@@ -20,6 +21,9 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         }
         if (!$this->_hasParam('partial')) {
             $this->_setParam('partial', '');
+        }
+        if (!$this->_hasParam('id_limit')) {
+            $this->_setParam('id_limit', '');
         }
         if (!$this->_hasParam('item_type')) {
             $this->_setParam('item_type', -1);
@@ -47,6 +51,19 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         $where_text = '';
         if (strlen($partial) > 0) {
             $where_text = 'AND text RLIKE ' . $db->quote($partial);
+        }
+
+        $where_id_limit = '';
+        if (preg_match("/\s*(\d+)(?:-(\d+))?\s*/", $this->_getParam('id_limit'), $matches)) {
+          $fromId = $matches[1];
+          $toId = @$matches[2];
+          if (!$toId) { $toId = $fromId; }
+          if ($fromId > $toId) {
+            $tmpId = $toId;
+            $toId = $fromId;
+            $fromId = $tmpId;
+          }
+          $where_id_limit = "AND items.id BETWEEN $fromId AND $toId";
         }
 
         $item_type = intval($this->_getParam('item_type'));
@@ -95,6 +112,7 @@ $where_subject_id
 $where_item_type
 $where_collection
 $where_text
+$where_id_limit
 GROUP BY elementtexts.record_id
 QCOUNT;
         $m_count = count($db->fetchAll($query));
@@ -115,6 +133,7 @@ $where_subject_id
 $where_item_type
 $where_collection
 $where_text
+$where_id_limit
 GROUP BY elementtexts.record_id
 $order_clause
 LIMIT $per_page

@@ -15,6 +15,7 @@ jQuery(document).ready(function () {
         $('#new_relation_object_item_type_id').val(-1);
         $('#new_relation_object_collection_id').val('');
         $('#partial_object_title').val('');
+        $('#id_limit').val('');
         $('input[name=itemsListSort]:checked').val('timestamp');
 
         updateChoices();
@@ -34,8 +35,18 @@ jQuery(document).ready(function () {
         };
     }
 
+    var updateTimer = null;
+
     function updateChoices() {
+      if (updateTimer != null) { clearTimeout(updateTimer); }
+      updateTimer = setTimeout(updateChoicesCore, 1000);
+    }
+
+    function updateChoicesCore() {
+        clearTimeout(updateTimer); updateTimer = null;
+
         options['partial'] = $('#partial_object_title').val();
+        options['id_limit'] = $('#id_limit').val();
         options['item_type'] = $('#new_relation_object_item_type_id').val();
         options['collection'] = $('#new_relation_object_collection_id').val();
         if ($('input[name=itemsListSort]:checked').val() === 'timestamp') {
@@ -240,6 +251,10 @@ jQuery(document).ready(function () {
     });
 
     $('#partial_object_title').on('input', function () {
+        updateChoices();
+    });
+
+    $('#id_limit').on('input', function () {
         updateChoices();
     });
 

@@ -34,33 +34,43 @@ msgstr ""
 msgid "There was an error in listing the item relation."
 msgstr ""
 
-#: ItemRelationsPlugin.php:551 ItemRelationsPlugin.php:603
+#: ItemRelationsPlugin.php:552 ItemRelationsPlugin.php:613
 #: views/admin/common/item-relations-show.php:18
 #: views/public/common/item-relations-show.php:14
 #: views/shared/common/item-relations-advanced-search.php:6
 msgid "Item Relations"
 msgstr ""
 
-#: ItemRelationsPlugin.php:555
+#: ItemRelationsPlugin.php:556
 msgid "Subjects"
 msgstr ""
 
-#: ItemRelationsPlugin.php:557
+#: ItemRelationsPlugin.php:557 formal_vocabularies.php:17
+#: views/shared/common/item-relations-form.php:12
+msgid "Relation"
+msgstr ""
+
+#: ItemRelationsPlugin.php:558
 #: views/shared/common/item-relations-advanced-search.php:32
 #: views/shared/common/item-relations-form.php:13
 msgid "Object"
 msgstr ""
 
-#: ItemRelationsPlugin.php:562
+#: ItemRelationsPlugin.php:560 views/shared/common/item-relations-form.php:15
+#: views/shared/common/item-relations-form.php:146
+msgid "Comment"
+msgstr ""
+
+#: ItemRelationsPlugin.php:566
 msgid "These Items"
 msgstr ""
 
-#: ItemRelationsPlugin.php:565
+#: ItemRelationsPlugin.php:571
 msgid "Item ID"
 msgstr ""
 
-#: ItemRelationsPlugin.php:620 views/shared/common/item-relations-form.php:139
-msgid "[Search and Select Below]"
+#: controllers/LookupController.php:158
+msgid "All"
 msgstr ""
 
 #: controllers/VocabulariesController.php:37
@@ -226,6 +236,10 @@ msgid ""
 "function, delivery, or coherence."
 msgstr ""
 
+#: formal_vocabularies.php:87
+msgid "Source"
+msgstr ""
+
 #: formal_vocabularies.php:88
 msgid "A related resource from which the described resource is derived."
 msgstr ""
@@ -280,8 +294,16 @@ msgstr ""
 msgid "A class of entity for whom the resource is intended or useful."
 msgstr ""
 
+#: formal_vocabularies.php:122
+msgid "Contributor"
+msgstr ""
+
 #: formal_vocabularies.php:123
 msgid "An entity responsible for making contributions to the resource."
+msgstr ""
+
+#: formal_vocabularies.php:127
+msgid "Coverage"
 msgstr ""
 
 #: formal_vocabularies.php:128
@@ -290,8 +312,17 @@ msgid ""
 "the resource, or the jurisdiction under which the resource is relevant."
 msgstr ""
 
+#: formal_vocabularies.php:132
+msgid "Creator"
+msgstr ""
+
 #: formal_vocabularies.php:133
 msgid "An entity primarily responsible for making the resource."
+msgstr ""
+
+#: formal_vocabularies.php:137 views/admin/vocabularies/browse.php:14
+#: views/admin/vocabularies/edit.php:18 views/admin/vocabularies/show.php:36
+msgid "Description"
 msgstr ""
 
 #: formal_vocabularies.php:138
@@ -316,6 +347,10 @@ msgstr ""
 msgid "The size or duration of the resource."
 msgstr ""
 
+#: formal_vocabularies.php:152
+msgid "Format"
+msgstr ""
+
 #: formal_vocabularies.php:153
 msgid "The file format, physical medium, or dimensions of the resource."
 msgstr ""
@@ -328,6 +363,10 @@ msgstr ""
 msgid ""
 "A process, used to engender knowledge, attitudes and skills, that the "
 "described resource is designed to support."
+msgstr ""
+
+#: formal_vocabularies.php:162
+msgid "Language"
 msgstr ""
 
 #: formal_vocabularies.php:163
@@ -373,8 +412,16 @@ msgid ""
 "interpretation."
 msgstr ""
 
+#: formal_vocabularies.php:187
+msgid "Publisher"
+msgstr ""
+
 #: formal_vocabularies.php:188
 msgid "An entity responsible for making the resource available."
+msgstr ""
+
+#: formal_vocabularies.php:192
+msgid "Rights"
 msgstr ""
 
 #: formal_vocabularies.php:193
@@ -397,6 +444,10 @@ msgstr ""
 msgid "Spatial characteristics of the resource."
 msgstr ""
 
+#: formal_vocabularies.php:207
+msgid "Subject"
+msgstr ""
+
 #: formal_vocabularies.php:208
 msgid "The topic of the resource."
 msgstr ""
@@ -415,6 +466,10 @@ msgstr ""
 
 #: formal_vocabularies.php:218
 msgid "Temporal characteristics of the resource."
+msgstr ""
+
+#: formal_vocabularies.php:222
+msgid "Type"
 msgstr ""
 
 #: formal_vocabularies.php:223
@@ -1183,12 +1238,24 @@ msgstr ""
 msgid "Allowed"
 msgstr ""
 
+#: views/admin/vocabularies/browse.php:13
+msgid "Name"
+msgstr ""
+
 #: views/admin/vocabularies/browse.php:15
 msgid "Namespace Prefix"
 msgstr ""
 
 #: views/admin/vocabularies/browse.php:16
 msgid "Namespace URI"
+msgstr ""
+
+#: views/admin/vocabularies/browse.php:22
+msgid "Yes"
+msgstr ""
+
+#: views/admin/vocabularies/browse.php:22
+msgid "No"
 msgstr ""
 
 #: views/admin/vocabularies/delete.php:2 views/admin/vocabularies/show.php:23
@@ -1219,8 +1286,21 @@ msgid ""
 "exact relation you want them to convey."
 msgstr ""
 
+#: views/admin/vocabularies/edit.php:17 views/admin/vocabularies/show.php:35
+msgid "Label"
+msgstr ""
+
+#: views/admin/vocabularies/edit.php:19
+#: views/shared/common/item-relations-form.php:17
+msgid "Delete"
+msgstr ""
+
 #: views/admin/vocabularies/edit.php:37
 msgid "Add a Property"
+msgstr ""
+
+#: views/admin/vocabularies/edit.php:41
+msgid "Save Changes"
 msgstr ""
 
 #: views/admin/vocabularies/show.php:2
@@ -1243,8 +1323,9 @@ msgstr ""
 msgid "Local Part"
 msgstr ""
 
-#: views/helpers/ItemRelationsForm.php:20
-msgid "All"
+#: views/helpers/ItemRelationsForm.php:33
+#: views/shared/common/item-relations-form.php:139
+msgid "[Search and Select Below]"
 msgstr ""
 
 #: views/shared/common/item-relations-advanced-search.php:11
@@ -1323,6 +1404,10 @@ msgstr ""
 msgid "Add this Relation"
 msgstr ""
 
+#: views/shared/common/item-relations-form.php:162
+msgid "Cancel"
+msgstr ""
+
 #: views/shared/common/item-relations-form.php:168
 msgid "Search and Select a Record"
 msgstr ""
@@ -1347,15 +1432,19 @@ msgstr ""
 msgid "By Partial Title"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:208
+#: views/shared/common/item-relations-form.php:206
+msgid "Limit Item IDs (“x” or “x-y”)"
+msgstr ""
+
+#: views/shared/common/item-relations-form.php:216
 msgid "Sort By"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:213
+#: views/shared/common/item-relations-form.php:221
 msgid "Most recently updated"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:217
+#: views/shared/common/item-relations-form.php:225
 msgid "Alphabetically"
 msgstr ""
 
