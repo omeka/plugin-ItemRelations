@@ -69,7 +69,7 @@ msgstr ""
 msgid "Item ID"
 msgstr ""
 
-#: controllers/LookupController.php:158
+#: controllers/LookupController.php:163
 msgid "All"
 msgstr ""
 
@@ -1367,8 +1367,8 @@ msgstr ""
 #: views/shared/common/item-relations-form.php:85
 #: views/shared/common/item-relations-show-list.php:16
 #: views/shared/common/item-relations-show-list.php:21
-#: views/shared/common/item-relations-show-table.php:18
-#: views/shared/common/item-relations-show-table.php:25
+#: views/shared/common/item-relations-show-table.php:30
+#: views/shared/common/item-relations-show-table.php:37
 msgid "This Item"
 msgstr ""
 
@@ -1467,4 +1467,12 @@ msgstr ""
 
 #: views/shared/common/item-relations-show-list-by-item-type.php:48
 msgid "No record is related to this item."
+msgstr ""
+
+#: views/shared/common/item-relations-show-table.php:5
+msgid "Show / Hide"
+msgstr ""
+
+#: views/shared/common/item-relations-show-table.php:6
+msgid "Show / Hide All"
 msgstr ""

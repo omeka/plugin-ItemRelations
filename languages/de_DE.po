@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: WeSa Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/GerZah/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2016-07-05 13:58+0200\n"
+"PO-Revision-Date: 2016-07-06 19:03+0200\n"
 "Last-Translator: Gero Zahn <gerozahn@campus.uni-paderborn.de>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/upb/wesa-omeka/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,7 @@ msgstr "Diese Objekte"
 msgid "Item ID"
 msgstr "Objekt-ID"
 
-#: controllers/LookupController.php:158
+#: controllers/LookupController.php:163
 msgid "All"
 msgstr "Alle"
 
@@ -1248,7 +1248,7 @@ msgstr "Für die Beschreibungen der Beziehungen, lesen Sie bitte unter %s weiter
 msgid "Invalid item IDs will be ignored."
 msgstr "Invalid item IDs will be ignored."
 
-#: views/shared/common/item-relations-form.php:38 views/shared/common/item-relations-form.php:59 views/shared/common/item-relations-form.php:85 views/shared/common/item-relations-show-list.php:16 views/shared/common/item-relations-show-list.php:21 views/shared/common/item-relations-show-table.php:18 views/shared/common/item-relations-show-table.php:25
+#: views/shared/common/item-relations-form.php:38 views/shared/common/item-relations-form.php:59 views/shared/common/item-relations-form.php:85 views/shared/common/item-relations-show-list.php:16 views/shared/common/item-relations-show-list.php:21 views/shared/common/item-relations-show-table.php:30 views/shared/common/item-relations-show-table.php:37
 msgid "This Item"
 msgstr "Dieses Objekt"
 
@@ -1347,3 +1347,11 @@ msgstr "Beziehungen auf dieses Objekt"
 #: views/shared/common/item-relations-show-list-by-item-type.php:48
 msgid "No record is related to this item."
 msgstr "Kein Objekt steht in Beziehung zu diesem Objekt."
+
+#: views/shared/common/item-relations-show-table.php:5
+msgid "Show / Hide"
+msgstr "Ein- / ausblenden"
+
+#: views/shared/common/item-relations-show-table.php:6
+msgid "Show / Hide All"
+msgstr "Alle ein- / ausblenden"
