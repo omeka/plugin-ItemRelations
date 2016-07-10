@@ -16,29 +16,29 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         // error_log(microtime());
         $db = get_db();
 
-        if (!$this->_hasParam('subject_id')) {
-            $this->_setParam('subject_id', -1);
+        if (!$this->hasParam('subject_id')) {
+            $this->setParam('subject_id', -1);
         }
-        if (!$this->_hasParam('partial')) {
-            $this->_setParam('partial', '');
+        if (!$this->hasParam('partial')) {
+            $this->setParam('partial', '');
         }
-        if (!$this->_hasParam('id_limit')) {
-            $this->_setParam('id_limit', '');
+        if (!$this->hasParam('id_limit')) {
+            $this->setParam('id_limit', '');
         }
-        if (!$this->_hasParam('item_type')) {
-            $this->_setParam('item_type', -1);
+        if (!$this->hasParam('item_type')) {
+            $this->setParam('item_type', -1);
         }
-        if (!$this->_hasParam('collection')) {
-            $this->_setParam('collection', -1);
+        if (!$this->hasParam('collection')) {
+            $this->setParam('collection', -1);
         }
-        if (!$this->_hasParam('sort')) {
-            $this->_setParam('sort', 'mod_desc');
+        if (!$this->hasParam('sort')) {
+            $this->setParam('sort', 'mod_desc');
         }
-        if (!$this->_hasParam('page')) {
-            $this->_setParam('page', 0);
+        if (!$this->hasParam('page')) {
+            $this->setParam('page', 0);
         }
-        if (!$this->_hasParam('per_page')) {
-            $this->_setParam('per_page', 15);
+        if (!$this->hasParam('per_page')) {
+            $this->setParam('per_page', 15);
         }
 
         $subject_id = intval($this->_getParam('subject_id'));
@@ -54,16 +54,18 @@ class ItemRelations_LookupController extends Omeka_Controller_AbstractActionCont
         }
 
         $where_id_limit = '';
-        if (preg_match("/\s*(\d+)(?:-(\d+))?\s*/", $this->_getParam('id_limit'), $matches)) {
-          $fromId = $matches[1];
-          $toId = @$matches[2];
-          if (!$toId) { $toId = $fromId; }
-          if ($fromId > $toId) {
-            $tmpId = $toId;
-            $toId = $fromId;
-            $fromId = $tmpId;
-          }
-          $where_id_limit = "AND items.id BETWEEN $fromId AND $toId";
+        if (preg_match('/\s*(\d+)(?:-(\d+))?\s*/', $this->getParam('id_limit'), $matches)) {
+            $fromId = (integer) $matches[1];
+            $toId = (integer) @$matches[2];
+            if (!$toId) {
+                $toId = $fromId;
+            }
+            if ($fromId > $toId) {
+                $tmpId = $toId;
+                $toId = $fromId;
+                $fromId = $tmpId;
+            }
+            $where_id_limit = "AND items.id BETWEEN $fromId AND $toId";
         }
 
         $item_type = intval($this->_getParam('item_type'));
