@@ -2,6 +2,8 @@ jQuery(document).ready(function () {
     var $ = jQuery;
     var options = {};
 
+    var updateTimer = null;
+
     init();
 
     function init() {
@@ -15,6 +17,7 @@ jQuery(document).ready(function () {
         $('#new_relation_object_item_type_id').val(-1);
         $('#new_relation_object_collection_id').val('');
         $('#partial_object_title').val('');
+        $('#id_limit').val('');
         $('input[name=itemsListSort]:checked').val('timestamp');
 
         updateChoices();
@@ -25,6 +28,7 @@ jQuery(document).ready(function () {
         options = {
             subject_id: $('#subject_id').attr('data-subject-id'),
             partial: '',
+            id_limit: '',
             item_type: -1,
             collection: -1,
             sort: 'mod_desc',
@@ -35,7 +39,15 @@ jQuery(document).ready(function () {
     }
 
     function updateChoices() {
+      if (updateTimer != null) { clearTimeout(updateTimer); }
+      updateTimer = setTimeout(updateChoicesCore, 1000);
+    }
+
+    function updateChoicesCore() {
+        if (updateTimer != null) { clearTimeout(updateTimer); updateTimer = null; }
+
         options['partial'] = $('#partial_object_title').val();
+        options['id_limit'] = $('#id_limit').val();
         options['item_type'] = $('#new_relation_object_item_type_id').val();
         options['collection'] = $('#new_relation_object_collection_id').val();
         if ($('input[name=itemsListSort]:checked').val() === 'timestamp') {
@@ -61,7 +73,10 @@ jQuery(document).ready(function () {
                 /* options */
                 $('#lookup-results').find('li').remove();
                 for (i = 0; i < data['items'].length; ++i) {
-                    items.push('<li data-value="' + data['items'][i]['value'] + '">' + data['items'][i]['label'] + '</li>');
+                    // items.push('<li data-value="' + data['items'][i]['value'] + '">' + data['items'][i]['label'] + '</li>');
+                    items.push('<li data-value="' + data['items'][i]['value'] + '">' +
+                    '<span class="relListItemId">#' + data['items'][i]['value'] + "</span> " +
+                    data['items'][i]['label'] + '</li>');
                 }
                 $('#lookup-results').append(items.join(''));
 
@@ -219,8 +234,9 @@ jQuery(document).ready(function () {
 
     /* Search and select an object to create a new relation. */
 
-    $('#refresh-results').click(function () {
-        updateChoices();
+    $('#refresh-results').click(function (e) {
+        e.preventDefault();
+        updateChoicesCore();
     });
 
     $('#new_relation_object_item_type_id').change(function () {
@@ -232,39 +248,57 @@ jQuery(document).ready(function () {
     });
 
     $('#new_selectObjectSortTimestamp').click(function () {
-        updateChoices();
+        updateChoicesCore();
     });
 
     $('#new_selectObjectSortName').click(function () {
-        updateChoices();
+        updateChoicesCore();
     });
 
     $('#partial_object_title').on('input', function () {
         updateChoices();
     });
 
-    $('#selector-previous-page').click(function () {
+    $('#id_limit').on('input', function () {
+        updateChoices();
+    });
+
+    $('#selector-previous-page a').click(function (e) {
+        e.preventDefault();
         if (0 < options['page']) {
             options['page']--;
-            updateChoices();
+            updateChoicesCore();
         }
     });
 
-    $('#selector-next-page').click(function () {
+    $('#selector-next-page a').click(function (e) {
+        e.preventDefault();
         if (options['page'] < options['max_page']) {
             options['page']++;
-            updateChoices();
+            updateChoicesCore();
         }
     });
 
     $('#lookup-results').on('click', 'li', function () {
         $('#new_relation_object_item_id').val($(this).attr('data-value'));
-        $('#object_id').html('<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">#' + $(this).attr('data-value') + '</a>');
-        $('#object_title').html($(this).html());
+        $('#object_id').html(
+          '<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">#' +
+            $(this).attr('data-value') +
+          '</a>'
+        );
+        var htmlSansSpan = $(this).html();
+        htmlSansSpan = htmlSansSpan.substr(htmlSansSpan.indexOf("</span>")+8);
+        $('#object_title').html(
+          '<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">' +
+            htmlSansSpan +
+          '</a>'
+        );
         updateAddButton();
     });
 
     $('#new_relation_property_id').change(function () {
         updateAddButton();
     });
+
+    $('#cancel-relation').click(function(e) { e.preventDefault(); });
 });

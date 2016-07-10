@@ -198,9 +198,17 @@
         <div class="three columns alpha">
             <?php echo $this->formLabel('partial_object_title', __('By Partial Title')); ?>
         </div>
-        <div class="inputs nine columns omega">
-            <?php echo $this->formText('partial_object_title', null, array('size' => 10, 'maxlength' => 60)); ?>
-        </div>
+        <fieldset class="inputs four columns">
+                <?php echo $this->formText('partial_object_title', null, array('size' => 10, 'maxlength' => 60)); ?>
+        </fieldset>
+        <fieldset class="inputs five columns omega">
+              <div class="three columns alpha">
+                <?php echo $this->formLabel('id_limit', __('Limit Item IDs (“x” or “x-y”)')); ?>
+              </div>
+              <div class="inputs two columns omega">
+                <?php echo $this->formText('id_limit', null, array('size' => 10, 'maxlength' => 60)); ?>
+              </div>
+        </fieldset>
     </div>
 
     <div class="field">

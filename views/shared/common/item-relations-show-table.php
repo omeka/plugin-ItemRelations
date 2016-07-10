@@ -2,18 +2,30 @@
   $provideRelationComments = get_option('item_relations_provide_relation_comments');
   $thisItemId = $item-> id;
 
-  echo "<table><tbody>";
+  $relVocabShowHide = __("Show / Hide");
+  $relVocabShowHideAll = __("Show / Hide All");
+  echo "
+    <script type='text/javascript'>
+      var relVocabShowHide = '$relVocabShowHide';
+      var relVocabShowHideAll = '$relVocabShowHideAll';
+    </script>
+  ";
+
+  $jsFile = WEB_PLUGIN."/ItemRelations/views/shared/javascripts/item-relations-vocab-toggle.js";
+  echo "<script type='text/javascript' src='$jsFile'></script>";
+
+  echo "<table id='relVocabTable'><tbody>";
   $colspan = ($provideRelationComments ? 4 : 3);
   $lastVocab = -1;
   foreach ($allRelations as $relation) {
     if ($lastVocab != $relation["vocabulary_id"]) {
-      echo "<tr><th colspan='$colspan'>"
+      $lastVocab = $relation["vocabulary_id"];
+      echo "<tr class='relVocabHead' data-vocab='$lastVocab'><th colspan='$colspan'>"
       ."<span title='".$relation["vocabulary_desc"]."'>"
       .$relation["vocabulary"]
       ."</span></th></tr>";
-      $lastVocab = $relation["vocabulary_id"];
     }
-    echo "<tr>";
+    echo "<tr class='relVocabRow relVocab_$lastVocab'>";
     echo "<td>" .
           ( $relation['subject_item_id']==$thisItemId ? __('This Item')
             : "<a href='".url('items/show/' . $relation['subject_item_id'])."'>".
