@@ -126,14 +126,14 @@
             <div class="three columns alpha">
                 <?php echo $this->formLabel('new_relation_property_id', __('Is Related By')); ?>
             </div>
-            <div class="nine columns alpha omega">
+            <div class="nine columns omega">
                 <?php echo $this->formSelect('new_relation_property_id',
                     null, array('multiple' => false), $formSelectProperties); ?>
             </div>
         </div>
 
         <div class="field">
-            <div class="inputs two columns alpha">
+            <div class="two columns alpha">
                 <?php echo $this->formLabel('object_title', __('With Object')); ?>
             </div>
             <div class="inputs one column">
@@ -157,7 +157,7 @@
 
         <input id="new_relation_object_item_id" type="hidden">
 
-        <div class="action">
+        <div class="action row">
             <div class="nine columns alpha">
                 <a href="#" id="add-relation" class="green button" data-lity-close><?php echo __('Add this Relation'); ?></a>
             </div>
@@ -168,15 +168,17 @@
             </div>
         </div>
 
-        <div class="six columns alpha">
-            <h3><?php echo __('Search and Select a Record'); ?></h3>
-        </div>
-        <div class="action six columns omega right">
-            <div class="right">
-                <a href="<?php echo url('/items/add'); ?>" id="create-record" class="blue button" target="_blank"><?php echo __('Create a new Item'); ?></a>
+        <div>
+            <div class="six columns alpha">
+                <h3><?php echo __('Search and Select a Record'); ?></h3>
             </div>
-            <div class="right">
-                <a href="#" id="refresh-results" class="green button"><?php echo __('Refresh'); ?></a>
+            <div class="action six columns omega">
+                <div class="right">
+                    <a href="<?php echo url('/items/add'); ?>" id="create-record" class="blue button" target="_blank"><?php echo __('Create a new Item'); ?></a>
+                </div>
+                <div class="right">
+                    <a href="#" id="refresh-results" class="green button"><?php echo __('Refresh'); ?></a>
+                </div>
             </div>
         </div>
 
