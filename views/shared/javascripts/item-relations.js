@@ -39,12 +39,17 @@ jQuery(document).ready(function () {
     }
 
     function updateChoices() {
-      if (updateTimer != null) { clearTimeout(updateTimer); }
-      updateTimer = setTimeout(updateChoicesCore, 1000);
+        if (updateTimer != null) {
+	        clearTimeout(updateTimer);
+        }
+	    updateTimer = setTimeout(updateChoicesCore, 1000);
     }
 
     function updateChoicesCore() {
-        if (updateTimer != null) { clearTimeout(updateTimer); updateTimer = null; }
+        if (updateTimer != null) {
+            clearTimeout(updateTimer);
+            updateTimer = null;
+        }
 
         options['partial'] = $('#partial_object_title').val();
         options['id_limit'] = $('#id_limit').val();
@@ -74,9 +79,9 @@ jQuery(document).ready(function () {
                 $('#lookup-results').find('li').remove();
                 for (i = 0; i < data['items'].length; ++i) {
                     // items.push('<li data-value="' + data['items'][i]['value'] + '">' + data['items'][i]['label'] + '</li>');
-                    items.push('<li data-value="' + data['items'][i]['value'] + '">' +
-                    '<span class="relListItemId">#' + data['items'][i]['value'] + "</span> " +
-                    data['items'][i]['label'] + '</li>');
+                    items.push('<li data-value="' + data['items'][i]['value'] + '">'
+                        + '<span class="relListItemId">#' + data['items'][i]['value'] + "</span> "
+                        + data['items'][i]['label'] + '</li>');
                 }
                 $('#lookup-results').append(items.join(''));
 
@@ -282,16 +287,16 @@ jQuery(document).ready(function () {
     $('#lookup-results').on('click', 'li', function () {
         $('#new_relation_object_item_id').val($(this).attr('data-value'));
         $('#object_id').html(
-          '<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">#' +
-            $(this).attr('data-value') +
-          '</a>'
+            '<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">#'
+            + $(this).attr('data-value')
+            + '</a>'
         );
         var htmlSansSpan = $(this).html();
         htmlSansSpan = htmlSansSpan.substr(htmlSansSpan.indexOf("</span>")+8);
         $('#object_title').html(
-          '<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">' +
-            htmlSansSpan +
-          '</a>'
+            '<a href="' + $('#object_id').attr('data-base-url') + '/items/show/' + $(this).attr('data-value') + '" target="_blank">'
+            + htmlSansSpan
+            + '</a>'
         );
         updateAddButton();
     });
@@ -300,5 +305,7 @@ jQuery(document).ready(function () {
         updateAddButton();
     });
 
-    $('#cancel-relation').click(function(e) { e.preventDefault(); });
+    $('#cancel-relation').click(function(e) {
+        e.preventDefault();
+    });
 });

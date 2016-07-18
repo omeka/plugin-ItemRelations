@@ -22,12 +22,12 @@ ul#lookup-results li:hover {
 }
 
 span.relListItemId {
-  display: inline-block;
-  text-align: right;
-  vertical-align: bottom;
-  overflow: hidden;
-  margin-right: 1em;
-  width: 4em;
-  font-size: 80%;
-  color: #aaa;
+	display: inline-block;
+	text-align: right;
+	vertical-align: bottom;
+	overflow: hidden;
+	margin-right: 1em;
+	width: 4em;
+	font-size: 80%;
+	color: #aaa;
 }
