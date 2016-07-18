@@ -20,6 +20,6 @@ class Table_ItemRelationsVocabulary extends Omeka_Db_Table
     public function getSelect()
     {
         return parent::getSelect()
-            ->order('custom DESC');
+            ->order('custom DESC')->order('name ASC');
     }
 }

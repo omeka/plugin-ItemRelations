@@ -31,6 +31,11 @@ class ItemRelationsRelation extends Omeka_Record_AbstractRecord
     public $object_item_id;
 
     /**
+     * @var varchar
+     */
+    public $relation_comment;
+
+    /**
      * Get a textual representation of the property for this relation.
      *
      * @uses ItemRelationsProperty::getText()
