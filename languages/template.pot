@@ -18,58 +18,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ItemRelationsPlugin.php:127
+#: ItemRelationsPlugin.php:128
 msgid "Custom"
 msgstr ""
 
-#: ItemRelationsPlugin.php:128
+#: ItemRelationsPlugin.php:129
 msgid "Custom vocabulary containing relations defined for this Omeka instance."
 msgstr ""
 
-#: ItemRelationsPlugin.php:405
+#: ItemRelationsPlugin.php:406
 msgid "There was an error in the item relation comments."
 msgstr ""
 
-#: ItemRelationsPlugin.php:433
+#: ItemRelationsPlugin.php:434
 msgid "There was an error in listing the item relation."
 msgstr ""
 
-#: ItemRelationsPlugin.php:552 ItemRelationsPlugin.php:613
+#: ItemRelationsPlugin.php:553 ItemRelationsPlugin.php:614
 #: views/admin/common/item-relations-show.php:18
 #: views/public/common/item-relations-show.php:14
 #: views/shared/common/item-relations-advanced-search.php:6
 msgid "Item Relations"
 msgstr ""
 
-#: ItemRelationsPlugin.php:556
+#: ItemRelationsPlugin.php:557
 msgid "Subjects"
 msgstr ""
 
-#: ItemRelationsPlugin.php:557 formal_vocabularies.php:17
+#: ItemRelationsPlugin.php:558 formal_vocabularies.php:17
 #: views/shared/common/item-relations-form.php:12
 msgid "Relation"
 msgstr ""
 
-#: ItemRelationsPlugin.php:558
+#: ItemRelationsPlugin.php:559
 #: views/shared/common/item-relations-advanced-search.php:32
 #: views/shared/common/item-relations-form.php:13
 msgid "Object"
 msgstr ""
 
-#: ItemRelationsPlugin.php:560 views/shared/common/item-relations-form.php:15
-#: views/shared/common/item-relations-form.php:146
+#: ItemRelationsPlugin.php:561 views/shared/common/item-relations-form.php:15
+#: views/shared/common/item-relations-form.php:150
 msgid "Comment"
 msgstr ""
 
-#: ItemRelationsPlugin.php:566
+#: ItemRelationsPlugin.php:567
 msgid "These Items"
 msgstr ""
 
-#: ItemRelationsPlugin.php:571
+#: ItemRelationsPlugin.php:572
 msgid "Item ID"
 msgstr ""
 
-#: controllers/LookupController.php:163
+#: controllers/LookupController.php:165
 msgid "All"
 msgstr ""
 
@@ -1209,6 +1209,16 @@ msgstr ""
 msgid "Set how to display the list of relations in the public view."
 msgstr ""
 
+#: views/admin/plugins/item-relations-config-form.php:151
+msgid "Tables Collapsible"
+msgstr ""
+
+#: views/admin/plugins/item-relations-config-form.php:156
+msgid ""
+"When using “As a table” to display relations, check this if you want the "
+"tables to be collapsible (i.e. to fold in and out by clicking their headers)."
+msgstr ""
+
 #: views/admin/vocabularies/add.php:2
 msgid "Add New Vocabulary"
 msgstr ""
@@ -1324,7 +1334,7 @@ msgid "Local Part"
 msgstr ""
 
 #: views/helpers/ItemRelationsForm.php:33
-#: views/shared/common/item-relations-form.php:139
+#: views/shared/common/item-relations-form.php:143
 msgid "[Search and Select Below]"
 msgstr ""
 
@@ -1362,89 +1372,89 @@ msgstr ""
 msgid "Invalid item IDs will be ignored."
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:38
-#: views/shared/common/item-relations-form.php:59
-#: views/shared/common/item-relations-form.php:85
+#: views/shared/common/item-relations-form.php:39
+#: views/shared/common/item-relations-form.php:60
+#: views/shared/common/item-relations-form.php:86
 #: views/shared/common/item-relations-show-list.php:16
 #: views/shared/common/item-relations-show-list.php:21
-#: views/shared/common/item-relations-show-table.php:30
-#: views/shared/common/item-relations-show-table.php:37
+#: views/shared/common/item-relations-show-table.php:32
+#: views/shared/common/item-relations-show-table.php:39
 msgid "This Item"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:81
+#: views/shared/common/item-relations-form.php:82
 msgid "New Relations"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:103
+#: views/shared/common/item-relations-form.php:104
 msgid "Delete now"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:108
+#: views/shared/common/item-relations-form.php:109
 msgid "Add a Relation"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:113
+#: views/shared/common/item-relations-form.php:115
 msgid "This Subject"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:116
+#: views/shared/common/item-relations-form.php:118
 msgid "[New]"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:124
+#: views/shared/common/item-relations-form.php:127
 msgid "Is Related By"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:133
+#: views/shared/common/item-relations-form.php:137
 msgid "With Object"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:158
+#: views/shared/common/item-relations-form.php:162
 msgid "Add this Relation"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:162
+#: views/shared/common/item-relations-form.php:166
 msgid "Cancel"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:168
+#: views/shared/common/item-relations-form.php:173
 msgid "Search and Select a Record"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:172
+#: views/shared/common/item-relations-form.php:177
 msgid "Create a new Item"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:175
+#: views/shared/common/item-relations-form.php:180
 msgid "Refresh"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:180
+#: views/shared/common/item-relations-form.php:187
 msgid "By Item Types"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:189
+#: views/shared/common/item-relations-form.php:197
 msgid "By Collection"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:199
+#: views/shared/common/item-relations-form.php:208
 msgid "By Partial Title"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:206
+#: views/shared/common/item-relations-form.php:217
 msgid "Limit Item IDs (“x” or “x-y”)"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:216
+#: views/shared/common/item-relations-form.php:227
 msgid "Sort By"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:221
+#: views/shared/common/item-relations-form.php:232
 msgid "Most recently updated"
 msgstr ""
 
-#: views/shared/common/item-relations-form.php:225
+#: views/shared/common/item-relations-form.php:236
 msgid "Alphabetically"
 msgstr ""
 
@@ -1469,10 +1479,10 @@ msgstr ""
 msgid "No record is related to this item."
 msgstr ""
 
-#: views/shared/common/item-relations-show-table.php:5
+#: views/shared/common/item-relations-show-table.php:7
 msgid "Show / Hide"
 msgstr ""
 
-#: views/shared/common/item-relations-show-table.php:6
+#: views/shared/common/item-relations-show-table.php:8
 msgid "Show / Hide All"
 msgstr ""

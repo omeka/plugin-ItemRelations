@@ -145,4 +145,20 @@
                     )); ?>
         </div>
     </div>
+    <div class="field">
+        <div class="two columns alpha">
+            <?php echo $this->formLabel('item_relations_tables_collapsible',
+            __('Tables Collapsible')); ?>
+        </div>
+        <div class="inputs five columns omega">
+            <p class="explanation">
+                <?php
+                echo __("When using “As a table” to display relations, check this if you want the tables ".
+                        "to be collapsible (i.e. to fold in and out by clicking their headers).");
+                ?>
+            </p>
+            <?php echo $this->formCheckbox('item_relations_tables_collapsible',
+                null, array('checked' => get_option('item_relations_tables_collapsible'))); ?>
+        </div>
+    </div>
 </fieldset>

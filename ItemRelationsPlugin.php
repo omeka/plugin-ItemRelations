@@ -54,6 +54,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         'item_relations_public_append_to_items_show' => 1,
         'item_relations_public_display_mode' => 'table',
         'item_relations_admin_display_mode' => 'table',
+        'item_relations_tables_collapsible' => 1,
     );
 
     /**

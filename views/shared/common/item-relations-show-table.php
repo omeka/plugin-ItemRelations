@@ -12,7 +12,9 @@ $relVocabShowHideAll = __("Show / Hide All");
     var relVocabShowHideAll = <?php echo json_encode($relVocabShowHideAll); ?>;
 </script>
 <?php
-echo js_tag('item-relations-vocab-toggle');
+  if (get_option('item_relations_tables_collapsible')) {
+    echo js_tag('item-relations-vocab-toggle');
+  }
 ?>
 <table id='relVocabTable'><tbody>
 <?php

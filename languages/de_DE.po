@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: WeSa Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/GerZah/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2016-07-06 19:03+0200\n"
+"PO-Revision-Date: 2016-07-18 11:47+0200\n"
 "Last-Translator: Gero Zahn <gerozahn@campus.uni-paderborn.de>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/upb/wesa-omeka/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
@@ -19,51 +19,51 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.8\n"
 
-#: ItemRelationsPlugin.php:127
+#: ItemRelationsPlugin.php:128
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: ItemRelationsPlugin.php:128
+#: ItemRelationsPlugin.php:129
 msgid "Custom vocabulary containing relations defined for this Omeka instance."
 msgstr "Benutzerdefiniertes Vokabular, das Beziehungen enthält, die für diese Omeka-Installation definiert wurden."
 
-#: ItemRelationsPlugin.php:405
+#: ItemRelationsPlugin.php:406
 msgid "There was an error in the item relation comments."
 msgstr "Es ist ein Fehler in den Objekt-Beziehungs-Kommentaren aufgetreten."
 
-#: ItemRelationsPlugin.php:433
+#: ItemRelationsPlugin.php:434
 msgid "There was an error in listing the item relation."
 msgstr "Es ist ein Fehler beim Auflisten der Objekt-Beziehungen aufgetreten."
 
-#: ItemRelationsPlugin.php:552 ItemRelationsPlugin.php:613 views/admin/common/item-relations-show.php:18 views/public/common/item-relations-show.php:14 views/shared/common/item-relations-advanced-search.php:6
+#: ItemRelationsPlugin.php:553 ItemRelationsPlugin.php:614 views/admin/common/item-relations-show.php:18 views/public/common/item-relations-show.php:14 views/shared/common/item-relations-advanced-search.php:6
 msgid "Item Relations"
 msgstr "Objekt-Beziehungen"
 
-#: ItemRelationsPlugin.php:556
+#: ItemRelationsPlugin.php:557
 msgid "Subjects"
 msgstr "Subjekt-Ressourcen"
 
-#: ItemRelationsPlugin.php:557 formal_vocabularies.php:17 views/shared/common/item-relations-form.php:12
+#: ItemRelationsPlugin.php:558 formal_vocabularies.php:17 views/shared/common/item-relations-form.php:12
 msgid "Relation"
 msgstr "Beziehung"
 
-#: ItemRelationsPlugin.php:558 views/shared/common/item-relations-advanced-search.php:32 views/shared/common/item-relations-form.php:13
+#: ItemRelationsPlugin.php:559 views/shared/common/item-relations-advanced-search.php:32 views/shared/common/item-relations-form.php:13
 msgid "Object"
 msgstr "Objekt-Ressource"
 
-#: ItemRelationsPlugin.php:560 views/shared/common/item-relations-form.php:15 views/shared/common/item-relations-form.php:146
+#: ItemRelationsPlugin.php:561 views/shared/common/item-relations-form.php:15 views/shared/common/item-relations-form.php:150
 msgid "Comment"
 msgstr "Kommentar"
 
-#: ItemRelationsPlugin.php:566
+#: ItemRelationsPlugin.php:567
 msgid "These Items"
 msgstr "Diese Objekte"
 
-#: ItemRelationsPlugin.php:571
+#: ItemRelationsPlugin.php:572
 msgid "Item ID"
 msgstr "Objekt-ID"
 
-#: controllers/LookupController.php:163
+#: controllers/LookupController.php:165
 msgid "All"
 msgstr "Alle"
 
@@ -1111,6 +1111,14 @@ msgstr "Öffentlicher Anzeigemodus"
 msgid "Set how to display the list of relations in the public view."
 msgstr "Definieren Sie, wie die Beziehungsliste in der öffentlichen Ansicht angezeigt werden soll."
 
+#: views/admin/plugins/item-relations-config-form.php:151
+msgid "Tables Collapsible"
+msgstr "Tabellen einklappbar"
+
+#: views/admin/plugins/item-relations-config-form.php:156
+msgid "When using “As a table” to display relations, check this if you want the tables to be collapsible (i.e. to fold in and out by clicking their headers)."
+msgstr "Wenn Sie den Anzeigemodus „Als Tabelle“ verwenden, aktivieren Sie diese Einstellung, wenn die Tabellen einklappbar sein sollen (d.h. sie durch Klicken der Kopfzeilen ein- bzw. ausgeblendet werden sollen)."
+
 #: views/admin/vocabularies/add.php:2
 msgid "Add New Vocabulary"
 msgstr "Neues Vokabular hinzufügen"
@@ -1219,7 +1227,7 @@ msgstr "Möchten Sie einige hinzufügen?"
 msgid "Local Part"
 msgstr "Lokaler Teil"
 
-#: views/helpers/ItemRelationsForm.php:33 views/shared/common/item-relations-form.php:139
+#: views/helpers/ItemRelationsForm.php:33 views/shared/common/item-relations-form.php:143
 msgid "[Search and Select Below]"
 msgstr "[Unten suchen und auswählen]"
 
@@ -1248,83 +1256,83 @@ msgstr "Für die Beschreibungen der Beziehungen, lesen Sie bitte unter %s weiter
 msgid "Invalid item IDs will be ignored."
 msgstr "Invalid item IDs will be ignored."
 
-#: views/shared/common/item-relations-form.php:38 views/shared/common/item-relations-form.php:59 views/shared/common/item-relations-form.php:85 views/shared/common/item-relations-show-list.php:16 views/shared/common/item-relations-show-list.php:21 views/shared/common/item-relations-show-table.php:30 views/shared/common/item-relations-show-table.php:37
+#: views/shared/common/item-relations-form.php:39 views/shared/common/item-relations-form.php:60 views/shared/common/item-relations-form.php:86 views/shared/common/item-relations-show-list.php:16 views/shared/common/item-relations-show-list.php:21 views/shared/common/item-relations-show-table.php:32 views/shared/common/item-relations-show-table.php:39
 msgid "This Item"
 msgstr "Dieses Objekt"
 
-#: views/shared/common/item-relations-form.php:81
+#: views/shared/common/item-relations-form.php:82
 msgid "New Relations"
 msgstr "Neue Beziehungen"
 
-#: views/shared/common/item-relations-form.php:103
+#: views/shared/common/item-relations-form.php:104
 msgid "Delete now"
 msgstr "Jetzt löschen"
 
-#: views/shared/common/item-relations-form.php:108
+#: views/shared/common/item-relations-form.php:109
 msgid "Add a Relation"
 msgstr "Eine Beziehung hinzufügen"
 
-#: views/shared/common/item-relations-form.php:113
+#: views/shared/common/item-relations-form.php:115
 msgid "This Subject"
 msgstr "Diese Subjekt-Resource"
 
-#: views/shared/common/item-relations-form.php:116
+#: views/shared/common/item-relations-form.php:118
 msgid "[New]"
 msgstr "[Neu]"
 
-#: views/shared/common/item-relations-form.php:124
+#: views/shared/common/item-relations-form.php:127
 msgid "Is Related By"
 msgstr "steht in Beziehung"
 
-#: views/shared/common/item-relations-form.php:133
+#: views/shared/common/item-relations-form.php:137
 msgid "With Object"
 msgstr "mit Objekt-Resource"
 
-#: views/shared/common/item-relations-form.php:158
+#: views/shared/common/item-relations-form.php:162
 msgid "Add this Relation"
 msgstr "Diese Beziehung hinzufügen"
 
-#: views/shared/common/item-relations-form.php:162
+#: views/shared/common/item-relations-form.php:166
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: views/shared/common/item-relations-form.php:168
+#: views/shared/common/item-relations-form.php:173
 msgid "Search and Select a Record"
 msgstr "Objekt suchen und auswählen"
 
-#: views/shared/common/item-relations-form.php:172
+#: views/shared/common/item-relations-form.php:177
 msgid "Create a new Item"
 msgstr "Neues Objekt erstellen"
 
-#: views/shared/common/item-relations-form.php:175
+#: views/shared/common/item-relations-form.php:180
 msgid "Refresh"
 msgstr "Aktualisieren"
 
-#: views/shared/common/item-relations-form.php:180
+#: views/shared/common/item-relations-form.php:187
 msgid "By Item Types"
 msgstr "Nach Objekttyp"
 
-#: views/shared/common/item-relations-form.php:189
+#: views/shared/common/item-relations-form.php:197
 msgid "By Collection"
 msgstr "Nach Sammlung"
 
-#: views/shared/common/item-relations-form.php:199
+#: views/shared/common/item-relations-form.php:208
 msgid "By Partial Title"
 msgstr "Nach teilweisem Objekt-Titel"
 
-#: views/shared/common/item-relations-form.php:206
+#: views/shared/common/item-relations-form.php:217
 msgid "Limit Item IDs (“x” or “x-y”)"
 msgstr "Objekt-IDs beschr. („x“ oder „x-y“)"
 
-#: views/shared/common/item-relations-form.php:216
+#: views/shared/common/item-relations-form.php:227
 msgid "Sort By"
 msgstr "Sortieren nach"
 
-#: views/shared/common/item-relations-form.php:221
+#: views/shared/common/item-relations-form.php:232
 msgid "Most recently updated"
 msgstr "Kürzlich bearbeitet"
 
-#: views/shared/common/item-relations-form.php:225
+#: views/shared/common/item-relations-form.php:236
 msgid "Alphabetically"
 msgstr "Alphabetisch"
 
@@ -1348,10 +1356,10 @@ msgstr "Beziehungen auf dieses Objekt"
 msgid "No record is related to this item."
 msgstr "Kein Objekt steht in Beziehung zu diesem Objekt."
 
-#: views/shared/common/item-relations-show-table.php:5
+#: views/shared/common/item-relations-show-table.php:7
 msgid "Show / Hide"
 msgstr "Ein- / ausblenden"
 
-#: views/shared/common/item-relations-show-table.php:6
+#: views/shared/common/item-relations-show-table.php:8
 msgid "Show / Hide All"
 msgstr "Alle ein- / ausblenden"
