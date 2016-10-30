@@ -657,6 +657,9 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $subjectRelations = array();
         foreach ($subjects as $subject) {
             $objectItem = get_record_by_id('Item', $subject->object_item_id);
+            if (!$objectItem) {
+                continue;
+            }
             $subjectRelations[] = array(
                 'item_relation_id' => $subject->id,
                 'object_item' => $objectItem,
@@ -681,6 +684,9 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $objectRelations = array();
         foreach ($objects as $object) {
             $subjectItem = get_record_by_id('Item', $object->subject_item_id);
+            if (!$subjectItem) {
+                continue;
+            }
             $objectRelations[] = array(
                 'item_relation_id' => $object->id,
                 'subject_item' => $subjectItem,
