@@ -31,7 +31,7 @@ class Table_ItemRelationsProperty extends Omeka_Db_Table
                     'vocabulary_namespace_uri' => 'namespace_uri'
                 )
             )
-            ->order('custom DESC');
+            ->order('custom DESC')->order('name ASC')->order('label ASC');
     }
 
     /**
@@ -46,7 +46,7 @@ class Table_ItemRelationsProperty extends Omeka_Db_Table
         
         $select->where('vocabulary_id = ?', (int) $id)
                ->reset(Zend_Db_Select::ORDER)
-               ->order('id');
+               ->order('label');
         
         return $this->fetchObjects($select);
     }

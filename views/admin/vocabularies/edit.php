@@ -22,7 +22,7 @@
         <tbody>
     <?php foreach ($this->properties as $property): ?>
             <tr>
-                <td><?php echo $property->label; ?></td>
+                <td><?php echo $this->formTextarea("property_label[{$property->id}]",$property->label, array('cols' => 50, 'rows' => 2)); ?></td>
                 <td><?php echo $this->formTextarea("property_description[{$property->id}]", $property->description, array('cols' => 50, 'rows' => 2)); ?></td>
                 <td><?php echo $this->formCheckbox("property_delete[{$property->id}]") ?></td>
             </tr>
