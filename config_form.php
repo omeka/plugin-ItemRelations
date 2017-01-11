@@ -14,6 +14,19 @@
 </div>
 <div class="field">
     <div class="two columns alpha">
+        <?php echo get_view()->formLabel('item_relations_provide_relation_comments', __('Provide comment field for relations')); ?>
+    </div>
+    <div class="inputs five columns omega">
+        <p class="explanation">
+            <?php
+            echo __('Check this if you want to be able to enter a comment to a relation.');
+            ?>
+        </p>
+        <?php echo get_view()->formCheckbox('item_relations_provide_relation_comments', null, array('checked' => $provideRelationComments)); ?>
+    </div>
+</div>
+<div class="field">
+    <div class="two columns alpha">
         <?php echo get_view()->formLabel('item_relations_relation_format', __('Relation Format')); ?>
     </div>
     <div class="inputs five columns omega">
@@ -23,6 +36,6 @@
                 . 'prefer to show. If one is unavailable the other will be used.');
             ?>
         </p>
-        <?php echo get_view()->formSelect('item_relations_relation_format', $relationFormat, null, array('prefix_local_part' => 'prefix:localPart', 'label' => 'label')); ?>
+        <?php echo get_view()->formSelect('item_relations_relation_format', $relationFormat, null, array('prefix_local_part' => __('prefix:localPart'), 'label' => __('label'))); ?>
     </div>
 </div>
