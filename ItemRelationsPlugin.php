@@ -464,8 +464,8 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                 'item_relation_id' => $subject->id,
                 'object_item_id' => $subject->object_item_id,
                 'object_item_title' => self::getItemTitle($item),
-                'relation_text' => $subject->getPropertyText(),
-                'relation_description' => $subject->property_description
+                'relation_text' => __($subject->getPropertyText()),
+                'relation_description' => __($subject->property_description),
             );
         }
         return $subjectRelations;
@@ -489,8 +489,8 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
                 'item_relation_id' => $object->id,
                 'subject_item_id' => $object->subject_item_id,
                 'subject_item_title' => self::getItemTitle($item),
-                'relation_text' => $object->getPropertyText(),
-                'relation_description' => $object->property_description
+                'relation_text' => __($object->getPropertyText()),
+                'relation_description' => __($object->property_description),
             );
         }
         return $objectRelations;
