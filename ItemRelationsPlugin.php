@@ -36,7 +36,6 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     protected $_filters = array(
         'admin_items_form_tabs',
         'admin_navigation_main',
-        'item_relations_properties_select_options',
     );
 
     /**
@@ -422,16 +421,6 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
             'privilege' => 'index'
         );
         return $nav;
-    }
-
-    public function filterItemRelationsPropertiesSelectOptions($options)
-    {
-        $translatedOptions = array();
-        foreach($options as $vocab => $properties) {
-            foreach ($properties as $id => $property)
-            $translatedOptions[$vocab][$id] = __($property);
-        }
-        return $translatedOptions;
     }
 
     /**

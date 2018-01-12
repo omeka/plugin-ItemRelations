@@ -712,27 +712,27 @@ msgstr ""
 msgid "A property representing an expression that is translated."
 msgstr ""
 
-#: ItemRelationsPlugin.php:368 ItemRelationsPlugin.php:418
+#: ItemRelationsPlugin.php:369 ItemRelationsPlugin.php:419
 #: views/admin/common/item-relations-show.php:2
 #: views/public/common/item-relations-show.php:2
 #: views/shared/common/item-relations-advanced-search.php:3
 msgid "Item Relations"
 msgstr ""
 
-#: ItemRelationsPlugin.php:372
+#: ItemRelationsPlugin.php:373
 msgid "Subjects"
 msgstr ""
 
-#: ItemRelationsPlugin.php:374 item_relations_form.php:17
+#: ItemRelationsPlugin.php:375 item_relations_form.php:17
 #: views/shared/common/item-relations-advanced-search.php:17
 msgid "Object"
 msgstr ""
 
-#: ItemRelationsPlugin.php:379
+#: ItemRelationsPlugin.php:380
 msgid "These Items"
 msgstr ""
 
-#: ItemRelationsPlugin.php:382 item_relations_form.php:41
+#: ItemRelationsPlugin.php:383 item_relations_form.php:41
 msgid "Item ID"
 msgstr ""
 

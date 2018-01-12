@@ -80,7 +80,7 @@ class Table_ItemRelationsProperty extends Omeka_Db_Table
 
         foreach ($properties as $property) {
             $pairs[$property->vocabulary_name][$property->id] =
-                $property->getText();
+                __($property->getText());
         }
 
         return $pairs;
