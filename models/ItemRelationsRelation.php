@@ -8,7 +8,7 @@
 /**
  * Item Relations Relation model.
  */
-class ItemRelationsRelation extends Omeka_Record_AbstractRecord
+class ItemRelationsRelation extends Omeka_Record_AbstractRecord implements Zend_Acl_Resource_Interface
 {
     /**
      * @var int
@@ -44,5 +44,10 @@ class ItemRelationsRelation extends Omeka_Record_AbstractRecord
         $property->vocabulary_namespace_prefix = $this->vocabulary_namespace_prefix;
 
         return $property->getText();
+    }
+
+    public function getResourceId()
+    {
+        return 'ItemRelations_Index';
     }
 }

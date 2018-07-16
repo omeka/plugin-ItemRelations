@@ -36,6 +36,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     protected $_filters = array(
         'admin_items_form_tabs',
         'admin_navigation_main',
+        'api_resources'
     );
 
     /**
@@ -443,6 +444,16 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
 
         $tabs['Item Relations'] = $content;
         return $tabs;
+    }
+
+    public function filterApiResources($apiResources)
+    {
+        $apiResources['item_relations'] = array(
+            'module' => 'Item Relations',
+            'record_type' => 'ItemRelationsRelation',
+            'actions' => array('get', 'index')
+        );
+        return $apiResources;
     }
 
     /**
