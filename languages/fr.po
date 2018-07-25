@@ -3,770 +3,770 @@
 # This file is distributed under the same license as the Omeka package.
 # 
 # Translators:
-# Bogdan Trifunovic <>, 2014
-# Predrag Djukic <djukic.predrag@gmail.com>, 2014
+# Guy Teasdale <Guy.Teasdale@gmail.com>, 2018
+# symac <wikitipiac@laposte.net>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2018-01-11 16:33+0000\n"
-"Last-Translator: patrickmj <patrickmjchnm@gmail.com>\n"
-"Language-Team: Serbian (Serbia) (http://www.transifex.com/omeka/omeka/language/sr_RS/)\n"
+"PO-Revision-Date: 2018-02-20 19:25+0000\n"
+"Last-Translator: Guy Teasdale <Guy.Teasdale@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/omeka/omeka/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sr_RS\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "A related resource."
-msgstr ""
+msgstr "Une ressource apparentée."
 
 msgid "Conforms To"
-msgstr ""
+msgstr "Est conforme à"
 
 msgid "An established standard to which the described resource conforms."
-msgstr ""
+msgstr "Une norme établie à laquelle se conforme la ressource."
 
 msgid "Has Format"
-msgstr ""
+msgstr "A pour autre format"
 
 msgid ""
 "A related resource that is substantially the same as the pre-existing "
 "described resource, but in another format."
-msgstr ""
+msgstr "Ressource similaire à la ressource décrite mais dans un autre format"
 
 msgid "Has Part"
-msgstr ""
+msgstr "a une partie"
 
 msgid ""
 "A related resource that is included either physically or logically in the "
 "described resource."
-msgstr ""
+msgstr "Une ressource liée qui est incluse physiquement ou logiquement dans la ressource décrite."
 
 msgid "Has Version"
-msgstr ""
+msgstr "A d'autres versions"
 
 msgid ""
 "A related resource that is a version, edition, or adaptation of the "
 "described resource."
-msgstr ""
+msgstr "Une ressource liée qui est une version, une édition ou une adaptation de la ressource décrite."
 
 msgid "Is Format Of"
-msgstr ""
+msgstr "Est un autre format de"
 
 msgid ""
 "A related resource that is substantially the same as the described resource,"
 " but in another format."
-msgstr ""
+msgstr "Une ressource liée, globalement identique à la ressource décrite, existant sous un autre format."
 
 msgid "Is Part Of"
-msgstr ""
+msgstr "est une partie de "
 
 msgid ""
 "A related resource in which the described resource is physically or "
 "logically included."
-msgstr ""
+msgstr "Ressource similaire à la ressource décrite physiquement."
 
 msgid "Is Referenced By"
-msgstr ""
+msgstr "Est référencé par"
 
 msgid ""
 "A related resource that references, cites, or otherwise points to the "
 "described resource."
-msgstr ""
+msgstr "Une ressource liée qui fait référence, cite ou pointe d’une autre manière vers la ressource décrite."
 
 msgid "Is Replaced By"
-msgstr ""
+msgstr "Est remplacé par"
 
 msgid ""
 "A related resource that supplants, displaces, or supersedes the described "
 "resource."
-msgstr ""
+msgstr "Une ressource similaire qui supplante ou remplace la ressource décrite."
 
 msgid "Is Required By"
-msgstr ""
+msgstr "Est requis par"
 
 msgid ""
 "A related resource that requires the described resource to support its "
 "function, delivery, or coherence."
-msgstr ""
+msgstr "Une ressource liée qui nécessite la ressource décrite pour permettre sa fonction, sa livraison ou sa cohérence."
 
 msgid "Is Version Of"
-msgstr ""
+msgstr "Est une version de"
 
 msgid ""
 "A related resource of which the described resource is a version, edition, or"
 " adaptation."
-msgstr ""
+msgstr "Une ressource apparentée qui est une version, une édition ou une adaptation de la ressource décrite."
 
 msgid "References"
-msgstr ""
+msgstr "Référence"
 
 msgid ""
 "A related resource that is referenced, cited, or otherwise pointed to by the"
 " described resource."
-msgstr ""
+msgstr "Ressource similaire qui est référencée, citée, ou désignée par la ressource décrite."
 
 msgid "Replaces"
-msgstr ""
+msgstr "Remplace"
 
 msgid ""
 "A related resource that is supplanted, displaced, or superseded by the "
 "described resource."
-msgstr ""
+msgstr "Une ressource similaire qui est supplantée ou remplacée par la ressource décrite."
 
 msgid "Requires"
-msgstr ""
+msgstr "Requiert"
 
 msgid ""
 "A related resource that is required by the described resource to support its"
 " function, delivery, or coherence."
-msgstr ""
+msgstr "Une ressource similaire qui est requise par la ressource décrite pour sa fonction, distribution ou cohérence."
 
 msgid "A related resource from which the described resource is derived."
-msgstr ""
+msgstr "Une ressource apparentée à partir de laquelle la ressource décrite a été dérivée."
 
 msgid "Abstract"
-msgstr ""
+msgstr "Résumé"
 
 msgid "A summary of the resource."
-msgstr ""
+msgstr "Un résumé de la ressource."
 
 msgid "Access Rights"
-msgstr ""
+msgstr "Droit d'accès"
 
 msgid ""
 "Information about who can access the resource or an indication of its "
 "security status."
-msgstr ""
+msgstr "Information concernant qui peut avoir accès à la ressource ou une indication de son état de sécurité."
 
 msgid "Accrual Method"
-msgstr ""
+msgstr "Méthode d’abonnement"
 
 msgid "The method by which items are added to a collection."
-msgstr ""
+msgstr "La méthode suivant laquelle les items sont ajoutés à une collection."
 
 msgid "Accrual Periodicity"
-msgstr ""
+msgstr "Périodicité d’acquisition"
 
 msgid "The frequency with which items are added to a collection."
-msgstr ""
+msgstr "Fréquence d'ajout des items dans une collection"
 
 msgid "Accrual Policy"
-msgstr ""
+msgstr "Politique d’acquisition"
 
 msgid "The policy governing the addition of items to a collection."
-msgstr ""
+msgstr "Politique d'acquisition d'une collection"
 
 msgid "Audience"
-msgstr ""
+msgstr "Public visé"
 
 msgid "A class of entity for whom the resource is intended or useful."
-msgstr ""
+msgstr "Une classe d’entité pour laquelle la ressource est destinée ou utile."
 
 msgid "An entity responsible for making contributions to the resource."
-msgstr ""
+msgstr "Une entité responsable de faire des contributions à la ressource."
 
 msgid ""
 "The spatial or temporal topic of the resource, the spatial applicability of "
 "the resource, or the jurisdiction under which the resource is relevant."
-msgstr ""
+msgstr "La portée spatiale ou temporelle de la ressource, ou la juridiction pour laquelle la ressource est pertinente."
 
 msgid "An entity primarily responsible for making the resource."
-msgstr ""
+msgstr "Une entité principalement responsable de la création de la ressource."
 
 msgid "An account of the resource."
-msgstr ""
+msgstr "Une présentation du contenu de la ressource."
 
 msgid "Audience Education Level"
-msgstr ""
+msgstr "Niveau public destinataire"
 
 msgid ""
 "A class of entity, defined in terms of progression through an educational or"
 " training context, for which the described resource is intended."
-msgstr ""
+msgstr "Une classe d’entité, définie en termes de progression dans un contexte éducatif ou de formation, pour laquelle la ressource décrite est destinée."
 
 msgid "Extent"
-msgstr ""
+msgstr "Étendue de la ressource, taille, durée"
 
 msgid "The size or duration of the resource."
-msgstr ""
+msgstr "La taille ou la durée de la ressource."
 
 msgid "The file format, physical medium, or dimensions of the resource."
-msgstr ""
+msgstr "Le format de fichier, le type de support ou les dimensions de la ressource."
 
 msgid "Instructional Method"
-msgstr ""
+msgstr "Méthode d’enseignement"
 
 msgid ""
 "A process, used to engender knowledge, attitudes and skills, that the "
 "described resource is designed to support."
-msgstr ""
+msgstr "Une méthode, utilisée pour générer des connaissances, des attitudes et des habiletés, que la ressource décrite est conçue pour soutenir."
 
 msgid "A language of the resource."
-msgstr ""
+msgstr "Langue de la ressource."
 
 msgid "License"
-msgstr ""
+msgstr "Licence"
 
 msgid ""
 "A legal document giving official permission to do something with the "
 "resource."
-msgstr ""
+msgstr "Un document juridique donnant l'autorisation officielle de faire quelque chose avec la ressource."
 
 msgid "Mediator"
-msgstr ""
+msgstr "Médiateur"
 
 msgid ""
 "An entity that mediates access to the resource and for whom the resource is "
 "intended or useful."
-msgstr ""
+msgstr "Une entité qui gère l’accès à la ressource et pour laquelle la ressource est destinée ou utile. "
 
 msgid "Medium"
-msgstr ""
+msgstr "Support"
 
 msgid "The material or physical carrier of the resource."
-msgstr ""
+msgstr "Le support matériel ou physique de la ressource."
 
 msgid "Provenance"
-msgstr ""
+msgstr "Provenance"
 
 msgid ""
 "A statement of any changes in ownership and custody of the resource since "
 "its creation that are significant for its authenticity, integrity, and "
 "interpretation."
-msgstr ""
+msgstr "Une déclaration de tout changement de propriété ou de conservation de la ressource depuis sa création, suffisamment important pour assurer son authenticité, son intégrité et son interprétation. "
 
 msgid "An entity responsible for making the resource available."
-msgstr ""
+msgstr "L'entité responsable de la diffusion de la ressource."
 
 msgid "Information about rights held in and over the resource."
-msgstr ""
+msgstr "Information sur les droits détenus dans et sur la ressource."
 
 msgid "Rights Holder"
-msgstr ""
+msgstr "Ayants droit"
 
 msgid "A person or organization owning or managing rights over the resource."
-msgstr ""
+msgstr "Une personne ou une organisation détentrice ou chargée de la gestion des droits concernant la ressource."
 
 msgid "Spatial Coverage"
-msgstr ""
+msgstr "Couverture spatiale"
 
 msgid "Spatial characteristics of the resource."
-msgstr ""
+msgstr "Les caractéristiques spatiales de la ressource"
 
 msgid "The topic of the resource."
-msgstr ""
+msgstr "Le sujet de la ressource."
 
 msgid "Table Of Contents"
-msgstr ""
+msgstr "Table des matières"
 
 msgid "A list of subunits of the resource."
-msgstr ""
+msgstr "Une liste des sous-unités de la ressource."
 
 msgid "Temporal Coverage"
-msgstr ""
+msgstr "Couverture temporelle"
 
 msgid "Temporal characteristics of the resource."
-msgstr ""
+msgstr "Les caractéristiques temporelles de la ressource"
 
 msgid "The nature or genre of the resource."
-msgstr ""
+msgstr "La nature ou le genre de la ressource."
 
 msgid "annotates"
-msgstr ""
+msgstr "Annote"
 
 msgid "Critical or explanatory note for a Document."
-msgstr ""
+msgstr "Note critique ou explicative pour un document."
 
 msgid "cited by"
-msgstr ""
+msgstr "Cité par"
 
 msgid "Relates a document to another document that cites the first document."
-msgstr ""
+msgstr "Relie un document à un autre document qui cite le premier document."
 
 msgid "cites"
-msgstr ""
+msgstr "Cite"
 
 msgid ""
 "Relates a document to another document that is cited by the first document "
 "as reference, comment, review, quotation or for another purpose."
-msgstr ""
+msgstr "Relie un document à un autre document qui est cité par le premier document comme référence, commentaire, révision, citation ou à d'autres fins."
 
 msgid "review of"
-msgstr ""
+msgstr "Compte rendu de"
 
 msgid "Relates a review document to a reviewed thing (resource, item, etc.)."
-msgstr ""
+msgstr "Relie un document à celui qui fait l'objet du compte rendu (ressource, item, etc.)"
 
 msgid "reproduced in"
-msgstr ""
+msgstr "Reproduit dans"
 
 msgid "The resource in which another resource is reproduced."
-msgstr ""
+msgstr "La ressource dans laquelle une autre ressource est reproduite."
 
 msgid "affirmed by"
-msgstr ""
+msgstr "Confirmé par"
 
 msgid "A legal decision that affirms a ruling."
-msgstr ""
+msgstr "Une décision judiciaire qui confirme un règlement."
 
 msgid "reversed by"
-msgstr ""
+msgstr "Infirmé par"
 
 msgid "A legal decision that reverses a ruling."
-msgstr ""
+msgstr "Une décision judiciaire qui renverse un règlement."
 
 msgid "subsequent legal decision"
-msgstr ""
+msgstr "Décision juridique ultérieure."
 
 msgid ""
 "A legal decision on appeal that takes action on a case (affirming it, "
 "reversing it, etc.)."
-msgstr ""
+msgstr "Une décision judiciaire en appel qui prend des mesures sur une affaire (la confirmant, l'inversant, etc.)."
 
 msgid "transcript of"
-msgstr ""
+msgstr "Transcription de"
 
 msgid "Relates a document to some transcribed original."
-msgstr ""
+msgstr "Relie un document à un original transcrit."
 
 msgid "translation of"
-msgstr ""
+msgstr "est une traduction de"
 
 msgid "Relates a translated document to the original document."
-msgstr ""
+msgstr "Relie un document traduit au document original,"
 
 msgid "based near"
-msgstr ""
+msgstr "Situé près"
 
 msgid ""
 "A location that something is based near, for some broadly human notion of "
 "near."
-msgstr ""
+msgstr "Un endroit où quelque chose est proche, suivant une notion humaine de proximité, de façon générale ."
 
 msgid "depiction"
-msgstr ""
+msgstr "Représentation"
 
 msgid "A depiction of some thing."
-msgstr ""
+msgstr "Une représentation de quelque chose."
 
 msgid "depicts"
-msgstr ""
+msgstr "Représente"
 
 msgid "A thing depicted in this representation."
-msgstr ""
+msgstr "Une chose dépeinte dans cette représentation"
 
 msgid "funded by"
-msgstr ""
+msgstr "Financé par"
 
 msgid "An organization funding a project or person."
-msgstr ""
+msgstr "Une organisation qui finance un projet ou une personne."
 
 msgid "image"
-msgstr ""
+msgstr "Image"
 
 msgid ""
 "An image that can be used to represent some thing (ie. those depictions "
 "which are particularly representative of something, eg. one’s photo on a "
 "homepage)."
-msgstr ""
+msgstr "Une image qui peut être utilisée pour représenter quelque chose. (c'est-à-dire les représentations qui sont particulièrement représentatives de quelque chose, par exemple, la photo d'une personne sur une page d'accueil)."
 
 msgid "is primary topic of"
-msgstr ""
+msgstr "Est le sujet principal de"
 
 msgid "A document that this thing is the primary topic of."
-msgstr ""
+msgstr "Un document dont cette chose est le sujet principal."
 
 msgid "knows"
-msgstr ""
+msgstr "Connaît"
 
 msgid ""
 "A person known by this person (indicating some level of reciprocated "
 "interaction between the parties)."
-msgstr ""
+msgstr "Une personne connue par cette personne (indiquant un certain niveau d'interaction réciproque entre les parties)."
 
 msgid "logo"
-msgstr ""
+msgstr "logo"
 
 msgid "A logo representing some thing."
-msgstr ""
+msgstr "Un logo représentant quelque chose."
 
 msgid "made"
-msgstr ""
+msgstr "fabriqué"
 
 msgid "Something that was made by this agent."
-msgstr ""
+msgstr "Quelque chose qui a été fabriqué par cet agent."
 
 msgid "maker"
-msgstr ""
+msgstr "fabricant"
 
 msgid "An agent that made this thing."
-msgstr ""
+msgstr "Un agent qui a fabriqué cette chose"
 
 msgid "member"
-msgstr ""
+msgstr "membre"
 
 msgid "Indicates a member of a Group."
-msgstr ""
+msgstr "Indique un membre d'un groupe."
 
 msgid "page"
-msgstr ""
+msgstr "page"
 
 msgid "A page or document about this thing."
-msgstr ""
+msgstr "Une page ou un document sur cette chose."
 
 msgid "primary topic"
-msgstr ""
+msgstr "sujet principal"
 
 msgid "The primary topic of some page or document."
-msgstr ""
+msgstr "Le sujet principal d'une page ou d'un document."
 
 msgid "thumbnail"
-msgstr ""
+msgstr "vue miniature"
 
 msgid "A derived thumbnail image."
-msgstr ""
+msgstr "Une image miniature dérivée"
 
 msgid "abridgement"
-msgstr ""
+msgstr "a un abrégé"
 
 msgid "A property representing an abridgment of an expression."
-msgstr ""
+msgstr "Une propriété représentant un abrégé d'une expression."
 
 msgid "abridgement of"
-msgstr ""
+msgstr "est un abrégé de"
 
 msgid "A property representing an expression that is abridged."
-msgstr ""
+msgstr "Une propriété représentant une expression qui est abrégée."
 
 msgid "adaption"
-msgstr ""
+msgstr "adaptation"
 
 msgid "A property representing an adaption of a work or expression."
-msgstr ""
+msgstr "Une propriété représentant une adaptation d'une oeuvre ou expression,"
 
 msgid "adaption of"
-msgstr ""
+msgstr "est une adaptation de"
 
 msgid "A property representing a work or expression that is adapted."
-msgstr ""
+msgstr "Une propriété représentant une oeuvre ou expression  qui est adaptée."
 
 msgid "alternate"
-msgstr ""
+msgstr "a une alternative"
 
 msgid "A property representing an alternative to a manifestation."
-msgstr ""
+msgstr "Une propriété représentant une alternative à une manifestation."
 
 msgid "alternate of"
-msgstr ""
+msgstr "est une alternative de"
 
 msgid "A property representing a manifestation that is alternated."
-msgstr ""
+msgstr "Une propriété représentant une manifestation qui est une alternative"
 
 msgid "arrangement"
-msgstr ""
+msgstr "a un arrangement"
 
 msgid "A property representing an arrangement of an expression."
-msgstr ""
+msgstr "Une propriété représentant un arrangement d'une expression."
 
 msgid "arrangement of"
-msgstr ""
+msgstr "est un arrangement de"
 
 msgid "A property representing an expression that is arranged."
-msgstr ""
+msgstr "Une propriété représentant une expression arrangée."
 
 msgid "complement"
-msgstr ""
+msgstr "a un complément"
 
 msgid "A property representing a complement to a work or expression."
-msgstr ""
+msgstr "Une propriété représentant un complément d'une oeuvre ou d'une expression."
 
 msgid "complement of"
-msgstr ""
+msgstr "est un complément de"
 
 msgid "A property representing a work or expression that is complemented."
-msgstr ""
+msgstr "Une propriété représentant une oeuvre ou une expression qui fait l'objet d'un complément."
 
 msgid "creator"
-msgstr ""
+msgstr "Créateur"
 
 msgid ""
 "A property representing a work that was in some way created by of an entity."
-msgstr ""
+msgstr "Une propriété représentant une oeuvre créé d'une manière ou d'une autre par une entité."
 
 msgid "embodiment"
-msgstr ""
+msgstr "Matérialisation"
 
 msgid ""
 "A property representing an expression that is embodied by a manifestation."
-msgstr ""
+msgstr "Une propriété représentant une expression qui est matérialisée par une manifestation"
 
 msgid "exemplar"
-msgstr ""
+msgstr "Exemplaire"
 
 msgid ""
 "A property representing an item that is an exemplar of a manifestation."
-msgstr ""
+msgstr "Une propriété représentant un item qui est un exemplaire d'une manifestation"
 
 msgid "exemplar of"
-msgstr ""
+msgstr "Est un exemplaire de"
 
 msgid ""
 "A property representing the manifestation that is exemplified by a item."
-msgstr ""
+msgstr "Une propriété représentant une manifestation qui est représentée par un item."
 
 msgid "imitation"
-msgstr ""
+msgstr "a une imitation    "
 
 msgid "A property representing an imitation of a work or expression."
-msgstr ""
+msgstr "Une propriété représentant une imitation d'une œuvre ou d'une expression."
 
 msgid "imitation of"
-msgstr ""
+msgstr "est une imitation de"
 
 msgid "A property representing a work or expression that is imitated."
-msgstr ""
+msgstr "Une propriété représentant une oeuvre ou expression  qui est imitée."
 
 msgid "owner"
-msgstr ""
+msgstr "a un propriétaire"
 
 msgid "A property representing an entity that owns an item."
-msgstr ""
+msgstr "Une propriété représentant une entité qui possède un item."
 
 msgid "owner of"
-msgstr ""
+msgstr "est le propriétaire de"
 
 msgid "A property representing an item that is in some way owned an entity."
-msgstr ""
+msgstr "Une propriété représentant un item qui appartient en quelque sorte à une entité."
 
 msgid "part"
-msgstr ""
+msgstr "a une partie"
 
 msgid "A property representing a part of an endeavour."
-msgstr ""
+msgstr "Une propriété représentant une partie d'un ensemble."
 
 msgid "part of"
-msgstr ""
+msgstr "est une partie de"
 
 msgid "A property representing an endeavour incorporating an endeavour."
-msgstr ""
+msgstr "Une propriété représentant une entreprise (un effort) incorporant une entreprise (un effort)."
 
 msgid "producer"
-msgstr ""
+msgstr "a un producteur"
 
 msgid ""
 "A property representing an entity in some way responsible for producing a "
 "manifestation."
-msgstr ""
+msgstr "Une propriété représentant une entité en quelque sorte responsable de la production d'une manifestation."
 
 msgid "producer of"
-msgstr ""
+msgstr "est un producteur de"
 
 msgid ""
 "A property representing a manifestation that was in some way produced an "
 "entity."
-msgstr ""
+msgstr "Une propriété représentant une manifestation qui a d'une certaine manière produit une entité."
 
 msgid "realization"
-msgstr ""
+msgstr "a une réalisation"
 
 msgid ""
 "A property representing an expression that is an intellectual or artistic "
 "realization of a work."
-msgstr ""
+msgstr "Une propriété représentant une expression qui est une réalisation intellectuelle ou artistique d'une œuvre."
 
 msgid "realization of"
-msgstr ""
+msgstr "est une réalisation de"
 
 msgid ""
 "A property representing the work that has been realized by an expression."
-msgstr ""
+msgstr "Une propriété représentant l'oeuvre qui a été réalisée par une expression."
 
 msgid "realizer"
-msgstr ""
+msgstr "réalisateur"
 
 msgid ""
 "A property representing an entity in some way responsible for realizing an "
 "expression."
-msgstr ""
+msgstr "Une propriété représentant une entité responsable, d'une manière ou d'une autre, de la réalisation d'une expression."
 
 msgid "realizer of"
-msgstr ""
+msgstr "est le réalisateur de"
 
 msgid ""
 "A property representing an expression that was in some way realized by an "
 "entity."
-msgstr ""
+msgstr "Propriété représentant une expression qui a été réalisée d'une manière ou d'une autre par une entité."
 
 msgid "reconfiguration"
-msgstr ""
+msgstr "a une reconfiguration"
 
 msgid "A property representing a recongifuration of an item."
-msgstr ""
+msgstr "Une propriété représentant une reconfiguration d'un item."
 
 msgid "reconfiguration of"
-msgstr ""
+msgstr "est une reconfiguration de"
 
 msgid "A property representing an item that is reconfigured."
-msgstr ""
+msgstr "Une propriété représentant un item reconfiguré."
 
 msgid "related endeavour"
-msgstr ""
+msgstr "entreprise apparentée"
 
 msgid ""
 "A property representing another endeavour that is related in some way to an "
 "endeavour."
-msgstr ""
+msgstr "Une propriété représentant une autre entreprise liée d'une certaine manière à une entreprise."
 
 msgid "reproduction"
-msgstr ""
+msgstr "a pour reproduction"
 
 msgid "A property representing a reproduction of a manifestation or item."
-msgstr ""
+msgstr "Une propriété représentant une reproduction d'une manifestation ou d'un item."
 
 msgid "reproduction of"
-msgstr ""
+msgstr "est une reproduction de"
 
 msgid "A property representing a manifestation or item that is reproduced."
-msgstr ""
+msgstr "Une propriété représentant une manifestation ou un item qui est reproduit."
 
 msgid "responsible entity"
-msgstr ""
+msgstr "a une entité responsable"
 
 msgid ""
 "A property representing an entity in some way responsible for an endeavour."
-msgstr ""
+msgstr "Une propriété représentant une entité en quelque sorte responsable d'une entreprise."
 
 msgid "responsible entity of"
-msgstr ""
+msgstr "est une entité responsable de"
 
 msgid ""
 "A property representing an endeavour that is the responsibility of an "
 "entity."
-msgstr ""
+msgstr "Une propriété représentant un effort qui est la responsabilité d'une entité."
 
 msgid "revision"
-msgstr ""
+msgstr "a une révision"
 
 msgid "A property representing a revision of an expression."
-msgstr ""
+msgstr "Une propriété représentant une révision d'une expression."
 
 msgid "revision of"
-msgstr ""
+msgstr "est une révision de"
 
 msgid "A property representing an expression that is revised."
-msgstr ""
+msgstr "Une propriété représentant une expression qui est révisée."
 
 msgid "successor"
-msgstr ""
+msgstr "a une suite"
 
 msgid "A property representing a successor to a work or expression."
-msgstr ""
+msgstr "Une propriété représentant une suite à une oeuvre ou une expression."
 
 msgid "successor of"
-msgstr ""
+msgstr "est une suite de "
 
 msgid "A property representing a work or expression that is succeeded."
-msgstr ""
+msgstr "Une propriété représentant une oeuvre ou une expression qui est suivie d'une autre oeuvre ou expression."
 
 msgid "summarization"
-msgstr ""
+msgstr "a un résumé"
 
 msgid "A property representing a summarization of a work or expression."
-msgstr ""
+msgstr "Une propriété représentant une synthèse d'une œuvre ou d'une expression."
 
 msgid "summarization of"
-msgstr ""
+msgstr "est un résumé de"
 
 msgid "A property representing a work or expression that is summarized."
-msgstr ""
+msgstr "Une propriété représentant une oeuvre ou une expression qui est résumée."
 
 msgid "supplement"
-msgstr ""
+msgstr "a un supplément"
 
 msgid "A property representing a supplement to a work or expression."
-msgstr ""
+msgstr "Une propriété représentant un supplément à une oeuvre ou une expression."
 
 msgid "supplement of"
-msgstr ""
+msgstr "est un supplément de"
 
 msgid "A property representing a work or expression that is supplemented."
-msgstr ""
+msgstr "Une propriété représentant une œuvre ou une expression qui fait l'objet d'un supplément."
 
 msgid "transformation"
-msgstr ""
+msgstr "a une transformation"
 
 msgid "A property representing a transformation of a work or expression."
-msgstr ""
+msgstr "Une propriété représentant une transformation d'une oeuvre ou d'une expression."
 
 msgid "transformation of"
-msgstr ""
+msgstr "est une transformation de"
 
 msgid "A property representing a work or expression that is transformed."
-msgstr ""
+msgstr "Une propriété représentant une oeuvre ou expression  qui est transformée."
 
 msgid "translation"
-msgstr ""
+msgstr "a une traduction"
 
 msgid "A property representing a translation of an expression."
-msgstr ""
+msgstr "Une propriété représentant une traduction d'une expression."
 
 msgid "A property representing an expression that is translated."
-msgstr ""
+msgstr "Une propriété représentant une expression qui est traduite."
 
 #: ItemRelationsPlugin.php:369 ItemRelationsPlugin.php:419
 #: views/admin/common/item-relations-show.php:2
 #: views/public/common/item-relations-show.php:2
 #: views/shared/common/item-relations-advanced-search.php:3
 msgid "Item Relations"
-msgstr "Везе објекта"
+msgstr "Relations entre contenus"
 
 #: ItemRelationsPlugin.php:373
 msgid "Subjects"
-msgstr "Субјекти"
+msgstr "Sujets"
 
 #: ItemRelationsPlugin.php:375 item_relations_form.php:17
 #: views/shared/common/item-relations-advanced-search.php:17
 msgid "Object"
-msgstr "Објекти"
+msgstr "Objet"
 
 #: ItemRelationsPlugin.php:380
 msgid "These Items"
-msgstr "Ови објекти"
+msgstr "Ces contenus"
 
 #: ItemRelationsPlugin.php:383 item_relations_form.php:41
 msgid "Item ID"
-msgstr "ИД објекта"
+msgstr "Identifiant du contenu"
 
 #: config_form.php:3
 msgid "Append to Public Items Show"
-msgstr "Додај прегледу јавно доступних објеката"
+msgstr "Ajouter à la vue publique"
 
 #: config_form.php:8
 msgid ""
 "Check this if you want to display an item's relations on its public show "
 "page."
-msgstr "Означи овде уколико желиш да прикажеш везе објекта на страници за јавни приказ."
+msgstr "Cocher cette case pour afficher les relations d'un contenu sur la vue publique."
 
 #: config_form.php:17
 msgid "Relation Format"
-msgstr "Формат релације"
+msgstr "Format de relation"
 
 #: config_form.php:22
 msgid ""
 "Select the format of an item's relations that you would prefer to show. If "
 "one is unavailable the other will be used."
-msgstr "Одабери формат везе објекта који би најрадије желео да се прикаже. Уколико он није доступан, други ће бити коришћен."
+msgstr "Sélectionnez le format des relations du contenu que vous préférez afficher. Si l'un n'est pas disponible, les autres seront utilisés."
 
 #: controllers/VocabulariesController.php:50
 msgid "The vocabulary was successfully edited."
-msgstr "Речник је успешно измењен."
+msgstr "Le vocabulaire a été modifié avec succès."
 
 #: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
 msgid "Browse Vocabularies"
-msgstr "Прегледај Речнике"
+msgstr "Parcourir les vocabulaires"
 
 #: item_relations_form.php:6
 #, php-format
@@ -774,7 +774,7 @@ msgid ""
 "Here you can relate this item to another item and delete existing relations."
 " For descriptions of the relations, see the %s page. Invalid item IDs will "
 "be ignored."
-msgstr "Овде можете поставити везу имеђу објеката и обрисати постојеће релације. За опис ових релација, види %s страницу. Нетачан ИД објекта биће занемарен."
+msgstr "Vous pouvez lier ce contenu à un autre et supprimer les relations existantes. Pour décrire les relations, voir la page %s. Les identifiants non valides seront ignorés."
 
 #: item_relations_form.php:24 item_relations_form.php:34
 #: item_relations_form.php:39 views/admin/common/item-relations-show.php:10
@@ -782,32 +782,32 @@ msgstr "Овде можете поставити везу имеђу објек�
 #: views/public/common/item-relations-show.php:9
 #: views/public/common/item-relations-show.php:18
 msgid "This Item"
-msgstr "Овај објекат"
+msgstr "Ce contenu"
 
 #: item_relations_form.php:46
 msgid "Add a Relation"
-msgstr "Додај везу"
+msgstr "Ajouter une relation"
 
 #: models/ItemRelationsProperty.php:62
 msgid "[unknown]"
-msgstr "[непознато]"
+msgstr "[inconnu]"
 
 #: views/admin/common/item-relations-show.php:5
 #: views/public/common/item-relations-show.php:4
 msgid "This item has no relations."
-msgstr "Овај објекат нема веза."
+msgstr "Ce contenu n'a pas de relations."
 
 #: views/admin/vocabularies/browse.php:8
 msgid "Namespace Prefix"
-msgstr "Префикс простора за назив"
+msgstr "Préfixe de l'espace de nommage."
 
 #: views/admin/vocabularies/browse.php:9
 msgid "Namespace URI"
-msgstr "URI простора за назив"
+msgstr "URI de l'espace de nommage."
 
 #: views/admin/vocabularies/edit.php:1
 msgid "Edit Custom Vocabulary"
-msgstr "Уреди прилагођени речник"
+msgstr "Modifier le vocabulaire personnalise"
 
 #: views/admin/vocabularies/edit.php:8
 msgid ""
@@ -815,31 +815,31 @@ msgid ""
 "Property labels must be unique. You cannot edit property labels once they "
 "have been created, so make sure they are spelled correctly and convey the "
 "exact relation you want them to convey."
-msgstr "Овде можете додати, изменити или обрисати поставке вашег прилагођеног речника. Ознаке поставки морају бити једниствене. Не можете уредити ознаку поставке након креирања, тако да будете обазриви да је исправно написана и унета управо на начин на који то желите."
+msgstr "Vous pouvez ajouter, modifier et supprimer les propriétés de vos vocabulaires personnalisés. Les libellés de propriété doivent être uniques. Vous ne pouvez modifier les libellés une fois qu'ils ont été créés, assurez vous qu'ils sont correctement orthographiés et sont explicites quant à la relation à laquelle ils correspondent."
 
 #: views/admin/vocabularies/edit.php:37
 msgid "Add a Property"
-msgstr "Додај својство"
+msgstr "Ajouter une propriété"
 
 #: views/admin/vocabularies/show.php:2
 msgid "Vocabulary Properties"
-msgstr "Својства речника"
+msgstr "Propriétés du vocabulaire"
 
 #: views/admin/vocabularies/show.php:7
 msgid "Edit Vocabulary"
-msgstr "Уреди речник"
+msgstr "Modifier le vocabulaire"
 
 #: views/admin/vocabularies/show.php:14
 msgid "This vocabulary has no properties."
-msgstr "Овај речник нема својства."
+msgstr "Ce vocabulaire n'a pas de propriétés."
 
 #: views/admin/vocabularies/show.php:16
 msgid "Why don't you add some?"
-msgstr "Зашто не додаш неко својство?"
+msgstr "Pourquoi ne pas en ajouter ?"
 
 #: views/admin/vocabularies/show.php:23
 msgid "Local Part"
-msgstr "Локални део"
+msgstr "partie locale"
 
 #: views/shared/common/item-relations-advanced-search.php:8
 msgid ""
@@ -848,4 +848,4 @@ msgid ""
 "return all items that have parts. When selecting \"Object\" items with the "
 "same relation, the search will return all items that are parts of other "
 "items."
-msgstr "Филтрирај ову претрагу за објекте са изабраним односом. На пример, приликом избора \"Субјекат\" код објеката са \"hasPart\" односом, претрага ће вратити све објекте који имају ове делове. Приликом одабира \"Објекат\" код објеката у истом односу, претрага ће вратити све објекте који су део других објеката."
+msgstr "Filtrer cette recherche pour les contenus possédant cette relation. Par exemple, en sélectionnant les contenus \"Sujet\" avec la relation \"hasPart\", la recherche renverra tous les contenus ayant des \"parties\". En sélectionnant les contenus \"Objet\" avec la même relation, la recherche renverra tous les contenus qui font partie d'autres contenus."

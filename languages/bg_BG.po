@@ -3,8 +3,8 @@
 # This file is distributed under the same license as the Omeka package.
 # 
 # Translators:
-# Bogdan Trifunovic <>, 2014
-# Predrag Djukic <djukic.predrag@gmail.com>, 2014
+# Gabriel Radev <gabosss@gmail.com>, 2014
+# Svetaketi Aruni <svetliok26@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Omeka\n"
@@ -12,12 +12,12 @@ msgstr ""
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
 "PO-Revision-Date: 2018-01-11 16:33+0000\n"
 "Last-Translator: patrickmj <patrickmjchnm@gmail.com>\n"
-"Language-Team: Serbian (Serbia) (http://www.transifex.com/omeka/omeka/language/sr_RS/)\n"
+"Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/omeka/omeka/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sr_RS\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: bg_BG\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "A related resource."
 msgstr ""
@@ -721,52 +721,52 @@ msgstr ""
 #: views/public/common/item-relations-show.php:2
 #: views/shared/common/item-relations-advanced-search.php:3
 msgid "Item Relations"
-msgstr "Везе објекта"
+msgstr "Зависимост на документи"
 
 #: ItemRelationsPlugin.php:373
 msgid "Subjects"
-msgstr "Субјекти"
+msgstr "Тема"
 
 #: ItemRelationsPlugin.php:375 item_relations_form.php:17
 #: views/shared/common/item-relations-advanced-search.php:17
 msgid "Object"
-msgstr "Објекти"
+msgstr "Обект"
 
 #: ItemRelationsPlugin.php:380
 msgid "These Items"
-msgstr "Ови објекти"
+msgstr "Следните документи"
 
 #: ItemRelationsPlugin.php:383 item_relations_form.php:41
 msgid "Item ID"
-msgstr "ИД објекта"
+msgstr "Документ ID"
 
 #: config_form.php:3
 msgid "Append to Public Items Show"
-msgstr "Додај прегледу јавно доступних објеката"
+msgstr "Добавяне към преглед на Публични Документи"
 
 #: config_form.php:8
 msgid ""
 "Check this if you want to display an item's relations on its public show "
 "page."
-msgstr "Означи овде уколико желиш да прикажеш везе објекта на страници за јавни приказ."
+msgstr "Отметнете това ако искате да покажете зависимостите на документите на техните публични страници."
 
 #: config_form.php:17
 msgid "Relation Format"
-msgstr "Формат релације"
+msgstr "Взаимосвързан формат."
 
 #: config_form.php:22
 msgid ""
 "Select the format of an item's relations that you would prefer to show. If "
 "one is unavailable the other will be used."
-msgstr "Одабери формат везе објекта који би најрадије желео да се прикаже. Уколико он није доступан, други ће бити коришћен."
+msgstr "Изберете формата на зависимост на документа който искате да покажете.  Ако не е наличен, ще се използва друга."
 
 #: controllers/VocabulariesController.php:50
 msgid "The vocabulary was successfully edited."
-msgstr "Речник је успешно измењен."
+msgstr "Речника е редактиран успешно."
 
 #: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
 msgid "Browse Vocabularies"
-msgstr "Прегледај Речнике"
+msgstr "Реглед на Речниците"
 
 #: item_relations_form.php:6
 #, php-format
@@ -774,7 +774,7 @@ msgid ""
 "Here you can relate this item to another item and delete existing relations."
 " For descriptions of the relations, see the %s page. Invalid item IDs will "
 "be ignored."
-msgstr "Овде можете поставити везу имеђу објеката и обрисати постојеће релације. За опис ових релација, види %s страницу. Нетачан ИД објекта биће занемарен."
+msgstr "Тук можете да създадете зависимост между този документ и друг документ или да изтриете съществуваща зависимост. За описание на зависимостите вижте страницата  %s. Невалидните ID-та на документи се игнорират."
 
 #: item_relations_form.php:24 item_relations_form.php:34
 #: item_relations_form.php:39 views/admin/common/item-relations-show.php:10
@@ -782,32 +782,32 @@ msgstr "Овде можете поставити везу имеђу објек�
 #: views/public/common/item-relations-show.php:9
 #: views/public/common/item-relations-show.php:18
 msgid "This Item"
-msgstr "Овај објекат"
+msgstr "Този Документ"
 
 #: item_relations_form.php:46
 msgid "Add a Relation"
-msgstr "Додај везу"
+msgstr "Добавяне на Зависимост"
 
 #: models/ItemRelationsProperty.php:62
 msgid "[unknown]"
-msgstr "[непознато]"
+msgstr "[неизвестно] "
 
 #: views/admin/common/item-relations-show.php:5
 #: views/public/common/item-relations-show.php:4
 msgid "This item has no relations."
-msgstr "Овај објекат нема веза."
+msgstr "Този документ няма зависимости"
 
 #: views/admin/vocabularies/browse.php:8
 msgid "Namespace Prefix"
-msgstr "Префикс простора за назив"
+msgstr "Представка за Именно пространство"
 
 #: views/admin/vocabularies/browse.php:9
 msgid "Namespace URI"
-msgstr "URI простора за назив"
+msgstr "URI на Именното пространстро"
 
 #: views/admin/vocabularies/edit.php:1
 msgid "Edit Custom Vocabulary"
-msgstr "Уреди прилагођени речник"
+msgstr "Редактиране на Потребителски речник"
 
 #: views/admin/vocabularies/edit.php:8
 msgid ""
@@ -815,31 +815,31 @@ msgid ""
 "Property labels must be unique. You cannot edit property labels once they "
 "have been created, so make sure they are spelled correctly and convey the "
 "exact relation you want them to convey."
-msgstr "Овде можете додати, изменити или обрисати поставке вашег прилагођеног речника. Ознаке поставки морају бити једниствене. Не можете уредити ознаку поставке након креирања, тако да будете обазриви да је исправно написана и унета управо на начин на који то желите."
+msgstr "Тук може да добавяте, редактирате и изтривате свойства в потребителския си речник. Етикетите на свойствата трябва трябва да са уникални. След като са създадени веднъж, етикетите на свойствата не могат да бъдат редактирани, така че уверете се, че са записани правилно и изразяват точно желаната зависимост."
 
 #: views/admin/vocabularies/edit.php:37
 msgid "Add a Property"
-msgstr "Додај својство"
+msgstr "Добавяне на свойство"
 
 #: views/admin/vocabularies/show.php:2
 msgid "Vocabulary Properties"
-msgstr "Својства речника"
+msgstr "Свойства на Речника"
 
 #: views/admin/vocabularies/show.php:7
 msgid "Edit Vocabulary"
-msgstr "Уреди речник"
+msgstr "Редакция на речника"
 
 #: views/admin/vocabularies/show.php:14
 msgid "This vocabulary has no properties."
-msgstr "Овај речник нема својства."
+msgstr "Този речник няма свойства."
 
 #: views/admin/vocabularies/show.php:16
 msgid "Why don't you add some?"
-msgstr "Зашто не додаш неко својство?"
+msgstr "Защо ти не добавиш нещо?"
 
 #: views/admin/vocabularies/show.php:23
 msgid "Local Part"
-msgstr "Локални део"
+msgstr "Локална част"
 
 #: views/shared/common/item-relations-advanced-search.php:8
 msgid ""
@@ -848,4 +848,4 @@ msgid ""
 "return all items that have parts. When selecting \"Object\" items with the "
 "same relation, the search will return all items that are parts of other "
 "items."
-msgstr "Филтрирај ову претрагу за објекте са изабраним односом. На пример, приликом избора \"Субјекат\" код објеката са \"hasPart\" односом, претрага ће вратити све објекте који имају ове делове. Приликом одабира \"Објекат\" код објеката у истом односу, претрага ће вратити све објекте који су део других објеката."
+msgstr "Филтрира това търсене на документи с избраната зависимост. Например, избирайки \"Subject\" документите с зависимост \"hasPart\", търсенето ще върне всички документи, които имат части. Избирайки \"Object\" документите със същата зависимост, търсенето ще върне всички документи, които са част от други документи."

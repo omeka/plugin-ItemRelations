@@ -3,48 +3,745 @@
 # This file is distributed under the same license as the Omeka package.
 # 
 # Translators:
-# Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2014
+# Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2014,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2014-04-29 10:10+0000\n"
-"Last-Translator: Sergi Montes <sergi.blanes@gmail.com>\n"
-"Language-Team: Catalan (Spain) (http://www.transifex.com/projects/p/omeka/language/ca_ES/)\n"
+"PO-Revision-Date: 2018-03-01 16:46+0000\n"
+"Last-Translator: Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>\n"
+"Language-Team: Catalan (Spain) (http://www.transifex.com/omeka/omeka/language/ca_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ca_ES\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ItemRelationsPlugin.php:357 ItemRelationsPlugin.php:407
+msgid "A related resource."
+msgstr "Un recurs relacionat."
+
+msgid "Conforms To"
+msgstr "D'acord a"
+
+msgid "An established standard to which the described resource conforms."
+msgstr ""
+
+msgid "Has Format"
+msgstr "Té el format"
+
+msgid ""
+"A related resource that is substantially the same as the pre-existing "
+"described resource, but in another format."
+msgstr ""
+
+msgid "Has Part"
+msgstr "Té part de"
+
+msgid ""
+"A related resource that is included either physically or logically in the "
+"described resource."
+msgstr ""
+
+msgid "Has Version"
+msgstr "Té una versió"
+
+msgid ""
+"A related resource that is a version, edition, or adaptation of the "
+"described resource."
+msgstr ""
+
+msgid "Is Format Of"
+msgstr "Format original"
+
+msgid ""
+"A related resource that is substantially the same as the described resource,"
+" but in another format."
+msgstr ""
+
+msgid "Is Part Of"
+msgstr "És part de"
+
+msgid ""
+"A related resource in which the described resource is physically or "
+"logically included."
+msgstr ""
+
+msgid "Is Referenced By"
+msgstr "Referenciat per"
+
+msgid ""
+"A related resource that references, cites, or otherwise points to the "
+"described resource."
+msgstr ""
+
+msgid "Is Replaced By"
+msgstr "Substituït per"
+
+msgid ""
+"A related resource that supplants, displaces, or supersedes the described "
+"resource."
+msgstr ""
+
+msgid "Is Required By"
+msgstr "És requerit per"
+
+msgid ""
+"A related resource that requires the described resource to support its "
+"function, delivery, or coherence."
+msgstr ""
+
+msgid "Is Version Of"
+msgstr "És una versió de"
+
+msgid ""
+"A related resource of which the described resource is a version, edition, or"
+" adaptation."
+msgstr ""
+
+msgid "References"
+msgstr "Referència"
+
+msgid ""
+"A related resource that is referenced, cited, or otherwise pointed to by the"
+" described resource."
+msgstr ""
+
+msgid "Replaces"
+msgstr "Substitueix"
+
+msgid ""
+"A related resource that is supplanted, displaced, or superseded by the "
+"described resource."
+msgstr ""
+
+msgid "Requires"
+msgstr "Requereix"
+
+msgid ""
+"A related resource that is required by the described resource to support its"
+" function, delivery, or coherence."
+msgstr ""
+
+msgid "A related resource from which the described resource is derived."
+msgstr ""
+
+msgid "Abstract"
+msgstr "Resum"
+
+msgid "A summary of the resource."
+msgstr "Un resum del recurs."
+
+msgid "Access Rights"
+msgstr "Drets d'accés"
+
+msgid ""
+"Information about who can access the resource or an indication of its "
+"security status."
+msgstr "Informació sobre qui pot accedir al recurs i la seguretat associada."
+
+msgid "Accrual Method"
+msgstr ""
+
+msgid "The method by which items are added to a collection."
+msgstr ""
+
+msgid "Accrual Periodicity"
+msgstr ""
+
+msgid "The frequency with which items are added to a collection."
+msgstr ""
+
+msgid "Accrual Policy"
+msgstr ""
+
+msgid "The policy governing the addition of items to a collection."
+msgstr ""
+
+msgid "Audience"
+msgstr "Audiència"
+
+msgid "A class of entity for whom the resource is intended or useful."
+msgstr "Un tipus d'entitat per la qual el recurs s'ha pensat o és útil."
+
+msgid "An entity responsible for making contributions to the resource."
+msgstr ""
+
+msgid ""
+"The spatial or temporal topic of the resource, the spatial applicability of "
+"the resource, or the jurisdiction under which the resource is relevant."
+msgstr ""
+
+msgid "An entity primarily responsible for making the resource."
+msgstr ""
+
+msgid "An account of the resource."
+msgstr ""
+
+msgid "Audience Education Level"
+msgstr ""
+
+msgid ""
+"A class of entity, defined in terms of progression through an educational or"
+" training context, for which the described resource is intended."
+msgstr ""
+
+msgid "Extent"
+msgstr "Extensió"
+
+msgid "The size or duration of the resource."
+msgstr ""
+
+msgid "The file format, physical medium, or dimensions of the resource."
+msgstr ""
+
+msgid "Instructional Method"
+msgstr ""
+
+msgid ""
+"A process, used to engender knowledge, attitudes and skills, that the "
+"described resource is designed to support."
+msgstr ""
+
+msgid "A language of the resource."
+msgstr "L'idioma del recurs."
+
+msgid "License"
+msgstr "Llicència"
+
+msgid ""
+"A legal document giving official permission to do something with the "
+"resource."
+msgstr ""
+
+msgid "Mediator"
+msgstr ""
+
+msgid ""
+"An entity that mediates access to the resource and for whom the resource is "
+"intended or useful."
+msgstr ""
+
+msgid "Medium"
+msgstr "Mitjà"
+
+msgid "The material or physical carrier of the resource."
+msgstr ""
+
+msgid "Provenance"
+msgstr ""
+
+msgid ""
+"A statement of any changes in ownership and custody of the resource since "
+"its creation that are significant for its authenticity, integrity, and "
+"interpretation."
+msgstr ""
+
+msgid "An entity responsible for making the resource available."
+msgstr ""
+
+msgid "Information about rights held in and over the resource."
+msgstr ""
+
+msgid "Rights Holder"
+msgstr "Propietari dels drets"
+
+msgid "A person or organization owning or managing rights over the resource."
+msgstr ""
+
+msgid "Spatial Coverage"
+msgstr "Cobertura geogràfica"
+
+msgid "Spatial characteristics of the resource."
+msgstr ""
+
+msgid "The topic of the resource."
+msgstr "La matèria del recurs."
+
+msgid "Table Of Contents"
+msgstr "Sumari"
+
+msgid "A list of subunits of the resource."
+msgstr ""
+
+msgid "Temporal Coverage"
+msgstr "Cobertura temporal"
+
+msgid "Temporal characteristics of the resource."
+msgstr ""
+
+msgid "The nature or genre of the resource."
+msgstr ""
+
+msgid "annotates"
+msgstr ""
+
+msgid "Critical or explanatory note for a Document."
+msgstr ""
+
+msgid "cited by"
+msgstr "citat per"
+
+msgid "Relates a document to another document that cites the first document."
+msgstr ""
+
+msgid "cites"
+msgstr ""
+
+msgid ""
+"Relates a document to another document that is cited by the first document "
+"as reference, comment, review, quotation or for another purpose."
+msgstr ""
+
+msgid "review of"
+msgstr ""
+
+msgid "Relates a review document to a reviewed thing (resource, item, etc.)."
+msgstr ""
+
+msgid "reproduced in"
+msgstr ""
+
+msgid "The resource in which another resource is reproduced."
+msgstr ""
+
+msgid "affirmed by"
+msgstr ""
+
+msgid "A legal decision that affirms a ruling."
+msgstr ""
+
+msgid "reversed by"
+msgstr ""
+
+msgid "A legal decision that reverses a ruling."
+msgstr ""
+
+msgid "subsequent legal decision"
+msgstr ""
+
+msgid ""
+"A legal decision on appeal that takes action on a case (affirming it, "
+"reversing it, etc.)."
+msgstr ""
+
+msgid "transcript of"
+msgstr "transcripció de"
+
+msgid "Relates a document to some transcribed original."
+msgstr ""
+
+msgid "translation of"
+msgstr "traducció de"
+
+msgid "Relates a translated document to the original document."
+msgstr ""
+
+msgid "based near"
+msgstr ""
+
+msgid ""
+"A location that something is based near, for some broadly human notion of "
+"near."
+msgstr ""
+
+msgid "depiction"
+msgstr ""
+
+msgid "A depiction of some thing."
+msgstr ""
+
+msgid "depicts"
+msgstr ""
+
+msgid "A thing depicted in this representation."
+msgstr ""
+
+msgid "funded by"
+msgstr ""
+
+msgid "An organization funding a project or person."
+msgstr ""
+
+msgid "image"
+msgstr "imatge"
+
+msgid ""
+"An image that can be used to represent some thing (ie. those depictions "
+"which are particularly representative of something, eg. one’s photo on a "
+"homepage)."
+msgstr ""
+
+msgid "is primary topic of"
+msgstr "és la matèria principal de"
+
+msgid "A document that this thing is the primary topic of."
+msgstr ""
+
+msgid "knows"
+msgstr "coneix"
+
+msgid ""
+"A person known by this person (indicating some level of reciprocated "
+"interaction between the parties)."
+msgstr ""
+
+msgid "logo"
+msgstr "logotip"
+
+msgid "A logo representing some thing."
+msgstr ""
+
+msgid "made"
+msgstr ""
+
+msgid "Something that was made by this agent."
+msgstr ""
+
+msgid "maker"
+msgstr ""
+
+msgid "An agent that made this thing."
+msgstr ""
+
+msgid "member"
+msgstr "membre"
+
+msgid "Indicates a member of a Group."
+msgstr ""
+
+msgid "page"
+msgstr "pàgina"
+
+msgid "A page or document about this thing."
+msgstr "Una pàgina o document sobre aquest tema."
+
+msgid "primary topic"
+msgstr "matèria principal"
+
+msgid "The primary topic of some page or document."
+msgstr ""
+
+msgid "thumbnail"
+msgstr "miniatura"
+
+msgid "A derived thumbnail image."
+msgstr "Una imatge derivada en miniatura."
+
+msgid "abridgement"
+msgstr ""
+
+msgid "A property representing an abridgment of an expression."
+msgstr ""
+
+msgid "abridgement of"
+msgstr ""
+
+msgid "A property representing an expression that is abridged."
+msgstr ""
+
+msgid "adaption"
+msgstr ""
+
+msgid "A property representing an adaption of a work or expression."
+msgstr ""
+
+msgid "adaption of"
+msgstr "adaptació de"
+
+msgid "A property representing a work or expression that is adapted."
+msgstr ""
+
+msgid "alternate"
+msgstr ""
+
+msgid "A property representing an alternative to a manifestation."
+msgstr ""
+
+msgid "alternate of"
+msgstr ""
+
+msgid "A property representing a manifestation that is alternated."
+msgstr ""
+
+msgid "arrangement"
+msgstr ""
+
+msgid "A property representing an arrangement of an expression."
+msgstr ""
+
+msgid "arrangement of"
+msgstr ""
+
+msgid "A property representing an expression that is arranged."
+msgstr ""
+
+msgid "complement"
+msgstr ""
+
+msgid "A property representing a complement to a work or expression."
+msgstr ""
+
+msgid "complement of"
+msgstr ""
+
+msgid "A property representing a work or expression that is complemented."
+msgstr ""
+
+msgid "creator"
+msgstr "autor"
+
+msgid ""
+"A property representing a work that was in some way created by of an entity."
+msgstr ""
+
+msgid "embodiment"
+msgstr ""
+
+msgid ""
+"A property representing an expression that is embodied by a manifestation."
+msgstr ""
+
+msgid "exemplar"
+msgstr "exemplar"
+
+msgid ""
+"A property representing an item that is an exemplar of a manifestation."
+msgstr ""
+
+msgid "exemplar of"
+msgstr "exemplar de"
+
+msgid ""
+"A property representing the manifestation that is exemplified by a item."
+msgstr ""
+
+msgid "imitation"
+msgstr ""
+
+msgid "A property representing an imitation of a work or expression."
+msgstr ""
+
+msgid "imitation of"
+msgstr "imitació de"
+
+msgid "A property representing a work or expression that is imitated."
+msgstr ""
+
+msgid "owner"
+msgstr ""
+
+msgid "A property representing an entity that owns an item."
+msgstr ""
+
+msgid "owner of"
+msgstr "propietari de"
+
+msgid "A property representing an item that is in some way owned an entity."
+msgstr ""
+
+msgid "part"
+msgstr ""
+
+msgid "A property representing a part of an endeavour."
+msgstr ""
+
+msgid "part of"
+msgstr "part de"
+
+msgid "A property representing an endeavour incorporating an endeavour."
+msgstr ""
+
+msgid "producer"
+msgstr ""
+
+msgid ""
+"A property representing an entity in some way responsible for producing a "
+"manifestation."
+msgstr ""
+
+msgid "producer of"
+msgstr "productor de"
+
+msgid ""
+"A property representing a manifestation that was in some way produced an "
+"entity."
+msgstr ""
+
+msgid "realization"
+msgstr ""
+
+msgid ""
+"A property representing an expression that is an intellectual or artistic "
+"realization of a work."
+msgstr ""
+
+msgid "realization of"
+msgstr ""
+
+msgid ""
+"A property representing the work that has been realized by an expression."
+msgstr ""
+
+msgid "realizer"
+msgstr ""
+
+msgid ""
+"A property representing an entity in some way responsible for realizing an "
+"expression."
+msgstr ""
+
+msgid "realizer of"
+msgstr ""
+
+msgid ""
+"A property representing an expression that was in some way realized by an "
+"entity."
+msgstr ""
+
+msgid "reconfiguration"
+msgstr ""
+
+msgid "A property representing a recongifuration of an item."
+msgstr ""
+
+msgid "reconfiguration of"
+msgstr "reconfiguració de"
+
+msgid "A property representing an item that is reconfigured."
+msgstr ""
+
+msgid "related endeavour"
+msgstr ""
+
+msgid ""
+"A property representing another endeavour that is related in some way to an "
+"endeavour."
+msgstr ""
+
+msgid "reproduction"
+msgstr ""
+
+msgid "A property representing a reproduction of a manifestation or item."
+msgstr ""
+
+msgid "reproduction of"
+msgstr "reproducció de"
+
+msgid "A property representing a manifestation or item that is reproduced."
+msgstr ""
+
+msgid "responsible entity"
+msgstr ""
+
+msgid ""
+"A property representing an entity in some way responsible for an endeavour."
+msgstr ""
+
+msgid "responsible entity of"
+msgstr "entitat responsable de"
+
+msgid ""
+"A property representing an endeavour that is the responsibility of an "
+"entity."
+msgstr ""
+
+msgid "revision"
+msgstr ""
+
+msgid "A property representing a revision of an expression."
+msgstr ""
+
+msgid "revision of"
+msgstr "revisió de"
+
+msgid "A property representing an expression that is revised."
+msgstr ""
+
+msgid "successor"
+msgstr ""
+
+msgid "A property representing a successor to a work or expression."
+msgstr ""
+
+msgid "successor of"
+msgstr ""
+
+msgid "A property representing a work or expression that is succeeded."
+msgstr ""
+
+msgid "summarization"
+msgstr ""
+
+msgid "A property representing a summarization of a work or expression."
+msgstr ""
+
+msgid "summarization of"
+msgstr ""
+
+msgid "A property representing a work or expression that is summarized."
+msgstr ""
+
+msgid "supplement"
+msgstr ""
+
+msgid "A property representing a supplement to a work or expression."
+msgstr ""
+
+msgid "supplement of"
+msgstr "suplement de"
+
+msgid "A property representing a work or expression that is supplemented."
+msgstr ""
+
+msgid "transformation"
+msgstr "transformació"
+
+msgid "A property representing a transformation of a work or expression."
+msgstr "Una propietat que representa la transformació d'una obra o expressió."
+
+msgid "transformation of"
+msgstr "transformació de"
+
+msgid "A property representing a work or expression that is transformed."
+msgstr "Una propietat que representa una obra o expressió que s'ha transformat."
+
+msgid "translation"
+msgstr "traducció"
+
+msgid "A property representing a translation of an expression."
+msgstr "Una propietat que representa la traducció d'una expressió."
+
+msgid "A property representing an expression that is translated."
+msgstr "Una propietat que representa l'expressió que s'ha traduït."
+
+#: ItemRelationsPlugin.php:369 ItemRelationsPlugin.php:419
 #: views/admin/common/item-relations-show.php:2
 #: views/public/common/item-relations-show.php:2
 #: views/shared/common/item-relations-advanced-search.php:3
 msgid "Item Relations"
 msgstr "Item Relations"
 
-#: ItemRelationsPlugin.php:361
+#: ItemRelationsPlugin.php:373
 msgid "Subjects"
 msgstr "Matèries"
 
-#: ItemRelationsPlugin.php:363 item_relations_form.php:17
+#: ItemRelationsPlugin.php:375 item_relations_form.php:17
 #: views/shared/common/item-relations-advanced-search.php:17
 msgid "Object"
 msgstr "Objecte"
 
-#: ItemRelationsPlugin.php:368
+#: ItemRelationsPlugin.php:380
 msgid "These Items"
 msgstr "Aquests ítems"
 
-#: ItemRelationsPlugin.php:371 item_relations_form.php:41
+#: ItemRelationsPlugin.php:383 item_relations_form.php:41
 msgid "Item ID"
 msgstr "ID de l'ítem"
 
 #: config_form.php:3
 msgid "Append to Public Items Show"
-msgstr "Afegiu a la pàgina d'ítems pública"
+msgstr "Afegeix a la pàgina d'ítems pública"
 
 #: config_form.php:8
 msgid ""
@@ -54,7 +751,7 @@ msgstr "Activeu per mostrar les relacions d'un ítem a la interfície pública."
 
 #: config_form.php:17
 msgid "Relation Format"
-msgstr "Format de relació"
+msgstr "Format de la relació"
 
 #: config_form.php:22
 msgid ""
@@ -68,7 +765,7 @@ msgstr "El vocabulari s'ha editat correctament"
 
 #: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
 msgid "Browse Vocabularies"
-msgstr "Cerca vocabularis"
+msgstr "Navega pels vocabularis"
 
 #: item_relations_form.php:6
 #, php-format
@@ -117,7 +814,7 @@ msgid ""
 "Property labels must be unique. You cannot edit property labels once they "
 "have been created, so make sure they are spelled correctly and convey the "
 "exact relation you want them to convey."
-msgstr "Podeu afegir, editar i esborrr propietats al vostre vocabulari personalitzat. L'etiqueta de la propietat ha de ser única i no es poden editar un cop creades."
+msgstr "Podeu afegir, editar i esborrar propietats del vostre vocabulari personalitzat. L'etiqueta de la propietat ha de ser única i no es poden editar un cop creades."
 
 #: views/admin/vocabularies/edit.php:37
 msgid "Add a Property"
@@ -133,11 +830,11 @@ msgstr "Edita el vocabulari"
 
 #: views/admin/vocabularies/show.php:14
 msgid "This vocabulary has no properties."
-msgstr "Aquest vocabulari no té propietats"
+msgstr "Aquest vocabulari no té propietats."
 
 #: views/admin/vocabularies/show.php:16
 msgid "Why don't you add some?"
-msgstr "Afegiu-ne alguna"
+msgstr "Voleu afegir-ne alguna?"
 
 #: views/admin/vocabularies/show.php:23
 msgid "Local Part"

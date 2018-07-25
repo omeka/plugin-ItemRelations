@@ -3,311 +3,310 @@
 # This file is distributed under the same license as the Omeka package.
 # 
 # Translators:
-# Bogdan Trifunovic <>, 2014
-# Predrag Djukic <djukic.predrag@gmail.com>, 2014
+# tanya chorna <tanya.chorna@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2018-01-11 16:33+0000\n"
-"Last-Translator: patrickmj <patrickmjchnm@gmail.com>\n"
-"Language-Team: Serbian (Serbia) (http://www.transifex.com/omeka/omeka/language/sr_RS/)\n"
+"PO-Revision-Date: 2018-04-12 09:12+0000\n"
+"Last-Translator: tanya chorna <tanya.chorna@gmail.com>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/omeka/omeka/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sr_RS\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 msgid "A related resource."
-msgstr ""
+msgstr "Пов'язаний ресурс"
 
 msgid "Conforms To"
-msgstr ""
+msgstr "Відповідає"
 
 msgid "An established standard to which the described resource conforms."
-msgstr ""
+msgstr "Встановлений стандарт, якому відповідає описаний ресурс."
 
 msgid "Has Format"
-msgstr ""
+msgstr "Існує у форматі"
 
 msgid ""
 "A related resource that is substantially the same as the pre-existing "
 "described resource, but in another format."
-msgstr ""
+msgstr "Пов'язаний ресурс, який по суті такий самий, як попередній описаний ресурс, але в іншому форматі."
 
 msgid "Has Part"
-msgstr ""
+msgstr "Має частину"
 
 msgid ""
 "A related resource that is included either physically or logically in the "
 "described resource."
-msgstr ""
+msgstr "Пов'язаний ресурс, який включений в описаному ресурсі або фізично або логічно."
 
 msgid "Has Version"
-msgstr ""
+msgstr "Має версію"
 
 msgid ""
 "A related resource that is a version, edition, or adaptation of the "
 "described resource."
-msgstr ""
+msgstr "Пов'язаний ресурс, є версією, іншим виданням або адаптацією описаного ресурсу."
 
 msgid "Is Format Of"
-msgstr ""
+msgstr "Формат"
 
 msgid ""
 "A related resource that is substantially the same as the described resource,"
 " but in another format."
-msgstr ""
+msgstr "Пов'язаний ресурс, який по суті такий самий, як описаний ресурс, але в іншому форматі."
 
 msgid "Is Part Of"
-msgstr ""
+msgstr "Частина з"
 
 msgid ""
 "A related resource in which the described resource is physically or "
 "logically included."
-msgstr ""
+msgstr "Пов'язаний ресурс, в якому описаний ресурс включений фізично або логічно."
 
 msgid "Is Referenced By"
-msgstr ""
+msgstr "Посилається на"
 
 msgid ""
 "A related resource that references, cites, or otherwise points to the "
 "described resource."
-msgstr ""
+msgstr "Пов'язаний ресурс, який посилається, цитує або іншим чином вказує на описаний ресурс."
 
 msgid "Is Replaced By"
-msgstr ""
+msgstr "Змінено на"
 
 msgid ""
 "A related resource that supplants, displaces, or supersedes the described "
 "resource."
-msgstr ""
+msgstr "Пов'язаний ресурс, який замінює описаний ресурс."
 
 msgid "Is Required By"
-msgstr ""
+msgstr "Вимагає"
 
 msgid ""
 "A related resource that requires the described resource to support its "
 "function, delivery, or coherence."
-msgstr ""
+msgstr "Пов'язаний ресурс, який вимагає описаного ресурсу для підтримки його функції, доставки або узгодженості."
 
 msgid "Is Version Of"
-msgstr ""
+msgstr "Версія"
 
 msgid ""
 "A related resource of which the described resource is a version, edition, or"
 " adaptation."
-msgstr ""
+msgstr "Пов'язаний ресурс, з якого походить описаний ресурс"
 
 msgid "References"
-msgstr ""
+msgstr "Посилання"
 
 msgid ""
 "A related resource that is referenced, cited, or otherwise pointed to by the"
 " described resource."
-msgstr ""
+msgstr "Пов'язаний ресурс, на який посилається, цитує чи іншим чином вказує описаний ресурс."
 
 msgid "Replaces"
-msgstr ""
+msgstr "Зміни"
 
 msgid ""
 "A related resource that is supplanted, displaced, or superseded by the "
 "described resource."
-msgstr ""
+msgstr "Пов'язаний ресурс, який замінюється описаним ресурсом."
 
 msgid "Requires"
-msgstr ""
+msgstr "Вимоги"
 
 msgid ""
 "A related resource that is required by the described resource to support its"
 " function, delivery, or coherence."
-msgstr ""
+msgstr "Пов'язаний ресурс, який вимагається описаним ресурсом для підтримки його функції, доставки або узгодженості."
 
 msgid "A related resource from which the described resource is derived."
-msgstr ""
+msgstr "Пов'язаний ресурс, з якого виведено описаний ресурс."
 
 msgid "Abstract"
-msgstr ""
+msgstr "Резюме"
 
 msgid "A summary of the resource."
-msgstr ""
+msgstr "Короткий опис ресурсу"
 
 msgid "Access Rights"
-msgstr ""
+msgstr "Права доступу"
 
 msgid ""
 "Information about who can access the resource or an indication of its "
 "security status."
-msgstr ""
+msgstr "Інформація про те, хто може отримати доступ до ресурсу або вказати його статус безпеки."
 
 msgid "Accrual Method"
-msgstr ""
+msgstr "Метод накопичення"
 
 msgid "The method by which items are added to a collection."
-msgstr ""
+msgstr "Метод, за допомогою якого елементи додаються до колекції."
 
 msgid "Accrual Periodicity"
-msgstr ""
+msgstr "Періодичність додавання"
 
 msgid "The frequency with which items are added to a collection."
-msgstr ""
+msgstr "Частота, з якою елементи додаються до колекції."
 
 msgid "Accrual Policy"
-msgstr ""
+msgstr "Політики додавання"
 
 msgid "The policy governing the addition of items to a collection."
-msgstr ""
+msgstr "Політики додавання елементів до колекції."
 
 msgid "Audience"
-msgstr ""
+msgstr "Аудиторія"
 
 msgid "A class of entity for whom the resource is intended or useful."
-msgstr ""
+msgstr "Аудиторія, для якої призначений або корисний ресурс."
 
 msgid "An entity responsible for making contributions to the resource."
-msgstr ""
+msgstr "Організація, відповідальна за благодійний внесок на створення ресурсу"
 
 msgid ""
 "The spatial or temporal topic of the resource, the spatial applicability of "
 "the resource, or the jurisdiction under which the resource is relevant."
-msgstr ""
+msgstr "Просторова або тимчасова тема ресурсу, просторова придатність ресурсу або юрисдикція, якій відповідає ресурс."
 
 msgid "An entity primarily responsible for making the resource."
-msgstr ""
+msgstr "Організація, відповідальна за створення ресурсу"
 
 msgid "An account of the resource."
-msgstr ""
+msgstr "Облік ресурсу"
 
 msgid "Audience Education Level"
-msgstr ""
+msgstr "Рівень освіти аудиторії"
 
 msgid ""
 "A class of entity, defined in terms of progression through an educational or"
 " training context, for which the described resource is intended."
-msgstr ""
+msgstr "Аудиторія, яку визначено з точки зору прогресу через освітній або практичний контекст, для якого описаний ресурс призначений."
 
 msgid "Extent"
-msgstr ""
+msgstr "Розмір"
 
 msgid "The size or duration of the resource."
-msgstr ""
+msgstr "Розмір або тривалість ресурсу."
 
 msgid "The file format, physical medium, or dimensions of the resource."
-msgstr ""
+msgstr "Формат файлу, фізичний носій чи розміри ресурсу."
 
 msgid "Instructional Method"
-msgstr ""
+msgstr "Навчальний метод"
 
 msgid ""
 "A process, used to engender knowledge, attitudes and skills, that the "
 "described resource is designed to support."
-msgstr ""
+msgstr "Процес, який використовується для поглиблення знань, навичок та вмінь, що призначений для підтримки описаного ресурсу."
 
 msgid "A language of the resource."
-msgstr ""
+msgstr "Мова ресурсу"
 
 msgid "License"
-msgstr ""
+msgstr "Ліцензія"
 
 msgid ""
 "A legal document giving official permission to do something with the "
 "resource."
-msgstr ""
+msgstr "Юридичний документ, що надає офіційний дозвіл щось зробити з ресурсом."
 
 msgid "Mediator"
-msgstr ""
+msgstr "Посередник"
 
 msgid ""
 "An entity that mediates access to the resource and for whom the resource is "
 "intended or useful."
-msgstr ""
+msgstr "Особа або організація, які є посередниками у створенні доступу до ресурсу, і для якого ресурс призначений або корисний."
 
 msgid "Medium"
-msgstr ""
+msgstr "Носій"
 
 msgid "The material or physical carrier of the resource."
-msgstr ""
+msgstr "Матеріал або фізичний носій ресурсу."
 
 msgid "Provenance"
-msgstr ""
+msgstr "Походження"
 
 msgid ""
 "A statement of any changes in ownership and custody of the resource since "
 "its creation that are significant for its authenticity, integrity, and "
 "interpretation."
-msgstr ""
+msgstr "Угода про будь-які зміни власності та зберіганні ресурсу з моменту його створення, яка є важливими для його автентичності, цілісності та тлумачення."
 
 msgid "An entity responsible for making the resource available."
-msgstr ""
+msgstr "Організація, відповідальна за створення доступу до ресурсу"
 
 msgid "Information about rights held in and over the resource."
-msgstr ""
+msgstr "Інформація про права, що зберігаються в ресурсі та за його межами"
 
 msgid "Rights Holder"
-msgstr ""
+msgstr "Правовласник"
 
 msgid "A person or organization owning or managing rights over the resource."
-msgstr ""
+msgstr "Людина або організація, що володіє чи управляє правами на ресурс."
 
 msgid "Spatial Coverage"
-msgstr ""
+msgstr "Просторове охоплення"
 
 msgid "Spatial characteristics of the resource."
-msgstr ""
+msgstr "Просторові характеристики ресурсу."
 
 msgid "The topic of the resource."
-msgstr ""
+msgstr "Тема ресурсу"
 
 msgid "Table Of Contents"
-msgstr ""
+msgstr "Зміст"
 
 msgid "A list of subunits of the resource."
-msgstr ""
+msgstr "Список підрозділів ресурсу."
 
 msgid "Temporal Coverage"
-msgstr ""
+msgstr "Тимчасове охоплення"
 
 msgid "Temporal characteristics of the resource."
-msgstr ""
+msgstr "Тимчасові характеристики ресурсу."
 
 msgid "The nature or genre of the resource."
-msgstr ""
+msgstr "Природа або жанр ресурсу"
 
 msgid "annotates"
-msgstr ""
+msgstr "анотації"
 
 msgid "Critical or explanatory note for a Document."
-msgstr ""
+msgstr "Примітка про критику чи пояснення для Документа."
 
 msgid "cited by"
-msgstr ""
+msgstr "цитовано"
 
 msgid "Relates a document to another document that cites the first document."
-msgstr ""
+msgstr "Пов'язує документ з іншим документом, який посилається на перший документ."
 
 msgid "cites"
-msgstr ""
+msgstr "цитування"
 
 msgid ""
 "Relates a document to another document that is cited by the first document "
 "as reference, comment, review, quotation or for another purpose."
-msgstr ""
+msgstr "Пов'язує документ з іншим документом, який згадується першим документом як посилання, коментар, огляд, цитата або інше."
 
 msgid "review of"
-msgstr ""
+msgstr "огляд"
 
 msgid "Relates a review document to a reviewed thing (resource, item, etc.)."
-msgstr ""
+msgstr "Пов'язує перегляд документу з преглянутим об'єктом (ресурс, елемент тощо)."
 
 msgid "reproduced in"
-msgstr ""
+msgstr "відтворено в"
 
 msgid "The resource in which another resource is reproduced."
-msgstr ""
+msgstr "Ресурс, в якому відтворюється інший ресурс."
 
 msgid "affirmed by"
-msgstr ""
+msgstr "підтверджено"
 
 msgid "A legal decision that affirms a ruling."
 msgstr ""
@@ -721,52 +720,52 @@ msgstr ""
 #: views/public/common/item-relations-show.php:2
 #: views/shared/common/item-relations-advanced-search.php:3
 msgid "Item Relations"
-msgstr "Везе објекта"
+msgstr ""
 
 #: ItemRelationsPlugin.php:373
 msgid "Subjects"
-msgstr "Субјекти"
+msgstr ""
 
 #: ItemRelationsPlugin.php:375 item_relations_form.php:17
 #: views/shared/common/item-relations-advanced-search.php:17
 msgid "Object"
-msgstr "Објекти"
+msgstr ""
 
 #: ItemRelationsPlugin.php:380
 msgid "These Items"
-msgstr "Ови објекти"
+msgstr ""
 
 #: ItemRelationsPlugin.php:383 item_relations_form.php:41
 msgid "Item ID"
-msgstr "ИД објекта"
+msgstr ""
 
 #: config_form.php:3
 msgid "Append to Public Items Show"
-msgstr "Додај прегледу јавно доступних објеката"
+msgstr ""
 
 #: config_form.php:8
 msgid ""
 "Check this if you want to display an item's relations on its public show "
 "page."
-msgstr "Означи овде уколико желиш да прикажеш везе објекта на страници за јавни приказ."
+msgstr ""
 
 #: config_form.php:17
 msgid "Relation Format"
-msgstr "Формат релације"
+msgstr ""
 
 #: config_form.php:22
 msgid ""
 "Select the format of an item's relations that you would prefer to show. If "
 "one is unavailable the other will be used."
-msgstr "Одабери формат везе објекта који би најрадије желео да се прикаже. Уколико он није доступан, други ће бити коришћен."
+msgstr ""
 
 #: controllers/VocabulariesController.php:50
 msgid "The vocabulary was successfully edited."
-msgstr "Речник је успешно измењен."
+msgstr ""
 
 #: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
 msgid "Browse Vocabularies"
-msgstr "Прегледај Речнике"
+msgstr ""
 
 #: item_relations_form.php:6
 #, php-format
@@ -774,7 +773,7 @@ msgid ""
 "Here you can relate this item to another item and delete existing relations."
 " For descriptions of the relations, see the %s page. Invalid item IDs will "
 "be ignored."
-msgstr "Овде можете поставити везу имеђу објеката и обрисати постојеће релације. За опис ових релација, види %s страницу. Нетачан ИД објекта биће занемарен."
+msgstr ""
 
 #: item_relations_form.php:24 item_relations_form.php:34
 #: item_relations_form.php:39 views/admin/common/item-relations-show.php:10
@@ -782,32 +781,32 @@ msgstr "Овде можете поставити везу имеђу објек�
 #: views/public/common/item-relations-show.php:9
 #: views/public/common/item-relations-show.php:18
 msgid "This Item"
-msgstr "Овај објекат"
+msgstr ""
 
 #: item_relations_form.php:46
 msgid "Add a Relation"
-msgstr "Додај везу"
+msgstr ""
 
 #: models/ItemRelationsProperty.php:62
 msgid "[unknown]"
-msgstr "[непознато]"
+msgstr ""
 
 #: views/admin/common/item-relations-show.php:5
 #: views/public/common/item-relations-show.php:4
 msgid "This item has no relations."
-msgstr "Овај објекат нема веза."
+msgstr ""
 
 #: views/admin/vocabularies/browse.php:8
 msgid "Namespace Prefix"
-msgstr "Префикс простора за назив"
+msgstr ""
 
 #: views/admin/vocabularies/browse.php:9
 msgid "Namespace URI"
-msgstr "URI простора за назив"
+msgstr ""
 
 #: views/admin/vocabularies/edit.php:1
 msgid "Edit Custom Vocabulary"
-msgstr "Уреди прилагођени речник"
+msgstr ""
 
 #: views/admin/vocabularies/edit.php:8
 msgid ""
@@ -815,31 +814,31 @@ msgid ""
 "Property labels must be unique. You cannot edit property labels once they "
 "have been created, so make sure they are spelled correctly and convey the "
 "exact relation you want them to convey."
-msgstr "Овде можете додати, изменити или обрисати поставке вашег прилагођеног речника. Ознаке поставки морају бити једниствене. Не можете уредити ознаку поставке након креирања, тако да будете обазриви да је исправно написана и унета управо на начин на који то желите."
+msgstr ""
 
 #: views/admin/vocabularies/edit.php:37
 msgid "Add a Property"
-msgstr "Додај својство"
+msgstr ""
 
 #: views/admin/vocabularies/show.php:2
 msgid "Vocabulary Properties"
-msgstr "Својства речника"
+msgstr ""
 
 #: views/admin/vocabularies/show.php:7
 msgid "Edit Vocabulary"
-msgstr "Уреди речник"
+msgstr ""
 
 #: views/admin/vocabularies/show.php:14
 msgid "This vocabulary has no properties."
-msgstr "Овај речник нема својства."
+msgstr ""
 
 #: views/admin/vocabularies/show.php:16
 msgid "Why don't you add some?"
-msgstr "Зашто не додаш неко својство?"
+msgstr ""
 
 #: views/admin/vocabularies/show.php:23
 msgid "Local Part"
-msgstr "Локални део"
+msgstr ""
 
 #: views/shared/common/item-relations-advanced-search.php:8
 msgid ""
@@ -848,4 +847,4 @@ msgid ""
 "return all items that have parts. When selecting \"Object\" items with the "
 "same relation, the search will return all items that are parts of other "
 "items."
-msgstr "Филтрирај ову претрагу за објекте са изабраним односом. На пример, приликом избора \"Субјекат\" код објеката са \"hasPart\" односом, претрага ће вратити све објекте који имају ове делове. Приликом одабира \"Објекат\" код објеката у истом односу, претрага ће вратити све објекте који су део других објеката."
+msgstr ""
