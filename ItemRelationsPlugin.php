@@ -36,6 +36,8 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     protected $_filters = array(
         'admin_items_form_tabs',
         'admin_navigation_main',
+        'api_extend_items',
+        'api_resources',
     );
 
     /**
@@ -548,5 +550,46 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
         $itemRelation->save();
 
         return true;
+    }
+
+    /**
+     * Add item relations to API
+     *
+     * @param array $apiResources
+     * @return array
+     */
+    public function filterApiResources($apiResources)
+    {
+        $apiResources['item_relations'] = array(
+            'record_type' => 'ItemRelationsRelation',
+            'actions' => array('index'),
+            'index_params' => array('subject_id', 'object_id', 'item_id'),
+        );
+        return $apiResources;
+    }
+
+    /**
+     * Add item relations linkage to item API
+     *
+     * @param array $extend
+     * @param array $args
+     * @return array
+     */
+    public function filterApiExtendItems($extend, $args)
+    {
+        $item = $args['record'];
+        $id = (int) $item->id;
+        $relationCount = $this->_db->getTable('ItemRelationsRelation')->count(array('item_id' => $id));
+
+        if (!$relationCount) {
+            return $extend;
+        }
+
+        $extend['item_relations'] = array(
+            'count' => $relationCount,
+            'url' => Omeka_Record_Api_AbstractRecordAdapter::getResourceUrl("/item_relations?item_id=" . $id),
+            'resource' => 'item_relations',
+        );
+        return $extend;
     }
 }
