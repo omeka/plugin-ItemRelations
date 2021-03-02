@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Camilo Martinez <cmart@decolector.net>, 2018
-# dario hereñu <magallania@gmail.com>, 2014
+# Darío Hereñú, 2014
 # Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2014
 # Sergi Montes <sergi.blanes@gmail.com>, 2018
 # Silvia Rus <silviarus.biblio@gmail.com>, 2018

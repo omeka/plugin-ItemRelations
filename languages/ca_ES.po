@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the Omeka package.
 # 
 # Translators:
+# Fidel Bellmunt <fidel.bellmunt@gmail.com>, 2019
 # Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2014,2018
+# Sergi Montes <sergi.blanes@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2018-03-01 16:46+0000\n"
-"Last-Translator: Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>\n"
+"PO-Revision-Date: 2019-10-08 09:52+0000\n"
+"Last-Translator: Fidel Bellmunt <fidel.bellmunt@gmail.com>\n"
 "Language-Team: Catalan (Spain) (http://www.transifex.com/omeka/omeka/language/ca_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +27,7 @@ msgid "Conforms To"
 msgstr "D'acord a"
 
 msgid "An established standard to which the described resource conforms."
-msgstr ""
+msgstr "Estàndard acceptat amb el que compleix el recurs descrit."
 
 msgid "Has Format"
 msgstr "Té el format"
@@ -33,7 +35,7 @@ msgstr "Té el format"
 msgid ""
 "A related resource that is substantially the same as the pre-existing "
 "described resource, but in another format."
-msgstr ""
+msgstr "Un recurs relacionat que essencialment és el mateix recurs descrit preexistent, però en un altre format."
 
 msgid "Has Part"
 msgstr "Té part de"
@@ -41,7 +43,7 @@ msgstr "Té part de"
 msgid ""
 "A related resource that is included either physically or logically in the "
 "described resource."
-msgstr ""
+msgstr "Un recurs relacionat que està inclòs física o lògicament en el recurs descrit."
 
 msgid "Has Version"
 msgstr "Té una versió"
@@ -49,7 +51,7 @@ msgstr "Té una versió"
 msgid ""
 "A related resource that is a version, edition, or adaptation of the "
 "described resource."
-msgstr ""
+msgstr "Un recurs relacionat que és una versió, edició o adaptació del recurs descrit."
 
 msgid "Is Format Of"
 msgstr "Format original"
@@ -57,7 +59,7 @@ msgstr "Format original"
 msgid ""
 "A related resource that is substantially the same as the described resource,"
 " but in another format."
-msgstr ""
+msgstr "Un recurs relacionat que essencialment és el mateix recurs descrit, però en un altre format."
 
 msgid "Is Part Of"
 msgstr "És part de"
@@ -65,7 +67,7 @@ msgstr "És part de"
 msgid ""
 "A related resource in which the described resource is physically or "
 "logically included."
-msgstr ""
+msgstr "Un recurs relacionat en el que el recurs descrit està física o lògicament inclòs."
 
 msgid "Is Referenced By"
 msgstr "Referenciat per"
@@ -73,7 +75,7 @@ msgstr "Referenciat per"
 msgid ""
 "A related resource that references, cites, or otherwise points to the "
 "described resource."
-msgstr ""
+msgstr "Un recurs relacionat que fa referència, cita o apunta al recurs descrit."
 
 msgid "Is Replaced By"
 msgstr "Substituït per"
@@ -81,7 +83,7 @@ msgstr "Substituït per"
 msgid ""
 "A related resource that supplants, displaces, or supersedes the described "
 "resource."
-msgstr ""
+msgstr "Un recurs relacionat que suplanta, desplaça o substitueix el recurs descrit."
 
 msgid "Is Required By"
 msgstr "És requerit per"
@@ -89,7 +91,7 @@ msgstr "És requerit per"
 msgid ""
 "A related resource that requires the described resource to support its "
 "function, delivery, or coherence."
-msgstr ""
+msgstr "Un recurs relacionat que requereix el recurs descrit per recolzar la seva funció, lliurament o coherència."
 
 msgid "Is Version Of"
 msgstr "És una versió de"
@@ -97,7 +99,7 @@ msgstr "És una versió de"
 msgid ""
 "A related resource of which the described resource is a version, edition, or"
 " adaptation."
-msgstr ""
+msgstr "Un recurs relacionat del que el recurs descrit n'és una versió, edició o adaptació."
 
 msgid "References"
 msgstr "Referència"
@@ -105,7 +107,7 @@ msgstr "Referència"
 msgid ""
 "A related resource that is referenced, cited, or otherwise pointed to by the"
 " described resource."
-msgstr ""
+msgstr "Un recurs relacionat que és referenciat, citat o assenyalat en alguna forma pel recurs descrit."
 
 msgid "Replaces"
 msgstr "Substitueix"
@@ -141,19 +143,19 @@ msgid ""
 msgstr "Informació sobre qui pot accedir al recurs i la seguretat associada."
 
 msgid "Accrual Method"
-msgstr ""
+msgstr "Mètode d'ingrés"
 
 msgid "The method by which items are added to a collection."
 msgstr ""
 
 msgid "Accrual Periodicity"
-msgstr ""
+msgstr "Periodicitat de l'ingrés"
 
 msgid "The frequency with which items are added to a collection."
 msgstr ""
 
 msgid "Accrual Policy"
-msgstr ""
+msgstr "Política d'ingrés"
 
 msgid "The policy governing the addition of items to a collection."
 msgstr ""
@@ -179,7 +181,7 @@ msgid "An account of the resource."
 msgstr ""
 
 msgid "Audience Education Level"
-msgstr ""
+msgstr "Nivell d'estudis de l'audiència"
 
 msgid ""
 "A class of entity, defined in terms of progression through an educational or"
@@ -190,13 +192,13 @@ msgid "Extent"
 msgstr "Extensió"
 
 msgid "The size or duration of the resource."
-msgstr ""
+msgstr "Mida o durada del recurs"
 
 msgid "The file format, physical medium, or dimensions of the resource."
 msgstr ""
 
 msgid "Instructional Method"
-msgstr ""
+msgstr "Mètode d'instrucció"
 
 msgid ""
 "A process, used to engender knowledge, attitudes and skills, that the "
@@ -215,7 +217,7 @@ msgid ""
 msgstr ""
 
 msgid "Mediator"
-msgstr ""
+msgstr "Mediador"
 
 msgid ""
 "An entity that mediates access to the resource and for whom the resource is "
@@ -229,7 +231,7 @@ msgid "The material or physical carrier of the resource."
 msgstr ""
 
 msgid "Provenance"
-msgstr ""
+msgstr "Procedència"
 
 msgid ""
 "A statement of any changes in ownership and custody of the resource since "
@@ -274,7 +276,7 @@ msgid "The nature or genre of the resource."
 msgstr ""
 
 msgid "annotates"
-msgstr ""
+msgstr "anota"
 
 msgid "Critical or explanatory note for a Document."
 msgstr ""
@@ -286,7 +288,7 @@ msgid "Relates a document to another document that cites the first document."
 msgstr ""
 
 msgid "cites"
-msgstr ""
+msgstr "cita"
 
 msgid ""
 "Relates a document to another document that is cited by the first document "
@@ -294,31 +296,31 @@ msgid ""
 msgstr ""
 
 msgid "review of"
-msgstr ""
+msgstr "revisió de"
 
 msgid "Relates a review document to a reviewed thing (resource, item, etc.)."
 msgstr ""
 
 msgid "reproduced in"
-msgstr ""
+msgstr "reproduït a"
 
 msgid "The resource in which another resource is reproduced."
 msgstr ""
 
 msgid "affirmed by"
-msgstr ""
+msgstr "afirmat per"
 
 msgid "A legal decision that affirms a ruling."
 msgstr ""
 
 msgid "reversed by"
-msgstr ""
+msgstr "invertit per"
 
 msgid "A legal decision that reverses a ruling."
 msgstr ""
 
 msgid "subsequent legal decision"
-msgstr ""
+msgstr "decisió legal subsegüent"
 
 msgid ""
 "A legal decision on appeal that takes action on a case (affirming it, "
@@ -338,7 +340,7 @@ msgid "Relates a translated document to the original document."
 msgstr ""
 
 msgid "based near"
-msgstr ""
+msgstr "basat a prop"
 
 msgid ""
 "A location that something is based near, for some broadly human notion of "
@@ -346,19 +348,19 @@ msgid ""
 msgstr ""
 
 msgid "depiction"
-msgstr ""
+msgstr "representació"
 
 msgid "A depiction of some thing."
 msgstr ""
 
 msgid "depicts"
-msgstr ""
+msgstr "representa"
 
 msgid "A thing depicted in this representation."
 msgstr ""
 
 msgid "funded by"
-msgstr ""
+msgstr "finançat per"
 
 msgid "An organization funding a project or person."
 msgstr ""
@@ -393,13 +395,13 @@ msgid "A logo representing some thing."
 msgstr ""
 
 msgid "made"
-msgstr ""
+msgstr "fet per"
 
 msgid "Something that was made by this agent."
 msgstr ""
 
 msgid "maker"
-msgstr ""
+msgstr "creador"
 
 msgid "An agent that made this thing."
 msgstr ""
@@ -429,19 +431,19 @@ msgid "A derived thumbnail image."
 msgstr "Una imatge derivada en miniatura."
 
 msgid "abridgement"
-msgstr ""
+msgstr "abreviatura"
 
 msgid "A property representing an abridgment of an expression."
 msgstr ""
 
 msgid "abridgement of"
-msgstr ""
+msgstr "abreviatura de"
 
 msgid "A property representing an expression that is abridged."
 msgstr ""
 
 msgid "adaption"
-msgstr ""
+msgstr "adaptació"
 
 msgid "A property representing an adaption of a work or expression."
 msgstr ""
@@ -453,37 +455,37 @@ msgid "A property representing a work or expression that is adapted."
 msgstr ""
 
 msgid "alternate"
-msgstr ""
+msgstr "alternativa"
 
 msgid "A property representing an alternative to a manifestation."
 msgstr ""
 
 msgid "alternate of"
-msgstr ""
+msgstr "alternativa de"
 
 msgid "A property representing a manifestation that is alternated."
 msgstr ""
 
 msgid "arrangement"
-msgstr ""
+msgstr "disposició"
 
 msgid "A property representing an arrangement of an expression."
-msgstr ""
+msgstr "Propietat que representa una disposició d’una expressió."
 
 msgid "arrangement of"
-msgstr ""
+msgstr "disposició de"
 
 msgid "A property representing an expression that is arranged."
 msgstr ""
 
 msgid "complement"
-msgstr ""
+msgstr "complementa"
 
 msgid "A property representing a complement to a work or expression."
 msgstr ""
 
 msgid "complement of"
-msgstr ""
+msgstr "complement de"
 
 msgid "A property representing a work or expression that is complemented."
 msgstr ""
@@ -496,7 +498,7 @@ msgid ""
 msgstr ""
 
 msgid "embodiment"
-msgstr ""
+msgstr "encarna"
 
 msgid ""
 "A property representing an expression that is embodied by a manifestation."
@@ -517,7 +519,7 @@ msgid ""
 msgstr ""
 
 msgid "imitation"
-msgstr ""
+msgstr "imitació"
 
 msgid "A property representing an imitation of a work or expression."
 msgstr ""
@@ -529,7 +531,7 @@ msgid "A property representing a work or expression that is imitated."
 msgstr ""
 
 msgid "owner"
-msgstr ""
+msgstr "propietari"
 
 msgid "A property representing an entity that owns an item."
 msgstr ""
@@ -541,7 +543,7 @@ msgid "A property representing an item that is in some way owned an entity."
 msgstr ""
 
 msgid "part"
-msgstr ""
+msgstr "part"
 
 msgid "A property representing a part of an endeavour."
 msgstr ""
@@ -553,7 +555,7 @@ msgid "A property representing an endeavour incorporating an endeavour."
 msgstr ""
 
 msgid "producer"
-msgstr ""
+msgstr "productor"
 
 msgid ""
 "A property representing an entity in some way responsible for producing a "
@@ -569,7 +571,7 @@ msgid ""
 msgstr ""
 
 msgid "realization"
-msgstr ""
+msgstr "realització"
 
 msgid ""
 "A property representing an expression that is an intellectual or artistic "
@@ -577,14 +579,14 @@ msgid ""
 msgstr ""
 
 msgid "realization of"
-msgstr ""
+msgstr "realització de"
 
 msgid ""
 "A property representing the work that has been realized by an expression."
 msgstr ""
 
 msgid "realizer"
-msgstr ""
+msgstr "realitzador"
 
 msgid ""
 "A property representing an entity in some way responsible for realizing an "
@@ -592,7 +594,7 @@ msgid ""
 msgstr ""
 
 msgid "realizer of"
-msgstr ""
+msgstr "realitzador de"
 
 msgid ""
 "A property representing an expression that was in some way realized by an "
@@ -600,7 +602,7 @@ msgid ""
 msgstr ""
 
 msgid "reconfiguration"
-msgstr ""
+msgstr "reconfiguració"
 
 msgid "A property representing a recongifuration of an item."
 msgstr ""
@@ -612,7 +614,7 @@ msgid "A property representing an item that is reconfigured."
 msgstr ""
 
 msgid "related endeavour"
-msgstr ""
+msgstr "iniciativa relacionada"
 
 msgid ""
 "A property representing another endeavour that is related in some way to an "
@@ -620,7 +622,7 @@ msgid ""
 msgstr ""
 
 msgid "reproduction"
-msgstr ""
+msgstr "reproducció"
 
 msgid "A property representing a reproduction of a manifestation or item."
 msgstr ""
@@ -632,7 +634,7 @@ msgid "A property representing a manifestation or item that is reproduced."
 msgstr ""
 
 msgid "responsible entity"
-msgstr ""
+msgstr "entitat responsable"
 
 msgid ""
 "A property representing an entity in some way responsible for an endeavour."
@@ -647,7 +649,7 @@ msgid ""
 msgstr ""
 
 msgid "revision"
-msgstr ""
+msgstr "revisió"
 
 msgid "A property representing a revision of an expression."
 msgstr ""
@@ -659,31 +661,31 @@ msgid "A property representing an expression that is revised."
 msgstr ""
 
 msgid "successor"
-msgstr ""
+msgstr "successor"
 
 msgid "A property representing a successor to a work or expression."
 msgstr ""
 
 msgid "successor of"
-msgstr ""
+msgstr "successor de"
 
 msgid "A property representing a work or expression that is succeeded."
 msgstr ""
 
 msgid "summarization"
-msgstr ""
+msgstr "resum"
 
 msgid "A property representing a summarization of a work or expression."
 msgstr ""
 
 msgid "summarization of"
-msgstr ""
+msgstr "resum de"
 
 msgid "A property representing a work or expression that is summarized."
 msgstr ""
 
 msgid "supplement"
-msgstr ""
+msgstr "suplement"
 
 msgid "A property representing a supplement to a work or expression."
 msgstr ""

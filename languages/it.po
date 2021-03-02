@@ -3,523 +3,523 @@
 # This file is distributed under the same license as the Omeka package.
 # 
 # Translators:
-# Naosuke Okamoto, 2018-2019
-# Naosuke Okamoto, 2018
-# Yuki Shira <shirayuking@gmail.com>, 2019
+# Daniele Binaghi, 2020
+# Federico Mazzini <fededandy@gmail.com>, 2018
+# Guybrush88 <erpizzo@alice.it>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2019-07-13 04:47+0000\n"
-"Last-Translator: Naosuke Okamoto\n"
-"Language-Team: Japanese (http://www.transifex.com/omeka/omeka/language/ja/)\n"
+"PO-Revision-Date: 2020-01-14 19:17+0000\n"
+"Last-Translator: Daniele Binaghi\n"
+"Language-Team: Italian (http://www.transifex.com/omeka/omeka/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "A related resource."
-msgstr "関連するリソースへの参照"
+msgstr "Una risorsa correlata."
 
 msgid "Conforms To"
-msgstr "Conforms To（準拠）"
+msgstr "Conforme a"
 
 msgid "An established standard to which the described resource conforms."
-msgstr "リソースが準拠する確立した標準"
+msgstr "Uno standard riconosciuto cui la risorsa descritta è conforme"
 
 msgid "Has Format"
-msgstr "別フォーマットがある (Has Format)"
+msgstr "Ha formato"
 
 msgid ""
 "A related resource that is substantially the same as the pre-existing "
 "described resource, but in another format."
-msgstr "既存のリソースと実質的には同じだが別フォーマットである関連リソース"
+msgstr "Una risorsa correlata che è sostanzialmente analoga alla risorsa pre-esistente descritta, ma in altro formato"
 
 msgid "Has Part"
-msgstr "部分がある (Has Part)"
+msgstr "Ha parte"
 
 msgid ""
 "A related resource that is included either physically or logically in the "
 "described resource."
-msgstr "このリソースに物理的または論理的に含まれる関連リソース"
+msgstr "Una risorsa correlata che è inclusa o fisicamente o logicamente nella risorsa descritta."
 
 msgid "Has Version"
-msgstr "改版がある (Has Version)"
+msgstr "Ha versione"
 
 msgid ""
 "A related resource that is a version, edition, or adaptation of the "
 "described resource."
-msgstr "このリソースの別バージョン・別版・改変版となる関連リソース"
+msgstr "Una risorsa correlata che è una versione, edizione o adattamento della risorsa descritta"
 
 msgid "Is Format Of"
-msgstr "別フォーマットである (Is Format Of)"
+msgstr "È formato di"
 
 msgid ""
 "A related resource that is substantially the same as the described resource,"
 " but in another format."
-msgstr "このリソースと実質的に同様であるが別フォーマットである関連リソース"
+msgstr "Una risorsa correlata che è sostanzialmente la stessa della risorsa descritta, ma in un altro formato."
 
 msgid "Is Part Of"
-msgstr "一部である (Is Part Of)"
+msgstr "È parte di"
 
 msgid ""
 "A related resource in which the described resource is physically or "
 "logically included."
-msgstr "このリソースが物理的または論理的に含まれる関連リソース"
+msgstr "Una risorsa correlata nella quale la risorsa descritta è fisicamente o logicamente inclusa."
 
 msgid "Is Referenced By"
-msgstr "引用されている (Is Referenced By)"
+msgstr "Ha riferimento a"
 
 msgid ""
 "A related resource that references, cites, or otherwise points to the "
 "described resource."
-msgstr "このリソースを参照、引用あるいは指し示している関連リソース"
+msgstr "Una risorsa correlata che fa riferimento, cita o comunque punta alla risorsa descritta."
 
 msgid "Is Replaced By"
-msgstr "置き換えられる (Is Replaced By)"
+msgstr "È rimpiazzato da"
 
 msgid ""
 "A related resource that supplants, displaces, or supersedes the described "
 "resource."
-msgstr "このリソースに取って代わる、置き換わる、あるいは後任となる関連リソース"
+msgstr "Una risorsa correlata che rimpiazza o sostituisce la risorsa descritta."
 
 msgid "Is Required By"
-msgstr "必要とされる (Is Required By)"
+msgstr "È richiesto da"
 
 msgid ""
 "A related resource that requires the described resource to support its "
 "function, delivery, or coherence."
-msgstr "機能や動作、あるいは一貫性をサポートするには、このリソースを必要とする関連リソース"
+msgstr "Una risorsa correlata che richiede la risorsa descritta per supportare le sue funzioni, presentazione o coerenza."
 
 msgid "Is Version Of"
-msgstr "改版である (Is Version Of)"
+msgstr "È versione di"
 
 msgid ""
 "A related resource of which the described resource is a version, edition, or"
 " adaptation."
-msgstr "記述されているリソースがバージョン、エディション、または翻案である関連リソース。"
+msgstr "Una risorsa correlata della quale la risorsa descritta è una versione, edizione o adattamento."
 
 msgid "References"
-msgstr "引用している (References)"
+msgstr "Fa riferimento"
 
 msgid ""
 "A related resource that is referenced, cited, or otherwise pointed to by the"
 " described resource."
-msgstr "このリソースにより参照、引用あるいは指し示されている関連リソース"
+msgstr "Una risorsa correlata alla quale viene fatto riferimento, che viene citata o comunque indicata dalla risorsa descritta."
 
 msgid "Replaces"
-msgstr "置き換え (Replaces)"
+msgstr "Rimpiazza"
 
 msgid ""
 "A related resource that is supplanted, displaced, or superseded by the "
 "described resource."
-msgstr "このリソースにより置き換えられた、あるいは取って代わられた関連リソース"
+msgstr "Una risorsa correlata che è rimpiazzata o sostituita dalla risorsa descritta."
 
 msgid "Requires"
-msgstr "必要である (Requires)"
+msgstr "Richiede"
 
 msgid ""
 "A related resource that is required by the described resource to support its"
 " function, delivery, or coherence."
-msgstr "機能や動作、あるいは一貫性をサポートするために、このリソースが必要とする関連リソース"
+msgstr "Una risorsa correlata che è richiesta dalla risorsa descritta per supportare le sue funzioni, presentazione o coerenza."
 
 msgid "A related resource from which the described resource is derived."
-msgstr "リソースの派生元リソースへの参照"
+msgstr "Una risorsa correlata dalla quale la risorsa descritta è derivata."
 
 msgid "Abstract"
-msgstr "要約 (Abstract)"
+msgstr "Abstract"
 
 msgid "A summary of the resource."
-msgstr "リソースサマリー"
+msgstr "Un riassunto della risorsa"
 
 msgid "Access Rights"
-msgstr "アクセス権 (Access Rights)"
+msgstr "Diritti di accesso"
 
 msgid ""
 "Information about who can access the resource or an indication of its "
 "security status."
-msgstr "リソースにアクセスできるユーザーまたはセキュリティステータスの表示に関する情報。"
+msgstr "Informazione su chi puà accedere alla risorsa o una indicazione del suo stato di sicurezza."
 
 msgid "Accrual Method"
-msgstr "発生方法 (Accrual Method)"
+msgstr "Metodo di accumulazione"
 
 msgid "The method by which items are added to a collection."
-msgstr "アイテムをコレクションに追加する方法"
+msgstr "Il metodo con il quale i documenti sono aggiunti alla collezione."
 
 msgid "Accrual Periodicity"
-msgstr "発生頻度 (Accrual Periodicity)"
+msgstr "Periodicità di accumulazione"
 
 msgid "The frequency with which items are added to a collection."
-msgstr "アイテムがコレクションに追加される頻度"
+msgstr "la frequenza con la quale i documenti vengono aggiunti alla collezione."
 
 msgid "Accrual Policy"
-msgstr "発生方針 (Accrual Policy)"
+msgstr "Politica di accumulazione"
 
 msgid "The policy governing the addition of items to a collection."
-msgstr "アイテムがコレクションに追加される際のポリシー"
+msgstr "La politica che regola l'aggiunta di documeti alla collezione."
 
 msgid "Audience"
-msgstr "オーディエンス (Audience)"
+msgstr "Pubblico"
 
 msgid "A class of entity for whom the resource is intended or useful."
-msgstr "リソースが意図している（または有効な）対象者（人）のクラス"
+msgstr "Una classe d'entità per la quale la risorsa è intesa o utile."
 
 msgid "An entity responsible for making contributions to the resource."
-msgstr "リソースへの寄与に責任を持つ（人や組織などの）エンティティ"
+msgstr "Un'entità responsabile dell'effettuazione di contributi alla risorsa."
 
 msgid ""
 "The spatial or temporal topic of the resource, the spatial applicability of "
 "the resource, or the jurisdiction under which the resource is relevant."
-msgstr "リソースの地理的・時間的範囲、リソースが関連する領域"
+msgstr "L'argomento spaziale o temporale della risorsa, l'applicabilità spaziale della risorsa, o la giurisdizione sotto la quale la risorsa risulta essere rilevante."
 
 msgid "An entity primarily responsible for making the resource."
-msgstr "リソースの制作に主たる責任を持つ（人や組織などの）エンティティ"
+msgstr "Un'entità primariamente responsabile per la creazione della risorsa."
 
 msgid "An account of the resource."
-msgstr "リソースの内容の説明"
+msgstr "Un riassunto della risorsa."
 
 msgid "Audience Education Level"
-msgstr "オーディエンスの教育レベル (Audience Education Level)"
+msgstr "Livello educativo del pubblico"
 
 msgid ""
 "A class of entity, defined in terms of progression through an educational or"
 " training context, for which the described resource is intended."
-msgstr "このリソースが意図するもののために、教育（あるいは訓練）のレベルによって定義されるエンティティのクラス"
+msgstr "Una classe di entità, definita in termini di progressione in un contesto educativo o di addestramento, per la quale la risorsa descritta è destinata."
 
 msgid "Extent"
-msgstr "範囲 (Extent)"
+msgstr "Estensione"
 
 msgid "The size or duration of the resource."
-msgstr "リソースのサイズもしくは時間"
+msgstr "La dimensione o durata della risorsa."
 
 msgid "The file format, physical medium, or dimensions of the resource."
-msgstr "リソースのファイル形式、物理媒体、あるいはサイズ"
+msgstr "Il formato file, mezzo fisico o dimensioni della risorsa."
 
 msgid "Instructional Method"
-msgstr "指導法 (Instructional Method)"
+msgstr "Metodo istruttivo"
 
 msgid ""
 "A process, used to engender knowledge, attitudes and skills, that the "
 "described resource is designed to support."
-msgstr "説明されたリソースがサポートするように設計されているという知識、態度、およびスキルを生み出すために使用されるプロセス。"
+msgstr "Un processo, usato per fornire conoscenza, attitudine e abilità, per il quale la risorsa descritta è stata disegnata."
 
 msgid "A language of the resource."
-msgstr "リソースの言語"
+msgstr "Un linguaggio della risorsa."
 
 msgid "License"
-msgstr "ライセンス (License)"
+msgstr "Licenza"
 
 msgid ""
 "A legal document giving official permission to do something with the "
 "resource."
-msgstr "リソース利用の公式な許可を与える法的文書"
+msgstr "Un documento legale che offre un permesso ufficiale per fare qualcosa con la risorsa."
 
 msgid "Mediator"
-msgstr "仲介者 (Mediator)"
+msgstr "Mediatore"
 
 msgid ""
 "An entity that mediates access to the resource and for whom the resource is "
 "intended or useful."
-msgstr "リソースへのアクセスを仲介し、リソースが意図されているかまたは有用であるエンティティ。"
+msgstr "Una entità che media l'accesso alla risorsa e per la quale la risorsa è intesa o utile."
 
 msgid "Medium"
-msgstr "媒体 (Medium)"
+msgstr "Mezzo"
 
 msgid "The material or physical carrier of the resource."
-msgstr "リソースの素材あるいは物理的搬送媒体"
+msgstr "La materia o involucro fisico della risorsa."
 
 msgid "Provenance"
-msgstr "来歴 (Provenance)"
+msgstr "Provenienza"
 
 msgid ""
 "A statement of any changes in ownership and custody of the resource since "
 "its creation that are significant for its authenticity, integrity, and "
 "interpretation."
-msgstr "リソースの作成以降のその信頼性、完全性、および解釈にとって重要な、リソースの所有権および保管の変化に関する記述。"
+msgstr ""
 
 msgid "An entity responsible for making the resource available."
-msgstr "リソースの発行に責任を持つ（人や組織などの）エンティティ"
+msgstr "Un'entità responsabile di rendere disponibile la risorsa."
 
 msgid "Information about rights held in and over the resource."
-msgstr "リソースに関する権利情報"
+msgstr "Informazione sui diritti posseduti sulla risorsa."
 
 msgid "Rights Holder"
-msgstr "権利保持者 (Rights Holder)"
+msgstr "Proprietario dei diritti"
 
 msgid "A person or organization owning or managing rights over the resource."
-msgstr "リソースの権利を保持あるいは管理する人や組織"
+msgstr "Una persona o organizzazione che possiede o amministra i diritti sulla risorsa."
 
 msgid "Spatial Coverage"
-msgstr "空間的範囲 (Spatial Coverage)"
+msgstr "Copertura spaziale"
 
 msgid "Spatial characteristics of the resource."
-msgstr "リソースの空間的な特性"
+msgstr "Caratteristiche spaziali della risorsa."
 
 msgid "The topic of the resource."
-msgstr "リソースのトピック"
+msgstr "Argomento della risorsa."
 
 msgid "Table Of Contents"
-msgstr "目次 (Table Of Contents)"
+msgstr "tabella contenuti"
 
 msgid "A list of subunits of the resource."
-msgstr "リソースのサブユニットのリスト"
+msgstr "Una lista di sottounità della risorsa."
 
 msgid "Temporal Coverage"
-msgstr "時間的範囲 (Temporal Coverage)"
+msgstr "Copertura temporale"
 
 msgid "Temporal characteristics of the resource."
-msgstr "リソースの時間的な特性"
+msgstr "Caratteristiche temporali della risorsa."
 
 msgid "The nature or genre of the resource."
-msgstr "リソースの性質もしくはジャンル"
+msgstr "La natura o genere della risorsa."
 
 msgid "annotates"
-msgstr "注釈（annotetes）"
+msgstr "annota"
 
 msgid "Critical or explanatory note for a Document."
-msgstr "文書に関する重要な注釈"
+msgstr "Nota critica o chiarificatrice per un documento."
 
 msgid "cited by"
-msgstr "によって引用(cited by)"
+msgstr "citato da"
 
 msgid "Relates a document to another document that cites the first document."
-msgstr "ある文書を、最初の文書を引用している別の文書に関連付けます。"
+msgstr "Mette in relazione un documento a un altro documento che cita il primo."
 
 msgid "cites"
-msgstr "引用(cites)"
+msgstr "cita"
 
 msgid ""
 "Relates a document to another document that is cited by the first document "
 "as reference, comment, review, quotation or for another purpose."
-msgstr "ある文書を、参照、コメント、レビュー、引用、または他の目的で最初の文書によって引用されている別の文書に関連付けます。"
+msgstr "Mette un documento in relazione ad un altro che è citato dal primo documento come riferimenti, commento, recensione, citazione o per altro scopo."
 
 msgid "review of"
-msgstr "のレビュー(review of)"
+msgstr "recensione di"
 
 msgid "Relates a review document to a reviewed thing (resource, item, etc.)."
-msgstr "レビュードキュメントをレビュー済みのもの（リソース、アイテムなど）に関連付けます。"
+msgstr "Mette un documento recensione in relazione ad una cosa recensita (risorsa, documento, ecc.)."
 
 msgid "reproduced in"
-msgstr "で再現(reproduced in)"
+msgstr "riprodotta in"
 
 msgid "The resource in which another resource is reproduced."
-msgstr "他のリソースが再現されているリソース。"
+msgstr "La risorsa nella quale un'altra risorsa è riprodotta."
 
 msgid "affirmed by"
-msgstr "によって確認された(affirmed by)"
+msgstr "stabilita da"
 
 msgid "A legal decision that affirms a ruling."
-msgstr "A legal decision that affirms a ruling."
+msgstr "Una decisione legale che stabilisce una sentenza."
 
 msgid "reversed by"
-msgstr "によって逆転(reversed by)"
+msgstr ""
 
 msgid "A legal decision that reverses a ruling."
-msgstr "判決を覆す法的決定。"
+msgstr "Una decisione legale che inverte una sentenza."
 
 msgid "subsequent legal decision"
-msgstr "その後の法的決定"
+msgstr "decisione legale susseguente"
 
 msgid ""
 "A legal decision on appeal that takes action on a case (affirming it, "
 "reversing it, etc.)."
-msgstr "訴訟に対して訴訟を起こす訴訟についての法的決定（それを肯定し、反対にするなど）。"
+msgstr "Una decisione legale in appello che svolge un'azione su un caso (confermandolo, invertendolo, ecc.)."
 
 msgid "transcript of"
-msgstr "の写し(transcript of)"
+msgstr "trascrizione di"
 
 msgid "Relates a document to some transcribed original."
-msgstr "ドキュメントを書き写したされた原本に関連付けます。"
+msgstr "Mette un documento in relazione a dell'originale trascritto."
 
 msgid "translation of"
-msgstr "の翻訳(translation of)"
+msgstr "traduzione di"
 
 msgid "Relates a translated document to the original document."
-msgstr "翻訳済みドキュメントを元のドキュメントに関連付けます。"
+msgstr "Mette un documento tradotto in relazione al documento originale."
 
 msgid "based near"
-msgstr ""
+msgstr "posizionato circa"
 
 msgid ""
 "A location that something is based near, for some broadly human notion of "
 "near."
-msgstr ""
+msgstr "Una località vicino alla quale qualcosa è posizionato, per una generica nozione umana di vicinanza."
 
 msgid "depiction"
-msgstr "描写(depiction)"
+msgstr "raffigurazione"
 
 msgid "A depiction of some thing."
-msgstr "何かの説明"
+msgstr "Una raffigurazione di qualcosa."
 
 msgid "depicts"
-msgstr "描く(depicts)"
+msgstr "raffigura"
 
 msgid "A thing depicted in this representation."
-msgstr "この表現に描かれているもの。"
+msgstr "Una cosa raffigurata in questa rappresentazione."
 
 msgid "funded by"
-msgstr "によって資金を供給(funded by)"
+msgstr "sovvenzionato da"
 
 msgid "An organization funding a project or person."
-msgstr "プロジェクトまたは個人に資金を提供する組織。"
+msgstr "Un'organizzazione che sovvenziona un progetto o persona."
 
 msgid "image"
-msgstr "画像(image)"
+msgstr "immagine"
 
 msgid ""
 "An image that can be used to represent some thing (ie. those depictions "
 "which are particularly representative of something, eg. one’s photo on a "
 "homepage)."
-msgstr "何かを表すために使用できる画像（例：ホームページ上の写真など、特に何かを表すもの）。"
+msgstr "Un'immagine che può essere usata per rappresentare qualcosa (p.e., quelle raffigurazioni che sono particolarmente rappresentative di qualcosa, come la foto di qualcuno su una home page)."
 
 msgid "is primary topic of"
-msgstr ""
+msgstr "è argomento primario di"
 
 msgid "A document that this thing is the primary topic of."
-msgstr "これが主要な話題であるという文書。"
+msgstr "Un documento di cui questa cosa è argomento primario."
 
 msgid "knows"
-msgstr ""
+msgstr "conosce"
 
 msgid ""
 "A person known by this person (indicating some level of reciprocated "
 "interaction between the parties)."
-msgstr "この人に知られている人（パーティー間のあるレベルの相互作用の対話を示す）。"
+msgstr "Una persona conosciuta da questa persona (indica un qualche livello di interazione reciproca tra le parti)"
 
 msgid "logo"
-msgstr "ロゴ"
+msgstr "logo"
 
 msgid "A logo representing some thing."
-msgstr "何かを表すロゴ。"
+msgstr "Un logo che rappresenta qualcosa."
 
 msgid "made"
-msgstr ""
+msgstr "fatto"
 
 msgid "Something that was made by this agent."
-msgstr ""
+msgstr "Qualcosa che è stata fatta da questo agente."
 
 msgid "maker"
-msgstr ""
+msgstr "fattore"
 
 msgid "An agent that made this thing."
-msgstr ""
+msgstr "Un agente che ha fatto questa cosa."
 
 msgid "member"
-msgstr ""
+msgstr "membro"
 
 msgid "Indicates a member of a Group."
-msgstr ""
+msgstr "Indica un membro di un gruppo"
 
 msgid "page"
-msgstr "ページ"
+msgstr "pagina"
 
 msgid "A page or document about this thing."
-msgstr ""
+msgstr "Una pagina o documento su questa cosa."
 
 msgid "primary topic"
-msgstr ""
+msgstr "Argomento primario"
 
 msgid "The primary topic of some page or document."
-msgstr ""
+msgstr "L'argomento primario di qualche pagina o documento."
 
 msgid "thumbnail"
-msgstr ""
+msgstr "miniatura"
 
 msgid "A derived thumbnail image."
-msgstr ""
+msgstr "Un'immagine in miniatura derivata."
 
 msgid "abridgement"
-msgstr ""
+msgstr "compendio"
 
 msgid "A property representing an abridgment of an expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta un compendio di un'espressione."
 
 msgid "abridgement of"
-msgstr ""
+msgstr "compendio di"
 
 msgid "A property representing an expression that is abridged."
-msgstr ""
+msgstr "Una proprietà che rappresenta un'espressione ridotta."
 
 msgid "adaption"
-msgstr ""
+msgstr "adattamento"
 
 msgid "A property representing an adaption of a work or expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta un adattamento di un lavoro o espressione."
 
 msgid "adaption of"
-msgstr ""
+msgstr "adattamento di"
 
 msgid "A property representing a work or expression that is adapted."
-msgstr ""
+msgstr "Una proprietà che rappresenta un lavoro o espressione adattato."
 
 msgid "alternate"
-msgstr ""
+msgstr "alternativa"
 
 msgid "A property representing an alternative to a manifestation."
-msgstr "体現形に代わるものを表す特性。"
+msgstr "Una proprietà che rappresenta un'alternativa a una manifestazione."
 
 msgid "alternate of"
-msgstr ""
+msgstr "alternativa di"
 
 msgid "A property representing a manifestation that is alternated."
-msgstr ""
+msgstr "Una proprietà che rappresenta una manifestazione alternativa."
 
 msgid "arrangement"
-msgstr ""
+msgstr "arrangiamento"
 
 msgid "A property representing an arrangement of an expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta un arrangiamento di un'espressione."
 
 msgid "arrangement of"
-msgstr ""
+msgstr "arrangiamento di"
 
 msgid "A property representing an expression that is arranged."
-msgstr ""
+msgstr "Una proprietà che rappresenta un'espressione arrangiata."
 
 msgid "complement"
-msgstr ""
+msgstr "complemento"
 
 msgid "A property representing a complement to a work or expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta un complemento ad un lavoro o espressione."
 
 msgid "complement of"
-msgstr ""
+msgstr "complemento di"
 
 msgid "A property representing a work or expression that is complemented."
-msgstr ""
+msgstr "Una proprietà che rappresenta un lavoro o espressione complementare."
 
 msgid "creator"
-msgstr ""
+msgstr "creatore"
 
 msgid ""
 "A property representing a work that was in some way created by of an entity."
-msgstr ""
+msgstr "Una proprietà che rappresenta un lavoro in qualche modo creato da un'entità."
 
 msgid "embodiment"
-msgstr ""
+msgstr "personificazione"
 
 msgid ""
 "A property representing an expression that is embodied by a manifestation."
-msgstr ""
+msgstr "Una proprietà che rappresenta un'espressione personificata da una manifestazione."
 
 msgid "exemplar"
-msgstr ""
+msgstr "esemplare"
 
 msgid ""
 "A property representing an item that is an exemplar of a manifestation."
-msgstr ""
+msgstr "Una proprietà che rappresenta un documento che è un esemplare di una manifestazione."
 
 msgid "exemplar of"
-msgstr ""
+msgstr "esemplare di"
 
 msgid ""
 "A property representing the manifestation that is exemplified by a item."
-msgstr ""
+msgstr "Una proprietà che rappresenta la manifestazione che è esemplificata dal documento."
 
 msgid "imitation"
-msgstr ""
+msgstr "imitazione"
 
 msgid "A property representing an imitation of a work or expression."
 msgstr ""
@@ -709,7 +709,7 @@ msgid "A property representing a work or expression that is transformed."
 msgstr ""
 
 msgid "translation"
-msgstr "翻訳"
+msgstr ""
 
 msgid "A property representing a translation of an expression."
 msgstr ""
@@ -726,20 +726,20 @@ msgstr ""
 
 #: ItemRelationsPlugin.php:373
 msgid "Subjects"
-msgstr ""
+msgstr "Soggetti"
 
 #: ItemRelationsPlugin.php:375 item_relations_form.php:17
 #: views/shared/common/item-relations-advanced-search.php:17
 msgid "Object"
-msgstr "オブジェクト"
+msgstr "Oggetto"
 
 #: ItemRelationsPlugin.php:380
 msgid "These Items"
-msgstr ""
+msgstr "Questi oggetti"
 
 #: ItemRelationsPlugin.php:383 item_relations_form.php:41
 msgid "Item ID"
-msgstr ""
+msgstr "ID dell'oggetto"
 
 #: config_form.php:3
 msgid "Append to Public Items Show"
@@ -767,7 +767,7 @@ msgstr ""
 
 #: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
 msgid "Browse Vocabularies"
-msgstr ""
+msgstr "Esplora i vocabolari"
 
 #: item_relations_form.php:6
 #, php-format
@@ -783,20 +783,20 @@ msgstr ""
 #: views/public/common/item-relations-show.php:9
 #: views/public/common/item-relations-show.php:18
 msgid "This Item"
-msgstr ""
+msgstr "Questo oggetto"
 
 #: item_relations_form.php:46
 msgid "Add a Relation"
-msgstr ""
+msgstr "Aggiungi una relazione"
 
 #: models/ItemRelationsProperty.php:62
 msgid "[unknown]"
-msgstr "[不明]"
+msgstr "[sconosciuto]"
 
 #: views/admin/common/item-relations-show.php:5
 #: views/public/common/item-relations-show.php:4
 msgid "This item has no relations."
-msgstr ""
+msgstr "Questo oggetto non ha relazioni."
 
 #: views/admin/vocabularies/browse.php:8
 msgid "Namespace Prefix"
@@ -808,7 +808,7 @@ msgstr ""
 
 #: views/admin/vocabularies/edit.php:1
 msgid "Edit Custom Vocabulary"
-msgstr ""
+msgstr "Modifica il vocabolario personalizzato"
 
 #: views/admin/vocabularies/edit.php:8
 msgid ""
@@ -820,27 +820,27 @@ msgstr ""
 
 #: views/admin/vocabularies/edit.php:37
 msgid "Add a Property"
-msgstr ""
+msgstr "Aggiungi una proprietà"
 
 #: views/admin/vocabularies/show.php:2
 msgid "Vocabulary Properties"
-msgstr ""
+msgstr "Proprietà del vocabolario"
 
 #: views/admin/vocabularies/show.php:7
 msgid "Edit Vocabulary"
-msgstr ""
+msgstr "Modifica il vocabolario"
 
 #: views/admin/vocabularies/show.php:14
 msgid "This vocabulary has no properties."
-msgstr ""
+msgstr "Questo vocabolario non ha proprietà."
 
 #: views/admin/vocabularies/show.php:16
 msgid "Why don't you add some?"
-msgstr ""
+msgstr "Perché non ne aggiungi un po'?"
 
 #: views/admin/vocabularies/show.php:23
 msgid "Local Part"
-msgstr ""
+msgstr "Parte locale"
 
 #: views/shared/common/item-relations-advanced-search.php:8
 msgid ""

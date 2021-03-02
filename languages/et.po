@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2018-02-27 18:23+0000\n"
+"PO-Revision-Date: 2018-11-09 20:15+0000\n"
 "Last-Translator: Rivo Zängov <eraser@eraser.ee>\n"
 "Language-Team: Estonian (http://www.transifex.com/omeka/omeka/language/et/)\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "A related resource."
-msgstr ""
+msgstr "Seotud ressurss."
 
 msgid "Conforms To"
 msgstr ""
@@ -204,10 +204,10 @@ msgid ""
 msgstr ""
 
 msgid "A language of the resource."
-msgstr ""
+msgstr "Ressursi keel."
 
 msgid "License"
-msgstr ""
+msgstr "Litsents"
 
 msgid ""
 "A legal document giving official permission to do something with the "
@@ -226,7 +226,7 @@ msgid "Medium"
 msgstr ""
 
 msgid "The material or physical carrier of the resource."
-msgstr ""
+msgstr "Inforessursi materjal või füüsiline kandja."
 
 msgid "Provenance"
 msgstr ""
@@ -259,19 +259,19 @@ msgid "The topic of the resource."
 msgstr ""
 
 msgid "Table Of Contents"
-msgstr ""
+msgstr "Sisukord"
 
 msgid "A list of subunits of the resource."
-msgstr ""
+msgstr "Inforessursi alamühikute loend."
 
 msgid "Temporal Coverage"
 msgstr ""
 
 msgid "Temporal characteristics of the resource."
-msgstr ""
+msgstr "Inforessursi ajalised tunnused."
 
 msgid "The nature or genre of the resource."
-msgstr ""
+msgstr "Inforessursi olemus või laad."
 
 msgid "annotates"
 msgstr ""
@@ -358,10 +358,10 @@ msgid "A thing depicted in this representation."
 msgstr ""
 
 msgid "funded by"
-msgstr ""
+msgstr "rahastaja"
 
 msgid "An organization funding a project or person."
-msgstr ""
+msgstr "Projekti või isiku rahastaja."
 
 msgid "image"
 msgstr "pilt"
@@ -707,7 +707,7 @@ msgid "A property representing a work or expression that is transformed."
 msgstr ""
 
 msgid "translation"
-msgstr ""
+msgstr "tõlge"
 
 msgid "A property representing a translation of an expression."
 msgstr ""

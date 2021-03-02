@@ -4,14 +4,15 @@
 # 
 # Translators:
 # Carlos Eduardo Maciel <carlosmaciel1@gmail.com>, 2016
+# m tk, 2021
 # Tel, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Omeka\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2018-01-11 16:33+0000\n"
-"Last-Translator: patrickmj <patrickmjchnm@gmail.com>\n"
+"PO-Revision-Date: 2021-01-08 20:05+0000\n"
+"Last-Translator: m tk\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/omeka/omeka/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,48 +21,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "A related resource."
-msgstr ""
+msgstr "Recurso relacionado."
 
 msgid "Conforms To"
-msgstr ""
+msgstr "Em conformidade com"
 
 msgid "An established standard to which the described resource conforms."
-msgstr ""
+msgstr "Um padrão estabelecido ao qual o recurso descrito está em conformidade."
 
 msgid "Has Format"
-msgstr ""
+msgstr "Possui formato"
 
 msgid ""
 "A related resource that is substantially the same as the pre-existing "
 "described resource, but in another format."
-msgstr ""
+msgstr "Um recurso relacionado que é praticamente o mesmo que o recurso descrito preexistente, mas em outro formato."
 
 msgid "Has Part"
-msgstr ""
+msgstr "Possui uma parte"
 
 msgid ""
 "A related resource that is included either physically or logically in the "
 "described resource."
-msgstr ""
+msgstr "Um recurso relacionado que está incluso física ou logicamente no recurso descrito."
 
 msgid "Has Version"
-msgstr ""
+msgstr "Possui uma versão"
 
 msgid ""
 "A related resource that is a version, edition, or adaptation of the "
 "described resource."
-msgstr ""
+msgstr "Um recurso relacionado que é uma versão, edição ou adaptação do recurso descrito."
 
 msgid "Is Format Of"
-msgstr ""
+msgstr "É um formato de"
 
 msgid ""
 "A related resource that is substantially the same as the described resource,"
 " but in another format."
-msgstr ""
+msgstr "Recurso relacionado que é substancialmente o mesmo que o recurso descrito, no entanto, em outro formato."
 
 msgid "Is Part Of"
-msgstr ""
+msgstr "É parte de"
 
 msgid ""
 "A related resource in which the described resource is physically or "
