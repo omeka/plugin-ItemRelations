@@ -31,7 +31,7 @@ class Table_ItemRelationsProperty extends Omeka_Db_Table
                     'vocabulary_namespace_uri' => 'namespace_uri'
                 )
             )
-            ->order('custom DESC');
+            ->order('custom DESC')->order('name ASC')->order('label ASC');
     }
 
     /**
