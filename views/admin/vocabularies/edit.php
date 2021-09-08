@@ -28,8 +28,8 @@
             </tr>
     <?php endforeach; ?>
             <tr class="new-property">
-                <td><?php echo __($this->formText("new_property_label[]"), null, array('size' => 20)); ?></td>
-                <td><?php echo __($this->formTextarea("new_property_description[]"), null, array('cols' => 50, 'rows' => 2)); ?></td>
+                <td><?php echo __($this->formText("new_property_label[]", null, array('size' => 20))); ?></td>
+                <td><?php echo __($this->formTextarea("new_property_description[]", null, array('cols' => 50, 'rows' => 2))); ?></td>
                 <td><span style="color:#ccc;">n/a</span></td>
             </tr>
         </tbody>
