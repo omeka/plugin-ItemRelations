@@ -368,25 +368,27 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
 ?>
 <fieldset id="item-relation-fields">
 <h2><?php echo __('Item Relations'); ?></h2>
-<table>
-    <thead>
-    <tr>
-        <th><?php echo __('Subjects'); ?></th>
-        <th><?php echo __('Relation'); ?></th>
-        <th><?php echo __('Object');  ?></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><?php echo __('These Items'); ?></td>
-        <td><?php echo get_view()->formSelect('custom[item_relations_property_id]', null, array(), $formSelectProperties); ?></td>
-        <td>
-            <?php echo __('Item ID'); ?>
-            <?php echo get_view()->formText('custom[item_relations_item_relation_object_item_id]', null, array('size' => 6)); ?>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table>
+        <thead>
+        <tr>
+            <th><?php echo __('Subjects'); ?></th>
+            <th><?php echo __('Relation'); ?></th>
+            <th><?php echo __('Object');  ?></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><?php echo __('These Items'); ?></td>
+            <td><?php echo get_view()->formSelect('custom[item_relations_property_id]', null, array(), $formSelectProperties); ?></td>
+            <td>
+                <?php echo __('Item ID'); ?>
+                <?php echo get_view()->formText('custom[item_relations_item_relation_object_item_id]', null, array('size' => 6)); ?>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </fieldset>
 <?php
     }

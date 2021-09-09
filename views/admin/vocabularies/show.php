@@ -17,23 +17,25 @@ $properties = $vocabulary->getProperties();
     <?php endif; ?>
 </p>
 <?php else: ?>
-<table>
-    <thead>
-    <tr>
-        <th><?php echo __('Local Part'); ?></th>
-        <th><?php echo __('Label'); ?></th>
-        <th><?php echo __('Description'); ?></th>
-    </tr>
-    </thead>
-    <tbody>
-<?php foreach ($properties as $property): ?>
-    <tr>
-        <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $property->local_part; ?></td>
-        <td><?php echo __($property->label); ?></td>
-        <td><?php echo __($property->description); ?></td>
-    </tr>
-<?php endforeach; ?>
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table>
+        <thead>
+        <tr>
+            <th><?php echo __('Local Part'); ?></th>
+            <th><?php echo __('Label'); ?></th>
+            <th><?php echo __('Description'); ?></th>
+        </tr>
+        </thead>
+        <tbody>
+    <?php foreach ($properties as $property): ?>
+        <tr>
+            <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $property->local_part; ?></td>
+            <td><?php echo __($property->label); ?></td>
+            <td><?php echo __($property->description); ?></td>
+        </tr>
+    <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
 <?php endif; ?>
 <?php echo foot(); ?>
