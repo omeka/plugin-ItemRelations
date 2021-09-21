@@ -6,7 +6,7 @@
 # Evy De Wulf <evy.dewulf@libis.kuleuven.be>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: Omeka\n"
+"Project-Id-Version: Omeka Classic\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
 "PO-Revision-Date: 2018-01-11 16:33+0000\n"

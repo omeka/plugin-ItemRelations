@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the Omeka package.
 # 
 # Translators:
-# Daniele Binaghi, 2020
+# Daniele Binaghi, 2020-2021
 # Federico Mazzini <fededandy@gmail.com>, 2018
 # Guybrush88 <erpizzo@alice.it>, 2015
+# Joe Mauri <asbruff@gmail.com>, 2021
 msgid ""
 msgstr ""
-"Project-Id-Version: Omeka\n"
+"Project-Id-Version: Omeka Classic\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2020-01-14 19:17+0000\n"
+"PO-Revision-Date: 2021-06-25 10:37+0000\n"
 "Last-Translator: Daniele Binaghi\n"
 "Language-Team: Italian (http://www.transifex.com/omeka/omeka/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -237,7 +238,7 @@ msgid ""
 "A statement of any changes in ownership and custody of the resource since "
 "its creation that are significant for its authenticity, integrity, and "
 "interpretation."
-msgstr ""
+msgstr "Una affermazione di qualsiasi variazione di proprietà e custodia della risorsa dalla sua creazione significativa per la sua autenticità, integrità e interpretazione."
 
 msgid "An entity responsible for making the resource available."
 msgstr "Un'entità responsabile di rendere disponibile la risorsa."
@@ -314,7 +315,7 @@ msgid "A legal decision that affirms a ruling."
 msgstr "Una decisione legale che stabilisce una sentenza."
 
 msgid "reversed by"
-msgstr ""
+msgstr "invertito da"
 
 msgid "A legal decision that reverses a ruling."
 msgstr "Una decisione legale che inverte una sentenza."
@@ -522,207 +523,207 @@ msgid "imitation"
 msgstr "imitazione"
 
 msgid "A property representing an imitation of a work or expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta un'imitazione di un lavoro o espressione."
 
 msgid "imitation of"
-msgstr ""
+msgstr "imitazione di"
 
 msgid "A property representing a work or expression that is imitated."
-msgstr ""
+msgstr "Una proprietà che rappresenta un lavoro o espressione che è imitato."
 
 msgid "owner"
-msgstr ""
+msgstr "proprietario"
 
 msgid "A property representing an entity that owns an item."
-msgstr ""
+msgstr "Una proprietà che rappresenta una entità a cui appartiene un documento."
 
 msgid "owner of"
-msgstr ""
+msgstr "proprietario di"
 
 msgid "A property representing an item that is in some way owned an entity."
-msgstr ""
+msgstr "Una proprietà che rappresenta un oggetto in qualche modo di proprietà di un'entità."
 
 msgid "part"
-msgstr ""
+msgstr "parte"
 
 msgid "A property representing a part of an endeavour."
-msgstr ""
+msgstr "Una proprietà che rappresenta parte di un tentativo."
 
 msgid "part of"
-msgstr ""
+msgstr "parte di"
 
 msgid "A property representing an endeavour incorporating an endeavour."
-msgstr ""
+msgstr "Una proprietà che rappresenta un tentativo che incorpora un tentativo."
 
 msgid "producer"
-msgstr ""
+msgstr "produttore"
 
 msgid ""
 "A property representing an entity in some way responsible for producing a "
 "manifestation."
-msgstr ""
+msgstr "Una proprietà che rappresenta un entità in qualche modo responsabile per la produzione di una manifestazione."
 
 msgid "producer of"
-msgstr ""
+msgstr "produttore di"
 
 msgid ""
 "A property representing a manifestation that was in some way produced an "
 "entity."
-msgstr ""
+msgstr "Una proprietà che rappresenta una manifestazione in qualche modo prodotta da un'entità."
 
 msgid "realization"
-msgstr ""
+msgstr "realizzazione"
 
 msgid ""
 "A property representing an expression that is an intellectual or artistic "
 "realization of a work."
-msgstr ""
+msgstr "Una proprietà che rappresenta una espressione che è la realizzazione di un lavoro intellettuale o artistico."
 
 msgid "realization of"
-msgstr ""
+msgstr "realizzazione di"
 
 msgid ""
 "A property representing the work that has been realized by an expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta il lavoro che è stato realizzato da un'espressione."
 
 msgid "realizer"
-msgstr ""
+msgstr "realizzatore"
 
 msgid ""
 "A property representing an entity in some way responsible for realizing an "
 "expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta una entità in qualche modo responsabile della realizzazione di una espressione."
 
 msgid "realizer of"
-msgstr ""
+msgstr "realizzatore di"
 
 msgid ""
 "A property representing an expression that was in some way realized by an "
 "entity."
-msgstr ""
+msgstr "Una proprietà che rappresenta una espressione in qualche modo realizzato da un'entità."
 
 msgid "reconfiguration"
-msgstr ""
+msgstr "riconfigurazione"
 
 msgid "A property representing a recongifuration of an item."
-msgstr ""
+msgstr "Una proprietà che rappresenta una riconfigurazione di un oggetto."
 
 msgid "reconfiguration of"
-msgstr ""
+msgstr "riconfigurazione di"
 
 msgid "A property representing an item that is reconfigured."
-msgstr ""
+msgstr "Una proprietà che rappresenta un oggetto che è riconfigurato."
 
 msgid "related endeavour"
-msgstr ""
+msgstr "tentativo correlato"
 
 msgid ""
 "A property representing another endeavour that is related in some way to an "
 "endeavour."
-msgstr ""
+msgstr "Una proprietà che rappresenta un altro tentativo che è correlato in qualche modo a un tentativo."
 
 msgid "reproduction"
-msgstr ""
+msgstr "riproduzione"
 
 msgid "A property representing a reproduction of a manifestation or item."
-msgstr ""
+msgstr "Una proprietà che rappresenta una riproduzione di una manifestazione o documento."
 
 msgid "reproduction of"
-msgstr ""
+msgstr "riproduzione di"
 
 msgid "A property representing a manifestation or item that is reproduced."
-msgstr ""
+msgstr "Una proprietà che rappresenta una manifestazione o documento che è riprodotto."
 
 msgid "responsible entity"
-msgstr ""
+msgstr "entità responsabile"
 
 msgid ""
 "A property representing an entity in some way responsible for an endeavour."
-msgstr ""
+msgstr "Una proprietà che rappresenta una entità in qualche modo responsabile di un tentativo."
 
 msgid "responsible entity of"
-msgstr ""
+msgstr "ente responsabile di"
 
 msgid ""
 "A property representing an endeavour that is the responsibility of an "
 "entity."
-msgstr ""
+msgstr "Una proprietà che rappresenta un tentativo che è responsabilità di una entità."
 
 msgid "revision"
-msgstr ""
+msgstr "revisione"
 
 msgid "A property representing a revision of an expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta una revisione di una espressione."
 
 msgid "revision of"
-msgstr ""
+msgstr "revisione di"
 
 msgid "A property representing an expression that is revised."
-msgstr ""
+msgstr "Una proprietà che rappresenta una espressione rielaborata."
 
 msgid "successor"
-msgstr ""
+msgstr "successore"
 
 msgid "A property representing a successor to a work or expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta il successore di un lavoro o espressione."
 
 msgid "successor of"
-msgstr ""
+msgstr "successore di"
 
 msgid "A property representing a work or expression that is succeeded."
-msgstr ""
+msgstr "Una proprietà che rappresenta un lavoro o espressione riusciti."
 
 msgid "summarization"
-msgstr ""
+msgstr "riepilogo"
 
 msgid "A property representing a summarization of a work or expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta il riepilogo di un lavoro o espressione."
 
 msgid "summarization of"
-msgstr ""
+msgstr "riepilogo di"
 
 msgid "A property representing a work or expression that is summarized."
-msgstr ""
+msgstr "Una proprietà che rappresenta un lavoro o espressione riepilogati."
 
 msgid "supplement"
-msgstr ""
+msgstr "integrazione"
 
 msgid "A property representing a supplement to a work or expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta una integrazione ad un lavoro o espressione."
 
 msgid "supplement of"
-msgstr ""
+msgstr "integrazione di"
 
 msgid "A property representing a work or expression that is supplemented."
-msgstr ""
+msgstr "Una proprietà che rappresenta un lavoro o espressione che sono integrati."
 
 msgid "transformation"
-msgstr ""
+msgstr "trasformazione"
 
 msgid "A property representing a transformation of a work or expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta una trasformazione di un lavoro o espressione."
 
 msgid "transformation of"
-msgstr ""
+msgstr "trasformazione di"
 
 msgid "A property representing a work or expression that is transformed."
-msgstr ""
+msgstr "Una proprietà che rappresenta un lavoro o espressione trasformati."
 
 msgid "translation"
-msgstr ""
+msgstr "traduzione"
 
 msgid "A property representing a translation of an expression."
-msgstr ""
+msgstr "Una proprietà che rappresenta una traduzione di una espressione."
 
 msgid "A property representing an expression that is translated."
-msgstr ""
+msgstr "Una proprietà che rappresenta un'espressione tradotta."
 
 #: ItemRelationsPlugin.php:369 ItemRelationsPlugin.php:419
 #: views/admin/common/item-relations-show.php:2
 #: views/public/common/item-relations-show.php:2
 #: views/shared/common/item-relations-advanced-search.php:3
 msgid "Item Relations"
-msgstr ""
+msgstr "Relazione tra documenti"
 
 #: ItemRelationsPlugin.php:373
 msgid "Subjects"
@@ -743,27 +744,27 @@ msgstr "ID dell'oggetto"
 
 #: config_form.php:3
 msgid "Append to Public Items Show"
-msgstr ""
+msgstr "Aggiungi ai Documenti Pubblici"
 
 #: config_form.php:8
 msgid ""
 "Check this if you want to display an item's relations on its public show "
 "page."
-msgstr ""
+msgstr "Seleziona se vuoi mostrare le relazioni di un documento nella sua pagina pubblica."
 
 #: config_form.php:17
 msgid "Relation Format"
-msgstr ""
+msgstr "Formato Relazioni"
 
 #: config_form.php:22
 msgid ""
 "Select the format of an item's relations that you would prefer to show. If "
 "one is unavailable the other will be used."
-msgstr ""
+msgstr "Seleziona il formato delle relazioni di un documento che preferiresti mostrare. Se uno non è disponibile verrà utilizzato l'altro."
 
 #: controllers/VocabulariesController.php:50
 msgid "The vocabulary was successfully edited."
-msgstr ""
+msgstr "Il vocabolario è stato modificato con successo."
 
 #: item_relations_form.php:4 views/admin/vocabularies/browse.php:1
 msgid "Browse Vocabularies"
@@ -775,7 +776,7 @@ msgid ""
 "Here you can relate this item to another item and delete existing relations."
 " For descriptions of the relations, see the %s page. Invalid item IDs will "
 "be ignored."
-msgstr ""
+msgstr "Qui puoi mettere in relazione questo documento con un altro e cancellare le relazioni esistenti. Per le descrizioni delle relazioni, guarda a pagina %s. Gli ID documento invalidi verranno ignorati."
 
 #: item_relations_form.php:24 item_relations_form.php:34
 #: item_relations_form.php:39 views/admin/common/item-relations-show.php:10
@@ -800,11 +801,11 @@ msgstr "Questo oggetto non ha relazioni."
 
 #: views/admin/vocabularies/browse.php:8
 msgid "Namespace Prefix"
-msgstr ""
+msgstr "Prefisso Namespace"
 
 #: views/admin/vocabularies/browse.php:9
 msgid "Namespace URI"
-msgstr ""
+msgstr "URI Namespace"
 
 #: views/admin/vocabularies/edit.php:1
 msgid "Edit Custom Vocabulary"
@@ -816,7 +817,7 @@ msgid ""
 "Property labels must be unique. You cannot edit property labels once they "
 "have been created, so make sure they are spelled correctly and convey the "
 "exact relation you want them to convey."
-msgstr ""
+msgstr "Qui puoi aggiungere, modificare e cancellare proprietà nel tuo vocabolario personale. Le etichette proprietà devono essere uniche. Una volta create non puoi modificare le etichette proprietà, quindi assicurati che l'ortografia sia corretta e che esprimano l'esatta relazione che vuoi esprimano."
 
 #: views/admin/vocabularies/edit.php:37
 msgid "Add a Property"
@@ -849,4 +850,4 @@ msgid ""
 "return all items that have parts. When selecting \"Object\" items with the "
 "same relation, the search will return all items that are parts of other "
 "items."
-msgstr ""
+msgstr "Filtra questa ricerca per gli oggetti con le relazioni selezionate. Per esempio, quando selezioni documenti \"Soggetto\" con la relazione \"ha parte\", la ricerca mostrerà tutti i documenti che hanno delle parti. Quando selezioni documenti \"Oggetto\" con la stessa relazione, la ricerca mostrerà tutti i documenti che sono parte di altri documenti."

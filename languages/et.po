@@ -6,7 +6,7 @@
 # Rivo Zängov <eraser@eraser.ee>, 2015-2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Omeka\n"
+"Project-Id-Version: Omeka Classic\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
 "PO-Revision-Date: 2018-11-09 20:15+0000\n"

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the Omeka package.
 # 
 # Translators:
-# Hong Zhang <zhangh@unlv.nevada.edu>, 2018
+# Hong Zhang <zhangh@unlv.nevada.edu>, 2018,2021
 msgid ""
 msgstr ""
-"Project-Id-Version: Omeka\n"
+"Project-Id-Version: Omeka Classic\n"
 "Report-Msgid-Bugs-To: http://github.com/omeka/plugin-ItemRelations/issues\n"
 "POT-Creation-Date: 2014-01-13 12:59-0500\n"
-"PO-Revision-Date: 2018-03-09 02:36+0000\n"
+"PO-Revision-Date: 2021-04-01 14:13+0000\n"
 "Last-Translator: Hong Zhang <zhangh@unlv.nevada.edu>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/omeka/omeka/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -364,7 +364,7 @@ msgid "An organization funding a project or person."
 msgstr "赞助一个项目或个人的组织。"
 
 msgid "image"
-msgstr "图片"
+msgstr "图像"
 
 msgid ""
 "An image that can be used to represent some thing (ie. those depictions "
@@ -647,13 +647,13 @@ msgid ""
 msgstr "代表了一个实体的责任的努力的属性。"
 
 msgid "revision"
-msgstr "校订"
+msgstr "修订"
 
 msgid "A property representing a revision of an expression."
-msgstr "代表了表达的校订本的属性。"
+msgstr "代表了表达的修订本的属性。"
 
 msgid "revision of"
-msgstr "是下面的校订："
+msgstr "是下面的修订："
 
 msgid "A property representing an expression that is revised."
 msgstr "代表了被校订的表达的属性。"
