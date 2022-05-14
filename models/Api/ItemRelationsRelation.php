@@ -12,17 +12,17 @@ class Api_ItemRelationsRelation extends Omeka_Record_Api_AbstractRecordAdapter
             $term = null;
         }
         $subject=get_record_by_id('item',$record->subject_item_id);
-		$object=get_record_by_id('item',$record->object_item_id);
-		
+        $object=get_record_by_id('item',$record->object_item_id);
+        
         return array(
             'subject' => array(
                 'id' => $record->subject_item_id,
                 'url' => self::getResourceUrl("/items/{$record->subject_item_id}"),
-				'label' => ItemRelationsPlugin::getItemTitle($subject),
+                'title' => ItemRelationsPlugin::getItemTitle($subject),
                 'resource' => 'items',
             ),
             'relation' => array(
-				'id' => $record->property_id,
+                'id' => $record->property_id,
                 'term' => $term,
                 'label' => $record->property_label,
                 'vocabulary' => $record->vocabulary_name,
@@ -30,13 +30,39 @@ class Api_ItemRelationsRelation extends Omeka_Record_Api_AbstractRecordAdapter
             'object' => array(
                 'id' => $record->object_item_id,
                 'url' => self::getResourceUrl("/items/{$record->object_item_id}"),
-				'label' => ItemRelationsPlugin::getItemTitle($object),
+                'title' => ItemRelationsPlugin::getItemTitle($object),
                 'resource' => 'items',
             ),
-			'item_relation' => array(
-				'id' => $record->id,
-				'resource' => 'item_relations',
-			),
+            'item_relation' => array(
+                'id' => $record->id,
+                'resource' => 'item_relations',
+            ),
         );
+        /*
+        return array(
+            'item_relation' => array(
+                'id' => $record->id,
+                'resource' => 'item_relations',
+                'subject' => array(
+                    'id' => $record->subject_item_id,
+                    'url' => self::getResourceUrl("/items/{$record->subject_item_id}"),
+                    'title' => ItemRelationsPlugin::getItemTitle($subject),
+                    'resource' => 'items',
+                ),
+                'relation' => array(
+                    'id' => $record->property_id,
+                    'term' => $term,
+                    'label' => $record->property_label,
+                    'vocabulary' => $record->vocabulary_name,
+                ),
+                'object' => array(
+                    'id' => $record->object_item_id,
+                    'url' => self::getResourceUrl("/items/{$record->object_item_id}"),
+                    'title' => ItemRelationsPlugin::getItemTitle($object),
+                    'resource' => 'items',
+                )
+            )
+        );
+        */
     }
 }
