@@ -15,8 +15,8 @@
         <tr>
             <td><a href="<?php echo html_escape($this->url("item-relations/vocabularies/show/id/{$vocabulary->id}")); ?>"><?php echo $vocabulary->name; ?></a></td>
             <td><?php echo __($vocabulary->description); ?></td>
-            <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $vocabulary->namespace_prefix; ?></td>
-            <td><?php echo $vocabulary->custom ? '<span style="color:#ccc;">n/a</span>' : $vocabulary->namespace_uri; ?></td>
+            <td><?php echo $vocabulary->custom ? __('n/a') : $vocabulary->namespace_prefix; ?></td>
+            <td><?php echo $vocabulary->custom ? __('n/a') : $vocabulary->namespace_uri; ?></td>
         </tr>
     <?php endforeach; ?>
         </tbody>
