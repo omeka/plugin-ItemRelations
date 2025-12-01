@@ -163,7 +163,7 @@ class ItemRelationsPlugin extends Omeka_Plugin_AbstractPlugin
     public static function hookConfig()
     {
         set_option('item_relations_public_append_to_items_show',
-            (int)(boolean) $_POST['item_relations_public_append_to_items_show']);
+            (int)(bool) $_POST['item_relations_public_append_to_items_show']);
         set_option('item_relations_relation_format',
             $_POST['item_relations_relation_format']);
     }
