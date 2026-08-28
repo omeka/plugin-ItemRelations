@@ -24,13 +24,13 @@ echo __('Here you can relate this item to another item and delete existing '
         <tr>
             <td><?php echo __('This Item'); ?></td>
             <td><?php echo $subjectRelation['relation_text']; ?></td>
-            <td><a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>" target="_blank"><?php echo $subjectRelation['object_item_title']; ?></a></td>
+            <td><a href="<?php echo url('items/show/' . $subjectRelation['object_item_id']); ?>" target="_blank"><?php echo $subjectRelation['object_item_title']; ?> <span class="sr-only"><?php echo __('(external link)'); ?></span></a></td>
             <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $subjectRelation['item_relation_id']; ?>" /></td>
         </tr>
         <?php endforeach; ?>
         <?php foreach ($objectRelations as $objectRelation): ?>
         <tr>
-            <td><a href="<?php echo url('items/show/' . $objectRelation['subject_item_id']); ?>" target="_blank"><?php echo $objectRelation['subject_item_title']; ?></a></td>
+            <td><a href="<?php echo url('items/show/' . $objectRelation['subject_item_id']); ?>" target="_blank"><?php echo $objectRelation['subject_item_title']; ?> <span class="sr-only"><?php echo __('(external link)'); ?></span></a></td>
             <td><?php echo $objectRelation['relation_text']; ?></td>
             <td><?php echo __('This Item'); ?></td>
             <td><input type="checkbox" name="item_relations_item_relation_delete[]" value="<?php echo $objectRelation['item_relation_id']; ?>" /></td>
